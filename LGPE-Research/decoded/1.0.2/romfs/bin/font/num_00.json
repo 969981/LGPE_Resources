@@ -1,0 +1,1678 @@
+{
+  "format": "NintendoWare NX FFNT/BFFNT",
+  "platform": "NX",
+  "header": {
+    "signature": "FFNT",
+    "byte_order": "little",
+    "bom_hex": "fffe",
+    "header_size": 20,
+    "version": 67174400,
+    "version_hex": "0x04010000",
+    "declared_file_size": 140340,
+    "block_count": 6,
+    "padding": 0
+  },
+  "font_info": {
+    "section_index": 0,
+    "offset": 20,
+    "size": 32,
+    "font_type": "Texture",
+    "font_type_code": 2,
+    "height": 28,
+    "width": 36,
+    "ascent": 26,
+    "line_feed": 28,
+    "alternate_character_index": 0,
+    "default_left_width": 0,
+    "default_glyph_width": 36,
+    "default_character_width": 36,
+    "character_encoding": "Unicode",
+    "character_encoding_code": 1,
+    "tglp_reference": 60,
+    "cwdh_reference": 139376,
+    "cmap_reference": 140048
+  },
+  "texture_glyph": {
+    "section_index": 1,
+    "offset": 52,
+    "size": 139316,
+    "cell_width": 36,
+    "cell_height": 28,
+    "sheet_count": 1,
+    "max_character_width": 21,
+    "sheet_size": 135272,
+    "baseline_position": 26,
+    "format_code": 12,
+    "row_count": 13,
+    "column_count": 17,
+    "sheet_width": 512,
+    "sheet_height": 512,
+    "sheet_data_offset": 4096,
+    "sheets": [
+      {
+        "index": 0,
+        "internal_path": "Sheet_0.bntx",
+        "offset": 4096,
+        "size": 135272,
+        "signature": "BNTX",
+        "sha256": "75dd4246c77841a0a2c98ad34c223998acad7df9736cc0ffa1e62860d15febd0",
+        "output_bntx_internal_path": "Sheet_0.bntx",
+        "output_png_internal_path": "Sheet_0.png",
+        "output_png_bytes": 2863,
+        "output_png_sha256": "6752264d3bf6db8bfbfd801306f7328f7c6807dee23bc0757890ccca5222f593",
+        "png_validation": {
+          "width": 512,
+          "height": 512,
+          "color_type": 6,
+          "bit_depth": 8,
+          "validated_bytes": 1049088
+        },
+        "conversion": {
+          "pixel_format": "BC4_UNORM",
+          "decoder": "ffmpeg",
+          "channel_mapping": "FFmpeg DDS conversion",
+          "width": 512,
+          "height": 512
+        },
+        "commands": [
+          {
+            "command": [
+              "C:\\Users\\10626\\AppData\\Local\\Temp\\lgpe-research-sort-verify-env\\Scripts\\python.exe",
+              "-c",
+              "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bffnt-wdj_ney6\\num_00.json.contents\\Sheet_0.bntx",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\texture-metadata.json",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\texture-r16.raw"
+            ],
+            "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg",
+            "returncode": 0,
+            "timeout_seconds": 180,
+            "stdout": "\nFile name: 0\n\nTextures count: 1\n\nImage 1 name: 0\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 0\nFormat: BC4_UNORM\nWidth: 512\nHeight: 512\nNumber of faces: 1\nSize Range: 4\nBlock Height: 16\nImage Size: 131072\nAlignment: 512\nChannel 1: 1\nChannel 2: 1\nChannel 3: 1\nChannel 4: Red\nImage type: Unknown\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "D:\\Tool\\ffmpeg-8.0.1-full_build\\bin\\ffmpeg.exe",
+              "-hide_banner",
+              "-n",
+              "-i",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\0.dds",
+              "-frames:v",
+              "1",
+              "-update",
+              "1",
+              "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\out.png"
+            ],
+            "cwd": null,
+            "returncode": 0,
+            "timeout_seconds": 180,
+            "stdout": "",
+            "stderr": "Input #0, dds_pipe, from '\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\0.dds':\n  Duration: N/A, bitrate: N/A\n  Stream #0:0: Video: dds, rgba, 512x512, 25 fps, 25 tbr, 25 tbn\nStream mapping:\n  Stream #0:0 -> #0:0 (dds (native) -> png (native))\nPress [q] to stop, [?] for help\nOutput #0, image2, to '\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-5j1x8yhg\\out.png':\n  Metadata:\n    encoder         : Lavf62.3.100\n  Stream #0:0: Video: png, rgba(pc, gbr/unknown/unknown, progressive), 512x512, q=2-31, 200 kb/s, 25 fps, 25 tbn\n    Metadata:\n      encoder         : Lavc62.11.100 png\n[out#0/image2 @ 000002a4e90a7c80] video:3KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=2.01x elapsed=0:00:00.01    \n"
+          }
+        ]
+      }
+    ]
+  },
+  "character_width_sections": [
+    {
+      "section_index": 2,
+      "offset": 139368,
+      "size": 672,
+      "start_index": 0,
+      "end_index": 217,
+      "entry_count": 218,
+      "entries": [
+        {
+          "glyph_index": 0,
+          "left": 9,
+          "glyph_width": 0,
+          "char_width": 9
+        },
+        {
+          "glyph_index": 1,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 2,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 3,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 4,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 5,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 6,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 7,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 8,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 9,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 10,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 11,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 12,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 13,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 14,
+          "left": 0,
+          "glyph_width": 9,
+          "char_width": 9
+        },
+        {
+          "glyph_index": 15,
+          "left": 0,
+          "glyph_width": 15,
+          "char_width": 15
+        },
+        {
+          "glyph_index": 16,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 17,
+          "left": 0,
+          "glyph_width": 12,
+          "char_width": 12
+        },
+        {
+          "glyph_index": 18,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 19,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 20,
+          "left": 0,
+          "glyph_width": 21,
+          "char_width": 21
+        },
+        {
+          "glyph_index": 21,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 22,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 23,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 24,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 25,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 26,
+          "left": 0,
+          "glyph_width": 9,
+          "char_width": 9
+        },
+        {
+          "glyph_index": 27,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 28,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 29,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 30,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 31,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 32,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 33,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 34,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 35,
+          "left": 0,
+          "glyph_width": 15,
+          "char_width": 15
+        },
+        {
+          "glyph_index": 36,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 37,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 38,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 39,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 40,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 41,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 42,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 43,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 44,
+          "left": 0,
+          "glyph_width": 15,
+          "char_width": 15
+        },
+        {
+          "glyph_index": 45,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 46,
+          "left": 0,
+          "glyph_width": 18,
+          "char_width": 18
+        },
+        {
+          "glyph_index": 47,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 48,
+          "left": 0,
+          "glyph_width": 15,
+          "char_width": 15
+        },
+        {
+          "glyph_index": 49,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 50,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 51,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 52,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 53,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 54,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 55,
+          "left": 0,
+          "glyph_width": 21,
+          "char_width": 21
+        },
+        {
+          "glyph_index": 56,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 57,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 58,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 59,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 60,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 61,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 62,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 63,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 64,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 65,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 66,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 67,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 68,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 69,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 70,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 71,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 72,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 73,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 74,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 75,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 76,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 77,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 78,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 79,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 80,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 81,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 82,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 83,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 84,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 85,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 86,
+          "left": 0,
+          "glyph_width": 15,
+          "char_width": 15
+        },
+        {
+          "glyph_index": 87,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 88,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 89,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 90,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 91,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 92,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 93,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 94,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 95,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 96,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 97,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 98,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 99,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 100,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 101,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 102,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 103,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 104,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 105,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 106,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 107,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 108,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 109,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 110,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 111,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 112,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 113,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 114,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 115,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 116,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 117,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 118,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 119,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 120,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 121,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 122,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 123,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 124,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 125,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 126,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 127,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 128,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 129,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 130,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 131,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 132,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 133,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 134,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 135,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 136,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 137,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 138,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 139,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 140,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 141,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 142,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 143,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 144,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 145,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 146,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 147,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 148,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 149,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 150,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 151,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 152,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 153,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 154,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 155,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 156,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 157,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 158,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 159,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 160,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 161,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 162,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 163,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 164,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 165,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 166,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 167,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 168,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 169,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 170,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 171,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 172,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 173,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 174,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 175,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 176,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 177,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 178,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 179,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 180,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 181,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 182,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 183,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 184,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 185,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 186,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 187,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 188,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 189,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 190,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 191,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 192,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 193,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 194,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 195,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 196,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 197,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 198,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 199,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 200,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 201,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 202,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 203,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 204,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 205,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 206,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 207,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 208,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 209,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 210,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 211,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 212,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 213,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 214,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 215,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 216,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        },
+        {
+          "glyph_index": 217,
+          "left": 0,
+          "glyph_width": 36,
+          "char_width": 0
+        }
+      ],
+      "next_reference": 0
+    }
+  ],
+  "character_map_sections": [
+    {
+      "section_index": 3,
+      "offset": 140040,
+      "size": 28,
+      "code_begin": 32,
+      "code_end": 126,
+      "mapping_method": "Direct",
+      "mapping_method_code": 0,
+      "padding": 0,
+      "next_reference": 140076,
+      "mapping": {
+        "glyph_offset": 0,
+        "index_formula": "glyph_index = codepoint - code_begin + glyph_offset"
+      }
+    },
+    {
+      "section_index": 4,
+      "offset": 140068,
+      "size": 28,
+      "code_begin": 160,
+      "code_end": 255,
+      "mapping_method": "Direct",
+      "mapping_method_code": 0,
+      "padding": 0,
+      "next_reference": 140104,
+      "mapping": {
+        "glyph_offset": 95,
+        "index_formula": "glyph_index = codepoint - code_begin + glyph_offset"
+      }
+    },
+    {
+      "section_index": 5,
+      "offset": 140096,
+      "size": 244,
+      "code_begin": 0,
+      "code_end": 65535,
+      "mapping_method": "Scan",
+      "mapping_method_code": 2,
+      "padding": 0,
+      "next_reference": 0,
+      "mapping": {
+        "entry_count": 27,
+        "entries": [
+          {
+            "codepoint": 338,
+            "glyph_index": 191
+          },
+          {
+            "codepoint": 339,
+            "glyph_index": 192
+          },
+          {
+            "codepoint": 352,
+            "glyph_index": 193
+          },
+          {
+            "codepoint": 353,
+            "glyph_index": 194
+          },
+          {
+            "codepoint": 376,
+            "glyph_index": 195
+          },
+          {
+            "codepoint": 381,
+            "glyph_index": 196
+          },
+          {
+            "codepoint": 382,
+            "glyph_index": 197
+          },
+          {
+            "codepoint": 402,
+            "glyph_index": 198
+          },
+          {
+            "codepoint": 710,
+            "glyph_index": 199
+          },
+          {
+            "codepoint": 732,
+            "glyph_index": 200
+          },
+          {
+            "codepoint": 8211,
+            "glyph_index": 201
+          },
+          {
+            "codepoint": 8212,
+            "glyph_index": 202
+          },
+          {
+            "codepoint": 8216,
+            "glyph_index": 203
+          },
+          {
+            "codepoint": 8217,
+            "glyph_index": 204
+          },
+          {
+            "codepoint": 8218,
+            "glyph_index": 205
+          },
+          {
+            "codepoint": 8220,
+            "glyph_index": 206
+          },
+          {
+            "codepoint": 8221,
+            "glyph_index": 207
+          },
+          {
+            "codepoint": 8222,
+            "glyph_index": 208
+          },
+          {
+            "codepoint": 8224,
+            "glyph_index": 209
+          },
+          {
+            "codepoint": 8225,
+            "glyph_index": 210
+          },
+          {
+            "codepoint": 8226,
+            "glyph_index": 211
+          },
+          {
+            "codepoint": 8230,
+            "glyph_index": 212
+          },
+          {
+            "codepoint": 8240,
+            "glyph_index": 213
+          },
+          {
+            "codepoint": 8249,
+            "glyph_index": 214
+          },
+          {
+            "codepoint": 8250,
+            "glyph_index": 215
+          },
+          {
+            "codepoint": 8364,
+            "glyph_index": 216
+          },
+          {
+            "codepoint": 8482,
+            "glyph_index": 217
+          }
+        ]
+      }
+    }
+  ],
+  "sections": [
+    {
+      "index": 0,
+      "signature": "FINF",
+      "offset": 20,
+      "size": 32,
+      "end_offset": 52,
+      "sha256": "8c506a2747634453287d8a8a3b3ec4b7f5f9d1a7d78fc95da7612a4f4c1c1aaa"
+    },
+    {
+      "index": 1,
+      "signature": "TGLP",
+      "offset": 52,
+      "size": 139316,
+      "end_offset": 139368,
+      "sha256": "2143902cc03289ebd3ebbdc384253c83dbbeb7c98a3595a3c7593fdd34e46599"
+    },
+    {
+      "index": 2,
+      "signature": "CWDH",
+      "offset": 139368,
+      "size": 672,
+      "end_offset": 140040,
+      "sha256": "ef888121f9cfec0e0dea9f619ceebdcfd7c4c667b354fea6d9f3b112b71ad9aa"
+    },
+    {
+      "index": 3,
+      "signature": "CMAP",
+      "offset": 140040,
+      "size": 28,
+      "end_offset": 140068,
+      "sha256": "255ba195a4e0a5896fd21a5980bc0a835b4a544594c11f94c7b8b51de4e0852c"
+    },
+    {
+      "index": 4,
+      "signature": "CMAP",
+      "offset": 140068,
+      "size": 28,
+      "end_offset": 140096,
+      "sha256": "796b00193890b8f20d25f318802a6dbcd211cceca8bb81550158e896f2789a63"
+    },
+    {
+      "index": 5,
+      "signature": "CMAP",
+      "offset": 140096,
+      "size": 244,
+      "end_offset": 140340,
+      "sha256": "f59ebb74a73e27ff291db0e5aef4686a07c6cbedeb72a8ed1d089ef9c363044a"
+    }
+  ],
+  "source": {
+    "version": "Pokemon Let's Go Pikachu 1.0.2",
+    "partition": "romfs",
+    "relative_path": "bin/font/num_00.bffnt",
+    "bytes": 140340,
+    "sha256": "5a4228c020523d3f260be26ccae284dfff7a7af30b835ed73388e937d5bcc9bc"
+  },
+  "decoder": "lgpe_research.bffnt_batch/nx_ffnt",
+  "tool_versions": {
+    "Switch-Toolbox": "3fcb87f1fea25ad56db139b0d9577db591f54118",
+    "BNTX-Extractor": "2c08e8e55fcc666ba6568a102f36dabd6c584e25",
+    "ffmpeg": {
+      "executable_sha256": "74db6c184a03dba2bdfe23e1a1f41cf5a8385bc1de6a7a1b26db1dc541abef93"
+    }
+  },
+  "outputs": [
+    {
+      "role": "structure",
+      "path": "decoded/1.0.2/romfs/bin/font/num_00.json"
+    },
+    {
+      "role": "embedded_texture",
+      "path": "decoded/1.0.2/romfs/bin/font/num_00.bffnt.contents/Sheet_0.bntx",
+      "sha256": "75dd4246c77841a0a2c98ad34c223998acad7df9736cc0ffa1e62860d15febd0",
+      "bytes": 135272
+    },
+    {
+      "role": "texture_png",
+      "path": "decoded/1.0.2/romfs/bin/font/num_00.bffnt.contents/Sheet_0.png",
+      "sha256": "6752264d3bf6db8bfbfd801306f7328f7c6807dee23bc0757890ccca5222f593",
+      "bytes": 2863
+    }
+  ]
+}

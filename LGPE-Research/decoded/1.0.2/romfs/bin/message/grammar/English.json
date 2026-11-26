@@ -1,0 +1,79 @@
+{
+  "schema": "lgpe-gamedata-v1",
+  "format": "LGPE grammar offset table with UTF-16LE text segments",
+  "format_status": "STRUCTURE_DECODED",
+  "field_semantics_status": "UNKNOWN",
+  "offset_count": 4,
+  "header_byte_1": 6,
+  "offset_table": {
+    "file_offset": 2,
+    "entry_count": 4,
+    "entry_size": 2,
+    "encoding": "u16 little-endian absolute file offsets"
+  },
+  "offsets": [
+    34,
+    44,
+    54,
+    70
+  ],
+  "interstitial_region": {
+    "file_offset": 10,
+    "byte_length": 24,
+    "raw_hex": "00000000000000000000000000060e0e0e0e00060e0e0e0e",
+    "semantics": "UNKNOWN"
+  },
+  "entries": [
+    {
+      "index": 0,
+      "offset_table_file_offset": 2,
+      "file_offset": 34,
+      "byte_length": 10,
+      "raw_hex": "74006800650020000000",
+      "utf16le_strings": [
+        "the "
+      ]
+    },
+    {
+      "index": 1,
+      "offset_table_file_offset": 4,
+      "file_offset": 44,
+      "byte_length": 10,
+      "raw_hex": "54006800650020000000",
+      "utf16le_strings": [
+        "The "
+      ]
+    },
+    {
+      "index": 2,
+      "offset_table_file_offset": 6,
+      "file_offset": 54,
+      "byte_length": 16,
+      "raw_hex": "61002000000061006e00200000000000",
+      "utf16le_strings": [
+        "a ",
+        "an ",
+        ""
+      ]
+    },
+    {
+      "index": 3,
+      "offset_table_file_offset": 8,
+      "file_offset": 70,
+      "byte_length": 16,
+      "raw_hex": "41002000000041006e00200000000000",
+      "utf16le_strings": [
+        "A ",
+        "An ",
+        ""
+      ]
+    }
+  ],
+  "reader_evidence": {
+    "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+    "path_xref_function": "main+0x1ae750",
+    "resource_request_helper": "main+0x00adc70",
+    "parser": "not recovered; text/offset structure is based on actual 1.0.2 files"
+  },
+  "raw_hex": "040622002c003600460000000000000000000000000000060e0e0e0e00060e0e0e0e740068006500200000005400680065002000000061002000000061006e0020000000000041002000000041006e00200000000000"
+}
