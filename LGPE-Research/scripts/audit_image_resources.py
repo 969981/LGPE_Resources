@@ -43,7 +43,7 @@ def brti_rows(data):
         payload = take(start,length)
         yield dict(index=i,name=name,brti_offset=p,format_code=u(p+0x1c,"I"),
                    width=u(p+0x24,"I"),height=u(p+0x28,"I"),depth=u(p+0x2c,"I"),
-                   array_count=u(p+0x30,"I"),tile_mode=u(p+0x12,"H"),
+                   array_count=u(p+0x30,"I"),tile_mode=u(p+0x10,"B"),
                    mip_count=mip_count,block_height_log2=u(p+0x34,"I")&7,
                    component_selectors=list(take(p+0x58,4)),data_offset=start,
                    data_bytes=length,payload_sha256=digest(payload)),payload
@@ -64,7 +64,7 @@ def linearize(payload,w,h,bpp,log):
     return bytes(out)
 
 def rgba(row,payload):
-    if (row["depth"],row["array_count"],row["tile_mode"],row["mip_count"],row["component_selectors"]) != (1,1,0,1,[2,3,4,5]):
+    if (row["depth"],row["array_count"],row["tile_mode"],row["mip_count"],row["component_selectors"]) != (1,1,1,1,[2,3,4,5]):
         raise NotImplementedError("only observed single-mip 2D identity-channel block-linear textures")
     w,h=row["width"],row["height"]
     if not 0 < w*h <= 16777216: raise ValueError("pixel limits")
