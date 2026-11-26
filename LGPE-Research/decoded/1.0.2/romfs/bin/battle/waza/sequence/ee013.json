@@ -1,0 +1,80 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 192,
+    "sha256": "76b6aca556e7ef0922178b066a68743605e811a1b09a852678c3bc12783073ba",
+    "raw_hex": "5345534403000000000000001f000000000000000f0000000000000000001c00000000000000a0410000a041000000000000003f010000000000000000000000000000000000000000007000506c61795f53455f626174746c655f7379735f3032365f6a756d700000000000000000000000000000000000000000000000000000000000000000000000000001000000100000001f0000000000000000001c00000000000000a0410000a041000000000000003f0100000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 3,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 192
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee013",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonSpMoveShake",
+            "StartFrame": 0,
+            "EndFrame": 15,
+            "Parameters": {
+              "trg": 0,
+              "srate": 20.0,
+              "erate": 20.0,
+              "sdec": 0.0,
+              "edec": 0.5,
+              "axis": 1,
+              "isFlip": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_026_jump",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "PokemonSpMoveShake",
+            "StartFrame": 16,
+            "EndFrame": 31,
+            "Parameters": {
+              "trg": 0,
+              "srate": 20.0,
+              "erate": 20.0,
+              "sdec": 0.0,
+              "edec": 0.5,
+              "axis": 1,
+              "isFlip": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

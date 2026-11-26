@@ -1,0 +1,90 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 120,
+    "sha256": "b198ba4019874726d26a692ec1ac11b1c091b3b89f6dc1a35404e21e3235f083",
+    "raw_hex": "5345534403000000000000003100000000000000310000000000000000000000000000000000000000000000000010000000000000000000000000000000000001000000000010000100000000000000000000000000000000000000000026000000000000000000290000000000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 2,
+    "command_count": 5,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 120
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew119",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "motion": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 41,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "motion": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

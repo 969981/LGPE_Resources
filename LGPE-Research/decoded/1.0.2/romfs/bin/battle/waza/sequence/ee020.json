@@ -1,0 +1,167 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 332,
+    "sha256": "e571a9919a7248bea2264fbe14466ff4288ecd6e473f5d983e184db9aaf9996a",
+    "raw_hex": "5345534403000000000000004700000000000000310000000000000000000000000000000000000000000000000026000000000000000000000000000000000000007d0000000000000000000000000000000000000082000100000000000000000000000000000000000000020000001300000000000000000083000000803f0000803f0000803f0000803f14000000470000000000000000000000140000002300000000000000000083000000000000000000000000000000803f2400000024000000000000000000bd00000000002600000026000000000000000000b50004000000280000003700000000000000000083000000000000000000000000000000003f3600000045000000000000000000830000000000000000000000000000000000460000004600000000000000000082000100000000000000000000000000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 12,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 332
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee020",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "EffSpBackColFlg",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 1,
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 2,
+            "EndFrame": 19,
+            "Parameters": {
+              "col": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "alpha": 1.0
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 20,
+            "EndFrame": 71,
+            "Parameters": {}
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 20,
+            "EndFrame": 35,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 1.0
+            }
+          },
+          {
+            "Name": "SpecialFieldEffectCreate",
+            "StartFrame": 36,
+            "EndFrame": 36,
+            "Parameters": {
+              "type": 0
+            }
+          },
+          {
+            "Name": "SpecialWaitSequence",
+            "StartFrame": 38,
+            "EndFrame": 38,
+            "Parameters": {
+              "waitType": 4
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 40,
+            "EndFrame": 55,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.5
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 54,
+            "EndFrame": 69,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          },
+          {
+            "Name": "EffSpBackColFlg",
+            "StartFrame": 70,
+            "EndFrame": 70,
+            "Parameters": {
+              "visible": 1,
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

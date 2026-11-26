@@ -1,0 +1,257 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 948,
+    "sha256": "f29e48b5223ce9066b313146b15cf2d4adbaa68520f854fe9a467036276f6885",
+    "raw_hex": "5345534403000000000000006c000000000000003c000000000000000000000000000000000000000000000000007d000000000000000000000000000000000000002600000000000000000000000000000000000000730057617a615f6577303037340000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000001a0000000000000000002400000000000f0000000000c842000070410000af43000000000000204200000000000000006400000001000000010000000100000000000000000000000100000001000000010000000100000001000000010000001f000000260000000000000000000700000000000000803f9a99993f0000803f00000000000000001f0000006c0000000a00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773037342f65773037345f75702e7074636c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000001f0000001f0000000a00000000003a000000000000000000000000000000204100000000640000000000000001000000010000000100000000000000000000000100000001000000010000001f0000001f0000000a00000000003e000000c03f0000c03f0000c03f01000000000000001f0000001f0000000000000000007000506c61795f53455f7730313636000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002d000000340000000000000000000700000000000000803f3333b33f0000803f00000000000000003b000000420000000000000000000700000000000000803fcdcccc3f0000803f00000000000000005b000000680000000000000000000700000000000000803f0000803f0000803f00000000000000006b0000006b000000000000000000050000000000000000006b0000006b000000000000000000260000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 2,
+    "command_count": 15,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 948
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew074",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 60,
+            "Parameters": {}
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0074"
+            }
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 1,
+            "EndFrame": 26,
+            "Parameters": {
+              "poke": 0,
+              "node": 15,
+              "pos": [
+                100.0,
+                15.0,
+                350.0
+              ],
+              "trg": [
+                0.0,
+                40.0,
+                0.0
+              ],
+              "fov": 0.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 31,
+            "EndFrame": 38,
+            "Parameters": {
+              "trg": 0,
+              "scale": [
+                1.0,
+                1.20000005,
+                1.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 31,
+            "EndFrame": 31,
+            "Parameters": {
+              "event": "Play_SE_w0166",
+              "is3d": 0
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 45,
+            "EndFrame": 52,
+            "Parameters": {
+              "trg": 0,
+              "scale": [
+                1.0,
+                1.39999998,
+                1.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 59,
+            "EndFrame": 66,
+            "Parameters": {
+              "trg": 0,
+              "scale": [
+                1.0,
+                1.60000002,
+                1.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 91,
+            "EndFrame": 104,
+            "Parameters": {
+              "trg": 0,
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 107,
+            "EndFrame": 107,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 107,
+            "EndFrame": 107,
+            "Parameters": {
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 10,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 31,
+            "EndFrame": 108,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew074/ew074_up.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 31,
+            "EndFrame": 31,
+            "Parameters": {
+              "trg": 0,
+              "node": 0,
+              "pos": [
+                0.0,
+                10.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 1,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 31,
+            "EndFrame": 31,
+            "Parameters": {
+              "scale": [
+                1.5,
+                1.5,
+                1.5
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

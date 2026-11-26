@@ -1,0 +1,172 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 660,
+    "sha256": "5f2aea644243a91cda8379594273cb2121b606d0287dd4f00db14d25d89b1394",
+    "raw_hex": "5345534403000000000000003100000000000000310000000000000000000000000000000000000000000000000026000000000000000000000000000000000000007d000000000000000000000000000000000000007c000100000001000000000000000a0000000a000000010000000000100001000000100000000a0000000a000000010000000000800001000000010000000a000000290000000000000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65733036322f65733036325f6869742e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000a0000000a0000000000000000003e00cdcc4c3fcdcc4c3fcdcc4c3f01000000000000000a0000000a0000000000000000003a000100000005000000000000000000000000000000640000000000000001000000010000000100000000000000000000000100000001000000010000000a0000000a0000000000000000007000506c61795f53455f626174746c655f7379735f3033385f6869745f67656e6572616c000000000000000000000000000000000000000000000000000000000000010000001e0000001e0000000000000000007e0001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 2,
+    "command_count": 11,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 660
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "es062",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "GaugeDisp",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "visible": 1,
+              "isUpdate": 0
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 10,
+            "EndFrame": 41,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/es062/es062_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 10,
+            "EndFrame": 10,
+            "Parameters": {
+              "scale": [
+                0.80000001,
+                0.80000001,
+                0.80000001
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 10,
+            "EndFrame": 10,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 1,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 10,
+            "EndFrame": 10,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_038_hit_general",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "GaugeDamage",
+            "StartFrame": 30,
+            "EndFrame": 30,
+            "Parameters": {
+              "trg": 1
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 10,
+            "EndFrame": 10,
+            "Parameters": {
+              "trg": 1,
+              "motion": 16
+            }
+          },
+          {
+            "Name": "HitBack",
+            "StartFrame": 10,
+            "EndFrame": 10,
+            "Parameters": {
+              "trg": 1,
+              "isDefault": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 1032,
+    "sha256": "7767a461859ee3754e454edf14c8dbff313880e699018222e28c444ae5c4e7e9",
+    "raw_hex": "534553440300000000000000a000000000000000000000000000000000002c00646174613a2f62696e2f626174746c652f77617a612f63616d6572612f746f756a6f752f65653333305f746f756a6f755f43414d5f30312e67666263616d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f746f756a6f752f65653333305f746f756a6f755f43414d5f30312e67666263616d6100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000f000000000000000000a04100000000010000000100000001000000000000000000000000000000000000000000a7000000000000000000000000000000000000000c00000000000000000000000000000000000000000000000c00010000000100000000000000000000000000000000000d0000000000000000000000000000000000000010000100000027000000000000000000000000000000000085000200000000000000000000000000000000007300426174746c655f637574696e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007000506c61795f53455f626174746c655f7379735f3031375f76735f747261696e65725f6375745f696e000000000000000000000000000000000000000000000000000000000000000000000000000000000000b200df9bac4ed019a28800000000000000002b0000002b0000000100000000007400010000000100000000000000730000007800000000000000000000007800000078000000000000000000b400a0000000a0000000000000000000310001000000a0000000a0000000000000000000a70001000000a0000000a00000000000000000000d0001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 2,
+    "command_count": 16,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 1032
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee330",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraAnimationPoke",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "camFile": "data:/bin/battle/waza/camera/toujou/ee330_toujou_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/toujou/ee330_toujou_CAM_01.gfbcama",
+              "trg": 1,
+              "node": 15,
+              "pos": [
+                0.0,
+                20.0,
+                0.0
+              ],
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 1,
+              "forceUpdate": 0
+            }
+          },
+          {
+            "Name": "TrainerDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "isDisp": 0
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "PokemonVisibleOther",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "motion": 39
+            }
+          },
+          {
+            "Name": "EffSpFadeIn",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "type": 2
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Battle_cutin"
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_017_vs_trainer_cut_in",
+              "is3d": 0
+            }
+          },
+          {
+            "Name": "MessageDispStd",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "msgId": "df9bac4ed019a288",
+              "option": 0,
+              "autoHide": 0
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 115,
+            "EndFrame": 120,
+            "Parameters": {}
+          },
+          {
+            "Name": "MessageHide",
+            "StartFrame": 120,
+            "EndFrame": 120,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "TrainerDispAll",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "isDisp": 1
+            }
+          },
+          {
+            "Name": "PokemonVisibleOther",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "visible": 1
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlayVoice",
+            "StartFrame": 43,
+            "EndFrame": 43,
+            "Parameters": {
+              "player": 1,
+              "trg": 1,
+              "type": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

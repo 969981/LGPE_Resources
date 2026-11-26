@@ -1,0 +1,381 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 1220,
+    "sha256": "cfa0683e0a5806d704fe2ad0e15527c75f170dc49b9b71dfee544975344b625f",
+    "raw_hex": "5345534403000000000000005a000000000000003100000000000000000000000000000000000000000000000000a7000000000000000000000000000100000000000c00010000000100000000000000000000000100000000000500010000000000000000000000000000000100000000001000010000000000000000000000390000000000700000000000000000000f000000000070000000240001000000050000000000b4430000f042000048430000704200004842000000000000000064000000010000000000000001000000000000000900000001000000010000000100000001000000010000000100000000000000390000000000710000000000000000000f000000000071000000240001000000050000000000b4430000f042000096430000704200004842000000000000000064000000010000000000000001000000000000000900000001000000010000000100000001000000000000000100000000000000000000000000000000007d00000000000000000000000000000000000000730057617a615f65773035323500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e000000510000000b00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773532352f65773532355f64665f736d6f6b652e7074636c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000000e0000000e0000000b00000000003e003333333f3333333f3333333f01000000000000000e0000000e0000000b00000000003a0001000000000000000000000000002041000000006400000000000000010000000100000001000000000000000000000001000000010000000100000010000000100000000000000000007000506c61795f53455f77303530300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000010000000100000000000000000007800010000000100000000000000000000000000000000000000160000003d0000000100000000000300010000000100000000000000000000000000000000007ac4640000000100000001000000010000000000000000000000010000000100000001000000160000003d000000010000000000080001000000000000000000b44300000000010000000000000000000000360000004b000000010000000000070001000000cdcccc3dcdcccc3dcdcccc3d00000000030000004b0000004b0000000100000000000c0001000000000000004b0000004b000000010000000000050001000000000000005a0000005a00000000000000000005000000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 5,
+    "command_count": 22,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 1220
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew525_back",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "TrainerDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "isDisp": 0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0525"
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 16,
+            "EndFrame": 16,
+            "Parameters": {
+              "event": "Play_SE_w0500",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowPoke",
+            "StartFrame": 16,
+            "EndFrame": 16,
+            "Parameters": {
+              "isEnable": 1,
+              "trg": 1,
+              "node": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 90,
+            "EndFrame": 90,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 112,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 57,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 0,
+            "EndFrame": 15,
+            "Parameters": {
+              "poke": 1,
+              "node": 5,
+              "pos": [
+                360.0,
+                120.0,
+                200.0
+              ],
+              "trg": [
+                60.0,
+                50.0,
+                0.0
+              ],
+              "fov": 0.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 9,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 113,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 57,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 0,
+            "EndFrame": 15,
+            "Parameters": {
+              "poke": 1,
+              "node": 5,
+              "pos": [
+                360.0,
+                120.0,
+                300.0
+              ],
+              "trg": [
+                60.0,
+                50.0,
+                0.0
+              ],
+              "fov": 0.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 9,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                0,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "motion": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveRelativePoke",
+            "StartFrame": 22,
+            "EndFrame": 61,
+            "Parameters": {
+              "moveTrg": 1,
+              "posTrg": 1,
+              "node": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                -1000.0
+              ],
+              "rate": 100,
+              "isFlip": 1,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "PokemonRotate",
+            "StartFrame": 22,
+            "EndFrame": 61,
+            "Parameters": {
+              "trg": 1,
+              "scale": [
+                0.0,
+                360.0,
+                0.0
+              ],
+              "relative": 1,
+              "isFlip": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 54,
+            "EndFrame": 75,
+            "Parameters": {
+              "trg": 1,
+              "scale": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "relative": 0,
+              "move": 3
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 75,
+            "EndFrame": 75,
+            "Parameters": {
+              "trg": 1,
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 75,
+            "EndFrame": 75,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 11,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 14,
+            "EndFrame": 81,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew525/ew525_df_smoke.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 14,
+            "EndFrame": 14,
+            "Parameters": {
+              "scale": [
+                0.69999999,
+                0.69999999,
+                0.69999999
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 14,
+            "EndFrame": 14,
+            "Parameters": {
+              "trg": 1,
+              "node": 0,
+              "pos": [
+                0.0,
+                10.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 1,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 2544,
+    "sha256": "c5b12e0b6360faf33abfb1cea84c7b20ffc939ccddb64be30ed6e45683a44e29",
+    "raw_hex": "534553440300000000000000e500000000000000000000000c000000000037001400000014000000000000000000880001000000000000000000000000000000000000000000000014000000140000000000730000002e0000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653431325f73616c6c795f43414d5f30312e67666263616d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653431325f73616c6c795f43414d5f30312e67666263616d6100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000004f726967696e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000014000000140000000000720000002e0000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653431325f73616c6c795f43414d5f30312e67666263616d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653431325f73616c6c795f43414d5f30312e67666263616d6100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000004f726967696e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000043000000000029000000000014000000140000000000290000007f00000000001400000014000000000000000000c600040000000000000014000000140000000000000000000c0000000000010000001400000014000000000000000000040000000000040000004f726967696e00000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000001400000014000000000000000000110000000000746f5f6261303034315f73616c6c7930320000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000014000000000000000000a30004000000000000001400000014000000000000000000a60004000000010000001400000014000000000000000000aa0004000000746f5f6261303030315f7761697430315f6c6f6f70000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000014000000000000000000aa0004000000746f5f6261303034315f73616c6c79303200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001400000025000000320000000000000014000000140000003200000000000c00030000000000000014000000740000000c0000000000000014000000140000000c000000000038001400000014000000000000000000b20054b28de1a2392d2700000000010000001f0000001f0000006700000000007100506c61795f766f5f626c5f706b5f626174746c655f3030315f737461727400000000000000000000000000000000000000000000000000000000000000000000506c61795f766f5f626c5f657665655f626174746c655f3139365f737461727400000000000000000000000000000000000000000000000000000000000000000000000059000000590000000000000000007000506c61795f53455f626174746c655f7379735f3033395f6169626f755f6a756d700000000000000000000000000000000000000000000000000000000000000000000000620000009b000000000000000000050000000000000000006a0000006a0000000000720000003100010000006b000000990000000000720000002500000000000000484300004842000096430000a0410000a041000000000000f04101000000010000000500000095000000950000000100000000007000506c61795f53455f626174746c655f7379735f3034305f6169626f755f6c616e64696e67000000000000000000000000000000000000000000000000000000000000000099000000990000000000730000003100010000009a000000c40000000000730000002400000000000f00000000003443000020420000af43000048c20000a041000048c20000f0416400000001000000010000000100000000000000080000000100000001000000010000000100000001000000010000009a000000c40000000000720000002400000000000f00000000003443000020420000af43000048c20000a041000048c20000f041640000000100000001000000010000000000000008000000010000000100000001000000010000000100000001000000bd000000bd000000000000000000c8000000000001000000c5000000e50000000000730000000000c5000000e50000000000720000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 8,
+    "command_count": 31,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 2544
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee412",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "EffCharaLightDirection",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "reset": 1,
+              "dir": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "flip": 0,
+              "flipTrg": 0
+            }
+          },
+          {
+            "Name": "LGPEcommand198",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "param1": 4,
+              "param2": 0
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 0,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "PokemonMoveRelativeTrainer",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "moveTrg": 0,
+              "trg": 4,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonMotionState",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 0,
+              "state": "to_ba0041_sally02",
+              "reset": 0
+            }
+          },
+          {
+            "Name": "TrainerMoveReset",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 4,
+              "origin": 0
+            }
+          },
+          {
+            "Name": "TrainerDisp",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 4,
+              "isDisp": 1
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 4,
+              "state": "to_ba0001_wait01_loop"
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 4,
+              "state": "to_ba0041_sally02"
+            }
+          },
+          {
+            "Name": "MessageDispStd",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "msgId": "54b28de1a2392d27",
+              "option": 0,
+              "autoHide": 1
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 89,
+            "EndFrame": 89,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_039_aibou_jump",
+              "is3d": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 98,
+            "EndFrame": 155,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "LGPEcommand200",
+            "StartFrame": 189,
+            "EndFrame": 189,
+            "Parameters": {
+              "param1": 0,
+              "param2": 1
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 115,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraAnimationTrainer",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "camType": 0,
+              "camFile": "data:/bin/battle/waza/camera/ball/ee412_sally_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/ball/ee412_sally_CAM_01.gfbcama",
+              "trg": 4,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "forceUpdate": 0,
+              "isLoseCam": 0
+            }
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 153,
+            "EndFrame": 153,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 154,
+            "EndFrame": 196,
+            "Parameters": {
+              "poke": 0,
+              "node": 15,
+              "pos": [
+                180.0,
+                40.0,
+                350.0
+              ],
+              "trg": [
+                -50.0,
+                20.0,
+                -50.0
+              ],
+              "fov": 30.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 8,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 197,
+            "EndFrame": 229,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 114,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraAnimationTrainer",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "camType": 0,
+              "camFile": "data:/bin/battle/waza/camera/ball/ee412_sally_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/ball/ee412_sally_CAM_01.gfbcama",
+              "trg": 4,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "forceUpdate": 0,
+              "isLoseCam": 0
+            }
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 106,
+            "EndFrame": 106,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "CameraMoveSpecialPos",
+            "StartFrame": 107,
+            "EndFrame": 153,
+            "Parameters": {
+              "posTrg": 0,
+              "pos": [
+                200.0,
+                50.0,
+                300.0
+              ],
+              "trg": [
+                20.0,
+                20.0,
+                0.0
+              ],
+              "fov": 30.0,
+              "isFlip": 1,
+              "isRot": 1,
+              "move": 5
+            }
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 154,
+            "EndFrame": 196,
+            "Parameters": {
+              "poke": 0,
+              "node": 15,
+              "pos": [
+                180.0,
+                40.0,
+                350.0
+              ],
+              "trg": [
+                -50.0,
+                20.0,
+                -50.0
+              ],
+              "fov": 30.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 8,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 197,
+            "EndFrame": 229,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 41,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 20,
+            "EndFrame": 67,
+            "Parameters": {}
+          },
+          {
+            "Name": "BallBarDisp",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 149,
+            "EndFrame": 149,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_040_aibou_landing",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 12,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleStop",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 20,
+            "EndFrame": 116,
+            "Parameters": {}
+          },
+          {
+            "Name": "ParticleDelete",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 50,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 20,
+            "EndFrame": 37,
+            "Parameters": {}
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 20,
+            "EndFrame": 20,
+            "Parameters": {
+              "trg": 3,
+              "visible": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 103,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySeVersion",
+            "StartFrame": 31,
+            "EndFrame": 31,
+            "Parameters": {
+              "pikaEvent": "Play_vo_bl_pk_battle_001_start",
+              "eeveEvent": "Play_vo_bl_evee_battle_196_start",
+              "is3d": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

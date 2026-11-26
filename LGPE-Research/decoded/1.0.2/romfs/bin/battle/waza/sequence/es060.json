@@ -1,0 +1,51 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 40,
+    "sha256": "1c37a83b63f7151c16f36c0d0a4bac9d93ebaf8b68c6a0bd877a19b66ab458ed",
+    "raw_hex": "534553440300000000000000130000000000000013000000000000000000260000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 1,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 40
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "es060",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 19,
+            "Parameters": {
+              "move": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

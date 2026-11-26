@@ -1,0 +1,57 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 64,
+    "sha256": "5b1697672836fdf2592c7302563cbfbe2e1df8bdd2b328aafb80026e8030e28e",
+    "raw_hex": "5345534403000000000000001f000000000000001f0000000000000000001c00000000000000e0400000e04000000000000000400000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 1,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 64
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee012",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonSpMoveShake",
+            "StartFrame": 0,
+            "EndFrame": 31,
+            "Parameters": {
+              "trg": 0,
+              "srate": 7.0,
+              "erate": 7.0,
+              "sdec": 0.0,
+              "edec": 2.0,
+              "axis": 0,
+              "isFlip": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

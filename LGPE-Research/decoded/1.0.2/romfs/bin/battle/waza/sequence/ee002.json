@@ -1,0 +1,119 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 544,
+    "sha256": "2fc9d80d7122cb182876e1e1e5e5a512cc4c6e784c692fbe2d3621d295d1984a",
+    "raw_hex": "5345534403000000000000004e000000000000003100000000000000000000000000000000000000000000000000260000000000080000004e0000000000000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65653030322f65653030325f6c7675702e7074636c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000008000000080000000000000000003a00000000000f0000000000000000000000000000006400000000000000000000000100000001000000000000000000000001000000010000000100000008000000080000000000000000003e003333b33f3333b33f3333b33f010000000000000008000000080000000000000000007000506c61795f53455f626174746c655f7379735f3030395f6c7675700000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 6,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 544
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee002",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 8,
+            "EndFrame": 78,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ee002/ee002_lvup.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "trg": 0,
+              "node": 15,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "scale": [
+                1.39999998,
+                1.39999998,
+                1.39999998
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_009_lvup",
+              "is3d": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

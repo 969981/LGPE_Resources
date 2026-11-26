@@ -1,0 +1,844 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 4164,
+    "sha256": "27774180199463da00cef7f74ac591748c5021bf4d06deb3c76a30bf542aae3f",
+    "raw_hex": "534553440300000000000000fa000000000000000f000000000075000000000000000000000000000000750000002e0000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653436305f62616c6c5f43414d5f30312e67666263616d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653436305f62616c6c5f43414d5f30312e67666263616d610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000004f726967696e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000750000003200000034430000000017000000000074000000000000000000000000000000740000002e0000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653436305f62616c6c5f43414d5f30312e67666263616d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f62616c6c2f65653436305f62616c6c5f43414d5f30312e67666263616d610000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020000004f726967696e0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000740000003200000034430000000000000000000000000000c60000000000030000000000000000000000000000000000a30000000000000000000000000000000000000000000000a60000000000010000000000000000000000000000000000aa0000000000746f5f6261303030315f7761697430315f6c6f6f70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000aa0000000000746f5f6261303034305f73616c6c793031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000a300020000000000000000000000000000000a0000000000a600020000000100000000000000000000000a0000000000aa0002000000746f5f6261303030315f7761697430315f6c6f6f700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000aa0002000000746f5f6261303033305f62616c6c303100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c0003000000010000000000000000000000000000000000040003000000000000004f726967696e00000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000000110003000000746f5f6261303034305f73616c6c79303100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000570000000b00000000004e000100000002000000010000000000000000000000000000000b00000000005e0001000000020000004f726967696e00000000000000000000000000000000000000000000000000000000000000000000000000000b00000000006a00746f5f6261303033305f62616c6c303100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a00000000000c0005000000000000000000000000000000000000000000b200bc418c4b38e63d2500000000000000000b0000000b00000066005c0000007000506c61795f766f5f626c5f706b5f626174746c655f3030315f737461727400000000000000000000000000000000000000000000000000000000000000000000000000000b0000000b0000006b005d0000007000506c61795f766f5f626c5f657665655f626174746c655f3139365f737461727400000000000000000000000000000000000000000000000000000000000000000000000040000000400000000000750000003100010000004000000040000000000074000000310001000000420000008a000000000075000000250000000000000096430000dc42000096c30000000000004842000070420000f041010000000100000003000000420000008a000000000074000000250000000000000096430000dc42000002c400000000000048420000a0420000f04101000000010000000300000045000000450000006400000000007000506c61795f53455f626174746c655f7379735f3033395f6169626f755f6a756d70000000000000000000000000000000000000000000000000000000000000000000000049000000490000006700000000007000506c61795f53455f626174746c655f7379735f3031385f62616c6c5f7468726f7700000000000000000000000000000000000000000000000000000000000000000000004e00000087000000000000000000050003000000000000004e0000004e0000000b00000000005e0000000000020000004f726967696e0000000000000000000000000000000000000000000000000000000000004e000000570000000b000000000050000000704100002a430000b4c201000000000000000100000001000000010000004e0000005b0000000b0000000000000057000000990000000c00000000004e000100000002000000020000000000000057000000570000000c00000000006a00746f5f65653430305f62616c6c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000057000000570000000c0000000000510005000000000000000000000000000000000000006400000001000000000000000100000001000000000000000000000001000000010000000100000057000000990000000c000000000000006900000069000000000000000000b20054b28de1a2392d2701000000000000007c0000007c0000006500000000007000506c61795f53455f626174746c655f7379735f3034305f6169626f755f6c616e64696e6700000000000000000000000000000000000000000000000000000000000000008a0000008a0000000a0000000000100005000000270000008c0000008c0000006800000000007000506c61795f53455f626174746c655f7379735f3030315f62616c6c5f64726f7000000000000000000000000000000000000000000000000000000000000000000000000091000000cd00000000007500000026000900000091000000cd00000000007400000026000900000092000000cc0000000a00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65625f7365742f65623030345f62616c6c6f75742e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000060000000000000092000000920000000a00000000003a0005000000000000000000000000000000000000006400000000000000010000000000000000000000000000000000000001000000010000000100000092000000920000000a000000000044000c000000576169737400000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000092000000920000000a00000000003e00000000400000004000000040000000000000000092000000a10000000a00000000003e00000020400000204000002040000000000000000092000000cf0000000a0000000000000092000000cf0000000a0000000000000096000000960000000a00000000000c00050000000100000096000000960000000a00000000000700050000000ad7233c0ad7233c0ad7233c000000000000000096000000c00000000a00000000000700050000000000803f0000803f0000803f0000000008000000960000009d0000000a0000000000000096000000960000000000000000007f000000000096000000960000006900000000007000506c61795f53455f626174746c655f7379735f3030365f706f6b655f6170706572616e636500000000000000000000000000000000000000000000000000000000000000a9000000a9000000000000000000c8000300000001000000b1000000b10000006a00000000007400010000000500000002000000cd000000cd000000000000000000b400ce000000fa0000000000750000000000ce000000fa0000000000740000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 14,
+    "command_count": 63,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 4164
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee463",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 117,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 15,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraAnimationTrainer",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "camType": 0,
+              "camFile": "data:/bin/battle/waza/camera/ball/ee460_ball_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/ball/ee460_ball_CAM_01.gfbcama",
+              "trg": 2,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "forceUpdate": 0,
+              "isLoseCam": 0
+            }
+          },
+          {
+            "Name": "CameraAnimationRotate",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "pos": 180.0
+            }
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 64,
+            "EndFrame": 64,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "CameraMoveSpecialPos",
+            "StartFrame": 66,
+            "EndFrame": 138,
+            "Parameters": {
+              "posTrg": 0,
+              "pos": [
+                300.0,
+                110.0,
+                -300.0
+              ],
+              "trg": [
+                0.0,
+                50.0,
+                60.0
+              ],
+              "fov": 30.0,
+              "isFlip": 1,
+              "isRot": 1,
+              "move": 3
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 145,
+            "EndFrame": 205,
+            "Parameters": {
+              "move": 9
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 206,
+            "EndFrame": 250,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 116,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 23,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraAnimationTrainer",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "camType": 0,
+              "camFile": "data:/bin/battle/waza/camera/ball/ee460_ball_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/ball/ee460_ball_CAM_01.gfbcama",
+              "trg": 2,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "forceUpdate": 0,
+              "isLoseCam": 0
+            }
+          },
+          {
+            "Name": "CameraAnimationRotate",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "pos": 180.0
+            }
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 64,
+            "EndFrame": 64,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "CameraMoveSpecialPos",
+            "StartFrame": 66,
+            "EndFrame": 138,
+            "Parameters": {
+              "posTrg": 0,
+              "pos": [
+                300.0,
+                110.0,
+                -520.0
+              ],
+              "trg": [
+                0.0,
+                50.0,
+                80.0
+              ],
+              "fov": 30.0,
+              "isFlip": 1,
+              "isRot": 1,
+              "move": 3
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 145,
+            "EndFrame": 205,
+            "Parameters": {
+              "move": 9
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 206,
+            "EndFrame": 250,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "LGPEcommand198",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "param1": 0,
+              "param2": 3
+            }
+          },
+          {
+            "Name": "TrainerMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "origin": 0
+            }
+          },
+          {
+            "Name": "TrainerDisp",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "isDisp": 1
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "state": "to_ba0001_wait01_loop"
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "state": "to_ba0040_sally01"
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 3,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "PokemonMoveRelativeTrainer",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "moveTrg": 3,
+              "trg": 0,
+              "node": "Origin",
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isRot": 1,
+              "forceUpdate": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonMotionState",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 3,
+              "state": "to_ba0040_sally01",
+              "reset": 0
+            }
+          },
+          {
+            "Name": "MessageDispStd",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "msgId": "bc418c4b38e63d25",
+              "option": 0,
+              "autoHide": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 78,
+            "EndFrame": 135,
+            "Parameters": {
+              "trg": 3,
+              "move": 0
+            }
+          },
+          {
+            "Name": "MessageDispStd",
+            "StartFrame": 105,
+            "EndFrame": 105,
+            "Parameters": {
+              "msgId": "54b28de1a2392d27",
+              "option": 1,
+              "autoHide": 0
+            }
+          },
+          {
+            "Name": "BallBarDisp",
+            "StartFrame": 150,
+            "EndFrame": 150,
+            "Parameters": {
+              "trg": 0
+            }
+          },
+          {
+            "Name": "LGPEcommand200",
+            "StartFrame": 169,
+            "EndFrame": 169,
+            "Parameters": {
+              "param1": 3,
+              "param2": 1
+            }
+          },
+          {
+            "Name": "MessageHide",
+            "StartFrame": 205,
+            "EndFrame": 205,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 10,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "TrainerMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 2,
+              "origin": 0
+            }
+          },
+          {
+            "Name": "TrainerDisp",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 2,
+              "isDisp": 1
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 2,
+              "state": "to_ba0001_wait01_loop"
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 2,
+              "state": "to_ba0030_ball01"
+            }
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 5,
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 138,
+            "EndFrame": 138,
+            "Parameters": {
+              "trg": 5,
+              "motion": 39
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 146,
+            "EndFrame": 204,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/eb_set/eb004_ballout.ptcl",
+              "index": 1,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 146,
+            "EndFrame": 146,
+            "Parameters": {
+              "trg": 5,
+              "node": 0,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 1,
+              "isRot": 0,
+              "isRotPos": 0,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleFollowModel",
+            "StartFrame": 146,
+            "EndFrame": 146,
+            "Parameters": {
+              "grpNo": 12,
+              "node": "Waist",
+              "isPos": 1,
+              "isRot": 0,
+              "isScl": 0,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rot": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 146,
+            "EndFrame": 146,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 146,
+            "EndFrame": 161,
+            "Parameters": {
+              "scale": [
+                2.5,
+                2.5,
+                2.5
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 146,
+            "EndFrame": 207,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 146,
+            "EndFrame": 207,
+            "Parameters": {}
+          },
+          {
+            "Name": "PokemonVisible",
+            "StartFrame": 150,
+            "EndFrame": 150,
+            "Parameters": {
+              "trg": 5,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 150,
+            "EndFrame": 150,
+            "Parameters": {
+              "trg": 5,
+              "scale": [
+                0.01,
+                0.01,
+                0.01
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonScale",
+            "StartFrame": 150,
+            "EndFrame": 192,
+            "Parameters": {
+              "trg": 5,
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "relative": 0,
+              "move": 8
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 150,
+            "EndFrame": 157,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 11,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ModelCreateBall",
+            "StartFrame": 0,
+            "EndFrame": 87,
+            "Parameters": {
+              "index": 1,
+              "trgChara": 2,
+              "animeType": 1,
+              "drawType": 0
+            }
+          },
+          {
+            "Name": "ModelAttachTrainer",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "isEnable": 1,
+              "trg": 2,
+              "node": "Origin",
+              "changeLight": 0
+            }
+          },
+          {
+            "Name": "ModelCahngeAnimationState",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "state": "to_ba0030_ball01"
+            }
+          },
+          {
+            "Name": "ModelAttachTrainer",
+            "StartFrame": 78,
+            "EndFrame": 78,
+            "Parameters": {
+              "isEnable": 0,
+              "trg": 2,
+              "node": "Origin",
+              "changeLight": 0
+            }
+          },
+          {
+            "Name": "ModelMovePosition",
+            "StartFrame": 78,
+            "EndFrame": 87,
+            "Parameters": {
+              "pos": [
+                15.0,
+                170.0,
+                -90.0
+              ],
+              "relative": 1,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 78,
+            "EndFrame": 91,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 12,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ModelCreateBall",
+            "StartFrame": 87,
+            "EndFrame": 153,
+            "Parameters": {
+              "index": 1,
+              "trgChara": 2,
+              "animeType": 2,
+              "drawType": 0
+            }
+          },
+          {
+            "Name": "ModelCahngeAnimationState",
+            "StartFrame": 87,
+            "EndFrame": 87,
+            "Parameters": {
+              "state": "to_ee400_ball"
+            }
+          },
+          {
+            "Name": "ModelMoveRelativePoke",
+            "StartFrame": 87,
+            "EndFrame": 87,
+            "Parameters": {
+              "trg": 5,
+              "node": 0,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 87,
+            "EndFrame": 153,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 100,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 69,
+            "EndFrame": 69,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_039_aibou_jump",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 101,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 124,
+            "EndFrame": 124,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_040_aibou_landing",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 102,
+        "GroupOptions": {
+          "Option0": 92,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 11,
+            "EndFrame": 11,
+            "Parameters": {
+              "event": "Play_vo_bl_pk_battle_001_start",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 103,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 73,
+            "EndFrame": 73,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_018_ball_throw",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 104,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 140,
+            "EndFrame": 140,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_001_ball_drop",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 105,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 150,
+            "EndFrame": 150,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_006_poke_apperance",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 106,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlayVoice",
+            "StartFrame": 177,
+            "EndFrame": 177,
+            "Parameters": {
+              "player": 1,
+              "trg": 5,
+              "type": 2
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 107,
+        "GroupOptions": {
+          "Option0": 93,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 11,
+            "EndFrame": 11,
+            "Parameters": {
+              "event": "Play_vo_bl_evee_battle_196_start",
+              "is3d": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 692,
+    "sha256": "29566768eb1a097154126fdfc2a7182bf00d5dba56b55f16644f1c1501367ab0",
+    "raw_hex": "5345534403000000000000003100000000000000310000000000000000000000000000000000000000000000000026000000000000000000000000000000000000007d000000000000000000000000000000000000007c000100000001000000000000000000000000000000000000000000730057617a615f657730303031000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000020000000000000000007e000100000002000000270000000000000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65653032342f65653032345f6869742e7074636c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000060000000000000002000000020000000000000000003a000100000005000000000000000000803f000000006400000000000000000000000100000001000000000000000000000001000000010000000100000002000000020000000000000000003e00cdcc4c3fcdcc4c3fcdcc4c3f010000000000000002000000020000000000000000007000506c61795f53455f773030303200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 10,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 692
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee024",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "GaugeDisp",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "visible": 1,
+              "isUpdate": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0001"
+            }
+          },
+          {
+            "Name": "GaugeDamage",
+            "StartFrame": 2,
+            "EndFrame": 2,
+            "Parameters": {
+              "trg": 1
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 2,
+            "EndFrame": 39,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ee024/ee024_hit.ptcl",
+              "index": 0,
+              "isMulti": 1,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 2,
+            "EndFrame": 2,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                1.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 2,
+            "EndFrame": 2,
+            "Parameters": {
+              "scale": [
+                0.80000001,
+                0.80000001,
+                0.80000001
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 2,
+            "EndFrame": 2,
+            "Parameters": {
+              "event": "Play_SE_w0002",
+              "is3d": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

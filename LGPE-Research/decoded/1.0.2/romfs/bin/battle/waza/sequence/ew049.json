@@ -1,0 +1,1149 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 5068,
+    "sha256": "a6705a7fc7be316218a6c38c1fdcab33ac6571b45e104717e0681ab210b1909d",
+    "raw_hex": "5345534403000000000000007d000000000000004f0000000700000000000000000000004f0000000700000000000000000000004f0000000700000000000000000000004f0000000700000000000000000000004f0000000700000000000000000000002b0000000700000000000000000000004f0000000700000000000000000000004f0000000700000000000000000000004f000000070000000000000000000000000000000a000000000005000000000000000000000000000b0000000a000000000009000000000001000000000000000000000000000000000000000000000009000000000005000100000000000000000000000b0000000900000000000900010000000000000000000000000000000000000000000000000000000a000000000026000000000000000000000000000a00000000008200010000000000000000000000000000000000000000000000000000000a00000000007d00000000000000000000000000000000000000730057617a615f657730303439000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000190000000a000000000083000000000000000000000000003333333f0e0000000e0000000000000000007000506c61795f53455f7730303933000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f0000000f0000000a00000000001400000000001f00000011000000350000000900000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f736f6e69632e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000011000000110000000900000000003a0000000000020000000000000000000000000000007800000000000000000000000100000001000000000000000000000001000000010000000100000011000000110000000900000000004000010000000500000000000000010000000000000011000000110000000900000000003e000000004000000040000000400000000000000000120000002b0000000900000000003a00010000000500000000000000000000000000000064000000000000000000000000000000010000000000000002000000010000000100000001000000160000003b0000000a00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f736f6e69632e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000016000000160000000a00000000003a000000000002000000000020430000f041000000007800000000000000000000000100000001000000000000000000000001000000010000000100000016000000160000000a00000000004000010000000500000000000000010000000000000016000000160000000a00000000003e00000000400000004000000040000000000000000017000000300000000a00000000003a000100000005000000000000000000000000000000640000000000000000000000000000000100000000000000020000000100000001000000010000001d000000420000000b00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f736f6e69632e7074636c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006000000000000001d0000001d0000000b00000000003a000000000002000000000000000000204200000000780000000000000000000000010000000100000000000000000000000100000001000000010000001d0000001d0000000b0000000000400001000000050000000000000001000000000000001d0000001d0000000b00000000003e0000000040000000400000004000000000000000001e000000380000000b00000000003a0001000000050000000000000000000000000000005a0000000000000000000000000000000100000000000000020000000100000001000000010000001e0000006b0000000100000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f64665f6869742e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000006000000000000001e0000001e0000000100000000003a000100000005000000000000000000a04000000000640000000000000000000000010000000100000000000000000000000100000001000000010000001e0000001e0000000100000000003e000000803f0000803f0000803f00000000000000001e0000001e0000000100000000003f00000000000000000000000000000000000000000020000000240000000a000000000083006666e63e6666263f6666663f3333333f230000004b0000000c00000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f736f6e69632e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000023000000230000000c00000000003a0000000000020000000000f0420000f041000000007800000000000000000000000100000001000000000000000000000001000000010000000100000023000000230000000c00000000004000010000000500000000000000010000000000000023000000230000000c00000000003e000000004000000040000000400000000000000000240000003b0000000c00000000003a0001000000050000000000000000000000000000005a00000000000000000000000000000001000000000000000200000001000000010000000100000026000000350000000a0000000000830000000000cdcc4c3dcdcc4c3d9a99993e26000000350000000100000000003e00000000400000004000000040000000000000000027000000270000000900000000001000010000001000000029000000380000000a00000000002a00000000000000404000008040000000000100000001000000290000006e0000000200000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f64665f6869742e7074636c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000060000000000000029000000290000000200000000003a000100000005000000000000000000a040000000006400000000000000000000000100000001000000000000000000000001000000010000000100000029000000290000000200000000003e009a99993f9a99993f9a99993f000000000000000029000000290000000200000000003f0000000000000000000000f042000000000000000029000000290000000100000000007000506c61795f53455f773030393400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000290000002900000001000000000078000100000001000000000000000000000000000000000000002b0000003a0000000200000000003e0000000040000000400000004000000000000000002c0000002c0000000a00000000007c0001000000010000000000000030000000750000000300000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f64665f6869742e7074636c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000060000000000000030000000300000000300000000003a000100000005000000000000000000a040000000006400000000000000000000000100000001000000000000000000000001000000010000000100000030000000300000000300000000003e006666a63f6666a63f6666a63f000000000000000030000000300000000300000000003f00000000000000000000008c42000000000000000033000000420000000300000000003e00000000400000004000000040000000000000000036000000360000000a00000000007e0001000000380000004a0000000a00000000002a0000004040000000000000a040000000000100000001000000380000007d0000000400000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034392f65773034395f64665f6869742e7074636c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000060000000000000038000000380000000400000000003a0001000000050000000000000000000000000000006400000000000000000000000100000001000000000000000000000001000000010000000100000038000000380000000400000000003e006666a63f6666a63f6666a63f000000000000000038000000380000000400000000003f00000000000000000000008c4200000000000000003c0000004b0000000400000000003e0000000040000000400000004000000000000000005c0000005c0000000100000000003700670000006700000002000000000037006e0000006e000000030000000000370072000000790000000a000000000083000000000000000000000000000000000074000000790000000a0000000000050000000000000000007400000079000000090000000000050001000000000000007600000076000000040000000000370078000000780000000a000000000082000100000000000000000000000000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 10,
+    "command_count": 77,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 5068
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew049",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0049"
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 14,
+            "EndFrame": 14,
+            "Parameters": {
+              "event": "Play_SE_w0093",
+              "is3d": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 30,
+            "EndFrame": 107,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_df_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 2,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 30,
+            "EndFrame": 30,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 30,
+            "EndFrame": 30,
+            "Parameters": {
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleRotate",
+            "StartFrame": 30,
+            "EndFrame": 30,
+            "Parameters": {
+              "scale": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 38,
+            "EndFrame": 53,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 41,
+            "EndFrame": 41,
+            "Parameters": {
+              "event": "Play_SE_w0094",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowPoke",
+            "StartFrame": 41,
+            "EndFrame": 41,
+            "Parameters": {
+              "isEnable": 1,
+              "trg": 1,
+              "node": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "ParticleStop",
+            "StartFrame": 92,
+            "EndFrame": 92,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 2,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 41,
+            "EndFrame": 110,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_df_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 2,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 41,
+            "EndFrame": 41,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 41,
+            "EndFrame": 41,
+            "Parameters": {
+              "scale": [
+                1.20000005,
+                1.20000005,
+                1.20000005
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleRotate",
+            "StartFrame": 41,
+            "EndFrame": 41,
+            "Parameters": {
+              "scale": [
+                0.0,
+                0.0,
+                120.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 43,
+            "EndFrame": 58,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleStop",
+            "StartFrame": 103,
+            "EndFrame": 103,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 3,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 48,
+            "EndFrame": 117,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_df_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 2,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 48,
+            "EndFrame": 48,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                5.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 48,
+            "EndFrame": 48,
+            "Parameters": {
+              "scale": [
+                1.29999995,
+                1.29999995,
+                1.29999995
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleRotate",
+            "StartFrame": 48,
+            "EndFrame": 48,
+            "Parameters": {
+              "scale": [
+                0.0,
+                0.0,
+                70.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 51,
+            "EndFrame": 66,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleStop",
+            "StartFrame": 110,
+            "EndFrame": 110,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 4,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 56,
+            "EndFrame": 125,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_df_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 2,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 56,
+            "EndFrame": 56,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 56,
+            "EndFrame": 56,
+            "Parameters": {
+              "scale": [
+                1.29999995,
+                1.29999995,
+                1.29999995
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleRotate",
+            "StartFrame": 56,
+            "EndFrame": 56,
+            "Parameters": {
+              "scale": [
+                0.0,
+                0.0,
+                70.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 60,
+            "EndFrame": 75,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleStop",
+            "StartFrame": 118,
+            "EndFrame": 118,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 7,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 43,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          },
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {}
+          }
+        ]
+      },
+      {
+        "GrpNo": 9,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonRotatePoke",
+            "StartFrame": 0,
+            "EndFrame": 11,
+            "Parameters": {
+              "trgPoke": 1,
+              "dirPoke": 0,
+              "node": 0,
+              "ofs": 0.0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 17,
+            "EndFrame": 53,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_sonic.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 17,
+            "EndFrame": 17,
+            "Parameters": {
+              "trg": 0,
+              "node": 2,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 120,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleRotatePoke",
+            "StartFrame": 17,
+            "EndFrame": 17,
+            "Parameters": {
+              "dirPoke": 1,
+              "node": 5,
+              "ofs": 0.0,
+              "vertical": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 17,
+            "EndFrame": 17,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 18,
+            "EndFrame": 43,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 2,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 39,
+            "EndFrame": 39,
+            "Parameters": {
+              "trg": 1,
+              "motion": 16
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 116,
+            "EndFrame": 121,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 10,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonRotatePoke",
+            "StartFrame": 0,
+            "EndFrame": 11,
+            "Parameters": {
+              "trgPoke": 0,
+              "dirPoke": 1,
+              "node": 0,
+              "ofs": 0.0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "EffSpBackColFlg",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 1,
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 2,
+            "EndFrame": 25,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.69999999
+            }
+          },
+          {
+            "Name": "PokemonAttackMotion",
+            "StartFrame": 15,
+            "EndFrame": 15,
+            "Parameters": {
+              "trg": 0,
+              "motion": 31
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 22,
+            "EndFrame": 59,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_sonic.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 22,
+            "EndFrame": 22,
+            "Parameters": {
+              "trg": 0,
+              "node": 2,
+              "pos": [
+                160.0,
+                30.0,
+                0.0
+              ],
+              "rate": 120,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleRotatePoke",
+            "StartFrame": 22,
+            "EndFrame": 22,
+            "Parameters": {
+              "dirPoke": 1,
+              "node": 5,
+              "ofs": 0.0,
+              "vertical": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 22,
+            "EndFrame": 22,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 23,
+            "EndFrame": 48,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 2,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 32,
+            "EndFrame": 36,
+            "Parameters": {
+              "col": [
+                0.44999999,
+                0.64999998,
+                0.89999998
+              ],
+              "alpha": 0.69999999
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 38,
+            "EndFrame": 53,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.05,
+                0.05
+              ],
+              "alpha": 0.30000001
+            }
+          },
+          {
+            "Name": "CameraShake",
+            "StartFrame": 41,
+            "EndFrame": 56,
+            "Parameters": {
+              "srate": 0.0,
+              "erate": 3.0,
+              "dec": 4.0,
+              "axis": 0,
+              "pos": 1,
+              "trg": 1
+            }
+          },
+          {
+            "Name": "GaugeDisp",
+            "StartFrame": 44,
+            "EndFrame": 44,
+            "Parameters": {
+              "trg": 1,
+              "visible": 1,
+              "isUpdate": 0
+            }
+          },
+          {
+            "Name": "GaugeDamage",
+            "StartFrame": 54,
+            "EndFrame": 54,
+            "Parameters": {
+              "trg": 1
+            }
+          },
+          {
+            "Name": "CameraShake",
+            "StartFrame": 56,
+            "EndFrame": 74,
+            "Parameters": {
+              "srate": 3.0,
+              "erate": 0.0,
+              "dec": 5.0,
+              "axis": 0,
+              "pos": 1,
+              "trg": 1
+            }
+          },
+          {
+            "Name": "EffSpBackColSet",
+            "StartFrame": 114,
+            "EndFrame": 121,
+            "Parameters": {
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 116,
+            "EndFrame": 121,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "EffSpBackColFlg",
+            "StartFrame": 120,
+            "EndFrame": 120,
+            "Parameters": {
+              "visible": 1,
+              "col": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "alpha": 0.0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 11,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 29,
+            "EndFrame": 66,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_sonic.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 29,
+            "EndFrame": 29,
+            "Parameters": {
+              "trg": 0,
+              "node": 2,
+              "pos": [
+                0.0,
+                40.0,
+                0.0
+              ],
+              "rate": 120,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleRotatePoke",
+            "StartFrame": 29,
+            "EndFrame": 29,
+            "Parameters": {
+              "dirPoke": 1,
+              "node": 5,
+              "ofs": 0.0,
+              "vertical": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 29,
+            "EndFrame": 29,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 30,
+            "EndFrame": 56,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 90,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 2,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 12,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 35,
+            "EndFrame": 75,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew049/ew049_sonic.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 35,
+            "EndFrame": 35,
+            "Parameters": {
+              "trg": 0,
+              "node": 2,
+              "pos": [
+                120.0,
+                30.0,
+                0.0
+              ],
+              "rate": 120,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleRotatePoke",
+            "StartFrame": 35,
+            "EndFrame": 35,
+            "Parameters": {
+              "dirPoke": 1,
+              "node": 5,
+              "ofs": 0.0,
+              "vertical": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 35,
+            "EndFrame": 35,
+            "Parameters": {
+              "scale": [
+                2.0,
+                2.0,
+                2.0
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 36,
+            "EndFrame": 59,
+            "Parameters": {
+              "trg": 1,
+              "node": 5,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 90,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 0,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 2,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

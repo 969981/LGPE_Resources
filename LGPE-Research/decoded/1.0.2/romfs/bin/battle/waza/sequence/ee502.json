@@ -1,0 +1,123 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 828,
+    "sha256": "cd1ddb7f96d7e311d42a8a623efedee131b655c3bd92ae9155e2e903ba6019a7",
+    "raw_hex": "5345534403000000000000000000000000000000000000000000000000007d00000000000000000000000000000000000000880000000000000000005c8f42bf666626bf00000000000000000000000000000000000000000000cb000000fac3000000000000fac30000fac3000000000000fac30100000000000000000000000000000000002e0003000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f6c6f73652f65653530305f6c6f73655f415f43414d5f30312e67666263616d00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f6c6f73652f65653530305f6c6f73655f415f43414d5f30312e67666263616d61000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000005761697374000000000000000000000000000000000000000000000000000000000000000000a0400000a040010000000100000000000000000000000100000000000000000000000000000000000e00000000000000000000000000000000000000aa0004000000746f5f6261303036305f6c6f736530315f7374617274000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 6,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 828
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee502",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "EffCharaLightDirection",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "reset": 0,
+              "dir": [
+                0.0,
+                -0.75999999,
+                -0.64999998
+              ],
+              "flip": 0,
+              "flipTrg": 0
+            }
+          },
+          {
+            "Name": "EffShadowBox",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "minVec": [
+                -500.0,
+                0.0,
+                -500.0
+              ],
+              "maxVec": [
+                -500.0,
+                0.0,
+                -500.0
+              ],
+              "rerative": 1
+            }
+          },
+          {
+            "Name": "CameraAnimationTrainer",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "camType": 3,
+              "camFile": "data:/bin/battle/waza/camera/lose/ee500_lose_A_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/lose/ee500_lose_A_CAM_01.gfbcama",
+              "trg": 4,
+              "node": "Waist",
+              "pos": [
+                0.0,
+                5.0,
+                5.0
+              ],
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 0,
+              "forceUpdate": 0,
+              "isLoseCam": 1
+            }
+          },
+          {
+            "Name": "PokemonVisibleAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "TrainerChangeMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 4,
+              "state": "to_ba0060_lose01_start"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

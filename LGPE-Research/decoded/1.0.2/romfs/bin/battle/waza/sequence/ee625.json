@@ -1,0 +1,227 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 1148,
+    "sha256": "f3f07ff08e78bf9f2dd3eaea49e577882b31158c46aa38f1a75f122c3b75b566",
+    "raw_hex": "534553440300000000000000a1000000000000000000000000006e0000002c00646174613a2f62696e2f626174746c652f77617a612f63616d6572612f6368616e67652f65653632305f6368616e67655f43414d5f30312e67666263616d0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000646174613a2f62696e2f626174746c652f77617a612f63616d6572612f6368616e67652f65653632305f6368616e67655f43414d5f30312e67666263616d61000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000c8c10000000001000000000000000100000000000000000000000000000000006e0000003400cdcc4c3f0000000000000000000000000000110000000000746f5f6261303038305f6368616e67653032000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001500000000003333933f0000000000000000000000000000b90000000000010000000000000000000000000000000000ba0000000000000000000000000000000000000000000000cc00000000000100000000000000000000000000000000000d000000000000000000000000000000000000000600000000001d0000001d0000006700000000007100506c61795f766f5f626c5f706b5f626174746c655f31393900000000000000000000000000000000000000000000000000000000000000000000000000000000506c61795f766f5f626c5f657665655f626174746c655f313939000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000a000000000006e000000310001000000a0000000a00000000000000000001500000000000000803fa0000000a0000000000000000000c7000400000000000000a0000000a0000000000000000000b100a0000000a0000000000000000000c8000000000000000000a0000000a0000000000000000000cc000000000000000000a1000000a100000000006e000000260000000000a1000000a10000000000000000000d0001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 3,
+    "command_count": 18,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 1148
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee625",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 110,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraAnimationPoke",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "camFile": "data:/bin/battle/waza/camera/change/ee620_change_CAM_01.gfbcam",
+              "anmFile": "data:/bin/battle/waza/camera/change/ee620_change_CAM_01.gfbcama",
+              "trg": 0,
+              "node": 0,
+              "pos": [
+                0.0,
+                -25.0,
+                0.0
+              ],
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "forceUpdate": 0
+            }
+          },
+          {
+            "Name": "CameraAnimationChangeSpeed",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "speed": 0.80000001
+            }
+          },
+          {
+            "Name": "CameraAnimationEnd",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "isHoldPos": 1
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 161,
+            "EndFrame": 161,
+            "Parameters": {
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMotionState",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "state": "to_ba0080_change02",
+              "reset": 0
+            }
+          },
+          {
+            "Name": "PokemonSetMotionSpeed",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "speed": 1.14999998
+            }
+          },
+          {
+            "Name": "SpecialTameVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "visible": 1
+            }
+          },
+          {
+            "Name": "SpecialMigawariVisible",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonDisableSleepEye",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "disable": 1
+            }
+          },
+          {
+            "Name": "PokemonVisibleOther",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveResetAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonSetMotionSpeed",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "trg": 0,
+              "speed": 1.0
+            }
+          },
+          {
+            "Name": "LGPEcommand199",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "param1": 4,
+              "param2": 0
+            }
+          },
+          {
+            "Name": "SpecialAllReset",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {}
+          },
+          {
+            "Name": "LGPEcommand200",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "param1": 0,
+              "param2": 0
+            }
+          },
+          {
+            "Name": "PokemonDisableSleepEye",
+            "StartFrame": 160,
+            "EndFrame": 160,
+            "Parameters": {
+              "trg": 0,
+              "disable": 0
+            }
+          },
+          {
+            "Name": "PokemonVisibleOther",
+            "StartFrame": 161,
+            "EndFrame": 161,
+            "Parameters": {
+              "visible": 1
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 103,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySeVersion",
+            "StartFrame": 29,
+            "EndFrame": 29,
+            "Parameters": {
+              "pikaEvent": "Play_vo_bl_pk_battle_199",
+              "eeveEvent": "Play_vo_bl_evee_battle_199",
+              "is3d": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

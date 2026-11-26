@@ -1,0 +1,119 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 544,
+    "sha256": "746e90bbc753be2eeee49e2caef6a8559869cc4d6fdc127208ba5676da28a0ec",
+    "raw_hex": "5345534403000000000000003d000000000000003100000000000000000000000000000000000000000000000000260000000000000000003d0000000000000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65733031312f65733031315f666c6173682e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000003e006666663f6666663f6666663f010000000000000000000000000000000000000000003a000000000005000000000000000000204100000c426400000001000000000000000100000001000000000000000000000001000000010000000100000000000000000000000000000000007000506c61795f53455f626174746c655f7379735f3033375f736869656c64000000000000000000000000000000000000000000000000000000000000000000000001000000ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 6,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 544
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "es011",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 0,
+            "EndFrame": 61,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/es011/es011_flash.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "scale": [
+                0.89999998,
+                0.89999998,
+                0.89999998
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "node": 5,
+              "pos": [
+                0.0,
+                10.0,
+                35.0
+              ],
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "event": "Play_SE_battle_sys_037_shield",
+              "is3d": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

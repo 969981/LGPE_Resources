@@ -1,0 +1,600 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 2584,
+    "sha256": "f713cc2a33efaf0dd70cc02b02f68ef8e58d87e0b0fff0593b8dc6d0a906e1e7",
+    "raw_hex": "534553440300000000000000b100000000000000310000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000009000000000001000000000000000000000000000000000000000000000000000000000026000000000000000000000000000000000000007d00000000000000000000000000000000000000730057617a615f65773032363900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000017000000000000000000240000000000040000000000484300008c42000048c3000048420000c841000048420000000064000000010000000000000001000000000000000000000001000000010000000100000001000000010000000100000008000000510000000000000000004d00646174613a2f62696e2f626174746c652f77617a612f6d6f64656c2f65773236395f68616e6430312f65773236395f68616e6430312e6766626d646c000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000008000000080000000000000000006700646174613a2f62696e2f626174746c652f77617a612f6d6f64656c2f616e6d2f65773236395f68616e6430312e676662616e6d6366670000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000080000000000000000006a0065773236395f68616e64303100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000800000000000000000051000000000006000000000000000000a04100008c426400000000000000000000000100000001000000000000000000000001000000010000000100000008000000080000000000000000005400cdcccc3dcdcccc3dcdcccc3d000000000000000008000000080000000000000000005500000000000000000000000000010000000000000008000000080000000000000000007000506c61795f53455f7730343038000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000800000008000000000000000000790001000000000000000000000000000000000000000a0000001300000000000000000054009a99193f9a99193f9a99193f00000000000000000e0000000e0000000100000000007000506c61795f53455f7730343039000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000e0000000e0000000100000000007900010000000000000000000000000000000000000027000000270000000200000000007000506c61795f53455f773034303900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000270000002700000002000000000079000100000000000000000000000000000000000000280000003d000000010000000000090001000000000000000000000000000000000000003c0000003c0000000100000000001000010000001f00000040000000400000000300000000007000506c61795f53455f77303430390000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000040000000400000000300000000007900010000000000000000000000000000000000000046000000a10000000400000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773236392f65773236395f64665f6869742e7074636c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000046000000460000000400000000003e000000c03f0000c03f0000c03f010000000000000046000000460000000400000000003a0001000000040000000000000000002041000020426400000000000000000000000100000001000000000000000000000001000000010000000100000046000000460000000400000000003f00000050c2000000000000000001000000000000004a0000004a0000000400000000007000506c61795f53455f7730343130000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000004a0000004a000000040000000000780001000000010000000000000000000000000000000000000050000000650000000100000000001800010000000000803f0000803f0000803f000000000000803f0000803e0000803e0000003f5a0000006f000000000000000000240001000000060000000000b4420000a0410000af43000000000000000000000000000000006400000001000000010000000100000000000000000000000100000001000000010000000100000001000000010000006c0000006c00000005000000000074000100000001000000000000006e000000970000000000000000002a000000a040000020400000104101000000010000000100000092000000a10000000100000000001800010000000000803f0000803e0000803e0000003f0000803f0000803f0000803f00000000a6000000b100000000000000000005000000000000000000a6000000b100000001000000000005000100000000000000b0000000b0000000000000000000260000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 6,
+    "command_count": 38,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 2584
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew269",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 0,
+              "motion": 0
+            }
+          },
+          {
+            "Name": "PokemonRotatePoke",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trgPoke": 0,
+              "dirPoke": 1,
+              "node": 0,
+              "ofs": 0.0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0269"
+            }
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 2,
+            "EndFrame": 23,
+            "Parameters": {
+              "poke": 0,
+              "node": 4,
+              "pos": [
+                200.0,
+                70.0,
+                -200.0
+              ],
+              "trg": [
+                50.0,
+                25.0,
+                50.0
+              ],
+              "fov": 0.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 0,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ModelCreate",
+            "StartFrame": 8,
+            "EndFrame": 81,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/model/ew269_hand01/ew269_hand01.gfbmdl",
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "castShadow": 0
+            }
+          },
+          {
+            "Name": "ModelSetAnimationConfig",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/model/anm/ew269_hand01.gfbanmcfg"
+            }
+          },
+          {
+            "Name": "ModelCahngeAnimationState",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "state": "ew269_hand01"
+            }
+          },
+          {
+            "Name": "ModelMoveRelativePoke",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "trg": 0,
+              "node": 6,
+              "pos": [
+                0.0,
+                20.0,
+                70.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ModelScale",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "scale": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ModelRotate",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "scale": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "event": "Play_SE_w0408",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowObj",
+            "StartFrame": 8,
+            "EndFrame": 8,
+            "Parameters": {
+              "type": 1,
+              "trg": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "ModelScale",
+            "StartFrame": 10,
+            "EndFrame": 19,
+            "Parameters": {
+              "scale": [
+                0.60000002,
+                0.60000002,
+                0.60000002
+              ],
+              "relative": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraMoveRelativePoke",
+            "StartFrame": 90,
+            "EndFrame": 111,
+            "Parameters": {
+              "poke": 1,
+              "node": 6,
+              "pos": [
+                90.0,
+                20.0,
+                350.0
+              ],
+              "trg": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "fov": 0.0,
+              "rate": 100,
+              "isFlip": 1,
+              "isScale": 1,
+              "isRot": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElemPos": [
+                1,
+                1,
+                1
+              ],
+              "enableElemTrg": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "CameraShake",
+            "StartFrame": 110,
+            "EndFrame": 151,
+            "Parameters": {
+              "srate": 5.0,
+              "erate": 2.5,
+              "dec": 9.0,
+              "axis": 1,
+              "pos": 1,
+              "trg": 1
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 166,
+            "EndFrame": 177,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 176,
+            "EndFrame": 176,
+            "Parameters": {
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 14,
+            "EndFrame": 14,
+            "Parameters": {
+              "event": "Play_SE_w0409",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowObj",
+            "StartFrame": 14,
+            "EndFrame": 14,
+            "Parameters": {
+              "type": 1,
+              "trg": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "PokemonRotatePoke",
+            "StartFrame": 40,
+            "EndFrame": 61,
+            "Parameters": {
+              "trgPoke": 1,
+              "dirPoke": 0,
+              "node": 0,
+              "ofs": 0.0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonMotion",
+            "StartFrame": 60,
+            "EndFrame": 60,
+            "Parameters": {
+              "trg": 1,
+              "motion": 31
+            }
+          },
+          {
+            "Name": "PokemonShaderCol",
+            "StartFrame": 80,
+            "EndFrame": 101,
+            "Parameters": {
+              "trg": 1,
+              "start_col": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "start_pow": 0.0,
+              "end_col": [
+                1.0,
+                0.25,
+                0.25
+              ],
+              "end_pow": 0.5
+            }
+          },
+          {
+            "Name": "PokemonShaderCol",
+            "StartFrame": 146,
+            "EndFrame": 161,
+            "Parameters": {
+              "trg": 1,
+              "start_col": [
+                1.0,
+                0.25,
+                0.25
+              ],
+              "start_pow": 0.5,
+              "end_col": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "end_pow": 0.0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 166,
+            "EndFrame": 177,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 2,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 39,
+            "EndFrame": 39,
+            "Parameters": {
+              "event": "Play_SE_w0409",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowObj",
+            "StartFrame": 39,
+            "EndFrame": 39,
+            "Parameters": {
+              "type": 1,
+              "trg": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 3,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 64,
+            "EndFrame": 64,
+            "Parameters": {
+              "event": "Play_SE_w0409",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowObj",
+            "StartFrame": 64,
+            "EndFrame": 64,
+            "Parameters": {
+              "type": 1,
+              "trg": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 4,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 70,
+            "EndFrame": 161,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew269/ew269_df_hit.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 70,
+            "EndFrame": 70,
+            "Parameters": {
+              "scale": [
+                1.5,
+                1.5,
+                1.5
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 70,
+            "EndFrame": 70,
+            "Parameters": {
+              "trg": 1,
+              "node": 4,
+              "pos": [
+                0.0,
+                10.0,
+                40.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleRotate",
+            "StartFrame": 70,
+            "EndFrame": 70,
+            "Parameters": {
+              "scale": [
+                -52.0,
+                0.0,
+                0.0
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 74,
+            "EndFrame": 74,
+            "Parameters": {
+              "event": "Play_SE_w0410",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowPoke",
+            "StartFrame": 74,
+            "EndFrame": 74,
+            "Parameters": {
+              "isEnable": 1,
+              "trg": 1,
+              "node": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 5,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "BelugaSoundPlayVoice",
+            "StartFrame": 108,
+            "EndFrame": 108,
+            "Parameters": {
+              "player": 1,
+              "trg": 1,
+              "type": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

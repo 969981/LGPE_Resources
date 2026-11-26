@@ -1,0 +1,57 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 56,
+    "sha256": "0733e61dac78b97f91db821d721b950ec00b37f2f8a9df3b258c0997350639fe",
+    "raw_hex": "5345534403000000000000004f000000000000004f000000000000000000200000000000060000000000f04200000000000048c3ffffffff"
+  },
+  "validation": {
+    "group_count": 1,
+    "command_count": 1,
+    "byte_roundtrip_exact": true,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 56
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ee014",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonLookAt",
+            "StartFrame": 0,
+            "EndFrame": 79,
+            "Parameters": {
+              "trg": 0,
+              "node": 6,
+              "ofs": [
+                120.0,
+                0.0,
+                -200.0
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

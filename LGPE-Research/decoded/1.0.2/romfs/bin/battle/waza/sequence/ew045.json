@@ -1,0 +1,254 @@
+{
+  "schema": "lgpe-research.bseq.v1",
+  "decoder": {
+    "name": "pbseqtool SESD parser",
+    "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+    "game_dictionary": "LGPECommandReference.json",
+    "command_dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+    "license_status": "README grants reuse as a base; no formal LICENSE file",
+    "semantics_status": "command names/parameters are parser-reference fields; gameplay meanings remain unverified"
+  },
+  "source": {
+    "format": "SESD",
+    "lgpe_format_version": 3,
+    "size": 924,
+    "sha256": "02c619c24cee7682efb791bcb33577986126d4ac88c73985979912656ab51b81",
+    "raw_hex": "534553440300000000000000890000000000000031000000000000000000000000000000000000000100000000000500010000000000000000000000000000000a000000000026000000000000000000000000000000000000007d00000000000000000000000000000000000000730057617a615f65773030343500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e000000230000000000000000000a00000000000100000000000000000000000000000001000000010000000000000000000000220000002200000000000000000014000000000027000000240000007b0000000100000000003600646174613a2f62696e2f626174746c652f77617a612f7061727469636c652f65773034352f65773034355f766f6963652e7074636c0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000060000000000000024000000240000000100000000003a0000000000020000000000000000000000000000006400000000000000000000000100000001000000000000000000000001000000010000000100000024000000240000000100000000003e000000a0400000a0400000a04001000000000000002400000024000000010000000000740001000000000000000000000027000000270000000000000000007000506c61795f53455f773030383800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000270000002700000000000000000078000100000000000000000000000000000000000000000000003a000000630000000100000000001c00010000000000a0400000a04000000000000040400300000000000000580000005d0000000100000000000500010000000000000074000000890000000000000000000500000000000000000088000000880000000a0000000000260000000000ffffffff"
+  },
+  "validation": {
+    "group_count": 3,
+    "command_count": 17,
+    "byte_roundtrip_exact": false,
+    "semantic_roundtrip_equal": true,
+    "rebuilt_size": 924
+  },
+  "sequence": {
+    "Metadata": {
+      "Game": "LGPE",
+      "Name": "ew045",
+      "Description": ""
+    },
+    "Data": [
+      {
+        "GrpNo": 0,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "DummyLabel",
+            "StartFrame": 0,
+            "EndFrame": 49,
+            "Parameters": {}
+          },
+          {
+            "Name": "GaugeDispAll",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "visible": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundLoadBank",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "name": "Waza_ew0045"
+            }
+          },
+          {
+            "Name": "PokemonRotateSpecialPos",
+            "StartFrame": 14,
+            "EndFrame": 35,
+            "Parameters": {
+              "trgPoke": 0,
+              "pos": 1,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "isFlip": 1,
+              "isRot": 1,
+              "rotOfs": 0.0,
+              "move": 0
+            }
+          },
+          {
+            "Name": "PokemonAttackMotion",
+            "StartFrame": 34,
+            "EndFrame": 34,
+            "Parameters": {
+              "trg": 0,
+              "motion": 39
+            }
+          },
+          {
+            "Name": "BelugaSoundPlaySe",
+            "StartFrame": 39,
+            "EndFrame": 39,
+            "Parameters": {
+              "event": "Play_SE_w0088",
+              "is3d": 1
+            }
+          },
+          {
+            "Name": "SoundBelugaFollowPoke",
+            "StartFrame": 39,
+            "EndFrame": 39,
+            "Parameters": {
+              "isEnable": 1,
+              "trg": 0,
+              "node": 0,
+              "ofs": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 116,
+            "EndFrame": 137,
+            "Parameters": {
+              "trg": 0,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 1,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "ParticleCreate",
+            "StartFrame": 36,
+            "EndFrame": 123,
+            "Parameters": {
+              "file": "data:/bin/battle/waza/particle/ew045/ew045_voice.ptcl",
+              "index": 0,
+              "isMulti": 0,
+              "drawType": 0,
+              "rotOrder": 6,
+              "forceCalc": 0
+            }
+          },
+          {
+            "Name": "ParticleMoveRelativePoke",
+            "StartFrame": 36,
+            "EndFrame": 36,
+            "Parameters": {
+              "trg": 0,
+              "node": 2,
+              "pos": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rate": 100,
+              "isFlip": 0,
+              "isScale": 0,
+              "isRot": 1,
+              "isRotPos": 1,
+              "forceUpdate": 0,
+              "move": 0,
+              "enableElem": [
+                1,
+                1,
+                1
+              ]
+            }
+          },
+          {
+            "Name": "ParticleScale",
+            "StartFrame": 36,
+            "EndFrame": 36,
+            "Parameters": {
+              "scale": [
+                5.0,
+                5.0,
+                5.0
+              ],
+              "relative": 1,
+              "move": 0
+            }
+          },
+          {
+            "Name": "BelugaSoundPlayVoice",
+            "StartFrame": 36,
+            "EndFrame": 36,
+            "Parameters": {
+              "player": 1,
+              "trg": 0,
+              "type": 0
+            }
+          },
+          {
+            "Name": "PokemonSpMoveShake",
+            "StartFrame": 58,
+            "EndFrame": 99,
+            "Parameters": {
+              "trg": 1,
+              "srate": 5.0,
+              "erate": 5.0,
+              "sdec": 0.0,
+              "edec": 3.0,
+              "axis": 3,
+              "isFlip": 0
+            }
+          },
+          {
+            "Name": "PokemonMoveReset",
+            "StartFrame": 88,
+            "EndFrame": 93,
+            "Parameters": {
+              "trg": 1,
+              "move": 0
+            }
+          }
+        ]
+      },
+      {
+        "GrpNo": 10,
+        "GroupOptions": {
+          "Option0": 0,
+          "Option1": 0
+        },
+        "Commands": [
+          {
+            "Name": "CameraReset",
+            "StartFrame": 0,
+            "EndFrame": 0,
+            "Parameters": {
+              "move": 0
+            }
+          },
+          {
+            "Name": "CameraReset",
+            "StartFrame": 136,
+            "EndFrame": 136,
+            "Parameters": {
+              "move": 0
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
