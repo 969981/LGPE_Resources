@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro__adjust_textbox" host="W00668" date="2018-02-21T20:01:23.958571+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="0" endFrame="3" animLoop="OneTime" fileName="in" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="out" startFrame="10" endFrame="13" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="key4" startFrame="1" endFrame="1" animLoop="Wait" fileName="key4" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>テキスト４行</comment>
+      <userData />
+      <group name="G_keyassignment_00" />
+    </animTag>
+    <animTag name="key5" startFrame="0" endFrame="0" animLoop="Wait" fileName="key5" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>テキスト５行</comment>
+      <userData />
+      <group name="G_keyassignment_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_text_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-217" slopeType="Step" />
+          <key frame="1" value="-217" slopeType="Step" />
+          <key frame="1" value="-242" slopeType="Step" />
+          <key frame="1" value="-242" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_inout_01">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-100" slopeType="Smooth" />
+          <key frame="3" value="0" slopeType="Smooth" />
+          <key frame="10" value="0" slopeType="Smooth" />
+          <key frame="13" value="-100" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="13" value="0" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_inout_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="13" value="0" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="T_text_R_04">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="T_text_L_04">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

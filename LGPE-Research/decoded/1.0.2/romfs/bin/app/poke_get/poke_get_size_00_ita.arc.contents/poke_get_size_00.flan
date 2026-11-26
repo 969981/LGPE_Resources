@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="takasu_momoka" host="W00725" date="2017-12-13T12:55:39.0858556+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="pop_up" startFrame="0" endFrame="30" animLoop="OneTime" fileName="pop_up" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_pop_up_00" />
+    </animTag>
+    <animTag name="big" startFrame="0" endFrame="0" animLoop="Wait" fileName="big" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_switch_00" />
+    </animTag>
+    <animTag name="small" startFrame="1" endFrame="1" animLoop="Wait" fileName="small" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_switch_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_pop_up_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="65" slopeType="Flat" />
+          <key frame="30" value="65" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="0.8" slopeType="Flat" />
+          <key frame="6" value="1" slope="0.001298218" />
+          <key frame="26" value="1" slope="-0.00113005657" />
+          <key frame="30" value="0.96" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="0.8" slopeType="Flat" />
+          <key frame="6" value="1" slope="0.001298218" />
+          <key frame="26" value="1" slope="-0.00113005657" />
+          <key frame="30" value="0.96" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_pop_up_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="27" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="27" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slope="-85" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_pop_up_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="g_text_size_big_00" />
+          <refRes name="g_text_size_small_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

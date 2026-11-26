@@ -1,0 +1,2094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika__adjust_textbox" host="W00740" date="2018-05-08T14:49:34.544864+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="fade_in" startFrame="10" endFrame="15" animLoop="OneTime" fileName="fade_in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>フェードイン</comment>
+      <userData />
+      <group name="G_fadeinout_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="fade_out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>フェードアウト</comment>
+      <userData />
+      <group name="G_fadeinout_00" />
+    </animTag>
+    <animTag name="result_in" startFrame="20" endFrame="200" animLoop="OneTime" fileName="result_in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>リザルトアニメ再生</comment>
+      <userData />
+      <group name="G_result_00" />
+    </animTag>
+    <animTag name="result_change" startFrame="0" endFrame="2" animLoop="OneTime" fileName="result_change" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>0F １P勝利
+1F ２P勝利
+2F ドロー</comment>
+      <userData />
+      <group name="G_result_change_00" />
+    </animTag>
+    <animTag name="vs_fade_out_00" startFrame="0" endFrame="60" animLoop="OneTime" fileName="vs_fade_out_00" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>バトル開始用フェードアウト</comment>
+      <userData />
+      <group name="G_vs_fade_00" />
+    </animTag>
+    <animTag name="vs_fade_out_01" startFrame="60" endFrame="96" animLoop="OneTime" fileName="vs_fade_out_01" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>バトル開始用フェードアウト</comment>
+      <userData />
+      <group name="G_vs_fade_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="120" fileName="keep" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>常に流し続けてください</comment>
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="patern_00" startFrame="0" endFrame="0" animLoop="Wait" fileName="patern_00" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>シングル</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <animTag name="patern_01" startFrame="1" endFrame="1" animLoop="Wait" fileName="patern_01" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>ダブル</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="240" convertStartFrame="0" convertEndFrame="240">
+      <animContent name="W_window_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Step" />
+          <key frame="10" value="1" slopeType="Step" />
+          <key frame="10" value="0.8" slopeType="Flat" />
+          <key frame="15" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="inout">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Linear" />
+          <key frame="0" value="1" slope="-0.166666672" slopeType="Linear" />
+          <key frame="3" value="0.5" slope="-0.166666672" slopeType="Linear" />
+          <key frame="3" value="0.5" slope="0.166666672" slopeType="Linear" />
+          <key frame="6" value="1" slope="0.166666672" slopeType="Linear" />
+          <key frame="6" value="1" slopeType="Linear" />
+          <key frame="10" value="1" slopeType="Linear" />
+          <key frame="10" value="1" slope="-0.166666672" slopeType="Linear" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Linear" />
+          <key frame="0" value="1" slope="-0.166666672" slopeType="Linear" />
+          <key frame="3" value="0.5" slope="-0.166666672" slopeType="Linear" />
+          <key frame="3" value="0.5" slope="0.166666672" slopeType="Linear" />
+          <key frame="6" value="1" slope="0.166666672" slopeType="Linear" />
+          <key frame="6" value="1" slopeType="Linear" />
+          <key frame="10" value="1" slopeType="Linear" />
+          <key frame="10" value="1" slope="-0.166666672" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_fadeinout_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Step" />
+          <key frame="10" value="0" slopeType="Step" />
+          <key frame="10" value="-160" />
+          <key frame="10" value="-160" slope="75.46867" />
+          <key frame="15" value="0" slope="-2" slopeType="Linear" />
+          <key frame="15" value="0" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_fadeinout_01">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Step" />
+          <key frame="10" value="0" slopeType="Step" />
+          <key frame="10" value="160" />
+          <key frame="10" value="160" slope="-84.55555" />
+          <key frame="15" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_win_draw_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="20" value="-80" />
+          <key frame="20" value="-80" slope="10.9960718" />
+          <key frame="40" value="0" slope="-2.643675" />
+          <key frame="40" value="0" />
+          <key frame="50" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_lose_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="20" value="-80" slope="-8.14371" />
+          <key frame="40" value="-162" slopeType="Flat" />
+          <key frame="50" value="-162" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_battleType_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="2" slopeType="Step" />
+          <key frame="10" value="2" slopeType="Step" />
+          <key frame="10" value="1" slope="-0.1" slopeType="Linear" />
+          <key frame="10" value="1" slope="0.333333343" slopeType="Linear" />
+          <key frame="13" value="2" slope="0.333333343" slopeType="Linear" />
+          <key frame="13" value="2" slope="0.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="2" slopeType="Step" />
+          <key frame="10" value="2" slopeType="Step" />
+          <key frame="10" value="1" slope="-0.1" slopeType="Linear" />
+          <key frame="10" value="1" slope="0.333333343" slopeType="Linear" />
+          <key frame="13" value="2" slope="0.333333343" slopeType="Linear" />
+          <key frame="13" value="2" slope="0.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="240" convertStartFrame="0" convertEndFrame="240">
+      <animContent name="W_window_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="15" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="inout">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="6" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="6" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slope="-85" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_fadeinout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="0" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="293.6202" />
+          <key xsi:type="HermiteU8" frame="13" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_fadeinout_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="0" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="293.6202" />
+          <key xsi:type="HermiteU8" frame="13" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_fadeinout_02">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="-25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="11" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="11" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="14" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="14" value="255" slope="63.75" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_win_draw_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="25.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_win_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="120" value="35" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_win_02">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="120" value="35" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_lose_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="25.5" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_lose_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="120" value="35" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_lose_03">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="120" value="35" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_draw_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="35" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="120" value="35" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_02">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="61" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="61" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_03">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="62" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_04">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="63" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_05">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="64" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_06">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="65" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_07">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="66" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_08">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="67" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_09">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="68" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_10">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="69" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_21">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_22">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_23">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_24">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_25">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_26">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_27">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_28">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_29">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_30">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_31">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_32">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_33">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_34">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_35">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_36">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_37">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="92" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_38">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="93" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_39">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="93" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_40">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="94" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="96" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="96" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_41">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_42">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_43">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_44">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_45">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_46">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_47">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_48">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_49">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_50">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_51">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_52">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_53">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_54">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_55">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_56">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_57">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_58">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_59">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_60">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="92" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_61">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_62">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_63">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_64">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_65">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_66">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_67">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_68">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="78" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_69">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_70">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_71">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_72">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_73">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_74">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_75">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_76">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_77">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_78">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_79">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_80">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_81">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_82">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_83">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_84">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_85">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_86">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_87">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="77" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_88">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_89">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_90">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_91">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_92">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_93">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_94">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_95">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_96">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_97">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_98">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_99">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_100">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_101">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_102">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_103">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_104">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_105">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_106">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="77" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_107">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="78" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_108">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_109">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_110">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_111">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_112">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_113">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_114">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_115">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_116">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_117">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_118">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_119">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_120">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_11">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_12">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="61" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="61" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_13">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="62" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="62" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_14">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="63" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="63" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_15">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="64" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="64" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_16">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="65" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_17">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="66" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="66" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_18">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="67" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="67" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_19">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="68" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="68" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_20">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="69" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="69" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_121">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_122">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_123">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_124">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_125">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_126">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_127">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_128">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_129">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_130">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_131">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_132">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_133">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_134">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_135">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_136">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_137">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="92" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_138">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="93" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_139">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="93" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="95" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_140">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="94" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="96" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="96" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_141">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_142">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="71" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="71" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_143">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_144">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_145">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_146">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_147">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_148">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_149">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_150">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_151">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_152">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_153">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_154">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_155">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_156">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_157">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_158">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_159">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="91" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="93" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_160">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="92" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="94" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_161">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_162">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_163">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="72" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="72" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_164">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_165">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_166">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_167">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_168">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="78" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_169">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_170">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_171">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_172">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_173">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_174">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_175">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_176">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_177">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_178">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_179">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_180">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="92" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_181">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_182">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_183">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_184">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_185">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_186">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_187">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="77" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_188">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_189">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_190">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_191">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_192">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_193">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_194">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_195">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_196">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_197">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_198">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_199">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_000">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="89" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="91" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_001">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_002">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="74" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="74" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_003">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="75" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_004">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_005">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="76" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="76" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_006">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="77" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="77" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_007">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="78" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="78" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_008">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="79" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="79" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_009">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_010">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="81" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="81" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_011">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="82" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="82" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_012">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="83" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="83" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_013">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="84" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="84" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_014">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_015">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="85" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_016">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="86" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="86" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_017">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_018">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="87" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="87" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="89" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_019">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_020">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="88" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="88" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_battleType_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="25" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="25" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="10" value="0" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="13.4235992" />
+          <key xsi:type="HermiteU8" frame="13" value="25" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TextureSRT" startFrame="0" endFrame="240" convertStartFrame="0" convertEndFrame="240">
+      <animContent name="P_win_04">
+        <animTexSRTTarget id="1" target="TranslateS">
+          <key frame="0" value="2.2" slopeType="Linear" />
+          <key frame="38" value="2.2" slopeType="Linear" />
+          <key frame="38" value="2.2" slope="-0.183333337" slopeType="Linear" />
+          <key frame="62" value="-2.2" slope="-0.183333337" slopeType="Linear" />
+          <key frame="62" value="-2.2" slopeType="Linear" />
+          <key frame="120" value="-2.2" slopeType="Smooth" />
+        </animTexSRTTarget>
+      </animContent>
+      <animContent name="P_win_05">
+        <animTexSRTTarget id="1" target="TranslateS">
+          <key frame="0" value="2.2" slopeType="Linear" />
+          <key frame="38" value="2.2" slopeType="Linear" />
+          <key frame="38" value="2.2" slope="-0.183333337" slopeType="Linear" />
+          <key frame="62" value="-2.2" slope="-0.183333337" slopeType="Linear" />
+          <key frame="62" value="-2.2" slopeType="Linear" />
+          <key frame="120" value="-2.2" slopeType="Smooth" />
+        </animTexSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="240" convertStartFrame="0" convertEndFrame="240">
+      <animContent name="P_battleType_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="NBR_BGicon_single_00" />
+          <refRes name="NBR_BGicon_double_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="240" convertStartFrame="0" convertEndFrame="240">
+      <animContent name="P_win_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_win_02">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_lose_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_lose_03">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_draw_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

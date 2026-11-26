@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="fukushima_yuya__adjust_textbox" host="W00703" date="2017-10-16T19:44:16.710307+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="4" endFrame="8" animLoop="OneTime" fileName="in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="inout" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="inout" />
+    </animTag>
+    <animTag name="visible" startFrame="1" endFrame="1" animLoop="Wait" fileName="visible" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>表示</comment>
+      <userData />
+      <group name="visible" />
+    </animTag>
+    <animTag name="invisible" startFrame="0" endFrame="0" animLoop="Wait" fileName="invisible" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>非表示</comment>
+      <userData />
+      <group name="visible" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_window_01">
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="3" value="0.95" slope="-0.0277079213" />
+          <key frame="3" value="0.95" />
+          <key frame="4" value="0.95" />
+          <key frame="4" value="0.95" slope="0.0209893752" />
+          <key frame="8" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_BG_shadow_20px_00">
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slope="-0.25" slopeType="Linear" />
+          <key frame="4" value="0" slope="-0.25" slopeType="Linear" />
+          <key frame="4" value="0" slope="0.25" slopeType="Linear" />
+          <key frame="8" value="1" slope="0.25" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_visible_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="-63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_window_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slope="63.75" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_visible_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

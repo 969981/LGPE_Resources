@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika__adjust_textbox" host="W00740" date="2018-06-15T13:24:51.38494+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="3" endFrame="6" animLoop="OneTime" fileName="in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="3000" animLoop="OneTime" fileName="keep" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="fade_in" startFrame="3" endFrame="6" animLoop="OneTime" fileName="fade_in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="fade_out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="pattern_version" startFrame="0" endFrame="1" animLoop="OneTime" fileName="pattern_version" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>ピカブイ切り替え用アニメ
+0F: ピカ
+1F: ブイ</comment>
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="pattern_map" startFrame="0" endFrame="42" animLoop="OneTime" fileName="pattern_map" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>以下の順でアニメを入れてあります、フレームを切り替えて絵を変えてください。（town_mapと同じ並びです）
+
+マサラ
+トキワ
+ニビ
+ハナダ
+シオン
+クチバ
+タマムシ
+セキチク
+グレン
+セキエイ高原
+ヤマブキ
+1番道路
+⇓
+25番道路
+トキワの森
+おつきみやま
+イワヤマトンネル
+発電所
+ディグダのあな
+ふたごじま
+チャンピオンロード</comment>
+      <userData />
+      <group name="G_map_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="3000" convertStartFrame="0" convertEndFrame="30">
+      <animContent name="inout_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="40" slope="13.333333" slopeType="Linear" />
+          <key frame="3" value="40" slope="-13.333333" slopeType="Linear" />
+          <key frame="6" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="inout_01">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="-40" slope="-13.333333" slopeType="Linear" />
+          <key frame="3" value="-40" slope="20" slopeType="Linear" />
+          <key frame="5" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="inout_02">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="-40" slope="-13.333333" slopeType="Linear" />
+          <key frame="3" value="-40" slope="13.333333" slopeType="Linear" />
+          <key frame="6" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_pict_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1.1" slopeType="Flat" />
+          <key frame="1500" value="0.9" slopeType="Flat" />
+          <key frame="3000" value="1.1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1.1" slopeType="Flat" />
+          <key frame="1500" value="0.9" slopeType="Flat" />
+          <key frame="3000" value="1.1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="703" value="3" slopeType="Flat" />
+          <key frame="2239" value="-3" slopeType="Flat" />
+          <key frame="3000" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_BG_00">
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="3" value="0" slopeType="Flat" />
+          <key frame="4" value="0" slopeType="Flat" />
+          <key frame="7" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="3000" convertStartFrame="0" convertEndFrame="30">
+      <animContent name="inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="6" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="inout_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="inout_02">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="6" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_pict_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="30" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="962" value="20" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="2024" value="40" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="3000" value="30" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="inout_03">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="6" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="3000" convertStartFrame="0" convertEndFrame="30">
+      <animContent name="P_pict_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="titleMenu_BGpika_00" />
+          <refRes name="titleMenu_BGevee_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_BGtexture_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="town001_0" />
+          <refRes name="town002_0" />
+          <refRes name="town003_0" />
+          <refRes name="town004_0" />
+          <refRes name="town005_0" />
+          <refRes name="town006_0" />
+          <refRes name="town007_0" />
+          <refRes name="town008_0" />
+          <refRes name="town009_0" />
+          <refRes name="town010_0" />
+          <refRes name="town011_0" />
+          <refRes name="road001" />
+          <refRes name="road002" />
+          <refRes name="road003" />
+          <refRes name="road004" />
+          <refRes name="road005" />
+          <refRes name="road006" />
+          <refRes name="road007" />
+          <refRes name="road008" />
+          <refRes name="road009" />
+          <refRes name="road010" />
+          <refRes name="road011" />
+          <refRes name="road012" />
+          <refRes name="road013" />
+          <refRes name="road014" />
+          <refRes name="road015" />
+          <refRes name="road016" />
+          <refRes name="road017" />
+          <refRes name="road018" />
+          <refRes name="road019" />
+          <refRes name="road020" />
+          <refRes name="road021" />
+          <refRes name="road022" />
+          <refRes name="road023" />
+          <refRes name="road024" />
+          <refRes name="road025" />
+          <refRes name="r002g0101" />
+          <refRes name="r004d0101" />
+          <refRes name="r010d0101" />
+          <refRes name="r010r0101" />
+          <refRes name="r011d0101" />
+          <refRes name="r020d0101" />
+          <refRes name="r023d0101" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="9" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="10" slopeType="Step" />
+          <key xsi:type="StepU16" frame="11" value="11" slopeType="Step" />
+          <key xsi:type="StepU16" frame="12" value="12" slopeType="Step" />
+          <key xsi:type="StepU16" frame="13" value="13" slopeType="Step" />
+          <key xsi:type="StepU16" frame="14" value="14" slopeType="Step" />
+          <key xsi:type="StepU16" frame="15" value="15" slopeType="Step" />
+          <key xsi:type="StepU16" frame="16" value="16" slopeType="Step" />
+          <key xsi:type="StepU16" frame="17" value="17" slopeType="Step" />
+          <key xsi:type="StepU16" frame="18" value="18" slopeType="Step" />
+          <key xsi:type="StepU16" frame="19" value="19" slopeType="Step" />
+          <key xsi:type="StepU16" frame="20" value="20" slopeType="Step" />
+          <key xsi:type="StepU16" frame="21" value="21" slopeType="Step" />
+          <key xsi:type="StepU16" frame="22" value="22" slopeType="Step" />
+          <key xsi:type="StepU16" frame="23" value="23" slopeType="Step" />
+          <key xsi:type="StepU16" frame="24" value="24" slopeType="Step" />
+          <key xsi:type="StepU16" frame="25" value="25" slopeType="Step" />
+          <key xsi:type="StepU16" frame="26" value="26" slopeType="Step" />
+          <key xsi:type="StepU16" frame="27" value="27" slopeType="Step" />
+          <key xsi:type="StepU16" frame="28" value="28" slopeType="Step" />
+          <key xsi:type="StepU16" frame="29" value="29" slopeType="Step" />
+          <key xsi:type="StepU16" frame="30" value="30" slopeType="Step" />
+          <key xsi:type="StepU16" frame="31" value="31" slopeType="Step" />
+          <key xsi:type="StepU16" frame="32" value="32" slopeType="Step" />
+          <key xsi:type="StepU16" frame="33" value="33" slopeType="Step" />
+          <key xsi:type="StepU16" frame="34" value="34" slopeType="Step" />
+          <key xsi:type="StepU16" frame="35" value="35" slopeType="Step" />
+          <key xsi:type="StepU16" frame="36" value="36" slopeType="Step" />
+          <key xsi:type="StepU16" frame="37" value="37" slopeType="Step" />
+          <key xsi:type="StepU16" frame="38" value="38" slopeType="Step" />
+          <key xsi:type="StepU16" frame="39" value="39" slopeType="Step" />
+          <key xsi:type="StepU16" frame="40" value="40" slopeType="Step" />
+          <key xsi:type="StepU16" frame="41" value="41" slopeType="Step" />
+          <key xsi:type="StepU16" frame="42" value="42" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

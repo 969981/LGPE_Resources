@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro" host="W00668" date="2018-04-04T13:05:50.8962176+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="fade_in" startFrame="10" endFrame="20" animLoop="OneTime" fileName="fade_in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>フェードイン</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="0" endFrame="10" animLoop="OneTime" fileName="fade_out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>フェードアウト</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="1020" fileName="keep" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>地形、キャラのループアニメ</comment>
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="hero_change" startFrame="0" endFrame="7" animLoop="OneTime" fileName="hero_change" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>主人公切り替え
+主人公選択画面と同じ並び</comment>
+      <userData />
+      <group name="G_hero_change" />
+    </animTag>
+    <animTag name="aibo_change" startFrame="0" endFrame="3" animLoop="OneTime" fileName="aibo_change" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>相棒切り替え
+0　ピカ♂
+1　ピカ♀
+2　ブイ♂
+3　ブイ♀
+</comment>
+      <userData />
+      <group name="G_aibo_chamge" />
+    </animTag>
+    <animTag name="land_in" startFrame="60" endFrame="120" animLoop="OneTime" fileName="land_in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>背景表示アニメ
+・fade_inの後に流してください。
+・背景切り替え時にも使います。
+
+0F目にland_changeのアニメを0Fから順番に切り替えてください。</comment>
+      <userData />
+      <group name="G_land_00" />
+    </animTag>
+    <animTag name="land_out" startFrame="0" endFrame="60" animLoop="OneTime" fileName="land_out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>背景を隠すアニメ
+・背景切り替える前に流してください</comment>
+      <userData />
+      <group name="G_land_00" />
+    </animTag>
+    <animTag name="land_change" startFrame="0" endFrame="10" animLoop="OneTime" fileName="land_change" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>背景切り替え用アニメ
+0　チャンピオンリーグ
+1　グレンタウン
+2　セキチク
+3　ヤマブキ
+4　タマムシ　
+5　シオン
+6　クチバ
+7　ハナダ
+8　ニビ
+9　トキワ
+10　マサラ</comment>
+      <userData />
+      <group name="G_land_change_00" />
+    </animTag>
+    <animTag name="keep_bg" startFrame="0" endFrame="1800" fileName="keep_bg" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>背景ループアニメ</comment>
+      <userData />
+      <group name="G_keep_01" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="1800" convertStartFrame="0" convertEndFrame="1800">
+      <animContent name="N_bg_00">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="0" slopeType="Linear" />
+          <key frame="0" value="0" slope="-0.3529412" slopeType="Linear" />
+          <key frame="1020" value="-360" slope="-0.3529412" slopeType="Linear" />
+          <key frame="1020" value="-360" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_bg_middie_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="250" slopeType="Step" />
+          <key frame="1" value="250" slopeType="Step" />
+          <key frame="1" value="250" slopeType="Step" />
+          <key frame="2" value="250" slopeType="Step" />
+          <key frame="2" value="310" slopeType="Step" />
+          <key frame="3" value="310" slopeType="Step" />
+          <key frame="3" value="250" slopeType="Step" />
+          <key frame="4" value="250" slopeType="Step" />
+          <key frame="4" value="250" slopeType="Step" />
+          <key frame="5" value="250" slopeType="Step" />
+          <key frame="5" value="250" slopeType="Step" />
+          <key frame="6" value="250" slopeType="Step" />
+          <key frame="6" value="250" slopeType="Step" />
+          <key frame="7" value="250" slopeType="Step" />
+          <key frame="7" value="310" slopeType="Step" />
+          <key frame="8" value="310" slopeType="Step" />
+          <key frame="8" value="250" slopeType="Step" />
+          <key frame="9" value="250" slopeType="Step" />
+          <key frame="9" value="250" slopeType="Step" />
+          <key frame="10" value="250" slopeType="Step" />
+          <key frame="10" value="310" slopeType="Step" />
+          <key frame="10" value="310" slopeType="Step" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="SizeW">
+          <key frame="0" value="760" slopeType="Step" />
+          <key frame="1" value="760" slopeType="Step" />
+          <key frame="1" value="605" slopeType="Step" />
+          <key frame="2" value="605" slopeType="Step" />
+          <key frame="2" value="512" slopeType="Step" />
+          <key frame="3" value="512" slopeType="Step" />
+          <key frame="3" value="448" slopeType="Step" />
+          <key frame="4" value="448" slopeType="Step" />
+          <key frame="4" value="760" slopeType="Step" />
+          <key frame="5" value="760" slopeType="Step" />
+          <key frame="5" value="390" slopeType="Step" />
+          <key frame="6" value="390" slopeType="Step" />
+          <key frame="6" value="843" slopeType="Step" />
+          <key frame="7" value="843" slopeType="Step" />
+          <key frame="7" value="512" slopeType="Step" />
+          <key frame="8" value="512" slopeType="Step" />
+          <key frame="8" value="883" slopeType="Step" />
+          <key frame="9" value="883" slopeType="Step" />
+          <key frame="9" value="702" slopeType="Step" />
+          <key frame="10" value="702" slopeType="Step" />
+          <key frame="10" value="512" slopeType="Step" />
+          <key frame="10" value="512" slopeType="Step" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="SizeH">
+          <key frame="0" value="518" slopeType="Step" />
+          <key frame="1" value="518" slopeType="Step" />
+          <key frame="1" value="464" slopeType="Step" />
+          <key frame="2" value="464" slopeType="Step" />
+          <key frame="2" value="360" slopeType="Step" />
+          <key frame="3" value="360" slopeType="Step" />
+          <key frame="3" value="600" slopeType="Step" />
+          <key frame="4" value="600" slopeType="Step" />
+          <key frame="4" value="580" slopeType="Step" />
+          <key frame="5" value="580" slopeType="Step" />
+          <key frame="5" value="600" slopeType="Step" />
+          <key frame="6" value="600" slopeType="Step" />
+          <key frame="6" value="571" slopeType="Step" />
+          <key frame="7" value="571" slopeType="Step" />
+          <key frame="7" value="360" slopeType="Step" />
+          <key frame="8" value="360" slopeType="Step" />
+          <key frame="8" value="429" slopeType="Step" />
+          <key frame="9" value="429" slopeType="Step" />
+          <key frame="9" value="428" slopeType="Step" />
+          <key frame="10" value="428" slopeType="Step" />
+          <key frame="10" value="360" slopeType="Step" />
+          <key frame="10" value="360" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_root">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="410" slope="-16.2811279" />
+          <key frame="30" value="206" slopeType="Step" />
+          <key frame="90" value="206" slopeType="Step" />
+          <key frame="90" value="670" slope="-17.0207977" />
+          <key frame="120" value="410" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-450" slopeType="Linear" />
+          <key frame="0" value="-450" slope="-2.26666665" slopeType="Linear" />
+          <key frame="30" value="-518" slope="-2.26666665" slopeType="Linear" />
+          <key frame="30" value="-518" slope="0.166666672" slopeType="Linear" />
+          <key frame="90" value="-508" slope="0.166666672" slopeType="Linear" />
+          <key frame="90" value="-508" slope="1.93333328" slopeType="Linear" />
+          <key frame="120" value="-450" slope="1.93333328" slopeType="Linear" />
+          <key frame="120" value="-450" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_pos_00">
+        <animPaneSRTTarget target="TranslateY" postInfinityType="Cycle">
+          <key frame="0" value="0" slope="0.6666667" />
+          <key frame="0" value="0" slope="2.51241136" />
+          <key frame="15" value="20" slopeType="Smooth" />
+          <key frame="30" value="0" slope="-2.51112342" />
+          <key frame="30" value="0" slope="-0.6666667" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_pos_01">
+        <animPaneSRTTarget target="TranslateY" preInfinityType="Cycle" postInfinityType="Cycle">
+          <key frame="0" value="0" slope="0.6666667" />
+          <key frame="0" value="0" slope="2.51241136" />
+          <key frame="15" value="20" slopeType="Smooth" />
+          <key frame="30" value="0" slope="-2.51112342" />
+          <key frame="30" value="0" slope="-0.6666667" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_m">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="0" slope="-0.055555556" slopeType="Linear" />
+          <key frame="0" value="0" slope="-0.254901975" slopeType="Linear" />
+          <key frame="1020" value="-260" slope="-0.254901975" slopeType="Linear" />
+          <key frame="1020" value="-260" slope="-0.055555556" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_m_01">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="187" slopeType="Step" />
+          <key frame="1" value="187" slopeType="Step" />
+          <key frame="1" value="125" slopeType="Step" />
+          <key frame="2" value="125" slopeType="Step" />
+          <key frame="2" value="384" slopeType="Step" />
+          <key frame="3" value="384" slopeType="Step" />
+          <key frame="3" value="392" slopeType="Step" />
+          <key frame="4" value="392" slopeType="Step" />
+          <key frame="4" value="164" slopeType="Step" />
+          <key frame="5" value="164" slopeType="Step" />
+          <key frame="5" value="150" slopeType="Step" />
+          <key frame="6" value="150" slopeType="Step" />
+          <key frame="6" value="150" slopeType="Step" />
+          <key frame="7" value="150" slopeType="Step" />
+          <key frame="7" value="140" slopeType="Step" />
+          <key frame="8" value="140" slopeType="Step" />
+          <key frame="8" value="140" slopeType="Step" />
+          <key frame="9" value="140" slopeType="Step" />
+          <key frame="9" value="170" slopeType="Step" />
+          <key frame="10" value="170" slopeType="Step" />
+          <key frame="10" value="120" slopeType="Step" />
+          <key frame="10" value="120" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_m_02">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-250" slopeType="Step" />
+          <key frame="1" value="-250" slopeType="Step" />
+          <key frame="1" value="-250" slopeType="Step" />
+          <key frame="2" value="-250" slopeType="Step" />
+          <key frame="2" value="-200" slopeType="Step" />
+          <key frame="3" value="-200" slopeType="Step" />
+          <key frame="3" value="-206" slopeType="Step" />
+          <key frame="4" value="-206" slopeType="Step" />
+          <key frame="4" value="-260" slopeType="Step" />
+          <key frame="5" value="-260" slopeType="Step" />
+          <key frame="5" value="-267" slopeType="Step" />
+          <key frame="6" value="-267" slopeType="Step" />
+          <key frame="6" value="-265" slopeType="Step" />
+          <key frame="7" value="-265" slopeType="Step" />
+          <key frame="7" value="-350" slopeType="Step" />
+          <key frame="8" value="-350" slopeType="Step" />
+          <key frame="8" value="-265" slopeType="Step" />
+          <key frame="9" value="-265" slopeType="Step" />
+          <key frame="9" value="-245" slopeType="Step" />
+          <key frame="10" value="-245" slopeType="Step" />
+          <key frame="10" value="-90" slopeType="Step" />
+          <key frame="10" value="-90" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_b">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="0" slopeType="Linear" />
+          <key frame="0" value="0" slope="-0.1764706" slopeType="Linear" />
+          <key frame="1020" value="-180" slope="-0.1764706" slopeType="Linear" />
+          <key frame="1020" value="-180" slope="-0.172222227" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_b_01">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-160" slopeType="Step" />
+          <key frame="1" value="-160" slopeType="Step" />
+          <key frame="1" value="-26" slopeType="Step" />
+          <key frame="2" value="-26" slopeType="Step" />
+          <key frame="2" value="1" slopeType="Step" />
+          <key frame="3" value="1" slopeType="Step" />
+          <key frame="3" value="-209" slopeType="Step" />
+          <key frame="4" value="-209" slopeType="Step" />
+          <key frame="4" value="-209" slopeType="Step" />
+          <key frame="5" value="-209" slopeType="Step" />
+          <key frame="5" value="-232" slopeType="Step" />
+          <key frame="6" value="-232" slopeType="Step" />
+          <key frame="6" value="-120" slopeType="Step" />
+          <key frame="7" value="-120" slopeType="Step" />
+          <key frame="7" value="-190" slopeType="Step" />
+          <key frame="8" value="-190" slopeType="Step" />
+          <key frame="8" value="-240" slopeType="Step" />
+          <key frame="9" value="-240" slopeType="Step" />
+          <key frame="9" value="-170" slopeType="Step" />
+          <key frame="10" value="-170" slopeType="Step" />
+          <key frame="10" value="-90" slopeType="Step" />
+          <key frame="10" value="-90" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_b_02">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-226" slopeType="Step" />
+          <key frame="1" value="-226" slopeType="Step" />
+          <key frame="1" value="-198" slopeType="Step" />
+          <key frame="2" value="-198" slopeType="Step" />
+          <key frame="2" value="-210" slopeType="Step" />
+          <key frame="3" value="-210" slopeType="Step" />
+          <key frame="3" value="-262" slopeType="Step" />
+          <key frame="4" value="-262" slopeType="Step" />
+          <key frame="4" value="-262" slopeType="Step" />
+          <key frame="5" value="-262" slopeType="Step" />
+          <key frame="5" value="-293" slopeType="Step" />
+          <key frame="6" value="-293" slopeType="Step" />
+          <key frame="6" value="-180" slopeType="Step" />
+          <key frame="7" value="-180" slopeType="Step" />
+          <key frame="7" value="-260" slopeType="Step" />
+          <key frame="8" value="-260" slopeType="Step" />
+          <key frame="8" value="-275" slopeType="Step" />
+          <key frame="9" value="-275" slopeType="Step" />
+          <key frame="9" value="-190" slopeType="Step" />
+          <key frame="10" value="-190" slopeType="Step" />
+          <key frame="10" value="-205" slopeType="Step" />
+          <key frame="10" value="-205" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_b_03">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-295" slopeType="Step" />
+          <key frame="1" value="-295" slopeType="Step" />
+          <key frame="1" value="-246" slopeType="Step" />
+          <key frame="2" value="-246" slopeType="Step" />
+          <key frame="2" value="-288" slopeType="Step" />
+          <key frame="3" value="-288" slopeType="Step" />
+          <key frame="3" value="-316" slopeType="Step" />
+          <key frame="4" value="-316" slopeType="Step" />
+          <key frame="4" value="-321" slopeType="Step" />
+          <key frame="5" value="-321" slopeType="Step" />
+          <key frame="5" value="-317" slopeType="Step" />
+          <key frame="6" value="-317" slopeType="Step" />
+          <key frame="6" value="-245" slopeType="Step" />
+          <key frame="7" value="-245" slopeType="Step" />
+          <key frame="7" value="-315" slopeType="Step" />
+          <key frame="8" value="-315" slopeType="Step" />
+          <key frame="8" value="-320" slopeType="Step" />
+          <key frame="9" value="-320" slopeType="Step" />
+          <key frame="9" value="-240" slopeType="Step" />
+          <key frame="10" value="-240" slopeType="Step" />
+          <key frame="10" value="-305" slopeType="Step" />
+          <key frame="10" value="-305" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_b_00">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-5" slopeType="Step" />
+          <key frame="1" value="-5" slopeType="Step" />
+          <key frame="1" value="45" slopeType="Step" />
+          <key frame="2" value="45" slopeType="Step" />
+          <key frame="2" value="16" slopeType="Step" />
+          <key frame="3" value="16" slopeType="Step" />
+          <key frame="3" value="0" slopeType="Step" />
+          <key frame="4" value="0" slopeType="Step" />
+          <key frame="4" value="-156" slopeType="Step" />
+          <key frame="5" value="-156" slopeType="Step" />
+          <key frame="5" value="1" slopeType="Step" />
+          <key frame="6" value="1" slopeType="Step" />
+          <key frame="6" value="70" slopeType="Step" />
+          <key frame="7" value="70" slopeType="Step" />
+          <key frame="7" value="-20" slopeType="Step" />
+          <key frame="8" value="-20" slopeType="Step" />
+          <key frame="8" value="0" slopeType="Step" />
+          <key frame="9" value="0" slopeType="Step" />
+          <key frame="9" value="90" slopeType="Step" />
+          <key frame="10" value="90" slopeType="Step" />
+          <key frame="10" value="-10" slopeType="Step" />
+          <key frame="10" value="-10" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_bg_m_00">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="31" slopeType="Step" />
+          <key frame="1" value="31" slopeType="Step" />
+          <key frame="1" value="34" slopeType="Step" />
+          <key frame="2" value="34" slopeType="Step" />
+          <key frame="2" value="94" slopeType="Step" />
+          <key frame="3" value="94" slopeType="Step" />
+          <key frame="3" value="82" slopeType="Step" />
+          <key frame="4" value="82" slopeType="Step" />
+          <key frame="4" value="34" slopeType="Step" />
+          <key frame="5" value="34" slopeType="Step" />
+          <key frame="5" value="28" slopeType="Step" />
+          <key frame="6" value="28" slopeType="Step" />
+          <key frame="6" value="20" slopeType="Step" />
+          <key frame="7" value="20" slopeType="Step" />
+          <key frame="7" value="70" slopeType="Step" />
+          <key frame="8" value="70" slopeType="Step" />
+          <key frame="8" value="15" slopeType="Step" />
+          <key frame="9" value="15" slopeType="Step" />
+          <key frame="9" value="40" slopeType="Step" />
+          <key frame="10" value="40" slopeType="Step" />
+          <key frame="10" value="210" slopeType="Step" />
+          <key frame="10" value="210" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="1800" convertStartFrame="0" convertEndFrame="1800">
+      <animContent name="N_root">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-8.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slope="-8.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="90" value="0" slope="8.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="120" value="255" slope="8.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="120" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_fade_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="-25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="255" slope="25.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TextureSRT" startFrame="0" endFrame="1800" convertStartFrame="0" convertEndFrame="1800">
+      <animContent name="P_bg_00">
+        <animTexSRTTarget target="TranslateS" postInfinityType="Cycle">
+          <key frame="0" value="0" slope="-0.01444262" slopeType="Linear" />
+          <key frame="0" value="0" slope="-0.0111111114" slopeType="Linear" />
+          <key frame="1800" value="-20" slope="-0.0111111114" slopeType="Linear" />
+          <key frame="1800" value="-20" slope="-0.01444262" slopeType="Linear" />
+        </animTexSRTTarget>
+        <animTexSRTTarget target="TranslateT" postInfinityType="Cycle">
+          <key frame="0" value="0" slopeType="Linear" />
+          <key frame="0" value="0" slope="0.006666667" slopeType="Linear" />
+          <key frame="1800" value="12" slope="0.006666667" slopeType="Linear" />
+          <key frame="1800" value="12" slopeType="Linear" />
+        </animTexSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="1800" convertStartFrame="0" convertEndFrame="1800">
+      <animContent name="P_bg_back_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_back_00" />
+          <refRes name="SR_circle_BG_back_01" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_middie_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_middle_00_00" />
+          <refRes name="SR_circle_BG_middle_01_00" />
+          <refRes name="SR_circle_BG_middle_02_00" />
+          <refRes name="SR_circle_BG_middle_03_00" />
+          <refRes name="SR_circle_BG_middle_04_00" />
+          <refRes name="SR_circle_BG_middle_05_00" />
+          <refRes name="SR_circle_BG_middle_06_00" />
+          <refRes name="SR_circle_BG_middle_07_00" />
+          <refRes name="SR_circle_BG_middle_08_00" />
+          <refRes name="SR_circle_BG_middle_09_00" />
+          <refRes name="SR_circle_BG_middle_10_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="9" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="10" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_aibo_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_pikachu_m_00" />
+          <refRes name="SR_pikachu_f_00" />
+          <refRes name="SR_eievui_m_00" />
+          <refRes name="SR_eievui_f_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_aibo_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_pikachu_m_01" />
+          <refRes name="SR_pikachu_f_01" />
+          <refRes name="SR_eievui_m_01" />
+          <refRes name="SR_eievui_f_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_hero_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_hero_a_00" />
+          <refRes name="SR_hero_b_00" />
+          <refRes name="SR_hero_c_00" />
+          <refRes name="SR_hero_d_00" />
+          <refRes name="SR_heroine_a_00" />
+          <refRes name="SR_heroine_b_00" />
+          <refRes name="SR_heroine_c_00" />
+          <refRes name="SR_heroine_d_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_hero_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_hero_a_01" />
+          <refRes name="SR_hero_b_01" />
+          <refRes name="SR_hero_c_01" />
+          <refRes name="SR_hero_d_01" />
+          <refRes name="SR_heroine_a_01" />
+          <refRes name="SR_heroine_b_01" />
+          <refRes name="SR_heroine_c_01" />
+          <refRes name="SR_heroine_d_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_middie_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_middle_00_01" />
+          <refRes name="SR_circle_BG_middle_01_01" />
+          <refRes name="SR_circle_BG_middle_02_01" />
+          <refRes name="SR_circle_BG_middle_03_01" />
+          <refRes name="SR_circle_BG_middle_04_01" />
+          <refRes name="SR_circle_BG_middle_05_01" />
+          <refRes name="SR_circle_BG_middle_06_01" />
+          <refRes name="SR_circle_BG_middle_07_01" />
+          <refRes name="SR_circle_BG_middle_08_01" />
+          <refRes name="SR_circle_BG_middle_09_01" />
+          <refRes name="SR_circle_BG_middle_10_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="9" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="10" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_middie_02">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_middle_00_01" />
+          <refRes name="SR_circle_BG_middle_02_01" />
+          <refRes name="SR_circle_BG_middle_03_01" />
+          <refRes name="SR_circle_BG_middle_04_02" />
+          <refRes name="SR_circle_BG_middle_05_01" />
+          <refRes name="SR_circle_BG_middle_06_01" />
+          <refRes name="SR_circle_BG_middle_07_02" />
+          <refRes name="SR_circle_BG_middle_08_01" />
+          <refRes name="SR_circle_BG_middle_09_01" />
+          <refRes name="SR_circle_BG_middle_10_02" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="9" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_back_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_back_00" />
+          <refRes name="SR_circle_BG_back_01" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_back_02">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_back_00" />
+          <refRes name="SR_circle_BG_back_01" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_back_03">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_back_00" />
+          <refRes name="SR_circle_BG_back_01" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_hero_02">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_hero_a_02" />
+          <refRes name="SR_hero_b_02" />
+          <refRes name="SR_hero_c_02" />
+          <refRes name="SR_hero_d_02" />
+          <refRes name="SR_heroine_a_02" />
+          <refRes name="SR_heroine_b_02" />
+          <refRes name="SR_heroine_c_02" />
+          <refRes name="SR_heroine_d_02" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_front_00LT">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_front_00" />
+          <refRes name="SR_circle_BG_front_01" />
+          <refRes name="SR_circle_BG_front_02" />
+          <refRes name="SR_circle_BG_front_03" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_front_00RT">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_front_00" />
+          <refRes name="SR_circle_BG_front_01" />
+          <refRes name="SR_circle_BG_front_02" />
+          <refRes name="SR_circle_BG_front_03" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_front_00LB">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_front_00" />
+          <refRes name="SR_circle_BG_front_01" />
+          <refRes name="SR_circle_BG_front_02" />
+          <refRes name="SR_circle_BG_front_03" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_bg_front_00RB">
+        <animTexPatternTarget target="Image">
+          <refRes name="SR_circle_BG_front_00" />
+          <refRes name="SR_circle_BG_front_01" />
+          <refRes name="SR_circle_BG_front_02" />
+          <refRes name="SR_circle_BG_front_03" />
+          <key xsi:type="StepU16" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="1800" convertStartFrame="0" convertEndFrame="1800">
+      <animContent name="P_aibo_00">
+        <animVisibilityTarget target="Visibility" postInfinityType="Cycle">
+          <key xsi:type="StepBool" frame="-15" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="15" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_aibo_01">
+        <animVisibilityTarget target="Visibility" postInfinityType="Cycle">
+          <key xsi:type="StepBool" frame="-15" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="15" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_hero_00">
+        <animVisibilityTarget target="Visibility" postInfinityType="Cycle">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="15" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="30" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="45" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="60" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_hero_01">
+        <animVisibilityTarget target="Visibility" postInfinityType="Cycle">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="15" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="60" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_bg_middie_02">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_hero_02">
+        <animVisibilityTarget target="Visibility" postInfinityType="Cycle">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="30" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="45" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="60" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

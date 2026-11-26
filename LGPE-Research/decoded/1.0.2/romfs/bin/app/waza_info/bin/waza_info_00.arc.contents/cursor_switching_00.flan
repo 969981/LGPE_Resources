@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika" host="W00538" date="2016-01-20T21:54:43.4944544+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="keep" startFrame="0" endFrame="20" fileName="keep" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>パーツの基本アニメーション</comment>
+      <userData />
+      <group name="keep" />
+    </animTag>
+    <animTag name="select" startFrame="0" endFrame="5" animLoop="OneTime" fileName="select" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>選択決定時アニメ</comment>
+      <userData />
+      <group name="G_select_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="80" convertStartFrame="0" convertEndFrame="80">
+      <animContent name="P_cursor_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="1" value="20" slopeType="Flat" />
+          <key frame="5" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slope="-0.130340829" />
+          <key frame="1" value="0.95" slopeType="Smooth" />
+          <key frame="5" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slope="0.0982185751" />
+          <key frame="1" value="1.05" slopeType="Smooth" />
+          <key frame="5" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_keep_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="10" value="12" slopeType="Smooth" />
+          <key frame="20" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Smooth" />
+          <key frame="3" value="1" slopeType="Flat" />
+          <key frame="10" value="0.96" slopeType="Smooth" />
+          <key frame="20" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Smooth" />
+          <key frame="3" value="1" slopeType="Flat" />
+          <key frame="10" value="1.04" slopeType="Smooth" />
+          <key frame="20" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

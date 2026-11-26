@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="honda_marie" host="W00680" date="2018-04-25T16:06:42.536833+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="0" endFrame="3" animLoop="OneTime" fileName="in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="out" startFrame="70" endFrame="73" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="fade_in" startFrame="0" endFrame="20" animLoop="OneTime" fileName="fade_in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="50" endFrame="70" animLoop="OneTime" fileName="fade_out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="73" value="0" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_end_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="255" slope="12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="255" slope="-12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slope="-12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="70" value="0" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="honda_marie__adjust_textbox" host="W00680" date="2018-02-22T18:33:16.920037+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="pika" startFrame="0" endFrame="0" animLoop="Wait" fileName="pika" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>ピカ版</comment>
+      <userData />
+      <group name="G_ver_00" />
+    </animTag>
+    <animTag name="vee" startFrame="1" endFrame="1" animLoop="Wait" fileName="vee" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>ブイ版</comment>
+      <userData />
+      <group name="G_ver_00" />
+    </animTag>
+    <animTag name="in" startFrame="0" endFrame="3" animLoop="OneTime" fileName="in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="out" startFrame="10" endFrame="13" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="13" value="0" slope="-85" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_shojo_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="shojo_p_00" />
+          <refRes name="shojo_v_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

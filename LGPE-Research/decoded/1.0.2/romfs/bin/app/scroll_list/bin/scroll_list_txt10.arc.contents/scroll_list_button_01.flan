@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="fukushima_yuya__adjust_textbox" host="W00703" date="2018-02-21T17:58:22.164606+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="touch_release" startFrame="0" endFrame="4" animLoop="OneTime" fileName="touch_release" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_group_00" />
+    </animTag>
+    <animTag name="passive" startFrame="1" endFrame="1" animLoop="Wait" fileName="passive" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_passive_00" />
+    </animTag>
+    <animTag name="active" startFrame="0" endFrame="0" animLoop="Wait" fileName="active" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_passive_00" />
+    </animTag>
+    <animTag name="select" startFrame="2" endFrame="4" animLoop="OneTime" fileName="select" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_select_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="60" fileName="keep" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="keep" />
+    </animTag>
+    <animTag name="unselect" startFrame="0" endFrame="2" animLoop="OneTime" fileName="unselect" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_select_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_passiveActive_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="2" value="0.9" slopeType="Flat" />
+          <key frame="4" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="2" value="0.9" slopeType="Flat" />
+          <key frame="4" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_select_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="2" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="W_glare_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="30" value="230" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="W_window_fill">
+        <animVertexColorTarget target="LT_r">
+          <key xsi:type="HermiteU8" frame="0" value="247" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="247" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_b">
+          <key xsi:type="HermiteU8" frame="0" value="124" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="124" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_r">
+          <key xsi:type="HermiteU8" frame="0" value="247" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="247" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_b">
+          <key xsi:type="HermiteU8" frame="0" value="124" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="124" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_g">
+          <key xsi:type="HermiteU8" frame="0" value="226" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="226" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_b">
+          <key xsi:type="HermiteU8" frame="0" value="112" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="112" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_g">
+          <key xsi:type="HermiteU8" frame="0" value="226" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="226" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_b">
+          <key xsi:type="HermiteU8" frame="0" value="112" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="112" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="W_window_line">
+        <animVertexColorTarget target="LT_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_b">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="101" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LT_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_b">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="101" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RT_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="184" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_b">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="89" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="LB_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="244" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_g">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="184" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_b">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="89" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+        <animVertexColorTarget target="RB_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="2" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_passive_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="N_passive_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

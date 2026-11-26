@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="takasu_momoka__adjust_textbox" host="W00725" date="2018-05-11T12:46:07.848938+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="30" endFrame="40" animLoop="OneTime" fileName="in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>inアニメ</comment>
+      <userData />
+      <group name="G_inout" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="5" animLoop="OneTime" fileName="out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>outアニメ</comment>
+      <userData />
+      <group name="G_inout" />
+    </animTag>
+    <animTag name="bg_loop" startFrame="0" endFrame="100" fileName="bg_loop" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>背景ループアニメ</comment>
+      <userData />
+      <group name="G_bg_00" />
+    </animTag>
+    <animTag name="window_change" startFrame="0" endFrame="1" animLoop="OneTime" fileName="window_change" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>0F_ピカチュウ
+1F_イーブイ</comment>
+      <userData />
+      <group name="G_window_ptn" />
+    </animTag>
+    <animTag name="button_change_00" startFrame="0" endFrame="0" animLoop="Wait" fileName="button_change_00" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>パルマボタンあり</comment>
+      <userData />
+      <group name="G_button_change_00" />
+    </animTag>
+    <animTag name="button_change_01" startFrame="1" endFrame="1" animLoop="Wait" fileName="button_change_01" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>パルマボタンなし</comment>
+      <userData />
+      <group name="G_button_change_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="all">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Smooth" />
+          <key frame="100" value="0" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="card">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="10" value="-26" slopeType="Flat" />
+          <key frame="30" value="-26" slopeType="Flat" />
+          <key frame="40" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_yesno_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Step" />
+          <key frame="1" value="0" slopeType="Step" />
+          <key frame="1" value="30" slopeType="Step" />
+          <key frame="1" value="30" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="L_yes_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-175" slopeType="Step" />
+          <key frame="1" value="-175" slopeType="Step" />
+          <key frame="1" value="-233" slopeType="Step" />
+          <key frame="1" value="-233" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="card">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="report">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Flat" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_window_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="report_window_00" />
+          <refRes name="report_window_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="L_parma_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>
