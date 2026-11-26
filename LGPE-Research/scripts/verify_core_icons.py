@@ -14,7 +14,7 @@ CASES = [("pokemon","bin/app/icon_pokemon/dummy.arc","dummy.flyt",221),
 CASES += [(lang,"bin/app/icon_type/icon_type"+("" if lang=="jpn" else "_"+lang)+".arc","dummy.flyt",36) for lang in LANGS]
 def sha(data): return hashlib.sha256(data).hexdigest()
 def crc(data): return f"{zlib.crc32(data)&0xffffffff:08x}"
-def key(name): return re.sub(r"\\^[ju]$","",name)
+def key(name): return name[:-2] if name.endswith(("^j","^u")) else name
 def xml_names(data):
     root=ET.fromstring(data)
     return [PureWindowsPath(e.attrib["imagePath"]).stem for e in root.iter()
