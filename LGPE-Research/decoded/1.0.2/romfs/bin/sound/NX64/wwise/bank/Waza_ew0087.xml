@@ -1,0 +1,683 @@
+<root filename="Waza_ew0087.bnk" path="\\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\1.0.2\2b7730a9e56498bbafac2002d4908c6b_NCA\1\bin\sound\NX64\wwise\bank" version="128">
+	<object name="BankHeader">
+		<field type="4cc" name="dwTag" value="b&apos;BKHD&apos;" valuefmt="b&apos;BKHD&apos; [Bank Header]"/>
+		<field offset="4" type="u32" name="dwChunkSize" value="24" valuefmt="0x18"/>
+		<object name="AkBankHeader">
+			<field offset="8" type="u32" name="dwBankGeneratorVersion" value="128"/>
+			<field offset="12" type="sid" name="dwSoundBankID" value="2646927218" hashname="Waza_ew0087"/>
+			<field offset="16" type="sid" name="dwLanguageID" value="393239870"/>
+			<field offset="20" type="u32" name="uAltValues" value="0" valuefmt="0x00">
+				<field type="bit0" name="bUnused" value="0" valuefmt="0"/>
+				<field type="bit16" name="bDeviceAllocated" value="0" valuefmt="0"/>
+			</field>
+			<field offset="24" type="u32" name="dwProjectID" value="3989"/>
+			<field offset="28" type="gap" name="padding" value="4" valuefmt="0x04"/>
+		</object>
+	</object>
+	<object name="MediaIndex">
+		<field offset="32" type="4cc" name="dwTag" value="b&apos;DIDX&apos;" valuefmt="b&apos;DIDX&apos; [Media Index]"/>
+		<field offset="36" type="u32" name="dwChunkSize" value="48" valuefmt="0x30"/>
+		<list name="pLoadedMedia" count="4">
+			<object name="MediaHeader" index="0">
+				<field offset="40" type="sid" name="id" value="3372407"/>
+				<field offset="44" type="u32" name="uOffset" value="0" valuefmt="0x00"/>
+				<field offset="48" type="u32" name="uSize" value="105986" valuefmt="0x19E02"/>
+			</object>
+			<object name="MediaHeader" index="1">
+				<field offset="52" type="sid" name="id" value="83689167"/>
+				<field offset="56" type="u32" name="uOffset" value="106000" valuefmt="0x19E10"/>
+				<field offset="60" type="u32" name="uSize" value="148073" valuefmt="0x24269"/>
+			</object>
+			<object name="MediaHeader" index="2">
+				<field offset="64" type="sid" name="id" value="490921859"/>
+				<field offset="68" type="u32" name="uOffset" value="254080" valuefmt="0x3E080"/>
+				<field offset="72" type="u32" name="uSize" value="115898" valuefmt="0x1C4BA"/>
+			</object>
+			<object name="MediaHeader" index="3">
+				<field offset="76" type="sid" name="id" value="631004242"/>
+				<field offset="80" type="u32" name="uOffset" value="369984" valuefmt="0x5A540"/>
+				<field offset="84" type="u32" name="uSize" value="175100" valuefmt="0x2ABFC"/>
+			</object>
+		</list>
+	</object>
+	<object name="DataChunk">
+		<field offset="88" type="4cc" name="dwTag" value="b&apos;DATA&apos;" valuefmt="b&apos;DATA&apos; [Data]"/>
+		<field offset="92" type="u32" name="dwChunkSize" value="545084" valuefmt="0x8513C"/>
+		<field offset="96" type="gap" name="pData" value="545084" valuefmt="0x8513C"/>
+	</object>
+	<object name="HircChunk">
+		<field offset="545180" type="4cc" name="dwTag" value="b&apos;HIRC&apos;" valuefmt="b&apos;HIRC&apos; [Hierarchy]"/>
+		<field offset="545184" type="u32" name="dwChunkSize" value="413" valuefmt="0x19D"/>
+		<field offset="545188" type="u32" name="NumReleasableHircItem" value="13"/>
+		<list name="listLoadedItem" count="13">
+			<object name="CAkSound" index="0">
+				<field offset="545192" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="545193" type="u32" name="dwSectionSize" value="44" valuefmt="0x2C"/>
+				<field offset="545197" type="sid" name="ulID" value="901974274"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="545201" type="u32" name="ulPluginID" value="1114113" valuefmt="0x00110001 [OPUSNX]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="545205" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="545206" type="tid" name="sourceID" value="631004242"/>
+							<field offset="545210" type="u32" name="uInMemoryMediaSize" value="175100" valuefmt="0x2ABFC"/>
+							<field offset="545214" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545215" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="545216" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="545217" type="u8" name="bOverrideAttachmentParams" value="0" valuefmt="0x00"/>
+						<field offset="545218" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="545222" type="tid" name="DirectParentID" value="1008471185"/>
+						<field offset="545226" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="545227" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="545228" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="545229" type="u8" name="uBitsPositioning" value="7" valuefmt="0x07">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="1"/>
+								<field type="bit1" name="unknown2d" value="1"/>
+								<field type="bit2" name="unknown2d_next_flag" value="1"/>
+								<field type="bit3" name="unknown2d" value="0"/>
+								<field type="bit4" name="cbIs3DPositioningAvailable" value="0"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="545230" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="545231" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="545232" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="545233" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="545235" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="545236" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="545237" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="545238" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="545239" type="u16" name="ulNumRTPC" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="1">
+				<field offset="545241" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="545242" type="u32" name="dwSectionSize" value="44" valuefmt="0x2C"/>
+				<field offset="545246" type="sid" name="ulID" value="949806817"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="545250" type="u32" name="ulPluginID" value="1114113" valuefmt="0x00110001 [OPUSNX]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="545254" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="545255" type="tid" name="sourceID" value="83689167"/>
+							<field offset="545259" type="u32" name="uInMemoryMediaSize" value="148073" valuefmt="0x24269"/>
+							<field offset="545263" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545264" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="545265" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="545266" type="u8" name="bOverrideAttachmentParams" value="0" valuefmt="0x00"/>
+						<field offset="545267" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="545271" type="tid" name="DirectParentID" value="1008471185"/>
+						<field offset="545275" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="545276" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="545277" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="545278" type="u8" name="uBitsPositioning" value="7" valuefmt="0x07">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="1"/>
+								<field type="bit1" name="unknown2d" value="1"/>
+								<field type="bit2" name="unknown2d_next_flag" value="1"/>
+								<field type="bit3" name="unknown2d" value="0"/>
+								<field type="bit4" name="cbIs3DPositioningAvailable" value="0"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="545279" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="545280" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="545281" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="545282" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="545284" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="545285" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="545286" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="545287" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="545288" type="u16" name="ulNumRTPC" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="2">
+				<field offset="545290" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="545291" type="u32" name="dwSectionSize" value="44" valuefmt="0x2C"/>
+				<field offset="545295" type="sid" name="ulID" value="950023688"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="545299" type="u32" name="ulPluginID" value="1114113" valuefmt="0x00110001 [OPUSNX]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="545303" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="545304" type="tid" name="sourceID" value="490921859"/>
+							<field offset="545308" type="u32" name="uInMemoryMediaSize" value="115898" valuefmt="0x1C4BA"/>
+							<field offset="545312" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545313" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="545314" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="545315" type="u8" name="bOverrideAttachmentParams" value="0" valuefmt="0x00"/>
+						<field offset="545316" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="545320" type="tid" name="DirectParentID" value="1008471185"/>
+						<field offset="545324" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="545325" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="545326" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="545327" type="u8" name="uBitsPositioning" value="7" valuefmt="0x07">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="1"/>
+								<field type="bit1" name="unknown2d" value="1"/>
+								<field type="bit2" name="unknown2d_next_flag" value="1"/>
+								<field type="bit3" name="unknown2d" value="0"/>
+								<field type="bit4" name="cbIs3DPositioningAvailable" value="0"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="545328" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="545329" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="545330" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="545331" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="545333" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="545334" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="545335" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="545336" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="545337" type="u16" name="ulNumRTPC" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="3">
+				<field offset="545339" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="545340" type="u32" name="dwSectionSize" value="49" valuefmt="0x31"/>
+				<field offset="545344" type="sid" name="ulID" value="958476523"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="545348" type="u32" name="ulPluginID" value="1114113" valuefmt="0x00110001 [OPUSNX]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="545352" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="545353" type="tid" name="sourceID" value="3372407"/>
+							<field offset="545357" type="u32" name="uInMemoryMediaSize" value="105986" valuefmt="0x19E02"/>
+							<field offset="545361" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545362" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="545363" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="545364" type="u8" name="bOverrideAttachmentParams" value="0" valuefmt="0x00"/>
+						<field offset="545365" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="545369" type="tid" name="DirectParentID" value="1008471185"/>
+						<field offset="545373" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="545374" type="u8" name="cProps" value="1"/>
+								<list name="pProps" count="1">
+									<object name="AkPropBundle" index="0">
+										<field offset="545375" type="u8" name="pID" value="0" valuefmt="0x00 [Volume]"/>
+										<field offset="545376" type="uni" name="pValue" value="-2.0"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="545380" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="545381" type="u8" name="uBitsPositioning" value="4" valuefmt="0x04">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="unknown2d" value="0"/>
+								<field type="bit2" name="unknown2d_next_flag" value="1"/>
+								<field type="bit3" name="unknown2d" value="0"/>
+								<field type="bit4" name="cbIs3DPositioningAvailable" value="0"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="545382" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="545383" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="545384" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="545385" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="545387" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="545388" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="545389" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="545390" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="545391" type="u16" name="ulNumRTPC" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkActorMixer" index="4">
+				<field offset="545393" type="u8" name="eHircType" value="7" valuefmt="0x07 [Actor-Mixer]"/>
+				<field offset="545394" type="u32" name="dwSectionSize" value="55" valuefmt="0x37"/>
+				<field offset="545398" type="sid" name="ulID" value="1008471185"/>
+				<object name="ActorMixerInitialValues">
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545402" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="545403" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="545404" type="u8" name="bOverrideAttachmentParams" value="0" valuefmt="0x00"/>
+						<field offset="545405" type="tid" name="OverrideBusId" value="2853974138"/>
+						<field offset="545409" type="tid" name="DirectParentID" value="0"/>
+						<field offset="545413" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="545414" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="545415" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="545416" type="u8" name="uBitsPositioning" value="19" valuefmt="0x13">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="1"/>
+								<field type="bit1" name="unknown2d" value="1"/>
+								<field type="bit2" name="unknown2d_next_flag" value="0"/>
+								<field type="bit3" name="unknown2d" value="0"/>
+								<field type="bit4" name="cbIs3DPositioningAvailable" value="1"/>
+							</field>
+							<field offset="545417" type="u8" name="uBits3d" value="114" valuefmt="0x72">
+								<field type="bit0" name="eSpatializationMode" value="2" valuefmt="2 [PositionAndOrientation]"/>
+								<field type="bit3" name="bHoldEmitterPosAndOrient" value="0"/>
+								<field type="bit4" name="bHoldListenerOrient" value="1"/>
+								<field type="bit5" name="bIsLooping" value="1"/>
+							</field>
+							<field offset="545418" type="tid" name="uAttenuationID" value="0"/>
+						</object>
+						<object name="AuxParams">
+							<field offset="545422" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="545423" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="545424" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="545425" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="545427" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="545428" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="545429" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="545430" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="545431" type="u16" name="ulNumRTPC" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+					<object name="Children">
+						<field offset="545433" type="u32" name="ulNumChilds" value="4"/>
+						<field offset="545437" type="tid" name="ulChildID" value="901974274"/>
+						<field offset="545441" type="tid" name="ulChildID" value="949806817"/>
+						<field offset="545445" type="tid" name="ulChildID" value="950023688"/>
+						<field offset="545449" type="tid" name="ulChildID" value="958476523"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkActionPlay" index="5">
+				<field offset="545453" type="u8" name="eHircType" value="3" valuefmt="0x03 [Action]"/>
+				<field offset="545454" type="u32" name="dwSectionSize" value="18" valuefmt="0x12"/>
+				<field offset="545458" type="sid" name="ulID" value="681366871"/>
+				<field offset="545462" type="u16" name="ulActionType" value="1027" valuefmt="0x0403 [Play]"/>
+				<object name="ActionInitialValues">
+					<field offset="545464" type="tid" name="idExt" value="949806817"/>
+					<field offset="545468" type="u8" name="idExt_4" value="0" valuefmt="0x00">
+						<field type="bit0" name="bIsBus" value="0"/>
+					</field>
+					<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+						<field offset="545469" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+						<field offset="545470" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="PlayActionParams">
+						<field offset="545471" type="u8" name="byBitVector" value="4" valuefmt="0x04">
+							<field type="bit0" name="eFadeCurve" value="4" valuefmt="4 [Linear]"/>
+						</field>
+						<field offset="545472" type="tid" name="bankID" value="2646927218" hashname="Waza_ew0087"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkEvent" index="6">
+				<field offset="545476" type="u8" name="eHircType" value="4" valuefmt="0x04 [Event]"/>
+				<field offset="545477" type="u32" name="dwSectionSize" value="9" valuefmt="0x09"/>
+				<field offset="545481" type="sid" name="ulID" value="431764432"/>
+				<object name="EventInitialValues">
+					<field offset="545485" type="var" name="ulActionListSize" value="1"/>
+					<list name="actions" count="1">
+						<object name="Action" index="0">
+							<field offset="545486" type="tid" name="ulActionID" value="681366871"/>
+						</object>
+					</list>
+				</object>
+			</object>
+			<object name="CAkActionPlay" index="7">
+				<field offset="545490" type="u8" name="eHircType" value="3" valuefmt="0x03 [Action]"/>
+				<field offset="545491" type="u32" name="dwSectionSize" value="18" valuefmt="0x12"/>
+				<field offset="545495" type="sid" name="ulID" value="53875931"/>
+				<field offset="545499" type="u16" name="ulActionType" value="1027" valuefmt="0x0403 [Play]"/>
+				<object name="ActionInitialValues">
+					<field offset="545501" type="tid" name="idExt" value="958476523"/>
+					<field offset="545505" type="u8" name="idExt_4" value="0" valuefmt="0x00">
+						<field type="bit0" name="bIsBus" value="0"/>
+					</field>
+					<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+						<field offset="545506" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+						<field offset="545507" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="PlayActionParams">
+						<field offset="545508" type="u8" name="byBitVector" value="4" valuefmt="0x04">
+							<field type="bit0" name="eFadeCurve" value="4" valuefmt="4 [Linear]"/>
+						</field>
+						<field offset="545509" type="tid" name="bankID" value="2646927218" hashname="Waza_ew0087"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkEvent" index="8">
+				<field offset="545513" type="u8" name="eHircType" value="4" valuefmt="0x04 [Event]"/>
+				<field offset="545514" type="u32" name="dwSectionSize" value="9" valuefmt="0x09"/>
+				<field offset="545518" type="sid" name="ulID" value="431764435"/>
+				<object name="EventInitialValues">
+					<field offset="545522" type="var" name="ulActionListSize" value="1"/>
+					<list name="actions" count="1">
+						<object name="Action" index="0">
+							<field offset="545523" type="tid" name="ulActionID" value="53875931"/>
+						</object>
+					</list>
+				</object>
+			</object>
+			<object name="CAkActionPlay" index="9">
+				<field offset="545527" type="u8" name="eHircType" value="3" valuefmt="0x03 [Action]"/>
+				<field offset="545528" type="u32" name="dwSectionSize" value="18" valuefmt="0x12"/>
+				<field offset="545532" type="sid" name="ulID" value="724839168"/>
+				<field offset="545536" type="u16" name="ulActionType" value="1027" valuefmt="0x0403 [Play]"/>
+				<object name="ActionInitialValues">
+					<field offset="545538" type="tid" name="idExt" value="950023688"/>
+					<field offset="545542" type="u8" name="idExt_4" value="0" valuefmt="0x00">
+						<field type="bit0" name="bIsBus" value="0"/>
+					</field>
+					<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+						<field offset="545543" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+						<field offset="545544" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="PlayActionParams">
+						<field offset="545545" type="u8" name="byBitVector" value="4" valuefmt="0x04">
+							<field type="bit0" name="eFadeCurve" value="4" valuefmt="4 [Linear]"/>
+						</field>
+						<field offset="545546" type="tid" name="bankID" value="2646927218" hashname="Waza_ew0087"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkEvent" index="10">
+				<field offset="545550" type="u8" name="eHircType" value="4" valuefmt="0x04 [Event]"/>
+				<field offset="545551" type="u32" name="dwSectionSize" value="9" valuefmt="0x09"/>
+				<field offset="545555" type="sid" name="ulID" value="431764438"/>
+				<object name="EventInitialValues">
+					<field offset="545559" type="var" name="ulActionListSize" value="1"/>
+					<list name="actions" count="1">
+						<object name="Action" index="0">
+							<field offset="545560" type="tid" name="ulActionID" value="724839168"/>
+						</object>
+					</list>
+				</object>
+			</object>
+			<object name="CAkActionPlay" index="11">
+				<field offset="545564" type="u8" name="eHircType" value="3" valuefmt="0x03 [Action]"/>
+				<field offset="545565" type="u32" name="dwSectionSize" value="18" valuefmt="0x12"/>
+				<field offset="545569" type="sid" name="ulID" value="273345332"/>
+				<field offset="545573" type="u16" name="ulActionType" value="1027" valuefmt="0x0403 [Play]"/>
+				<object name="ActionInitialValues">
+					<field offset="545575" type="tid" name="idExt" value="901974274"/>
+					<field offset="545579" type="u8" name="idExt_4" value="0" valuefmt="0x00">
+						<field type="bit0" name="bIsBus" value="0"/>
+					</field>
+					<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+						<field offset="545580" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+						<field offset="545581" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="PlayActionParams">
+						<field offset="545582" type="u8" name="byBitVector" value="4" valuefmt="0x04">
+							<field type="bit0" name="eFadeCurve" value="4" valuefmt="4 [Linear]"/>
+						</field>
+						<field offset="545583" type="tid" name="bankID" value="2646927218" hashname="Waza_ew0087"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkEvent" index="12">
+				<field offset="545587" type="u8" name="eHircType" value="4" valuefmt="0x04 [Event]"/>
+				<field offset="545588" type="u32" name="dwSectionSize" value="9" valuefmt="0x09"/>
+				<field offset="545592" type="sid" name="ulID" value="431764439"/>
+				<object name="EventInitialValues">
+					<field offset="545596" type="var" name="ulActionListSize" value="1"/>
+					<list name="actions" count="1">
+						<object name="Action" index="0">
+							<field offset="545597" type="tid" name="ulActionID" value="273345332"/>
+						</object>
+					</list>
+				</object>
+			</object>
+		</list>
+	</object>
+</root>

@@ -1,0 +1,197 @@
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> PROGRAM	base=7100000000	sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> FUNCTION	main+0x315260	entry=7100315260	name=FUN_7100315260	bytes=576  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> INCOMING	from=7100300bf0	type=UNCONDITIONAL_CALL	caller=71002fdf90  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> INCOMING_SUMMARY	count=1  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CALL	71003153ec	71001c4840	callee=71001c4840  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> DECOMPILED_BEGIN	7100315260	lines=109  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	0	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	1	/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	2	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	3	void FUN_7100315260(long param_1,long param_2,uint param_3,uint param_4)  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	4	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	5	{  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	6	  int *piVar1;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	7	  uint uVar2;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	8	  ushort uVar3;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	9	  undefined *puVar4;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	10	  bool bVar5;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	11	  int iVar6;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	12	  undefined4 uVar7;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	13	  uint *puVar8;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	14	  ulong uVar9;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	15	  ulong uVar10;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	16	  long lVar11;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	17	  long lVar12;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	18	  long lVar13;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	19	    
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	20	  *(undefined4 *)(param_1 + 0x840) = 10;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	21	  puVar4 = PTR_DAT_71015fad08;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	22	  if (param_2 != -0x340d631b7bddd9bb) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	23	    lVar11 = *(long *)(*(long *)PTR_DAT_71015fad08 + 0x98);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	24	    if (lVar11 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	25	      (**(code **)(*(long *)(lVar11 + 0x48) + 0x10))();  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	26	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	27	    puVar8 = *(uint **)(*(long *)(lVar11 + 0x1e8) + 0x170);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	28	    piVar1 = (int *)((long)puVar8 + (ulong)*puVar8);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	29	    if ((*(ushort *)((long)piVar1 - (long)*piVar1) < 5) ||  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	30	       (uVar9 = (ulong)((ushort *)((long)piVar1 - (long)*piVar1))[2], uVar9 == 0)) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	31	      puVar8 = (uint *)0x0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	32	      uVar2 = _Reset;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	33	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	34	    else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	35	      puVar8 = (uint *)((long)piVar1 + uVar9);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	36	      puVar8 = (uint *)((long)puVar8 + (ulong)*puVar8);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	37	      uVar2 = *puVar8;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	38	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	39	    if (uVar2 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	40	      lVar13 = 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	41	      do {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	42	        uVar9 = (ulong)*(uint *)((long)puVar8 + lVar13 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	43	        lVar12 = lVar13 + (uVar9 - (long)*(int *)((long)puVar8 + lVar13 + uVar9 + 4));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	44	        uVar3 = *(ushort *)((long)puVar8 + lVar12 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	45	        if ((uVar3 < 5) || (uVar10 = (ulong)*(ushort *)((long)puVar8 + lVar12 + 8), uVar10 == 0)) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	46	          bVar5 = param_2 == 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	47	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	48	        else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	49	          bVar5 = *(long *)((long)puVar8 + lVar13 + uVar9 + uVar10 + 4) == param_2;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	50	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	51	        if (bVar5) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	52	          if ((param_3 & 1) == 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	53	            if ((param_4 & 1) == 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	54	              if ((0xe < uVar3) &&  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	55	                 (uVar10 = (ulong)*(ushort *)((long)puVar8 + lVar12 + 0x12), uVar10 != 0))  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	56	              goto LAB_7100315474;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	57	            }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	58	            else if (0x4c < uVar3) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	59	              uVar3 = *(ushort *)((long)puVar8 + lVar12 + 0x50);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	60	              goto joined_r0x00710031545c;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	61	            }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	62	LAB_7100315488:  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	63	            uVar7 = 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	64	          }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	65	          else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	66	            if (uVar3 < 0x1f) goto LAB_7100315488;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	67	            uVar3 = *(ushort *)((long)puVar8 + lVar12 + 0x22);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	68	joined_r0x00710031545c:  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	69	            uVar10 = (ulong)uVar3;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	70	            if (uVar10 == 0) goto LAB_7100315488;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	71	LAB_7100315474:  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	72	            uVar7 = *(undefined4 *)((long)puVar8 + lVar13 + uVar10 + uVar9 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	73	          }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	74	          *(undefined4 *)(param_1 + 0x840) = uVar7;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	75	          lVar13 = *(long *)(*(long *)puVar4 + 0x98);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	76	          goto joined_r0x007100315498;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	77	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	78	        lVar13 = lVar13 + 4;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	79	      } while ((ulong)uVar2 * 4 != lVar13);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	80	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	81	    lVar13 = *(long *)(*(long *)puVar4 + 0x98);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	82	joined_r0x007100315498:  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	83	    if (lVar13 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	84	      (**(code **)(*(long *)(lVar13 + 0x48) + 0x10))();  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	85	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	86	    lVar12 = *(long *)(*(long *)(lVar13 + 0x58) + 0x80);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	87	    if (lVar12 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	88	      (**(code **)(*(long *)(lVar12 + 0x48) + 0x10))();  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	89	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	90	    (**(code **)(*(long *)(lVar13 + 0x48) + 0x18))((long *)(lVar13 + 0x48));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	91	    iVar6 = FUN_71001c4840(lVar12);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	92	    if (iVar6 == 2) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	93	      *(undefined4 *)(param_1 + 0x840) = 0x1e;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	94	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	95	    if (lVar12 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	96	      (**(code **)(*(long *)(lVar12 + 0x48) + 0x18))((long *)(lVar12 + 0x48));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	97	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	98	    if (lVar11 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	99	                    /* WARNING: Could not recover jumptable at 0x007100315434. Too many branches */  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	100	                    /* WARNING: Treating indirect jump as call */  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	101	      (**(code **)(*(long *)(lVar11 + 0x48) + 0x18))((long *)(lVar11 + 0x48));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	102	      return;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	103	    }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	104	  }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	105	  return;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	106	}  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	107	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	108	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> DECOMPILED_END	7100315260  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> FUNCTION	main+0x3154a0	entry=71003154a0	name=FUN_71003154a0	bytes=364  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> INCOMING	from=71002fe3c0	type=UNCONDITIONAL_CALL	caller=71002fdf90  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> INCOMING	from=7100301210	type=UNCONDITIONAL_CALL	caller=7100300e40  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> INCOMING_SUMMARY	count=2  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> DECOMPILED_BEGIN	71003154a0	lines=74  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	0	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	1	undefined4 FUN_71003154a0(undefined8 param_1,long param_2,uint param_3,uint param_4)  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	2	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	3	{  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	4	  int *piVar1;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	5	  uint *puVar2;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	6	  long lVar3;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	7	  ushort uVar4;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	8	  long lVar5;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	9	  bool bVar6;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	10	  ulong uVar7;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	11	  long lVar8;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	12	  uint *puVar9;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	13	  ulong uVar10;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	14	  ulong uVar11;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	15	  long lVar12;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	16	  undefined4 uVar13;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	17	    
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	18	  lVar12 = *(long *)(*(long *)PTR_DAT_71015fad08 + 0x98);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	19	  if (lVar12 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	20	    (**(code **)(*(long *)(lVar12 + 0x48) + 0x10))();  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	21	  }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	22	  puVar9 = *(uint **)(*(long *)(lVar12 + 0x1e8) + 0x170);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	23	  piVar1 = (int *)((long)puVar9 + (ulong)*puVar9);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	24	  uVar10 = (ulong)*(ushort *)((long)piVar1 + (4 - (long)*piVar1));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	25	  puVar2 = (uint *)((long)piVar1 + uVar10);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	26	  uVar11 = (ulong)*puVar2;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	27	  uVar7 = (ulong)*(uint *)((long)puVar2 + uVar11);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	28	  if (uVar7 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	29	    lVar3 = *puVar9 + uVar11 + uVar10;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	30	    lVar8 = 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	31	    do {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	32	      uVar10 = (ulong)*(uint *)((long)puVar9 + lVar8 + lVar3 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	33	      lVar5 = lVar8 + (uVar10 - (long)*(int *)((long)puVar9 + lVar8 + uVar10 + lVar3 + 4)) + lVar3;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	34	      uVar4 = *(ushort *)((long)puVar9 + lVar5 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	35	      if ((uVar4 < 5) || (uVar11 = (ulong)*(ushort *)((long)puVar9 + lVar5 + 8), uVar11 == 0)) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	36	        bVar6 = param_2 == 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	37	      }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	38	      else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	39	        bVar6 = *(long *)((long)puVar9 + lVar8 + uVar10 + uVar11 + lVar3 + 4) == param_2;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	40	      }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	41	      if (bVar6) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	42	        if ((param_3 & 1) == 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	43	          if ((param_4 & 1) == 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	44	            if (uVar4 < 0x11) break;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	45	            uVar4 = *(ushort *)((long)puVar9 + lVar5 + 0x14);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	46	          }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	47	          else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	48	            if (uVar4 < 0x4f) break;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	49	            uVar4 = *(ushort *)((long)puVar9 + lVar5 + 0x52);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	50	          }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	51	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	52	        else {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	53	          if (uVar4 < 0x21) break;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	54	          uVar4 = *(ushort *)((long)puVar9 + lVar5 + 0x24);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	55	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	56	        if ((ulong)uVar4 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	57	          uVar13 = *(undefined4 *)((long)puVar9 + lVar8 + uVar4 + uVar10 + lVar3 + 4);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	58	          goto joined_r0x0071003155d8;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	59	        }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	60	        break;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	61	      }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	62	      lVar8 = lVar8 + 4;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	63	    } while (uVar7 * 4 != lVar8);  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	64	  }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	65	  uVar13 = 0;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	66	joined_r0x0071003155d8:  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	67	  if (lVar12 != 0) {  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	68	    (**(code **)(*(long *)(lVar12 + 0x48) + 0x18))((long *)(lVar12 + 0x48));  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	69	  }  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	70	  return uVar13;  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	71	}  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	72	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> CODE	73	  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> DECOMPILED_END	71003154a0  
+2026-10-29 12:55:38 INFO  InspectEncounterLookupHelpers.java> SUMMARY	image=//192.168.1.5/j/ROMS/Nintendo Switch/Pokemon/Pokemon Lets Go Pikachu/1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main  

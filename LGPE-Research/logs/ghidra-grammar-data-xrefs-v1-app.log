@@ -1,0 +1,880 @@
+2026-10-29 22:11:01 INFO  (LoggingInitialization) Using log config file: jar:file:/D:/Tool/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-29 22:11:01 INFO  (LoggingInitialization) Using log file: logs\ghidra-grammar-data-xrefs-v1-app.log  
+2026-10-29 22:11:01 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-29 22:11:01 INFO  (Preferences) Loading user preferences: C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-29 22:11:01 INFO  (ClassSearcher) Searching for classes...  
+2026-10-29 22:11:02 INFO  (ClassSearcher) Class search complete (633 ms)  
+2026-10-29 22:11:02 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-29 22:11:02 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-29 22:11:02 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-29 22:11:02 INFO  (DefaultTrustManagerFactory) Loaded 78 trusted CA certificates from the OS trust store.  
+2026-10-29 22:11:02 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-29 22:11:03 INFO  (AnalyzeHeadless) Headless startup complete (1608 ms)  
+2026-10-29 22:11:03 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-29 22:11:03 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\SwitchLoader\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\BinExport\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts  
+2026-10-29 22:11:03 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-29 22:11:03 INFO  (HeadlessAnalyzer) Opening existing project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:11:03 INFO  (HeadlessProject) Opening project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:11:04 DEBUG (SleighLanguage) Took 297ms (118ms inside lock) to initialize language D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.slaspec -> D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.sla  
+2026-10-29 22:11:04 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /main  
+2026-10-29 22:11:05 INFO  (HeadlessAnalyzer) REPORT: Execute script: InspectGrammarDataReferences.java   
+2026-10-29 22:11:07 ERROR (HeadlessAnalyzer) InspectGrammarDataReferences.java:128: error: unreported exception ghidra.util.exception.CancelledException; must be caught or declared to be thrown
+            if ((offset & 0x3fffff) == 0) monitor.checkCancelled();
+                                                                ^
+skipping \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra\InspectGrammarDataReferences.java
+  
+2026-10-29 22:11:07 ERROR (HeadlessAnalyzer) REPORT SCRIPT ERROR: InspectGrammarDataReferences.java : The class could not be found. It must be the public class of the .java file: InspectGrammarDataReferences not found by 86e94605 [1] ghidra.app.script.GhidraScriptLoadException: The class could not be found. It must be the public class of the .java file: InspectGrammarDataReferences not found by 86e94605 [1]
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:114)
+	at ghidra.app.util.headless.HeadlessAnalyzer.runScriptsList(HeadlessAnalyzer.java:929)
+	at ghidra.app.util.headless.HeadlessAnalyzer.analyzeProgram(HeadlessAnalyzer.java:1107)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFileNoImport(HeadlessAnalyzer.java:1206)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processFolderNoImport(HeadlessAnalyzer.java:1376)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processNoImport(HeadlessAnalyzer.java:1405)
+	at ghidra.app.util.headless.HeadlessAnalyzer.processLocal(HeadlessAnalyzer.java:461)
+	at ghidra.app.util.headless.AnalyzeHeadless.launch(AnalyzeHeadless.java:211)
+	at ghidra.GhidraLauncher.launch(GhidraLauncher.java:78)
+	at ghidra.Ghidra.main(Ghidra.java:41)
+Caused by: java.lang.ClassNotFoundException: InspectGrammarDataReferences not found by 86e94605 [1]
+	at org.apache.felix.framework.BundleWiringImpl.findClassOrResourceByDelegation(BundleWiringImpl.java:1591)
+	at org.apache.felix.framework.BundleWiringImpl.access$300(BundleWiringImpl.java:79)
+	at org.apache.felix.framework.BundleWiringImpl$BundleClassLoader.loadClass(BundleWiringImpl.java:1976)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at org.apache.felix.framework.Felix.loadBundleClass(Felix.java:2116)
+	at org.apache.felix.framework.BundleImpl.loadClass(BundleImpl.java:986)
+	at ghidra.app.script.JavaScriptProvider.loadClass(JavaScriptProvider.java:166)
+	at ghidra.app.script.JavaScriptProvider.getScriptInstance(JavaScriptProvider.java:97)
+	... 9 more
+ 
+2026-10-29 22:11:52 INFO  (LoggingInitialization) Using log config file: jar:file:/D:/Tool/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-29 22:11:52 INFO  (LoggingInitialization) Using log file: logs\ghidra-grammar-data-xrefs-v1-app.log  
+2026-10-29 22:11:52 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-29 22:11:52 INFO  (Preferences) Loading user preferences: C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-29 22:11:52 INFO  (ClassSearcher) Searching for classes...  
+2026-10-29 22:11:53 INFO  (ClassSearcher) Class search complete (633 ms)  
+2026-10-29 22:11:53 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-29 22:11:53 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-29 22:11:53 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-29 22:11:53 INFO  (DefaultTrustManagerFactory) Loaded 78 trusted CA certificates from the OS trust store.  
+2026-10-29 22:11:53 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-29 22:11:53 INFO  (AnalyzeHeadless) Headless startup complete (1652 ms)  
+2026-10-29 22:11:53 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-29 22:11:54 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\SwitchLoader\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\BinExport\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts  
+2026-10-29 22:11:54 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-29 22:11:54 INFO  (HeadlessAnalyzer) Opening existing project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:11:54 INFO  (HeadlessProject) Opening project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:11:55 DEBUG (SleighLanguage) Took 342ms (123ms inside lock) to initialize language D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.slaspec -> D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.sla  
+2026-10-29 22:11:56 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /main  
+2026-10-29 22:11:56 INFO  (HeadlessAnalyzer) REPORT: Execute script: InspectGrammarDataReferences.java   
+2026-10-29 22:11:58 INFO  (HeadlessAnalyzer) SCRIPT: \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra\InspectGrammarDataReferences.java  
+2026-10-29 22:11:58 INFO  (GhidraScript) InspectGrammarDataReferences.java> PROGRAM	version=Pokemon Let's Go Pikachu 1.0.2	base=7100000000	main_sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ae	text=bin/message/grammar/JPN.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae7bc	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_BEGIN	function=71001ae750	name=FUN_71001ae750	chars=5332  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	0	  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	1	void FUN_71001ae750(long param_1,undefined8 param_2)  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	2	  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	3	{  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	4	  byte bVar1;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	5	  undefined8 local_138;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	6	  char *pcStack_130;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	7	  undefined8 local_128;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	8	  undefined8 local_120;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	9	  char *pcStack_118;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	10	  undefined8 local_110;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	11	  undefined8 local_108;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	12	  char *pcStack_100;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	13	  undefined8 local_f8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	14	  undefined8 local_f0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	15	  char *pcStack_e8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	16	  undefined8 local_e0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	17	  undefined8 local_d8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	18	  char *pcStack_d0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	19	  undefined8 local_c8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	20	  undefined8 local_c0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	21	  char *pcStack_b8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	22	  undefined8 local_b0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	23	  undefined8 local_a8;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	24	  char *pcStack_a0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	25	  undefined8 local_98;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	26	  undefined8 local_90;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	27	  char *pcStack_88;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	28	  undefined8 local_80;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	29	  long local_78 [4];  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	30	  long local_58;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	31	  undefined8 local_48;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	32	  char *pcStack_40;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	33	  undefined8 local_38;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	34	    
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	35	  bVar1 = FUN_71001d6240();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	36	  *(uint *)(param_1 + 0xaf8) = (uint)bVar1;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	37	  *(undefined8 *)(param_1 + 0xaf0) = param_2;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	38	  local_48 = 0xc55a351b89197bc4;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	39	  pcStack_40 = "bin/message/grammar/JPN.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	40	  local_38 = 0x1b;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	41	  FUN_710004deb0(local_78,(long)&local_48);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	42	  FUN_71000adc70((long *)(param_1 + 0x50),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	43	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	44	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	45	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	46	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	47	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	48	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	49	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	50	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	51	  FUN_710004deb0(local_78,(long)&local_48);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	52	  FUN_71000adc70((long *)(param_1 + 0x160),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	53	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	54	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	55	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	56	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	57	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	58	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	59	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	60	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	61	  local_90 = 0x2f4566f4d868fa84;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	62	  pcStack_88 = "bin/message/grammar/English.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	63	  local_80 = 0x1f;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	64	  FUN_710004deb0(local_78,(long)&local_90);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	65	  FUN_71000adc70((long *)(param_1 + 0x270),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	66	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	67	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	68	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	69	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	70	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	71	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	72	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	73	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	74	  local_a8 = 0xe010dd89e52e89c2;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	75	  pcStack_a0 = "bin/message/grammar/French.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	76	  local_98 = 0x1e;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	77	  FUN_710004deb0(local_78,(long)&local_a8);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	78	  FUN_71000adc70((long *)(param_1 + 0x380),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	79	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	80	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	81	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	82	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	83	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	84	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	85	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	86	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	87	  local_c0 = 0x2488796715c8a29c;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	88	  pcStack_b8 = "bin/message/grammar/German.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	89	  local_b0 = 0x1e;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	90	  FUN_710004deb0(local_78,(long)&local_c0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	91	  FUN_71000adc70((long *)(param_1 + 0x5a0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	92	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	93	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	94	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	95	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	96	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	97	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	98	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	99	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	100	  local_d8 = 0xcbd678977d1086f4;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	101	  pcStack_d0 = "bin/message/grammar/Italian.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	102	  local_c8 = 0x1f;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	103	  FUN_710004deb0(local_78,(long)&local_d8);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	104	  FUN_71000adc70((long *)(param_1 + 0x490),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	105	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	106	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	107	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	108	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	109	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	110	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	111	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	112	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	113	  local_f0 = 0x6c35db96836afc26;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	114	  pcStack_e8 = "bin/message/grammar/Korean.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	115	  local_e0 = 0x1e;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	116	  FUN_710004deb0(local_78,(long)&local_f0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	117	  FUN_71000adc70((long *)(param_1 + 0x7c0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	118	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	119	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	120	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	121	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	122	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	123	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	124	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	125	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	126	  local_108 = 0x68cf7bf48699f7d4;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	127	  pcStack_100 = "bin/message/grammar/Spanish.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	128	  local_f8 = 0x1f;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	129	  FUN_710004deb0(local_78,(long)&local_108);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	130	  FUN_71000adc70((long *)(param_1 + 0x6b0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	131	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	132	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	133	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	134	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	135	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	136	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	137	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	138	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	139	  local_120 = 0xf849e2c024338a3b;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	140	  pcStack_118 = "bin/message/grammar/Simp_Chinese.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	141	  local_110 = 0x24;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	142	  FUN_710004deb0(local_78,(long)&local_120);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	143	  FUN_71000adc70((long *)(param_1 + 0x8d0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	144	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	145	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	146	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	147	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	148	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	149	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	150	    local_78[0] = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	151	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	152	  local_138 = 0xc746bef6ad7a5269;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	153	  pcStack_130 = "bin/message/grammar/Trad_Chinese.dat";  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	154	  local_128 = 0x24;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	155	  FUN_710004deb0(local_78,(long)&local_138);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	156	  FUN_71000adc70((long *)(param_1 + 0x9e0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	157	  if (local_58 != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	158	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	159	    local_58 = 0;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	160	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	161	  if (local_78[0] != 0) {  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	162	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	163	  }  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	164	  return;  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	165	}  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	166	  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	167	  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_END	function=71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ca	text=bin/message/grammar/English.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae894	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ea	text=bin/message/grammar/French.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae910	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02209	text=bin/message/grammar/German.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae98c	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02228	text=bin/message/grammar/Italian.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aea08	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02248	text=bin/message/grammar/Korean.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aea84	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02267	text=bin/message/grammar/Spanish.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aeb00	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02287	text=bin/message/grammar/Simp_Chinese.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aeb7c	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f022ac	text=bin/message/grammar/Trad_Chinese.dat  
+2026-10-29 22:11:59 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aebf8	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021ba	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021d6	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021f6	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02215	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02234	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02254	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02273	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02293	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f022b8	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:12:00 INFO  (GhidraScript) InspectGrammarDataReferences.java> SUMMARY	defined_grammar_strings=9	raw_ascii_or_utf16_matches=9	direct_string_xrefs=9	decompiled_xref_functions=1	program=main  
+2026-10-29 22:14:22 INFO  (LoggingInitialization) Using log config file: jar:file:/D:/Tool/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-29 22:14:22 INFO  (LoggingInitialization) Using log file: logs\ghidra-grammar-data-xrefs-v1-app.log  
+2026-10-29 22:14:22 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-29 22:14:22 INFO  (Preferences) Loading user preferences: C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-29 22:14:22 INFO  (ClassSearcher) Searching for classes...  
+2026-10-29 22:14:23 INFO  (ClassSearcher) Class search complete (674 ms)  
+2026-10-29 22:14:23 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-29 22:14:23 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-29 22:14:23 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-29 22:14:23 INFO  (DefaultTrustManagerFactory) Loaded 78 trusted CA certificates from the OS trust store.  
+2026-10-29 22:14:23 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-29 22:14:24 INFO  (AnalyzeHeadless) Headless startup complete (1768 ms)  
+2026-10-29 22:14:24 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-29 22:14:24 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\SwitchLoader\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\BinExport\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts  
+2026-10-29 22:14:24 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-29 22:14:24 INFO  (HeadlessAnalyzer) Opening existing project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:14:24 INFO  (HeadlessProject) Opening project: X:\roms\nintendo switch\pokemon\pokemon lets go pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 22:14:26 DEBUG (SleighLanguage) Took 347ms (133ms inside lock) to initialize language D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.slaspec -> D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.sla  
+2026-10-29 22:14:26 INFO  (HeadlessAnalyzer) REPORT: Processing read-only project file: /main  
+2026-10-29 22:14:26 INFO  (HeadlessAnalyzer) REPORT: Execute script: InspectGrammarDataReferences.java   
+2026-10-29 22:14:29 INFO  (HeadlessAnalyzer) SCRIPT: \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra\InspectGrammarDataReferences.java  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> PROGRAM	version=Pokemon Let's Go Pikachu 1.0.2	base=7100000000	main_sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ae	text=bin/message/grammar/JPN.dat  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae7bc	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_BEGIN	function=71001ae750	name=FUN_71001ae750	chars=5332  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	0	  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	1	void FUN_71001ae750(long param_1,undefined8 param_2)  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	2	  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	3	{  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	4	  byte bVar1;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	5	  undefined8 local_138;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	6	  char *pcStack_130;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	7	  undefined8 local_128;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	8	  undefined8 local_120;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	9	  char *pcStack_118;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	10	  undefined8 local_110;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	11	  undefined8 local_108;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	12	  char *pcStack_100;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	13	  undefined8 local_f8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	14	  undefined8 local_f0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	15	  char *pcStack_e8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	16	  undefined8 local_e0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	17	  undefined8 local_d8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	18	  char *pcStack_d0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	19	  undefined8 local_c8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	20	  undefined8 local_c0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	21	  char *pcStack_b8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	22	  undefined8 local_b0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	23	  undefined8 local_a8;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	24	  char *pcStack_a0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	25	  undefined8 local_98;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	26	  undefined8 local_90;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	27	  char *pcStack_88;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	28	  undefined8 local_80;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	29	  long local_78 [4];  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	30	  long local_58;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	31	  undefined8 local_48;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	32	  char *pcStack_40;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	33	  undefined8 local_38;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	34	    
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	35	  bVar1 = FUN_71001d6240();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	36	  *(uint *)(param_1 + 0xaf8) = (uint)bVar1;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	37	  *(undefined8 *)(param_1 + 0xaf0) = param_2;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	38	  local_48 = 0xc55a351b89197bc4;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	39	  pcStack_40 = "bin/message/grammar/JPN.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	40	  local_38 = 0x1b;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	41	  FUN_710004deb0(local_78,(long)&local_48);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	42	  FUN_71000adc70((long *)(param_1 + 0x50),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	43	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	44	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	45	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	46	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	47	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	48	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	49	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	50	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	51	  FUN_710004deb0(local_78,(long)&local_48);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	52	  FUN_71000adc70((long *)(param_1 + 0x160),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	53	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	54	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	55	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	56	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	57	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	58	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	59	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	60	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	61	  local_90 = 0x2f4566f4d868fa84;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	62	  pcStack_88 = "bin/message/grammar/English.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	63	  local_80 = 0x1f;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	64	  FUN_710004deb0(local_78,(long)&local_90);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	65	  FUN_71000adc70((long *)(param_1 + 0x270),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	66	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	67	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	68	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	69	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	70	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	71	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	72	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	73	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	74	  local_a8 = 0xe010dd89e52e89c2;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	75	  pcStack_a0 = "bin/message/grammar/French.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	76	  local_98 = 0x1e;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	77	  FUN_710004deb0(local_78,(long)&local_a8);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	78	  FUN_71000adc70((long *)(param_1 + 0x380),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	79	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	80	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	81	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	82	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	83	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	84	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	85	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	86	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	87	  local_c0 = 0x2488796715c8a29c;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	88	  pcStack_b8 = "bin/message/grammar/German.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	89	  local_b0 = 0x1e;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	90	  FUN_710004deb0(local_78,(long)&local_c0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	91	  FUN_71000adc70((long *)(param_1 + 0x5a0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	92	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	93	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	94	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	95	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	96	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	97	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	98	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	99	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	100	  local_d8 = 0xcbd678977d1086f4;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	101	  pcStack_d0 = "bin/message/grammar/Italian.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	102	  local_c8 = 0x1f;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	103	  FUN_710004deb0(local_78,(long)&local_d8);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	104	  FUN_71000adc70((long *)(param_1 + 0x490),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	105	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	106	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	107	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	108	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	109	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	110	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	111	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	112	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	113	  local_f0 = 0x6c35db96836afc26;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	114	  pcStack_e8 = "bin/message/grammar/Korean.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	115	  local_e0 = 0x1e;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	116	  FUN_710004deb0(local_78,(long)&local_f0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	117	  FUN_71000adc70((long *)(param_1 + 0x7c0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	118	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	119	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	120	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	121	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	122	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	123	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	124	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	125	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	126	  local_108 = 0x68cf7bf48699f7d4;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	127	  pcStack_100 = "bin/message/grammar/Spanish.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	128	  local_f8 = 0x1f;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	129	  FUN_710004deb0(local_78,(long)&local_108);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	130	  FUN_71000adc70((long *)(param_1 + 0x6b0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	131	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	132	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	133	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	134	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	135	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	136	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	137	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	138	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	139	  local_120 = 0xf849e2c024338a3b;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	140	  pcStack_118 = "bin/message/grammar/Simp_Chinese.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	141	  local_110 = 0x24;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	142	  FUN_710004deb0(local_78,(long)&local_120);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	143	  FUN_71000adc70((long *)(param_1 + 0x8d0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	144	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	145	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	146	    local_58 = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	147	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	148	  if (local_78[0] != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	149	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	150	    local_78[0] = 0;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	151	  }  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	152	  local_138 = 0xc746bef6ad7a5269;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	153	  pcStack_130 = "bin/message/grammar/Trad_Chinese.dat";  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	154	  local_128 = 0x24;  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	155	  FUN_710004deb0(local_78,(long)&local_138);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	156	  FUN_71000adc70((long *)(param_1 + 0x9e0),local_78,0,*(long **)(param_1 + 0xaf0),0);  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	157	  if (local_58 != 0) {  
+2026-10-29 22:14:29 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	158	    (**(code **)(*(long *)(local_58 + 0x48) + 0x18))();  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	159	    local_58 = 0;  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	160	  }  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	161	  if (local_78[0] != 0) {  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	162	    (**(code **)(*(long *)(local_78[0] + 0x48) + 0x18))();  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	163	  }  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	164	  return;  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	165	}  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	166	  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	71001ae750	167	  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_END	function=71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ca	text=bin/message/grammar/English.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae894	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f021ea	text=bin/message/grammar/French.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae910	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02209	text=bin/message/grammar/German.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001ae98c	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02228	text=bin/message/grammar/Italian.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aea08	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02248	text=bin/message/grammar/Korean.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aea84	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02267	text=bin/message/grammar/Spanish.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aeb00	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f02287	text=bin/message/grammar/Simp_Chinese.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aeb7c	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> DEFINED_GRAMMAR_STRING	address=7100f022ac	text=bin/message/grammar/Trad_Chinese.dat  
+2026-10-29 22:14:30 INFO  (GhidraScript) InspectGrammarDataReferences.java> STRING_XREF	from=71001aebf8	type=DATA	function=71001ae750	name=FUN_71001ae750  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> LOADER_INCOMING	from=71000061d0	type=UNCONDITIONAL_CALL	caller=7100005bd0	name=FUN_7100005bd0  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_BEGIN	function=7100005bd0	name=FUN_7100005bd0	chars=11399  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	0	  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	1	void FUN_7100005bd0(long *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	2	  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	3	{  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	4	  undefined8 uVar1;  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	5	  undefined8 uVar2;  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	6	  long *plVar3;  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	7	  undefined *puVar4;  
+2026-10-29 22:14:31 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	8	  undefined *puVar5;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	9	  undefined *puVar6;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	10	  undefined *puVar7;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	11	  bool bVar8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	12	  undefined4 uVar9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	13	  undefined8 *puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	14	  long *plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	15	  undefined8 *puVar12;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	16	  long *plVar13;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	17	  long lVar14;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	18	  long lVar15;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	19	  undefined8 uVar16;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	20	  undefined8 local_90;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	21	  undefined8 local_88;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	22	  undefined8 uStack_80;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	23	  undefined8 local_78;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	24	  undefined8 uStack_70;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	25	  undefined1 auStack_68 [8];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	26	    
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	27	  nn::oe::SetExpectedThemeColor(1);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	28	  local_90 = (ulong)local_90._4_4_ << 0x20;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	29	  local_78 = (ulong)local_78._4_4_ << 0x20;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	30	  nn::oe::GetExpectedVolumeBalance((float *)&local_90,(float *)&local_78);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	31	  nn::oe::SetExpectedVolumeBalance(1.0,(float)local_78);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	32	  nn::time::Initialize();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	33	  puVar4 = PTR_DAT_71015faab8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	34	  plVar13 = *(long **)(*(long *)PTR_DAT_71015faab8 + 8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	35	  FUN_71000063f0();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	36	  FUN_7100038fe0(param_1);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	37	  FUN_7100006600((long)param_1);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	38	  FUN_7100006920(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	39	  FUN_7100006a30(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	40	  lVar14 = *(long *)PTR_DAT_71015fae90;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	41	  uVar9 = FUN_71001b2df0();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	42	  FUN_71001b4350(lVar14,plVar13,uVar9,param_4);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	43	  FUN_7100006b40(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	44	  FUN_71001d35e0(*(long *)PTR_DAT_71015fae98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	45	  FUN_7100006c50(*(long **)(*(long *)puVar4 + 0x1a8));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	46	  FUN_710013e0d0(*(long *)PTR_DAT_71015faea0,*(long **)(*(long *)puVar4 + 0x1a8));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	47	  puVar10 = FUN_7100008bf0(&local_90,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	48	  puVar7 = PTR_DAT_71015faea8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	49	  puVar12 = *(undefined8 **)PTR_DAT_71015faea8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	50	  *(undefined8 **)PTR_DAT_71015faea8 = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	51	  if (puVar12 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	52	    plVar11 = (long *)puVar12[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	53	    uVar16 = puVar12[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	54	    uVar1 = puVar12[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	55	    uVar2 = puVar12[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	56	    (**(code **)*puVar12)(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	57	    (**(code **)(*plVar11 + 0x18))(plVar11,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	58	    puVar10 = *(undefined8 **)puVar7;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	59	  }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	60	  puVar12 = (undefined8 *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	61	  if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	62	    puVar12 = puVar10 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	63	  }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	64	  FUN_710001db80(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	65	  FUN_7100142710(*(long *)puVar7);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	66	  puVar7 = PTR_DAT_71015fad18;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	67	  lVar14 = nn::os::GetTlsValue(*(undefined4 *)PTR_DAT_71015fad18);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	68	  if (*(ulong *)(lVar14 + 0x80) < 0x10) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	69	    *(long **)(lVar14 + *(ulong *)(lVar14 + 0x80) * 8) = plVar13;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	70	    *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + 1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	71	    plVar11 = (long *)(**(code **)(*plVar13 + 0x10))(plVar13,0xf8,8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	72	    if (plVar11 == (long *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	73	      (**(code **)(*plVar13 + 0x90))(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	74	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	75	    memset(plVar11 + 1,0,0xf0);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	76	    puVar6 = PTR_DAT_71015fad90;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	77	    plVar11[7] = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	78	    *(undefined4 *)(plVar11 + 8) = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	79	    *(undefined4 *)(plVar11 + 6) = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	80	    plVar11[4] = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	81	    plVar11[5] = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	82	    *plVar11 = (long)(puVar6 + 0x10);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	83	    plVar11[2] = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	84	    plVar11[3] = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	85	    nn::os::GetTlsValue(*(undefined4 *)puVar7);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	86	    puVar6 = PTR_DAT_71015faeb8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	87	    *PTR_DAT_71015faeb0 = 1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	88	    *plVar11 = (long)(puVar6 + 0x10);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	89	    plVar11[9] = (long)(puVar6 + 0x40);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	90	    memset(plVar11 + 10,0,0xa8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	91	    plVar11[1] = (long)plVar13;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	92	    plVar11[2] = (long)plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	93	    plVar11[3] = 0xf8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	94	    plVar11[4] = 8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	95	    puVar6 = PTR_DAT_71015fad08;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	96	    *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + -1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	97	    puVar10 = *(undefined8 **)puVar6;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	98	    *(long **)puVar6 = plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	99	    if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	100	      plVar11 = (long *)puVar10[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	101	      uVar1 = puVar10[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	102	      uVar2 = puVar10[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	103	      uVar16 = puVar10[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	104	      (**(code **)*puVar10)();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	105	      (**(code **)(*plVar11 + 0x18))(plVar11,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	106	      plVar11 = *(long **)puVar6;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	107	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	108	    plVar3 = (long *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	109	    if (plVar11 != (long *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	110	      plVar3 = plVar11 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	111	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	112	    FUN_710001db80(plVar3);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	113	    FUN_710013b650(*(long **)puVar6,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	114	    FUN_7100006d70(*(long **)(*(long *)puVar4 + 0x168));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	115	    FUN_710016e000(*(long *)PTR_DAT_71015face8,*(long **)(*(long *)puVar4 + 0x168));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	116	    lVar14 = *(long *)(*(long *)puVar6 + 0x98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	117	    if (lVar14 != 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	118	      (**(code **)(*(long *)(lVar14 + 0x48) + 0x10))();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	119	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	120	    lVar15 = *(long *)(lVar14 + 0xc0);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	121	    if (lVar15 == 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	122	      FUN_7100279c40(0);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	123	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	124	    else {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	125	      plVar11 = (long *)(lVar15 + 0x48);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	126	      (**(code **)(*plVar11 + 0x10))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	127	      FUN_7100279c40(lVar15);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	128	      (**(code **)(*plVar11 + 0x18))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	129	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	130	    (**(code **)(*(long *)(lVar14 + 0x48) + 0x18))((long *)(lVar14 + 0x48));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	131	    puVar10 = FUN_71000093f0(&local_90,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	132	    puVar5 = PTR_DAT_71015faec0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	133	    puVar12 = *(undefined8 **)PTR_DAT_71015faec0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	134	    *(undefined8 **)PTR_DAT_71015faec0 = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	135	    if (puVar12 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	136	      plVar11 = (long *)puVar12[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	137	      uVar16 = puVar12[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	138	      uVar1 = puVar12[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	139	      uVar2 = puVar12[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	140	      (**(code **)*puVar12)(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	141	      (**(code **)(*plVar11 + 0x18))(plVar11,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	142	      puVar10 = *(undefined8 **)puVar5;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	143	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	144	    puVar12 = (undefined8 *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	145	    if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	146	      puVar12 = puVar10 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	147	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	148	    FUN_710001db80(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	149	    plVar11 = *(long **)(*(long *)puVar4 + 0x228);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	150	    lVar14 = nn::os::GetTlsValue(*(undefined4 *)puVar7);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	151	    if (*(ulong *)(lVar14 + 0x80) < 0x10) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	152	      *(long **)(lVar14 + *(ulong *)(lVar14 + 0x80) * 8) = plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	153	      *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + 1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	154	      puVar10 = (undefined8 *)(**(code **)(*plVar11 + 0x10))(plVar11,0x78,8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	155	      if (puVar10 == (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	156	        (**(code **)(*plVar11 + 0x90))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	157	      }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	158	      FUN_710011e7a0(puVar10,plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	159	      puVar10[1] = plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	160	      puVar10[2] = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	161	      puVar10[3] = 0x78;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	162	      puVar10[4] = 8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	163	      puVar5 = PTR_DAT_71015facf8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	164	      *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + -1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	165	      puVar12 = *(undefined8 **)puVar5;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	166	      *(undefined8 **)puVar5 = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	167	      if (puVar12 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	168	        plVar3 = (long *)puVar12[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	169	        uVar1 = puVar12[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	170	        uVar2 = puVar12[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	171	        uVar16 = puVar12[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	172	        (**(code **)*puVar12)();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	173	        (**(code **)(*plVar3 + 0x18))(plVar3,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	174	        puVar10 = *(undefined8 **)puVar5;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	175	      }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	176	      puVar12 = (undefined8 *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	177	      if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	178	        puVar12 = puVar10 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	179	      }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	180	      FUN_710001db80(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	181	      FUN_710011e9a0(*(long *)puVar5,plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	182	      FUN_710011eff0(*(long *)puVar5,0);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	183	      local_78 = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	184	      uStack_70 = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	185	      local_90 = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	186	      local_88 = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	187	      uStack_80 = 0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	188	      nn::account::Initialize();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	189	      nn::account::OpenPreselectedUser((UserHandle *)&local_90);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	190	      nn::account::GetUserId((Uid *)&local_78,(UserHandle *)&local_90);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	191	      FUN_71001cdbd0(*(long **)(*(long *)puVar4 + 0x148),local_78,uStack_70);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	192	      plVar11 = *(long **)(*(long *)puVar4 + 200);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	193	      lVar14 = nn::os::GetTlsValue(*(undefined4 *)puVar7);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	194	      if (*(ulong *)(lVar14 + 0x80) < 0x10) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	195	        *(long **)(lVar14 + *(ulong *)(lVar14 + 0x80) * 8) = plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	196	        *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + 1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	197	        puVar10 = (undefined8 *)(**(code **)(*plVar11 + 0x10))(plVar11,0x2d0,8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	198	        if (puVar10 == (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	199	          (**(code **)(*plVar11 + 0x90))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	200	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	201	        FUN_7100343c00(puVar10,plVar11,local_78,uStack_70,&local_90);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	202	        puVar10[1] = plVar11;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	203	        puVar10[2] = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	204	        puVar10[3] = 0x2d0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	205	        puVar10[4] = 8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	206	        puVar7 = PTR_DAT_71015faec8;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	207	        *(long *)(lVar14 + 0x80) = *(long *)(lVar14 + 0x80) + -1;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	208	        puVar12 = *(undefined8 **)puVar7;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	209	        *(undefined8 **)puVar7 = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	210	        if (puVar12 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	211	          plVar3 = (long *)puVar12[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	212	          uVar1 = puVar12[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	213	          uVar2 = puVar12[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	214	          uVar16 = puVar12[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	215	          (**(code **)*puVar12)();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	216	          (**(code **)(*plVar3 + 0x18))(plVar3,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	217	          puVar10 = *(undefined8 **)puVar7;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	218	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	219	        puVar12 = (undefined8 *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	220	        if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	221	          puVar12 = puVar10 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	222	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	223	        FUN_710001db80(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	224	        FUN_7100006e80(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	225	        FUN_7100142ea0(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	226	        FUN_7100142fe0(&local_78);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	227	        FUN_7100006f90(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	228	        FUN_71001bcb80(*(long *)PTR_DAT_71015faed0,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	229	        FUN_71000070b0(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	230	        FUN_71001ae750(*(long *)PTR_DAT_71015faed8,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	231	        lVar15 = *(long *)puVar6;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	232	        lVar14 = *(long *)(lVar15 + 0x98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	233	        if (lVar14 == 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	234	          FUN_71003704d0(0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	235	          lVar14 = *(long *)(lVar15 + 0x98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	236	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	237	        else {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	238	          plVar11 = (long *)(lVar14 + 0x48);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	239	          (**(code **)(*plVar11 + 0x10))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	240	          FUN_71003704d0(lVar14 + 0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	241	          (**(code **)(*plVar11 + 0x18))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	242	          lVar14 = *(long *)(lVar15 + 0x98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	243	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	244	        if (lVar14 == 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	245	          FUN_7100370670(0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	246	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	247	        else {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	248	          plVar11 = (long *)(lVar14 + 0x48);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	249	          (**(code **)(*plVar11 + 0x10))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	250	          FUN_7100370670(lVar14 + 0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	251	          (**(code **)(*plVar11 + 0x18))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	252	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	253	        do {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	254	          while (lVar14 = *(long *)(lVar15 + 0x98), lVar14 != 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	255	            plVar11 = (long *)(lVar14 + 0x48);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	256	            (**(code **)(*plVar11 + 0x10))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	257	            bVar8 = FUN_7100370890(lVar14 + 0xc90);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	258	            (**(code **)(*plVar11 + 0x18))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	259	            if (bVar8) goto LAB_71000062c0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	260	          }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	261	          bVar8 = FUN_7100370890(0xc90);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	262	        } while (!bVar8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	263	LAB_71000062c0:  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	264	        lVar14 = *(long *)(lVar15 + 0x98);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	265	        if (lVar14 == 0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	266	          FUN_7100370940(0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	267	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	268	        else {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	269	          plVar11 = (long *)(lVar14 + 0x48);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	270	          (**(code **)(*plVar11 + 0x10))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	271	          FUN_7100370940(lVar14 + 0xc90,*(long **)(*(long *)puVar4 + 0x128));  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	272	          (**(code **)(*plVar11 + 0x18))(plVar11);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	273	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	274	        puVar10 = FUN_710000a890(auStack_68,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	275	        puVar4 = PTR_DAT_71015faee0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	276	        puVar12 = *(undefined8 **)PTR_DAT_71015faee0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	277	        *(undefined8 **)PTR_DAT_71015faee0 = puVar10;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	278	        if (puVar12 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	279	          plVar11 = (long *)puVar12[1];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	280	          uVar16 = puVar12[4];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	281	          uVar1 = puVar12[2];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	282	          uVar2 = puVar12[3];  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	283	          (**(code **)*puVar12)(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	284	          (**(code **)(*plVar11 + 0x18))(plVar11,uVar1,uVar2,uVar16);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	285	          puVar10 = *(undefined8 **)puVar4;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	286	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	287	        puVar12 = (undefined8 *)0x0;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	288	        if (puVar10 != (undefined8 *)0x0) {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	289	          puVar12 = puVar10 + 9;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	290	        }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	291	        FUN_710001db80(puVar12);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	292	        lVar14 = *(long *)puVar4;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	293	        FUN_71000a6010();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	294	        FUN_71000a6020(lVar14,plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	295	        do {  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	296	          bVar8 = FUN_71000a6270(lVar14);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	297	        } while (!bVar8);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	298	        FUN_71000a62d0(lVar14);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	299	        FUN_71000071c0(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	300	        FUN_7100145510(*(long *)PTR_DAT_71015fad78);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	301	        FUN_71000072d0(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	302	        FUN_710000db60(plVar13);  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	303	        return;  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	304	      }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	305	    }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	306	  }  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	307	                    /* WARNING: Subroutine does not return */  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	308	  abort();  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	309	}  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	310	  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> CODE	7100005bd0	311	  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> DECOMPILED_END	function=7100005bd0  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> LOADER_CALLER_INCOMING	caller=7100005bd0	from=7101527458	type=DATA	parent=<no-function>	name=<no-function>  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> LOADER_CALLER_INCOMING_COUNT	caller=7100005bd0	count=1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> LOADER_INCOMING_COUNT	count=1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021ba	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021d6	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f021f6	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02215	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02234	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02254	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02273	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f02293	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> RAW_GRAMMAR_MATCH	address=7100f022b8	encoding=ASCII	block=.rodata.1  
+2026-10-29 22:14:32 INFO  (GhidraScript) InspectGrammarDataReferences.java> SUMMARY	defined_grammar_strings=9	raw_ascii_or_utf16_matches=9	direct_string_xrefs=9	decompiled_xref_functions=2	program=main  

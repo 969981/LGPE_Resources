@@ -1,0 +1,101 @@
+{
+  "schema": "lgpe-save-worker-pointer-scan-v1",
+  "status": "STATIC_POINTER_SCAN_ONLY",
+  "game": "Pokemon Let's Go Pikachu 1.0.2",
+  "main": {
+    "sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+    "image_base": "0x7100000000",
+    "source_path": "../1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main"
+  },
+  "trace": {
+    "tool": "Ghidra 12.2",
+    "read_only": true,
+    "source_hash_unchanged": true,
+    "script": "scripts/ghidra/ScanSaveWorkerPointers.java",
+    "script_sha256": "10be8bacb2476af82b7376b884a415a9801686b13956b67320b9b3cdf5538075",
+    "wrapper": "scripts/ghidra/Run-ScanSaveWorkerPointers.ps1",
+    "wrapper_sha256": "51a24c233d494d217b5548c95c586feef29eeed1d3a27b10a23c6a181ac08960",
+    "log": "logs/ghidra-save-worker-pointers-v1-script.log",
+    "log_sha256": "17063287540935d822d4fc729d2728c107f7cabb29834f377aeb30255802185c"
+  },
+  "scan": {
+    "initialized_blocks": 18,
+    "bytes_scanned": 23113044,
+    "candidate_lines": 2,
+    "candidate_output_truncated": false,
+    "absolute_qword_matches": 0,
+    "image_offset_dword_matches": 2
+  },
+  "address_materialization": {
+    "executable_blocks": 1,
+    "instruction_count": 2839329,
+    "adr_adrp_count": 91789,
+    "page_candidates": 0,
+    "page_plus_offset_candidates": 0,
+    "exact_worker_candidates": 0,
+    "candidate_lines": 0,
+    "candidate_output_truncated": false
+  },
+  "targets": {
+    "SAVE_WORKER": {
+      "address": "main+0x24d70",
+      "function": "FUN_7100024d70",
+      "incoming_references": 0,
+      "absolute_qword_matches": 0,
+      "image_offset_dword_matches": 0
+    },
+    "SAVE_ID_HELPER": {
+      "address": "main+0x27200",
+      "function": "FUN_7100027200",
+      "incoming_references": 2,
+      "absolute_qword_matches": 0,
+      "image_offset_dword_matches": 2
+    },
+    "QUEUE_HELPER": {
+      "address": "main+0x27440",
+      "function": "FUN_7100027440",
+      "incoming_references": 1,
+      "absolute_qword_matches": 0,
+      "image_offset_dword_matches": 0
+    },
+    "STATUS_HELPER": {
+      "address": "main+0x275f0",
+      "function": "FUN_71000275f0",
+      "incoming_references": 1,
+      "absolute_qword_matches": 0,
+      "image_offset_dword_matches": 0
+    }
+  },
+  "unassigned_candidates": [
+    {
+      "kind": "IMAGE_OFFSET_DWORD",
+      "block": ".rela.plt",
+      "slot": "main+0xee83f3",
+      "target_label": "SAVE_ID_HELPER",
+      "target": "main+0x27200",
+      "classification": "UNASSIGNED_RAW_CANDIDATE"
+    },
+    {
+      "kind": "IMAGE_OFFSET_DWORD",
+      "block": ".hash",
+      "slot": "main+0xeeadeb",
+      "target_label": "SAVE_ID_HELPER",
+      "target": "main+0x27200",
+      "classification": "UNASSIGNED_RAW_CANDIDATE"
+    }
+  ],
+  "address_page_candidates": [],
+  "page_plus_offset_candidates": [],
+  "interpretation": {
+    "worker_registration": "UNKNOWN",
+    "player_save_owner": "UNKNOWN",
+    "runtime_execution": "UNVERIFIED",
+    "limitations": [
+      "The scan compares raw little-endian qwords and non-executable image-offset dwords; it does not normalize relocations or infer indirect-call semantics.",
+      "The code scan matches ADR/ADRP rendered operands to the worker's 4 KiB page and checks only nearby same-register ADD immediates for offset 0xd70.",
+      "Page and page-plus-offset instruction candidates are static address materialization evidence, not proof of worker registration or execution.",
+      "Image-offset matches in .rela.plt and .hash are retained as candidates and are not assigned as function pointers.",
+      "No raw absolute qword match does not exclude split ADRP/ADD materialization, relative encodings, or indirect dispatch through a different table."
+    ]
+  }
+}

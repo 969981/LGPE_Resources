@@ -1,0 +1,91 @@
+Ghidra 12.2 PUBLIC; exact Pokémon Let’s Go Pikachu 1.0.2 main; -noanalysis, read-only.
+Filtered excerpt from the actual v19 runner output. Reproduce with:
+  pwsh.exe -NoProfile -ExecutionPolicy Bypass -File scripts/ghidra/Run-TraceSortStringAccessorLink.ps1
+The runner hashes the input main before and after and verifies read-only processing.
+
+Interpretation of the owner-side immediate: ADRP sets a page address. In this
+sequence, 0x7101609000 + 0x350 = 0x7101609350 and + 0x358 = 0x7101609358.
+The corresponding values are assigned to owner members +0x18e0/+0x18e8 in
+Ghidra's decompiler output. These are page-relative static pointer loads, not
+loads from a resource object based at a runtime pointer.
+
+INFO  TraceSortStringAccessorLink.java> PROGRAM	version=Pokemon Let's Go Pikachu 1.0.2	base=7100000000	language=AARCH64:LE:64:v8A	main_sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_SCAN_BEGIN	scope=all current function-manager bodies	condition=literal load operand [base,#0x350]; base provenance is not assumed	reports C lines and incoming references (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_FUNCTION	entry=7100374530	name=FUN_7100374530	loads_350=1	loads_358=0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_CODE	entry=7100374530	line=76	text=    if ((*(long *)(param_1 + 0x350) == 0) && (lVar2 = *(long *)(param_1 + 0x18), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_CODE	entry=7100374530	line=77	text=      *(undefined8 *)(param_1 + 0x350) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING	target=7100374530	from=7100b316c4	type=UNCONDITIONAL_CALL	caller=7100b315e0	caller_name=FUN_7100b315e0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING	target=7100374530	from=7100b314e4	type=UNCONDITIONAL_CALL	caller=7100b31400	caller_name=FUN_7100b31400 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING	target=7100374530	from=7100b319a4	type=UNCONDITIONAL_CALL	caller=7100b318c0	caller_name=FUN_7100b318c0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING_COUNT	target=7100374530	count=3 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_FUNCTION	entry=7100b06f10	name=FUN_7100b06f10	loads_350=2	loads_358=2 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_NO_C_LITERAL	entry=7100b06f10	name=FUN_7100b06f10 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING	target=7100b06f10	from=7100b06ed4	type=UNCONDITIONAL_CALL	caller=7100b06d60	caller_name=FUN_7100b06d60 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_INCOMING_COUNT	target=7100b06f10	count=1 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT_BEGIN	start=7100b06f50	end=7100b07080	function=FUN_7100b06f10 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f7c	instruction=adrp x8,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f80	instruction=ldr x8,[x8, #0x338] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f84	instruction=adrp x9,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f88	instruction=adrp x10,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f8c	instruction=ldr x9,[x9, #0x340] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f90	instruction=ldr x10,[x10, #0x348] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f94	instruction=str x19,[x20] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f98	instruction=adrp x11,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06f9c	instruction=ldr x11,[x11, #0x350] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fa0	instruction=str xzr,[x19, #0x1900] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fa4	instruction=adrp x12,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fa8	instruction=ldr x12,[x12, #0x358] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fac	instruction=str x8,[x19, #0x18f8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fb0	instruction=ldr x8,[x19, #0x1958] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fb4	instruction=str x9,[x19, #0x18d0] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fb8	instruction=str x10,[x19, #0x18d8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fbc	instruction=str x11,[x19, #0x18e0] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06fc0	instruction=str x12,[x19, #0x18e8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06ff4	instruction=adrp x8,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06ff8	instruction=ldr x8,[x8, #0x360] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b06ffc	instruction=adrp x9,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07000	instruction=adrp x10,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07004	instruction=ldr x9,[x9, #0x340] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07008	instruction=ldr x10,[x10, #0x348] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b0700c	instruction=str x19,[x20] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07010	instruction=adrp x11,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07014	instruction=ldr x11,[x11, #0x350] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07018	instruction=str xzr,[x19, #0x1900] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b0701c	instruction=adrp x12,0x7101609000 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07020	instruction=ldr x12,[x12, #0x358] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07024	instruction=str x8,[x19, #0x18f8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07028	instruction=ldr x8,[x19, #0x1958] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b0702c	instruction=str x9,[x19, #0x18d0] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07030	instruction=str x10,[x19, #0x18d8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07034	instruction=str x11,[x19, #0x18e0] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT	address=7100b07038	instruction=str x12,[x19, #0x18e8] (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> LOCALIZED_OWNER_INSN_CONTEXT_END (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	20	    puVar2 = PTR_LAB_7101609348;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	21	    puVar1 = PTR_LAB_7101609340;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	22	    puVar6 = PTR_DAT_7101609338;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	23	    *(long *)(param_1 + 0x18f0) = param_1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	24	    puVar3 = PTR_LAB_7101609350;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	25	    *(undefined8 *)(param_1 + 0x1900) = 0;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	26	    puVar4 = PTR_LAB_7101609358;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	27	    *(undefined **)(param_1 + 0x18f8) = puVar6;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	28	    pcVar5 = *(code **)(param_1 + 0x1958);
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	29	    *(undefined **)(param_1 + 0x18d0) = puVar1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	30	    *(undefined **)(param_1 + 0x18d8) = puVar2;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	31	    *(undefined **)(param_1 + 0x18e0) = puVar3;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	32	    *(undefined **)(param_1 + 0x18e8) = puVar4;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	73	    puVar4 = PTR_FUN_7101609360;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	74	    puVar1 = PTR_LAB_7101609348;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	75	    puVar6 = PTR_LAB_7101609340;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	76	    *(long *)(param_1 + 0x18f0) = param_1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	77	    puVar2 = PTR_LAB_7101609350;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	78	    *(undefined8 *)(param_1 + 0x1900) = 0;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	79	    puVar3 = PTR_LAB_7101609358;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	80	    *(undefined **)(param_1 + 0x18f8) = puVar4;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	81	    pcVar5 = *(code **)(param_1 + 0x1958);
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	82	    *(undefined **)(param_1 + 0x18d0) = puVar6;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	83	    *(undefined **)(param_1 + 0x18d8) = puVar1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	84	    *(undefined **)(param_1 + 0x18e0) = puVar2;
+INFO  TraceSortStringAccessorLink.java> CODE	7100b06f10	85	    *(undefined **)(param_1 + 0x18e8) = puVar3;
+INFO  TraceSortStringAccessorLink.java> OFFSET_OPERAND_SCAN_END	functions=88	decompiled=88	c_literal_candidate_functions=44	localized_owner_inbound_references=4 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> SUMMARY	decompiled_functions=54	temporary_functions=16	owner_range_functions=55	owner_range_decompiled=55	owner_range_field_candidates=8	resource_range_functions=12	resource_range_decompiled=12	resource_range_field_candidates=5	offset_operand_functions=88	offset_operand_decompiled=88	offset_operand_c_literal_candidates=44	localized_owner_inbound_references=4	program=main (GhidraScript)  
+Verified: exact-build main was processed read-only; script changes cannot be saved.

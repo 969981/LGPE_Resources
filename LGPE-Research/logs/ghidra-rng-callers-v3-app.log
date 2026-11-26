@@ -1,0 +1,2175 @@
+2026-10-29 05:16:25 INFO  (LoggingInitialization) Using log config file: jar:file:/D:/Tool/ghidra/ghidra_12.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml  
+2026-10-29 05:16:25 INFO  (LoggingInitialization) Using log file: logs\ghidra-rng-callers-v3-app.log  
+2026-10-29 05:16:25 DEBUG (GhidraObjectInputFilter) Including serial input filter: FileSystem/data/client.rmi.serial.filter  
+2026-10-29 05:16:25 INFO  (Preferences) Loading user preferences: C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\preferences  
+2026-10-29 05:16:25 INFO  (ClassSearcher) Searching for classes...  
+2026-10-29 05:16:26 INFO  (ClassSearcher) Class search complete (669 ms)  
+2026-10-29 05:16:26 INFO  (DefaultSSLContextInitializer) Initializing SSL Context  
+2026-10-29 05:16:26 INFO  (SecureRandomFactory) Initializing Random Number Generator...  
+2026-10-29 05:16:26 INFO  (SecureRandomFactory) Random Number Generator initialization complete: SHA1PRNG  
+2026-10-29 05:16:26 INFO  (DefaultTrustManagerFactory) Loaded 77 trusted CA certificates from the OS trust store.  
+2026-10-29 05:16:26 INFO  (DefaultTrustManagerFactory) Loaded 118 trusted CA certificates from the Java default trust store.  
+2026-10-29 05:16:26 INFO  (AnalyzeHeadless) Headless startup complete (1777 ms)  
+2026-10-29 05:16:26 INFO  (ClassSearcher) Class searcher loaded 60 extension points (19 false positives)  
+2026-10-29 05:16:26 INFO  (HeadlessAnalyzer) HEADLESS Script Paths:
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\DATA\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\SystemEmulation\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Base\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\MicrosoftCodeAnalyzer\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\JVM\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\WildcardAssembler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\DecompilerDependent\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FileFormats\ghidra_scripts
+    \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Swift\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BytePatterns\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PyGhidra\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Debug\Debugger-rmi-trace\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\PDB\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\VersionTracking\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\Atmel\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\GnuDemangler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\Decompiler\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\PIC\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\SwitchLoader\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\FunctionID\ghidra_scripts
+    C:\Users\10626\AppData\Roaming\ghidra\ghidra_12.2_PUBLIC\Extensions\BinExport\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\8051\ghidra_scripts
+    D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Features\BSim\ghidra_scripts  
+2026-10-29 05:16:26 INFO  (HeadlessAnalyzer) HEADLESS: execution starts  
+2026-10-29 05:16:26 INFO  (HeadlessAnalyzer) Opening existing project: X:\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 05:16:26 INFO  (HeadlessProject) Opening project: X:\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\work\ghidra-main\project\LGPE102-main  
+2026-10-29 05:16:29 DEBUG (SleighLanguage) Took 395ms (158ms inside lock) to initialize language D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.slaspec -> D:\Tool\ghidra\ghidra_12.2_PUBLIC\Ghidra\Processors\AARCH64\data\languages\AARCH64.sla  
+2026-10-29 05:16:29 INFO  (HeadlessAnalyzer) REPORT: Processing project file: /main  
+2026-10-29 05:16:29 INFO  (HeadlessAnalyzer) REPORT: Execute script: InspectRandomCallers.java   
+2026-10-29 05:16:31 INFO  (HeadlessAnalyzer) SCRIPT: \\192.168.1.5\j\ROMS\Nintendo Switch\Pokemon\Pokemon Lets Go Pikachu\LGPE-Research\scripts\ghidra\InspectRandomCallers.java  
+2026-10-29 05:16:31 INFO  (GhidraScript) InspectRandomCallers.java> PROGRAM	main	base=7100000000	//192.168.1.5/j/ROMS/Nintendo Switch/Pokemon/Pokemon Lets Go Pikachu/1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100145310	entry=7100145310	FUN_7100145310	bytes=68  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	710013b74c	710013b650	FUN_710013b650  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100145328	7100d30798	7100d30798	GenerateCryptographicallyRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100145310	chars=245  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100145310(undefined8 *param_1)
+
+{
+  undefined8 local_18;
+  
+  nn::crypto::GenerateCryptographicallyRandomBytes(&local_18,8);
+  *param_1 = local_18;
+  param_1[1] = 0x82a2b175229d6a5b;
+  param_1[2] = local_18;
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100145310  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100145380	entry=7100145380	FUN_7100145380	bytes=40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71009e89b0	71009e89a0	FUN_71009e89a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71002f753c	71002f7480	FUN_71002f7480  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100145394	7100d30798	7100d30798	GenerateCryptographicallyRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100145380	chars=159  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+undefined8 FUN_7100145380(void)
+
+{
+  undefined8 local_18;
+  
+  nn::crypto::GenerateCryptographicallyRandomBytes(&local_18,8);
+  return local_18;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100145380  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100524ed0	entry=7100524ed0	FUN_7100524ed0	bytes=44  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d24064	7100d24030	FUN_7100d24030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d2406c	7100d24030	FUN_7100d24030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100524ee8	7100d30798	7100d30798	GenerateCryptographicallyRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100524ed0	chars=176  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+undefined8 FUN_7100524ed0(void)
+
+{
+  undefined8 local_18;
+  
+  local_18 = 0;
+  nn::crypto::GenerateCryptographicallyRandomBytes(&local_18,8);
+  return local_18;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100524ed0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100524f00	entry=7100524f00	FUN_7100524f00	bytes=8  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d24114	7100d24030	FUN_7100d24030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d24120	7100d24030	FUN_7100d24030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d24e08	7100d24c70	FUN_7100d24c70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100524f04	7100d30798	7100d30798	GenerateCryptographicallyRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100524f00	chars=156  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100524f00(void *param_1,ulong param_2)
+
+{
+  nn::crypto::GenerateCryptographicallyRandomBytes(param_1,param_2 & 0xffffffff);
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100524f00  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	71004e0040	entry=71004e0040	FUN_71004e0040	bytes=212  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71004fe038	71004fe000	FUN_71004fe000  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cc96ac	7100cc96a0	FUN_7100cc96a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf22c8	7100cf2190	FUN_7100cf2190  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cca4b8	7100cca2b0	FUN_7100cca2b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cca4d4	7100cca2b0	FUN_7100cca2b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfdab4	7100cfda50	FUN_7100cfda50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100ce953c	7100ce8dd0	FUN_7100ce8dd0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d079fc	7100d079e0	FUN_7100d079e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004e0080	7100d31918	7100d31918	GenerateRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004e00fc	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	71004e0040	chars=1067  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+int FUN_71004e0040(uint param_1)
+
+{
+  uint uVar1;
+  undefined *puVar2;
+  undefined *puVar3;
+  int iVar4;
+  ulong uVar5;
+  ulong uVar6;
+  int local_34;
+  
+  puVar2 = PTR_DAT_71016013a0;
+  if (*PTR_DAT_71016013a0 == '\0') {
+    local_34 = 0;
+    uVar6 = 4;
+    nn::os::GenerateRandomBytes(&local_34,4);
+    puVar3 = PTR_DAT_71016013a8;
+    iVar4 = 0x1105;
+    if (local_34 != 0) {
+      iVar4 = local_34;
+    }
+    *(undefined4 *)(PTR_DAT_71016013a8 + 0x9c0) = 4;
+    *(int *)puVar3 = iVar4;
+    *(int *)(puVar3 + 4) = iVar4 * 0x10dcd;
+    *(int *)(puVar3 + 8) = iVar4 * 0x1c587629;
+    *(int *)(puVar3 + 0xc) = iVar4 * -0x59004c2b;
+    uVar5 = 3;
+    do {
+      *(int *)(puVar3 + uVar6 * 4) = *(int *)(puVar3 + uVar5 * 4) * 0x10dcd;
+      uVar5 = (ulong)*(uint *)(puVar3 + 0x9c0);
+      uVar1 = *(uint *)(puVar3 + 0x9c0) + 1;
+      uVar6 = (ulong)uVar1;
+      *(uint *)(puVar3 + 0x9c0) = uVar1;
+    } while (uVar1 < 0x270);
+    *puVar2 = 1;
+  }
+  iVar4 = FUN_71004e0150((uint *)PTR_DAT_71016013a8,param_1);
+  return iVar4;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	71004e0120	entry=71004e0120	FUN_71004e0120	bytes=44  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfbe3c	7100cfbdc0	FUN_7100cfbdc0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf70ec	7100cf7030	FUN_7100cf7030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004e0138	7100d31918	7100d31918	GenerateRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	71004e0120	chars=155  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+undefined4 FUN_71004e0120(void)
+
+{
+  undefined4 local_14;
+  
+  local_14 = 0;
+  nn::os::GenerateRandomBytes(&local_14,4);
+  return local_14;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	71004e0120  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	71004e0150	entry=71004e0150	FUN_71004e0150	bytes=364  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71004e00fc	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71004e0300	71004e02c0	FUN_71004e02c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8ce4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8cf4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d04	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d14	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d24	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d34	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d44	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d54	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d64	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d74	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d84	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8d94	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8da4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8db4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8dc4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf8dd4	7100cf8cb0	FUN_7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	71004e0150	chars=1934  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+int FUN_71004e0150(uint *param_1,uint param_2)
+
+{
+  uint *puVar1;
+  uint uVar2;
+  ulong uVar3;
+  long lVar4;
+  uint uVar5;
+  ulong uVar6;
+  
+  if (param_2 == 0) {
+    return 0;
+  }
+  uVar5 = param_1[0x270];
+  if (0x26f < uVar5) {
+    if (uVar5 == 0x271) {
+      param_1[2] = 0x6d9307cd;
+      uVar3 = 3;
+      param_1[0] = 0x1105;
+      param_1[1] = 0x11efe201;
+      uVar6 = 2;
+      param_1[0x270] = 3;
+      do {
+        param_1[uVar3] = param_1[uVar6] * 0x10dcd;
+        uVar6 = (ulong)param_1[0x270];
+        uVar5 = param_1[0x270] + 1;
+        uVar3 = (ulong)uVar5;
+        param_1[0x270] = uVar5;
+      } while (uVar5 < 0x270);
+    }
+    uVar3 = (ulong)*param_1;
+    lVar4 = 0;
+    do {
+      puVar1 = (uint *)((long)param_1 + lVar4);
+      uVar5 = (uint)uVar3;
+      uVar3 = (ulong)puVar1[1];
+      lVar4 = lVar4 + 4;
+      *puVar1 = param_1[(uVar3 & 1) + 0x271] ^ puVar1[0x18d] ^
+                (puVar1[1] & 0x7ffffffe | uVar5 & 0x80000000) >> 1;
+    } while (lVar4 != 0x38c);
+    uVar3 = (ulong)param_1[0xe3];
+    lVar4 = 0;
+    do {
+      puVar1 = (uint *)((long)param_1 + lVar4);
+      uVar5 = (uint)uVar3;
+      uVar3 = (ulong)puVar1[0xe4];
+      lVar4 = lVar4 + 4;
+      puVar1[0xe3] = param_1[(uVar3 & 1) + 0x271] ^ *puVar1 ^
+                     (puVar1[0xe4] & 0x7ffffffe | uVar5 & 0x80000000) >> 1;
+    } while (lVar4 != 0x630);
+    uVar2 = param_1[((ulong)*param_1 & 1) + 0x271];
+    param_1[0x270] = 0;
+    uVar5 = 0;
+    param_1[0x26f] =
+         uVar2 ^ param_1[0x18c] ^ (*param_1 & 0x7ffffffe | param_1[0x26f] & 0x80000000) >> 1;
+  }
+  param_1[0x270] = uVar5 + 1;
+  uVar5 = param_1[uVar5] ^ param_1[uVar5] >> 0xb;
+  uVar5 = (uVar5 & 0x13a58ad) << 7 ^ uVar5;
+  uVar5 = (uVar5 & 0x1df8c) << 0xf ^ uVar5;
+  uVar5 = uVar5 ^ uVar5 >> 0x12;
+  uVar2 = 0;
+  if (param_2 != 0) {
+    uVar2 = uVar5 / param_2;
+  }
+  return uVar5 - uVar2 * param_2;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	71004e02c0	entry=71004e02c0	FUN_71004e02c0	bytes=264  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfda80	7100cfda50	FUN_7100cfda50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004e0300	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004e0334	7100d31918	7100d31918	GenerateRandomBytes  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	71004e02c0	chars=1205  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+float FUN_71004e02c0(float param_1)
+
+{
+  int iVar1;
+  undefined *puVar2;
+  undefined *puVar3;
+  uint uVar4;
+  ulong uVar5;
+  ulong uVar6;
+  float fVar7;
+  int local_34;
+  
+  puVar2 = PTR_DAT_71016013a0;
+  if (*PTR_DAT_71016013a0 == '\0') {
+    local_34 = 0;
+    uVar6 = 4;
+    nn::os::GenerateRandomBytes(&local_34,4);
+    puVar3 = PTR_DAT_71016013a8;
+    iVar1 = 0x1105;
+    if (local_34 != 0) {
+      iVar1 = local_34;
+    }
+    *(undefined4 *)(PTR_DAT_71016013a8 + 0x9c0) = 4;
+    *(int *)puVar3 = iVar1;
+    *(int *)(puVar3 + 4) = iVar1 * 0x10dcd;
+    *(int *)(puVar3 + 8) = iVar1 * 0x1c587629;
+    *(int *)(puVar3 + 0xc) = iVar1 * -0x59004c2b;
+    uVar5 = 3;
+    do {
+      *(int *)(puVar3 + uVar6 * 4) = *(int *)(puVar3 + uVar5 * 4) * 0x10dcd;
+      uVar5 = (ulong)*(uint *)(puVar3 + 0x9c0);
+      uVar4 = *(uint *)(puVar3 + 0x9c0) + 1;
+      uVar6 = (ulong)uVar4;
+      *(uint *)(puVar3 + 0x9c0) = uVar4;
+    } while (uVar4 < 0x270);
+    *puVar2 = 1;
+  }
+  if (param_1 <= 0.0) {
+    fVar7 = 0.0;
+  }
+  else {
+    uVar4 = FUN_71004e0150((uint *)PTR_DAT_71016013a8,0x10000);
+    fVar7 = (float)uVar4 * DAT_7100f47340 * param_1;
+  }
+  return fVar7;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	71004e02c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cf8cb0	entry=7100cf8cb0	FUN_7100cf8cb0	bytes=336  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfa400	7100cfa310	FUN_7100cfa310  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf894c	7100cf8750	FUN_7100cf8750  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8ce4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8cf4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d04	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d14	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d24	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d34	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d44	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d54	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d64	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d74	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d84	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8d94	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8da4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8db4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8dc4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf8dd4	71004e0150	71004e0150	FUN_71004e0150  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cf8cb0	chars=1539  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cf8cb0(undefined1 *param_1,uint *param_2,long *param_3)
+
+{
+  int iVar1;
+  
+  (**(code **)(*param_3 + 0x10))(param_3);
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  *param_1 = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[1] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[2] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[3] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[4] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[5] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[6] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[7] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[8] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[9] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[10] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[0xb] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[0xc] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[0xd] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[0xe] = (char)iVar1;
+  iVar1 = FUN_71004e0150(param_2,0xff);
+  param_1[0xf] = (char)iVar1;
+  *(undefined8 *)(param_1 + 0x10) = 0x10;
+                    /* WARNING: Could not recover jumptable at 0x007100cf8dfc. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (**(code **)(*param_3 + 0x20))(param_3);
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cf8cb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cfd450	entry=7100cfd450	FUN_7100cfd450	bytes=1484  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100ce6844	7100ce67e0	FUN_7100ce67e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d0051c	7100d004f0	FUN_7100d004f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd47c	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd484	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd4b8	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd4c4	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd558	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd560	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd570	7100cfda50	7100cfda50	FUN_7100cfda50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd618	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd620	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd62c	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd6c0	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd788	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd790	71004de670	71004de670	FUN_71004de670  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd838	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd840	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd850	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd87c	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd890	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd924	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd940	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd9ec	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfd9f8	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cfd450	chars=10145  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+/* WARNING: Removing unreachable block (ram,0x007100cfd9a4) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd8f8) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd6a8) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd758) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd540) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd5e8) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd808) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd694) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd52c) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd5d4) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd744) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd90c) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd9b8) */
+/* WARNING: Removing unreachable block (ram,0x007100cfd7f4) */
+
+undefined8 FUN_7100cfd450(long param_1,undefined8 *param_2,long param_3)
+
+{
+  long *plVar1;
+  int iVar2;
+  char cVar3;
+  bool bVar4;
+  long *plVar5;
+  int iVar6;
+  int iVar7;
+  undefined8 uVar8;
+  long lVar9;
+  long *plVar10;
+  ulong uStack_1a8;
+  ulong local_1a0;
+  ulong uStack_198;
+  ulong uStack_190;
+  ulong uStack_188;
+  long *local_180;
+  undefined8 auStack_178 [18];
+  ulong local_e8;
+  undefined8 auStack_e0 [18];
+  
+  FUN_7100cb9d70(auStack_e0);
+  FUN_71004dde40(&local_e8);
+  if (*(long *)(param_1 + 0x20) != 0) {
+    do {
+      if (local_e8 < *(ulong *)(*(long *)(param_1 + 0x18) + 0xa8)) break;
+      FUN_71004dde40(&uStack_188);
+      lVar9 = *(long *)(param_1 + 0x18);
+      FUN_7100cb9d70(auStack_178);
+      local_180 = *(long **)(lVar9 + 0x10);
+      plVar1 = local_180 + 1;
+      iVar6 = (int)*plVar1;
+      if (iVar6 == (int)*plVar1) {
+        cVar3 = '\x01';
+        bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar4) {
+          *(int *)plVar1 = (int)*plVar1 + 1;
+          cVar3 = ExclusiveMonitorsStatus();
+        }
+        if (cVar3 != '\0') goto LAB_7100cfd508;
+      }
+      else {
+        ClearExclusiveLocal();
+LAB_7100cfd508:
+        while( true ) {
+          while (iVar7 = (int)*plVar1, iVar7 != iVar6) {
+            ClearExclusiveLocal();
+            iVar6 = iVar7;
+          }
+          cVar3 = '\x01';
+          bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar4) {
+            *(int *)plVar1 = iVar6 + 1;
+            cVar3 = ExclusiveMonitorsStatus();
+          }
+          if (cVar3 == '\0') break;
+          iVar6 = iVar7;
+        }
+      }
+      FUN_7100cb9e50((long)auStack_178,lVar9 + 0x18);
+      FUN_71004dde40(&uStack_190);
+      FUN_7100cfda50(param_1 + 0x38,(long *)&local_180,(long *)&uStack_190);
+      plVar1 = local_180 + 1;
+      iVar6 = (int)*plVar1;
+      iVar7 = (int)*plVar1 + -1;
+      if (iVar6 == (int)*plVar1) {
+        cVar3 = '\x01';
+        bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar4) {
+          *(int *)plVar1 = iVar7;
+          cVar3 = ExclusiveMonitorsStatus();
+        }
+        if (cVar3 != '\0') goto LAB_7100cfd5b0;
+      }
+      else {
+        ClearExclusiveLocal();
+LAB_7100cfd5b0:
+        while( true ) {
+          while( true ) {
+            iVar2 = (int)*plVar1;
+            iVar7 = iVar6 + -1;
+            if (iVar2 == iVar6) break;
+            ClearExclusiveLocal();
+            iVar6 = iVar2;
+          }
+          cVar3 = '\x01';
+          bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar4) {
+            *(int *)plVar1 = iVar7;
+            cVar3 = ExclusiveMonitorsStatus();
+          }
+          if (cVar3 == '\0') break;
+          iVar6 = iVar2;
+        }
+      }
+      if ((iVar7 == 0) && (*(char *)((long)local_180 + 0xc) == '\0')) {
+        *(undefined1 *)((long)local_180 + 0xc) = 1;
+        (**(code **)(*local_180 + 8))();
+      }
+      FUN_7100cba130();
+      FUN_71004dde40(&uStack_198);
+      lVar9 = *(long *)(param_1 + 0x18);
+      FUN_7100cb9d70(auStack_178);
+      local_180 = *(long **)(lVar9 + 0x10);
+      plVar1 = local_180 + 1;
+      iVar6 = (int)*plVar1;
+      if (iVar6 == (int)*plVar1) {
+        cVar3 = '\x01';
+        bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar4) {
+          *(int *)plVar1 = (int)*plVar1 + 1;
+          cVar3 = ExclusiveMonitorsStatus();
+        }
+        if (cVar3 != '\0') goto LAB_7100cfd670;
+      }
+      else {
+        ClearExclusiveLocal();
+LAB_7100cfd670:
+        while( true ) {
+          while (iVar7 = (int)*plVar1, iVar7 != iVar6) {
+            ClearExclusiveLocal();
+            iVar6 = iVar7;
+          }
+          cVar3 = '\x01';
+          bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar4) {
+            *(int *)plVar1 = iVar6 + 1;
+            cVar3 = ExclusiveMonitorsStatus();
+          }
+          if (cVar3 == '\0') break;
+          iVar6 = iVar7;
+        }
+      }
+      FUN_7100cb9e50((long)auStack_178,lVar9 + 0x18);
+      plVar10 = *(long **)(param_1 + 0x18);
+      lVar9 = *plVar10;
+      *(long *)(lVar9 + 8) = plVar10[1];
+      *(long *)plVar10[1] = lVar9;
+      *(long *)(param_1 + 0x20) = *(long *)(param_1 + 0x20) + -1;
+      plVar5 = (long *)plVar10[2];
+      plVar1 = plVar5 + 1;
+      iVar6 = (int)*plVar1;
+      iVar7 = (int)*plVar1 + -1;
+      if (iVar6 == (int)*plVar1) {
+        cVar3 = '\x01';
+        bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar4) {
+          *(int *)plVar1 = iVar7;
+          cVar3 = ExclusiveMonitorsStatus();
+        }
+        if (cVar3 != '\0') goto LAB_7100cfd720;
+      }
+      else {
+        ClearExclusiveLocal();
+LAB_7100cfd720:
+        while( true ) {
+          while( true ) {
+            iVar2 = (int)*plVar1;
+            iVar7 = iVar6 + -1;
+            if (iVar2 == iVar6) break;
+            ClearExclusiveLocal();
+            iVar6 = iVar2;
+          }
+          cVar3 = '\x01';
+          bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar4) {
+            *(int *)plVar1 = iVar7;
+            cVar3 = ExclusiveMonitorsStatus();
+          }
+          if (cVar3 == '\0') break;
+          iVar6 = iVar2;
+        }
+      }
+      if ((iVar7 == 0) && (*(char *)((long)plVar5 + 0xc) == '\0')) {
+        *(undefined1 *)((long)plVar5 + 0xc) = 1;
+        (**(code **)(*plVar5 + 8))();
+      }
+      FUN_7100cba130();
+      FUN_71004de670((long)plVar10);
+      plVar1 = local_180 + 1;
+      iVar6 = (int)*plVar1;
+      iVar7 = (int)*plVar1 + -1;
+      if (iVar6 == (int)*plVar1) {
+        cVar3 = '\x01';
+        bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar4) {
+          *(int *)plVar1 = iVar7;
+          cVar3 = ExclusiveMonitorsStatus();
+        }
+        if (cVar3 != '\0') goto LAB_7100cfd7d0;
+      }
+      else {
+        ClearExclusiveLocal();
+LAB_7100cfd7d0:
+        while( true ) {
+          while( true ) {
+            iVar2 = (int)*plVar1;
+            iVar7 = iVar6 + -1;
+            if (iVar2 == iVar6) break;
+            ClearExclusiveLocal();
+            iVar6 = iVar2;
+          }
+          cVar3 = '\x01';
+          bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar4) {
+            *(int *)plVar1 = iVar7;
+            cVar3 = ExclusiveMonitorsStatus();
+          }
+          if (cVar3 == '\0') break;
+          iVar6 = iVar2;
+        }
+      }
+      if ((iVar7 == 0) && (*(char *)((long)local_180 + 0xc) == '\0')) {
+        *(undefined1 *)((long)local_180 + 0xc) = 1;
+        (**(code **)(*local_180 + 8))();
+      }
+      FUN_7100cba130();
+      FUN_71004dde40(&local_e8);
+    } while (*(long *)(param_1 + 0x20) != 0);
+  }
+  FUN_71004dde40(&local_1a0);
+  if ((*(long *)(param_1 + 0x50) == 0) || (local_1a0 < *(ulong *)(*(long *)(param_1 + 0x48) + 0xa8))
+     ) {
+    uVar8 = 0;
+    goto LAB_7100cfd9f4;
+  }
+  FUN_71004dde40(&uStack_1a8);
+  lVar9 = *(long *)(param_1 + 0x48);
+  FUN_7100cb9d70(auStack_178);
+  local_180 = *(long **)(lVar9 + 0x10);
+  plVar1 = local_180 + 1;
+  iVar6 = (int)*plVar1;
+  if (iVar6 == (int)*plVar1) {
+    cVar3 = '\x01';
+    bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+    if (bVar4) {
+      *(int *)plVar1 = (int)*plVar1 + 1;
+      cVar3 = ExclusiveMonitorsStatus();
+    }
+    if (cVar3 != '\0') goto LAB_7100cfd8d4;
+  }
+  else {
+    ClearExclusiveLocal();
+LAB_7100cfd8d4:
+    while( true ) {
+      while (iVar7 = (int)*plVar1, iVar7 != iVar6) {
+        ClearExclusiveLocal();
+        iVar6 = iVar7;
+      }
+      cVar3 = '\x01';
+      bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+      if (bVar4) {
+        *(int *)plVar1 = iVar6 + 1;
+        cVar3 = ExclusiveMonitorsStatus();
+      }
+      if (cVar3 == '\0') break;
+      iVar6 = iVar7;
+    }
+  }
+  FUN_7100cb9e50((long)auStack_178,lVar9 + 0x18);
+  if (param_2 != (undefined8 *)0x0) {
+    *param_2 = local_180;
+  }
+  if (param_3 != 0) {
+    FUN_7100cb9e50(param_3,(long)auStack_178);
+  }
+  plVar1 = local_180 + 1;
+  iVar6 = (int)*plVar1;
+  iVar7 = (int)*plVar1 + -1;
+  if (iVar6 == (int)*plVar1) {
+    cVar3 = '\x01';
+    bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+    if (bVar4) {
+      *(int *)plVar1 = iVar7;
+      cVar3 = ExclusiveMonitorsStatus();
+    }
+    if (cVar3 != '\0') goto LAB_7100cfd980;
+  }
+  else {
+    ClearExclusiveLocal();
+LAB_7100cfd980:
+    while( true ) {
+      while( true ) {
+        iVar2 = (int)*plVar1;
+        iVar7 = iVar6 + -1;
+        if (iVar2 == iVar6) break;
+        ClearExclusiveLocal();
+        iVar6 = iVar2;
+      }
+      cVar3 = '\x01';
+      bVar4 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+      if (bVar4) {
+        *(int *)plVar1 = iVar7;
+        cVar3 = ExclusiveMonitorsStatus();
+      }
+      if (cVar3 == '\0') break;
+      iVar6 = iVar2;
+    }
+  }
+  if ((iVar7 == 0) && (*(char *)((long)local_180 + 0xc) == '\0')) {
+    *(undefined1 *)((long)local_180 + 0xc) = 1;
+    (**(code **)(*local_180 + 8))();
+  }
+  FUN_7100cba130();
+  uVar8 = 1;
+LAB_7100cfd9f4:
+  FUN_7100cba130();
+  return uVar8;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cfd450  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cfda50	entry=7100cfda50	FUN_7100cfda50	bytes=184  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfd570	7100cfd450	FUN_7100cfd450  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71015f6b78	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfda80	71004e02c0	71004e02c0	FUN_71004e02c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfdab4	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfdaec	7100d030d0	7100d030d0	FUN_7100d030d0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cfda50	chars=876  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cfda50(long param_1,long *param_2,long *param_3)
+
+{
+  long lVar1;
+  uint uVar2;
+  ulong *puVar3;
+  long lVar4;
+  long lVar5;
+  float fVar6;
+  float fVar7;
+  ulong local_40;
+  ulong local_38;
+  
+  puVar3 = &local_40;
+  fVar7 = *(float *)(*(long *)(param_1 + 0x20) + 0x24);
+  fVar6 = FUN_71004e02c0(1.0);
+  if (fVar7 <= fVar6) {
+    uVar2 = *(uint *)(*(long *)(param_1 + 0x20) + 0x20);
+    lVar5 = *param_3;
+    lVar4 = (long)*(int *)(*(long *)(param_1 + 0x20) + 0x1c);
+    if (uVar2 == 0) {
+      local_40 = lVar5 + lVar4;
+    }
+    else {
+      uVar2 = FUN_71004e0040(uVar2);
+      lVar1 = (long)(int)uVar2;
+      if ((uVar2 & 0x80000000) != 0) {
+        lVar1 = -(long)(int)-uVar2;
+      }
+      local_38 = lVar5 + lVar4 + lVar1;
+      puVar3 = &local_38;
+    }
+    FUN_7100d030d0(param_1,param_2,puVar3);
+  }
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cfda50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100d030d0	entry=7100d030d0	FUN_7100d030d0	bytes=620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfdaec	7100cfda50	FUN_7100cfda50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfd2d0	7100cfd1f0	FUN_7100cfd1f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71015f6528	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfd400	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d03134	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d031b8	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d031c4	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d031d8	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d0325c	7100cb9e50	7100cb9e50	FUN_7100cb9e50  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d03320	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100d030d0	chars=4156  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100d030d0(long param_1,long *param_2,ulong *param_3)
+
+{
+  long *plVar1;
+  char cVar2;
+  bool bVar3;
+  long *plVar4;
+  long *plVar5;
+  long lVar6;
+  int iVar7;
+  int iVar8;
+  ulong uVar9;
+  long *plVar10;
+  long *plVar11;
+  undefined8 auStack_d8 [18];
+  ulong local_48;
+  
+  plVar11 = *(long **)(param_1 + 0x10);
+  uVar9 = *param_3;
+  for (plVar10 = (long *)(param_1 + 8); plVar11 != plVar10; plVar10 = (long *)*plVar10) {
+    if (*(ulong *)(*plVar10 + 0xa8) <= uVar9) {
+      plVar11 = plVar10;
+      break;
+    }
+  }
+  FUN_7100cb9d70(auStack_d8);
+  plVar5 = (long *)*param_2;
+  plVar1 = plVar5 + 1;
+  iVar7 = (int)*plVar1;
+  if (iVar7 == (int)*plVar1) {
+    cVar2 = '\x01';
+    bVar3 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+    if (bVar3) {
+      *(int *)plVar1 = (int)*plVar1 + 1;
+      cVar2 = ExclusiveMonitorsStatus();
+    }
+    if (cVar2 == '\0') {
+LAB_7100d031b0:
+      FUN_7100cb9e50((long)auStack_d8,(long)(param_2 + 1));
+      local_48 = uVar9;
+      plVar4 = FUN_71004de620(0xb0);
+      *plVar4 = 0;
+      FUN_7100cb9d70(plVar4 + 3);
+      plVar4[2] = (long)plVar5;
+      plVar1 = plVar5 + 1;
+      iVar7 = (int)*plVar1;
+      if (iVar7 == (int)*plVar1) {
+        cVar2 = '\x01';
+        bVar3 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+        if (bVar3) {
+          *(int *)plVar1 = (int)*plVar1 + 1;
+          cVar2 = ExclusiveMonitorsStatus();
+        }
+        if (cVar2 == '\0') {
+LAB_7100d03254:
+          FUN_7100cb9e50((long)(plVar4 + 3),(long)auStack_d8);
+          plVar4[0x15] = local_48;
+          lVar6 = *plVar11;
+          *(long **)(lVar6 + 8) = plVar4;
+          *plVar4 = lVar6;
+          *plVar10 = (long)plVar4;
+          plVar4[1] = (long)plVar11;
+          *(long *)(param_1 + 0x18) = *(long *)(param_1 + 0x18) + 1;
+          plVar10 = plVar5 + 1;
+          iVar7 = (int)*plVar10;
+          iVar8 = (int)*plVar10 + -1;
+          if (iVar7 == (int)*plVar10) {
+            cVar2 = '\x01';
+            bVar3 = (bool)ExclusiveMonitorPass(plVar10,0x10);
+            if (bVar3) {
+              *(int *)plVar10 = iVar8;
+              cVar2 = ExclusiveMonitorsStatus();
+            }
+            if (cVar2 == '\0') {
+LAB_7100d032fc:
+              if ((iVar8 == 0) && (*(char *)((long)plVar5 + 0xc) == '\0')) {
+                *(undefined1 *)((long)plVar5 + 0xc) = 1;
+                (**(code **)(*plVar5 + 8))();
+              }
+              FUN_7100cba130();
+              return;
+            }
+          }
+          else {
+            ClearExclusiveLocal();
+          }
+          do {
+            lVar6 = *plVar10;
+            iVar8 = iVar7 + -1;
+            if ((int)lVar6 == iVar7) {
+              cVar2 = '\x01';
+              bVar3 = (bool)ExclusiveMonitorPass(plVar10,0x10);
+              if (bVar3) {
+                *(int *)plVar10 = iVar8;
+                cVar2 = ExclusiveMonitorsStatus();
+              }
+              if (cVar2 == '\0') goto LAB_7100d032fc;
+            }
+            else {
+              ClearExclusiveLocal();
+            }
+            iVar7 = (int)lVar6;
+          } while( true );
+        }
+      }
+      else {
+        ClearExclusiveLocal();
+      }
+      do {
+        lVar6 = *plVar1;
+        if ((int)lVar6 == iVar7) {
+          cVar2 = '\x01';
+          bVar3 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+          if (bVar3) {
+            *(int *)plVar1 = iVar7 + 1;
+            cVar2 = ExclusiveMonitorsStatus();
+          }
+          if (cVar2 == '\0') goto LAB_7100d03254;
+        }
+        else {
+          ClearExclusiveLocal();
+        }
+        iVar7 = (int)lVar6;
+      } while( true );
+    }
+  }
+  else {
+    ClearExclusiveLocal();
+  }
+  do {
+    lVar6 = *plVar1;
+    if ((int)lVar6 == iVar7) {
+      cVar2 = '\x01';
+      bVar3 = (bool)ExclusiveMonitorPass(plVar1,0x10);
+      if (bVar3) {
+        *(int *)plVar1 = iVar7 + 1;
+        cVar2 = ExclusiveMonitorsStatus();
+      }
+      if (cVar2 == '\0') goto LAB_7100d031b0;
+    }
+    else {
+      ClearExclusiveLocal();
+    }
+    iVar7 = (int)lVar6;
+  } while( true );
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100d030d0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100ce67e0	entry=7100ce67e0	FUN_7100ce67e0	bytes=132  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100ce5098	7100ce4e90	FUN_7100ce4e90  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce6824	7100cfdcb0	7100cfdcb0	FUN_7100cfdcb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce682c	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce6834	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce6844	7100cfd450	7100cfd450	FUN_7100cfd450  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce6850	7100cba130	7100cba130	FUN_7100cba130  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100ce67e0	chars=530  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100ce67e0(long *param_1)
+
+{
+  ulong uVar1;
+  undefined8 local_b8;
+  undefined8 auStack_b0 [18];
+  
+  if (*(char *)(param_1[0x28] + 8) != '\0') {
+    while( true ) {
+      FUN_7100cb9d70(auStack_b0);
+      uVar1 = FUN_7100cfd450((long)(param_1 + 0x1c),&local_b8,(long)auStack_b0);
+      if ((uVar1 & 1) == 0) break;
+      (**(code **)(*param_1 + 0x38))(param_1,local_b8,auStack_b0);
+      FUN_7100cfdcb0((long)(param_1 + 0x1c));
+      FUN_7100cba130();
+    }
+    FUN_7100cba130();
+  }
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100ce67e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100d004f0	entry=7100d004f0	FUN_7100d004f0	bytes=140  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71015f5660	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71015f56b8	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d0051c	7100cfd450	7100cfd450	FUN_7100cfd450  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d0052c	71004ea5c0	71004ea5c0	FUN_71004ea5c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d00534	7100cfdcb0	7100cfdcb0	FUN_7100cfdcb0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100d004f0	chars=741  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+ulong FUN_7100d004f0(long *param_1,long param_2,long param_3)
+
+{
+  ulong uVar1;
+  uint *puVar2;
+  long local_28;
+  
+  if (*(char *)(param_1[0x35] + 8) == '\0') {
+                    /* WARNING: Could not recover jumptable at 0x007100d0055c. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+    uVar1 = (**(code **)(*param_1 + 0x40))(param_1,param_2);
+    return uVar1;
+  }
+  uVar1 = FUN_7100cfd450((long)(param_1 + 0x29),&local_28,param_3);
+  if ((uVar1 & 1) == 0) {
+    puVar2 = (uint *)PTR_DAT_710160ae10;
+  }
+  else {
+    FUN_71004ea5c0(param_2,local_28);
+    FUN_7100cfdcb0((long)(param_1 + 0x29));
+    puVar2 = (uint *)PTR_DAT_710160abf0;
+  }
+  return (ulong)*puVar2;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100d004f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100500b20	entry=7100500b20	FUN_7100500b20	bytes=936  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100500b04	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500b58	7100ccf260	7100ccf260	FUN_7100ccf260  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500b68	710050d0c0	710050d0c0	FUN_710050d0c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500b7c	71004dca60	71004dca60	FUN_71004dca60  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500b88	71004dc800	71004dc800	FUN_71004dc800  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500ba0	710050ce10	710050ce10	FUN_710050ce10  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500bac	71004f41c0	71004f41c0	FUN_71004f41c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500bb4	7100ccf110	7100ccf110	FUN_7100ccf110  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500bbc	710050e9b0	710050e9b0	FUN_710050e9b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500be8	710050ea90	710050ea90	FUN_710050ea90  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500c00	7100ccf3a0	7100ccf3a0	FUN_7100ccf3a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500c30	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500c9c	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500cf4	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500d58	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500db4	71004dca60	71004dca60	FUN_71004dca60  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500dc0	71004dc800	71004dc800	FUN_71004dc800  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500dc8	7100ccf300	7100ccf300	FUN_7100ccf300  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500dd4	71004f4260	71004f4260	FUN_71004f4260  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500de4	71004e2840	71004e2840	FUN_71004e2840  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500df4	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500dfc	71004e2d30	71004e2d30	FUN_71004e2d30  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e08	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e10	71004e2be0	71004e2be0	FUN_71004e2be0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e1c	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e24	71004dfe70	71004dfe70	FUN_71004dfe70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e30	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e3c	71004dfe70	71004dfe70	FUN_71004dfe70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e50	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e58	71004e2a90	71004e2a90	FUN_71004e2a90  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e64	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e6c	71004dfe70	71004dfe70	FUN_71004dfe70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e78	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e80	7100cdc1a0	7100cdc1a0	FUN_7100cdc1a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e94	71004dd680	71004dd680	FUN_71004dd680  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500e9c	71004e2880	71004e2880	FUN_71004e2880  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100500ea4	7100ccf300	7100ccf300	FUN_7100ccf300  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100500b20	chars=5070  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100500b20(long *param_1,long param_2,long *param_3,long param_4,undefined8 param_5,
+                   undefined8 param_6,undefined8 param_7,undefined8 param_8)
+
+{
+  uint uVar1;
+  undefined *puVar2;
+  undefined8 *puVar3;
+  long lVar4;
+  uint *puVar5;
+  ushort *puVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  undefined8 uVar9;
+  undefined8 uVar10;
+  long lVar11;
+  ulong uVar12;
+  long *plVar13;
+  undefined8 auStack_218 [37];
+  undefined1 auStack_f0 [28];
+  char local_d4 [4];
+  undefined8 uStack_d0;
+  char local_c8;
+  ushort local_58 [2];
+  int local_54;
+  
+  lVar4 = param_4;
+  FUN_7100ccf260(&uStack_d0,param_4);
+  puVar6 = local_58;
+  FUN_710050d0c0((long)&uStack_d0,&local_54,puVar6);
+  uVar12 = *(ulong *)(param_4 + 0x18);
+  puVar3 = FUN_71004dca60((long)(param_1 + 1),(uint)local_58[0],puVar6,lVar4,param_5,param_6,param_7
+                          ,param_8);
+  FUN_71004dc800((long)(puVar3 + 1),uVar12);
+  puVar2 = PTR_DAT_7101601368;
+  if (local_54 == 1) {
+    FUN_710050ce10(param_2);
+    FUN_71004f41c0((long)(param_1 + 10),param_2);
+    FUN_7100ccf110(auStack_218);
+    local_d4[0] = '\0';
+    FUN_710050e9b0();
+    (**(code **)(*param_1 + 0x18))(param_1,local_58[0],&uStack_d0,auStack_218,local_d4,param_3);
+    FUN_710050ea90(param_3);
+    if ((*(char *)(param_2 + 0x28) == '\0') && (local_d4[0] != '\0')) {
+      lVar4 = FUN_7100ccf3a0((long)auStack_218);
+      puVar2 = PTR_DAT_7101601368;
+      plVar13 = (long *)(PTR_DAT_7101601368 + 0x28);
+      if (*PTR_DAT_7101601360 != '\0') {
+        puVar5 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+        uVar1 = *puVar5;
+        if (uVar1 != 0) {
+          lVar11 = **(long **)(puVar2 + 0x98);
+          if ((ulong)((*(long **)(puVar2 + 0x98))[1] - lVar11 >> 3) <= (ulong)uVar1) {
+                    /* WARNING: Subroutine does not return */
+            FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,
+                           0);
+          }
+          plVar13 = (long *)(*(long *)(lVar11 + (ulong)uVar1 * 8) + 0x20);
+        }
+      }
+      if ((*plVar13 == 0) || (lVar11 = *(long *)(*plVar13 + 0x10), lVar11 == 0)) {
+        lVar11 = 0;
+      }
+      else {
+        lVar11 = *(long *)(lVar11 + 0x10);
+      }
+      plVar13 = (long *)(lVar11 + 0x78);
+      (**(code **)(*plVar13 + 0x10))(plVar13);
+      uVar7 = 1;
+      uVar8 = 0;
+      uVar9 = 0;
+      uVar10 = 0;
+      (**(code **)(*param_3 + 0xf0))(auStack_f0,param_3,lVar4);
+      (**(code **)(*plVar13 + 0x20))(plVar13);
+      uVar12 = *(ulong *)(lVar4 + 0x18);
+      puVar3 = FUN_71004dca60((long)(param_1 + 1),(uint)local_58[0],uVar7,uVar8,uVar9,uVar10,param_7
+                              ,param_8);
+      FUN_71004dc800((long)(puVar3 + 0xd),uVar12);
+    }
+    FUN_7100ccf300(auStack_218);
+    FUN_71004f4260((long)(param_1 + 10),param_2);
+  }
+  else {
+    plVar13 = (long *)(PTR_DAT_7101601368 + 0x28);
+    if (*PTR_DAT_7101601360 != '\0') {
+      puVar5 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      uVar1 = *puVar5;
+      if (uVar1 != 0) {
+        lVar4 = **(long **)(puVar2 + 0x98);
+        if ((ulong)((*(long **)(puVar2 + 0x98))[1] - lVar4 >> 3) <= (ulong)uVar1) {
+                    /* WARNING: Subroutine does not return */
+          FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,0)
+          ;
+        }
+        plVar13 = (long *)(*(long *)(lVar4 + (ulong)uVar1 * 8) + 0x20);
+      }
+    }
+    if ((*plVar13 == 0) || (lVar4 = *(long *)(*plVar13 + 0x10), lVar4 == 0)) {
+      lVar4 = 0;
+    }
+    else {
+      lVar4 = *(long *)(lVar4 + 0x10);
+    }
+    plVar13 = (long *)(lVar4 + 0x78);
+    (**(code **)(*plVar13 + 0x10))(plVar13);
+    (**(code **)(*param_1 + 0x20))(param_1,local_58[0],&uStack_d0,param_3);
+    (**(code **)(*plVar13 + 0x20))(plVar13);
+  }
+  if (local_c8 != '\0') {
+    FUN_71004e2840(auStack_218);
+    lVar4 = FUN_71004dd680((long)auStack_218,
+                           "ClientProtocolRequestBroker: Error processing message. pBuffer=");
+    lVar4 = FUN_71004e2d30(lVar4,param_4);
+    lVar4 = FUN_71004dd680(lVar4," Protocol ID=");
+    lVar4 = FUN_71004e2be0(lVar4,(ulong)local_58[0]);
+    lVar4 = FUN_71004dd680(lVar4," CntSize=");
+    lVar4 = FUN_71004dfe70(lVar4,*(undefined8 *)(param_4 + 0x18));
+    lVar4 = FUN_71004dd680(lVar4," Size=");
+    FUN_71004dfe70(lVar4,*(long *)(param_4 + 0x20) - *(long *)(param_4 + 0x28));
+    if (param_3 == (long *)0x0) {
+      FUN_71004dd680((long)auStack_218,"  <EndPoint is NULL>");
+    }
+    else {
+      lVar4 = FUN_71004dd680((long)auStack_218,"  EndPoint: CID=");
+      lVar4 = FUN_71004e2a90(lVar4,(ulong)*(uint *)(param_3 + 0x12));
+      lVar4 = FUN_71004dd680(lVar4," PID=");
+      lVar4 = FUN_71004dfe70(lVar4,param_3[0x13]);
+      lVar4 = FUN_71004dd680(lVar4," URL=");
+      FUN_7100cdc1a0(lVar4,(long)(param_3 + 2));
+    }
+    FUN_71004e2880(auStack_218);
+  }
+  FUN_7100ccf300(&uStack_d0);
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100500b20  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	71004fe000	entry=71004fe000	FUN_71004fe000	bytes=312  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100508df8	7100508490	FUN_7100508490  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe030	71004ed3a0	71004ed3a0	FUN_71004ed3a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe038	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe044	71004ecba0	71004ecba0	FUN_71004ecba0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe060	71004ed380	71004ed380	FUN_71004ed380  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe090	71004ed380	71004ed380	FUN_71004ed380  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe0a8	71004ed380	71004ed380	FUN_71004ed380  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe0dc	71004ed580	71004ed580	FUN_71004ed580  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe0ec	71004ed590	71004ed590	FUN_71004ed590  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe100	710050e5e0	710050e5e0	FUN_710050e5e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe10c	71004ed3a0	71004ed3a0	FUN_71004ed3a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe114	71004ed8e0	71004ed8e0	FUN_71004ed8e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	71004fe11c	71004ecd20	71004ecd20	FUN_71004ecd20  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	71004fe000	chars=1211  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_71004fe000(long param_1,long param_2,long param_3,int *param_4)
+
+{
+  int iVar1;
+  ulong uVar2;
+  undefined **ppuVar3;
+  long lVar4;
+  undefined *local_a8;
+  undefined4 local_a0;
+  undefined1 local_9c;
+  undefined8 auStack_70 [2];
+  long local_60;
+  
+  lVar4 = *(long *)(param_2 + 0x10);
+  FUN_71004ed3a0(param_1,param_3 + 0x10);
+  iVar1 = FUN_71004e0040(0xffffffff);
+  *param_4 = iVar1;
+  FUN_71004ecba0(auStack_70);
+  local_a8 = *(undefined **)(param_2 + 0x38);
+  FUN_71004ed380((long)auStack_70,&local_a8,8,1);
+  if (lVar4 == 0) {
+    ppuVar3 = (undefined **)&DAT_7100f755e4;
+  }
+  else {
+    local_a8 = (undefined *)CONCAT44(local_a8._4_4_,*(undefined4 *)(lVar4 + 0x18));
+    ppuVar3 = &local_a8;
+  }
+  FUN_71004ed380((long)auStack_70,ppuVar3,4,1);
+  FUN_71004ed380((long)auStack_70,param_4,4,1);
+  local_a0 = 1;
+  local_a8 = PTR_DAT_7101601518 + 0x10;
+  local_9c = 0;
+  uVar2 = FUN_71004ed580();
+  FUN_71004ed590((long)&local_a8,uVar2,0);
+  FUN_710050e5e0(*(undefined8 *)(param_2 + 0x28),local_60,(long)&local_a8,(long *)(param_3 + 0x58));
+  FUN_71004ed3a0(param_1,(long)&local_a8);
+  FUN_71004ed8e0(&local_a8);
+  FUN_71004ecd20(auStack_70);
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	71004fe000  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cc96a0	entry=7100cc96a0	FUN_7100cc96a0	bytes=28  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71005070d4	7100507060	FUN_7100507060  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100d0e028	7100d0dfc0	FUN_7100d0dfc0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cc96ac	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cc96a0	chars=117  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+int FUN_7100cc96a0(void)
+
+{
+  int iVar1;
+  
+  iVar1 = FUN_71004e0040(0x6e48);
+  return iVar1 + 0x8000;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cc96a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cf2190	entry=7100cf2190	FUN_7100cf2190	bytes=544  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	710051337c	71005132f0	FUN_71005132f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71005133e0	71005132f0	FUN_71005132f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf21b0	7100cc8b80	7100cc8b80	FUN_7100cc8b80  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf21dc	7100cc8d20	7100cc8d20	FUN_7100cc8d20  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf2238	7100cddca0	7100cddca0	FUN_7100cddca0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf2280	71004dd060	71004dd060	FUN_71004dd060  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf22a8	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf22bc	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf22c8	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf22f4	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf2344	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf2358	71004f34a0	71004f34a0	FUN_71004f34a0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf2360	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cf2190	chars=3171  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cf2190(undefined8 *param_1,uint param_2,undefined8 param_3)
+
+{
+  undefined *puVar1;
+  undefined *puVar2;
+  int iVar3;
+  uint *puVar4;
+  long lVar5;
+  long *plVar6;
+  uint uVar7;
+  short local_38 [4];
+  
+  FUN_7100cc8b80(param_1,param_2);
+  puVar1 = PTR_DAT_710160a878;
+  param_1[2] = 0;
+  param_1[3] = param_3;
+  *(undefined1 *)(param_1 + 4) = 0;
+  *param_1 = puVar1 + 0x10;
+  param_1[6] = 0;
+  param_1[7] = 0;
+  param_1[5] = param_1 + 6;
+  FUN_7100cc8d20();
+  *param_1 = PTR_DAT_710160ad10 + 0x10;
+  param_1[10] = 0;
+  param_1[9] = param_1 + 10;
+  param_1[0xd] = 0;
+  param_1[0xe] = 0;
+  param_1[0x10] = 0;
+  param_1[0x11] = 0;
+  param_1[0xb] = 0;
+  param_1[0xc] = param_1 + 0xd;
+  *(undefined1 *)(param_1 + 0xf) = 0;
+  param_1[0x14] = 0;
+  param_1[0x12] = 0;
+  param_1[0x13] = param_1 + 0x14;
+  param_1[0x19] = 0;
+  param_1[0x1a] = 0;
+  param_1[0x1b] = 0;
+  param_1[0x15] = 0;
+  param_1[0x16] = param_1 + 0x16;
+  param_1[0x17] = param_1 + 0x16;
+  param_1[0x18] = 0;
+  FUN_7100cddca0((long)(param_1 + 0x1d));
+  *(undefined2 *)(param_1 + 0x20) = 0;
+  puVar1 = PTR_DAT_710160a8e8;
+  param_1[0x25] = 0;
+  param_1[0x26] = 0;
+  param_1[0x27] = 0;
+  param_1[0x28] = 0;
+  param_1[0x1f] = puVar1 + 0x10;
+  param_1[0x21] = param_1 + 0x22;
+  param_1[0x22] = 0;
+  param_1[0x23] = 0;
+  param_1[0x24] = param_1 + 0x25;
+  param_1[0x2b] = 0;
+  param_1[0x2c] = 0;
+  param_1[0x29] = 0;
+  param_1[0x2a] = param_1 + 0x2b;
+  FUN_71004dd060(param_1 + 0x2e,0x4000,1);
+  *(undefined2 *)(param_1 + 0x37) = 0;
+  *(undefined1 *)(param_1 + 0x1c) = 0;
+  puVar1 = PTR_DAT_7101601360;
+  uVar7 = (uint)(byte)*PTR_DAT_7101601360;
+  if (*PTR_DAT_7101601360 != 0) {
+    puVar4 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    uVar7 = *puVar4;
+  }
+  *(uint *)((long)param_1 + 0xe4) = uVar7;
+  param_1[3] = param_3;
+  FUN_71004dde40((ulong *)local_38);
+  iVar3 = FUN_71004e0040(0xffff);
+  *(short *)(param_1 + 0x20) = (short)iVar3 + local_38[0];
+  puVar2 = PTR_DAT_7101601368;
+  plVar6 = (long *)(PTR_DAT_7101601368 + 0x28);
+  if (*puVar1 != '\0') {
+    puVar4 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    uVar7 = *puVar4;
+    if (uVar7 != 0) {
+      lVar5 = **(long **)(puVar2 + 0x98);
+      if ((ulong)((*(long **)(puVar2 + 0x98))[1] - lVar5 >> 3) <= (ulong)uVar7) {
+                    /* WARNING: Subroutine does not return */
+        FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,0);
+      }
+      plVar6 = (long *)(*(long *)(lVar5 + (ulong)uVar7 * 8) + 0x20);
+    }
+  }
+  if (*plVar6 == 0) {
+    lVar5 = 0;
+  }
+  else {
+    lVar5 = *(long *)(*plVar6 + 0x10);
+  }
+  FUN_71004f34a0(lVar5,&LAB_7100cf23b0,param_1);
+  plVar6 = FUN_71004dc540(0x40);
+  if (plVar6 != (long *)0x0) {
+    plVar6[2] = 0;
+    puVar1 = PTR_DAT_710160ad18 + 0x10;
+    *(uint *)(plVar6 + 1) = param_2;
+    *(undefined4 *)((long)plVar6 + 0xc) = 0xffffffff;
+    *plVar6 = (long)puVar1;
+    plVar6[4] = 0;
+    plVar6[3] = (long)(plVar6 + 4);
+    plVar6[5] = 0;
+    plVar6[6] = 0;
+    plVar6[7] = 0;
+  }
+  param_1[0x2d] = plVar6;
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cf2190  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cca2b0	entry=7100cca2b0	FUN_7100cca2b0	bytes=580  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cd5984	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca2d4	7100cc8b80	7100cc8b80	FUN_7100cc8b80  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca340	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca398	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca3cc	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca428	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca448	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca4ac	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca4b8	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca4c8	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cca4d4	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cca2b0	chars=3186  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cca2b0(undefined8 *param_1,uint param_2,long param_3)
+
+{
+  undefined8 *puVar1;
+  uint uVar2;
+  char cVar3;
+  undefined *puVar4;
+  int iVar5;
+  uint *puVar6;
+  long lVar7;
+  undefined8 uVar8;
+  undefined *puVar9;
+  long *plVar10;
+  short local_48 [4];
+  char local_38 [8];
+  
+  FUN_7100cc8b80(param_1,param_2);
+  puVar9 = PTR_DAT_710160a8e0;
+  *(undefined2 *)((long)param_1 + 0xc) = 0;
+  *(undefined1 *)((long)param_1 + 0xe) = 0;
+  puVar4 = PTR_DAT_710160a8e8;
+  *(undefined1 *)(param_1 + 3) = 0xff;
+  *(undefined2 *)(param_1 + 8) = 0;
+  param_1[2] = param_3;
+  param_1[5] = 0;
+  *param_1 = puVar9 + 0x10;
+  param_1[7] = puVar4 + 0x10;
+  puVar9 = PTR_DAT_7101601368;
+  if (param_3 == 0) {
+    plVar10 = (long *)(PTR_DAT_7101601368 + 0x18);
+    if (*PTR_DAT_7101601360 != '\0') {
+      puVar6 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      uVar2 = *puVar6;
+      if (uVar2 != 0) {
+        lVar7 = **(long **)(puVar9 + 0x98);
+        if ((ulong)((*(long **)(puVar9 + 0x98))[1] - lVar7 >> 3) <= (ulong)uVar2) {
+                    /* WARNING: Subroutine does not return */
+          FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,0)
+          ;
+        }
+        plVar10 = (long *)(*(long *)(lVar7 + (ulong)uVar2 * 8) + 0x10);
+      }
+    }
+    uVar8 = 0;
+    if (*plVar10 != 0) {
+      lVar7 = *(long *)(*plVar10 + 0x10);
+      uVar8 = 0;
+      if (lVar7 != 0) {
+        uVar8 = *(undefined8 *)(lVar7 + 0xe8);
+      }
+    }
+    param_1[2] = uVar8;
+  }
+  puVar4 = PTR_DAT_7101601368;
+  puVar9 = PTR_DAT_7101601360;
+  plVar10 = (long *)(PTR_DAT_7101601368 + 0x18);
+  if (*PTR_DAT_7101601360 != '\0') {
+    puVar6 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    uVar2 = *puVar6;
+    if (uVar2 != 0) {
+      lVar7 = **(long **)(puVar4 + 0x98);
+      if ((ulong)((*(long **)(puVar4 + 0x98))[1] - lVar7 >> 3) <= (ulong)uVar2) {
+                    /* WARNING: Subroutine does not return */
+        FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,0);
+      }
+      plVar10 = (long *)(*(long *)(lVar7 + (ulong)uVar2 * 8) + 0x10);
+    }
+  }
+  if (*plVar10 == 0) {
+    lVar7 = 0;
+    cVar3 = *puVar9;
+  }
+  else {
+    lVar7 = *(long *)(*plVar10 + 0x10);
+    cVar3 = *puVar9;
+  }
+  if (cVar3 != '\0') {
+    puVar6 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar6 != 0) {
+      puVar9 = (undefined *)
+               (*(long *)(PTR_DAT_7101601b60 + (ulong)param_2 * 0x2a8 + 0x10) +
+               (ulong)*puVar6 * 0x148);
+      goto LAB_7100cca488;
+    }
+  }
+  puVar9 = PTR_DAT_7101601b60 + (ulong)param_2 * 0x2a8 + 0x18;
+LAB_7100cca488:
+  puVar1 = (undefined8 *)(lVar7 + 0x1b0);
+  if (1 < *(int *)(puVar9 + 0x140) - 1U) {
+    puVar1 = (undefined8 *)(lVar7 + 0x1a8);
+  }
+  param_1[4] = *puVar1;
+  FUN_71004dde40((ulong *)local_38);
+  iVar5 = FUN_71004e0040(0xff);
+  *(char *)(param_1 + 6) = (char)iVar5 + local_38[0];
+  FUN_71004dde40((ulong *)local_48);
+  iVar5 = FUN_71004e0040(0xffff);
+  *(short *)(param_1 + 8) = (short)iVar5 + local_48[0];
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cca2b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100ce8dd0	entry=7100ce8dd0	FUN_7100ce8dd0	bytes=2632  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cf3078	7100cf2e00	FUN_7100cf2e00  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8e60	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8e70	7100cb9d70	7100cb9d70	FUN_7100cb9d70  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8e80	7100cdaaa0	7100cdaaa0	FUN_7100cdaaa0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8ebc	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8ee8	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8f28	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8fcc	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce8ff8	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce902c	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9048	7100d2fa98	7100d2fa98	memset  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9070	71004e0470	71004e0470	FUN_71004e0470  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce909c	71004dde40	71004dde40	FUN_71004dde40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9188	7100d00e40	7100d00e40	FUN_7100d00e40  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9194	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce91bc	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce91e4	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9244	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce92fc	7100cdb6c0	7100cdb6c0	FUN_7100cdb6c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce931c	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce936c	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce93c0	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce93e4	7100cd8540	7100cd8540	FUN_7100cd8540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9404	7100cfb6f0	7100cfb6f0	FUN_7100cfb6f0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9404	7100cfb2c0	7100cfb2c0	FUN_7100cfb2c0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce940c	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9430	7100cfe3b0	7100cfe3b0	FUN_7100cfe3b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9484	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce94b4	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce94e4	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce950c	71004e2e60	71004e2e60	FUN_71004e2e60  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9524	71004e2ff0	71004e2ff0	FUN_71004e2ff0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce953c	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9558	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9598	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce95d8	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9608	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9650	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9698	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce96fc	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce9764	71004e34b0	71004e34b0	FUN_71004e34b0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce97b4	71004ddea0	71004ddea0	FUN_71004ddea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce97e4	7100d00ef0	7100d00ef0	FUN_7100d00ef0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100ce97f8	7100cf1ea0	7100cf1ea0	FUN_7100cf1ea0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100ce8dd0	chars=14660  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+/* WARNING: Type propagation algorithm not settling */
+
+void FUN_7100ce8dd0(long *param_1,long param_2,long param_3,long param_4,undefined1 param_5)
+
+{
+  undefined *puVar1;
+  undefined *puVar2;
+  uint uVar3;
+  undefined2 uVar4;
+  undefined *puVar5;
+  int iVar6;
+  undefined8 *puVar7;
+  uint *puVar8;
+  ulong *__s;
+  ulonglong uVar9;
+  long *plVar10;
+  undefined *puVar11;
+  undefined8 uVar12;
+  long lVar13;
+  int iVar14;
+  char cVar15;
+  char *pcVar16;
+  undefined1 *puVar17;
+  undefined4 uVar18;
+  ulong local_68;
+  undefined8 local_58;
+  
+  *param_1 = (long)(PTR_DAT_710160a8c8 + 0x10);
+  param_1[2] = (long)(PTR_DAT_710160a8d0 + 0x10);
+  param_1[6] = 0;
+  param_1[5] = (long)(param_1 + 6);
+  param_1[9] = 0;
+  param_1[7] = 0;
+  param_1[8] = (long)(param_1 + 9);
+  param_1[0xc] = 0;
+  param_1[10] = 0;
+  param_1[0xb] = (long)(param_1 + 0xc);
+  param_1[0xd] = 0;
+  param_1[0xe] = 0;
+  *(undefined2 *)(param_1 + 0xf) = 1;
+  *(undefined1 *)((long)param_1 + 0x7a) = 0;
+  puVar7 = FUN_71004dc540(0x90);
+  if (puVar7 != (undefined8 *)0x0) {
+    FUN_7100cb9d70(puVar7);
+  }
+  param_1[3] = (long)puVar7;
+  FUN_7100cdaaa0((long)(param_1 + 2),param_3);
+  *(undefined4 *)(param_1 + 0x11) = 0;
+  *(undefined1 *)(param_1 + 0x16) = 0;
+  param_1[0x17] = 0;
+  param_1[0x10] = 0;
+  *(undefined4 *)(param_1 + 0x12) = 0;
+  puVar1 = PTR_DAT_710160aca8 + 0x10;
+  param_1[0x13] = 0;
+  param_1[0x14] = 0;
+  *(undefined2 *)(param_1 + 0x18) = 0;
+  param_1[0x1b] = 0;
+  *param_1 = (long)puVar1;
+  param_1[1] = param_2;
+  param_1[0x19] = 0;
+  param_1[0x1a] = 0;
+  puVar7 = FUN_71004de620(8);
+  param_1[0x19] = (long)puVar7;
+  param_1[0x1a] = (long)puVar7;
+  param_1[0x1b] = (long)(puVar7 + 1);
+  *puVar7 = 0;
+  param_1[0x1e] = 0;
+  param_1[0x1c] = 0;
+  param_1[0x1d] = 0;
+  param_1[0x1a] = param_1[0x1a] + 8;
+  puVar7 = FUN_71004de620(8);
+  param_1[0x1c] = (long)puVar7;
+  param_1[0x1d] = (long)puVar7;
+  param_1[0x1e] = (long)(puVar7 + 1);
+  *puVar7 = 0;
+  param_1[0x1d] = param_1[0x1d] + 8;
+  puVar1 = PTR_DAT_7101601360;
+  uVar3 = *(uint *)(param_2 + 8);
+  if (*PTR_DAT_7101601360 == '\0') {
+LAB_7100ce8f54:
+    puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+  }
+  else {
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 == 0) goto LAB_7100ce8f54;
+    puVar11 = (undefined *)
+              (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) + (ulong)*puVar8 * 0x148)
+    ;
+  }
+  puVar5 = PTR_DAT_710160acb0;
+  iVar14 = *(int *)(puVar11 + 0xdc);
+  *(undefined4 *)((long)param_1 + 300) = 0;
+  param_1[0x27] = 0;
+  param_1[0x28] = 0;
+  *(int *)(param_1 + 0x26) = iVar14;
+  *(int *)(param_1 + 0x25) = iVar14 << 3;
+  puVar2 = PTR_DAT_710160a8e8;
+  *(undefined1 *)((long)param_1 + 0x134) = 1;
+  *(undefined2 *)(param_1 + 0x2c) = 0;
+  *(undefined2 *)(param_1 + 0x2f) = 0;
+  puVar11 = puVar2 + 0x10;
+  param_1[0x24] = (long)(puVar5 + 0x10);
+  param_1[0x36] = 0;
+  param_1[0x37] = 0;
+  param_1[0x2b] = (long)puVar11;
+  param_1[0x29] = (long)puVar11;
+  *(undefined2 *)(param_1 + 0x2a) = 0;
+  param_1[0x2e] = (long)puVar11;
+  param_1[0x33] = 0;
+  param_1[0x38] = 0;
+  param_1[0x39] = 0;
+  puVar7 = FUN_71004de620(8);
+  param_1[0x37] = (long)puVar7;
+  param_1[0x38] = (long)puVar7;
+  param_1[0x39] = (long)(puVar7 + 1);
+  *puVar7 = 0;
+  param_1[0x3c] = 0;
+  param_1[0x3a] = 0;
+  param_1[0x3b] = 0;
+  param_1[0x38] = param_1[0x38] + 8;
+  puVar7 = FUN_71004de620(1);
+  param_1[0x3a] = (long)puVar7;
+  param_1[0x3b] = (long)puVar7;
+  param_1[0x3c] = (long)puVar7 + 1;
+  *(undefined1 *)puVar7 = 0;
+  *(undefined1 *)(param_1 + 0x3f) = 0;
+  param_1[0x40] = 0;
+  param_1[0x41] = 0;
+  param_1[0x42] = 0;
+  param_1[0x3b] = param_1[0x3b] + 1;
+  __s = FUN_71004de620(8);
+  param_1[0x40] = (long)__s;
+  param_1[0x42] = 1;
+  param_1[0x41] = 1;
+  memset(__s,0,0);
+  *__s = *__s & 0xfffffffffffffffe;
+  FUN_71004e0470(param_1 + 0x43,"Send",1000);
+  *(undefined4 *)(param_1 + 0x62) = 0;
+  puVar5 = PTR_DAT_710160acb8;
+  param_1[0x60] = 0;
+  param_1[0x5f] = 0;
+  param_1[0x5e] = (long)(puVar5 + 0x10);
+  param_1[0x61] = 0;
+  param_1[0x68] = 0;
+  FUN_71004dde40(&local_58);
+  *(undefined4 *)(param_1 + 0x69) = 0;
+  *(undefined2 *)((long)param_1 + 0x34c) = 0;
+  *(undefined1 *)((long)param_1 + 0x34e) = 0;
+  param_1[0x68] = CONCAT62(local_58._2_6_,CONCAT11(local_58._1_1_,(undefined1)local_58));
+  param_1[0x93] = -0x100000000;
+  param_1[0x96] = (long)(param_1 + 0x97);
+  param_1[0x6a] = 0;
+  *(undefined4 *)(param_1 + 0x6b) = 0;
+  param_1[0x6c] = 0;
+  param_1[0x6d] = 0;
+  param_1[0x6e] = 0;
+  param_1[0x6f] = 0;
+  param_1[0x70] = 0;
+  param_1[0x71] = 0;
+  param_1[0x72] = 0;
+  param_1[0x73] = 0;
+  param_1[0x74] = 0;
+  param_1[0x75] = 0;
+  param_1[0x76] = 0;
+  param_1[0x77] = 0;
+  param_1[0x78] = 0;
+  param_1[0x79] = 0;
+  param_1[0x7a] = 0;
+  param_1[0x7b] = 0;
+  param_1[0x7c] = 0;
+  param_1[0x7d] = 0;
+  param_1[0x7e] = 0;
+  param_1[0x7f] = 0;
+  param_1[0x80] = 0;
+  param_1[0x81] = 0;
+  param_1[0x82] = 0;
+  param_1[0x83] = 0;
+  param_1[0x84] = 0;
+  param_1[0x85] = 0;
+  param_1[0x86] = 0;
+  param_1[0x87] = 0;
+  param_1[0x88] = 0;
+  param_1[0x89] = 0;
+  param_1[0x8a] = 0;
+  param_1[0x8b] = 0;
+  param_1[0x8c] = 0;
+  param_1[0x8d] = 0;
+  param_1[0x8e] = 0;
+  param_1[0x8f] = 0;
+  param_1[0x90] = 0;
+  param_1[0x91] = 0;
+  param_1[0x92] = 0;
+  param_1[0x94] = 0;
+  param_1[0x95] = 0;
+  param_1[0x97] = 0;
+  param_1[0x98] = 0;
+  *(undefined4 *)((long)param_1 + 0x114) = 0;
+  (**(code **)(*param_1 + 0xa0))(param_1);
+  *(undefined1 *)(param_1 + 0x66) = 0;
+  puVar7 = FUN_71004dc540(0x30);
+  if (puVar7 != (undefined8 *)0x0) {
+    puVar7[2] = 0;
+    puVar7[1] = puVar7 + 2;
+    puVar7[3] = 0;
+    puVar7[4] = puVar11;
+    *(undefined2 *)(puVar7 + 5) = 1;
+  }
+  *(undefined8 **)param_1[0x19] = puVar7;
+  puVar7 = FUN_71004dc540(0x68);
+  if (puVar7 != (undefined8 *)0x0) {
+    uVar3 = *(uint *)(param_1[1] + 8);
+    if (*puVar1 == '\0') {
+LAB_7100ce9210:
+      puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+    }
+    else {
+      puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      if (*puVar8 == 0) goto LAB_7100ce9210;
+      puVar11 = (undefined *)
+                (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) +
+                (ulong)*puVar8 * 0x148);
+    }
+    uVar4 = *(undefined2 *)(puVar11 + 0xc0);
+    uVar3 = *(uint *)(param_1[1] + 8);
+    if (*puVar1 == '\0') {
+LAB_7100ce9270:
+      puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+    }
+    else {
+      puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      if (*puVar8 == 0) goto LAB_7100ce9270;
+      puVar11 = (undefined *)
+                (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) +
+                (ulong)*puVar8 * 0x148);
+    }
+    uVar12 = *(undefined8 *)(puVar11 + 200);
+    puVar2 = puVar2 + 0x10;
+    puVar7[2] = 0;
+    puVar7[1] = puVar7 + 2;
+    puVar7[3] = 0;
+    puVar7[5] = puVar2;
+    puVar7[7] = puVar2;
+    puVar7[9] = puVar2;
+    *(undefined2 *)(puVar7 + 4) = uVar4;
+    *(undefined2 *)(puVar7 + 6) = 1;
+    *(undefined2 *)(puVar7 + 8) = 1;
+    *(undefined2 *)(puVar7 + 10) = 1;
+    *(undefined4 *)(puVar7 + 0xb) = 0;
+    puVar7[0xc] = uVar12;
+  }
+  *(undefined8 **)param_1[0x1c] = puVar7;
+  *(undefined2 *)(param_1 + 0x2a) = 0;
+  *(undefined2 *)(param_1 + 0x2c) = 0;
+  *(undefined2 *)(param_1 + 0x2f) = 0;
+  *(undefined2 *)(param_1 + 0x30) = 0;
+  param_1[0x2d] = param_4;
+  param_1[0x1f] = 0;
+  *(undefined4 *)((long)param_1 + 0x11c) = 0;
+  *(undefined1 *)((long)param_1 + 0x1eb) = param_5;
+  uVar9 = FUN_7100cdb6c0(param_3,"Tpt",0xffffffff);
+  iVar14 = (int)uVar9;
+  if (iVar14 == -1) {
+    uVar3 = *(uint *)(param_1[1] + 8);
+    if (*puVar1 == '\0') {
+LAB_7100ce9398:
+      puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+    }
+    else {
+      puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      if (*puVar8 == 0) goto LAB_7100ce9398;
+      puVar11 = (undefined *)
+                (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) +
+                (ulong)*puVar8 * 0x148);
+    }
+    iVar14 = *(int *)(puVar11 + 0x140);
+    uVar18 = *(undefined4 *)(param_1[1] + 8);
+    if (iVar14 == 0) goto LAB_7100ce93bc;
+LAB_7100ce9318:
+    plVar10 = FUN_71004dc540(0x18);
+    puVar2 = PTR_DAT_710160acc8;
+    puVar11 = PTR_DAT_710160acc0;
+    if (plVar10 != (long *)0x0) {
+      *(undefined4 *)(plVar10 + 1) = uVar18;
+      *plVar10 = (long)(puVar11 + 0x10);
+      plVar10[2] = (long)(puVar2 + 0x10);
+    }
+  }
+  else {
+    uVar18 = *(undefined4 *)(param_1[1] + 8);
+    if (iVar14 != 0) goto LAB_7100ce9318;
+LAB_7100ce93bc:
+    plVar10 = FUN_71004dc540(0xd0);
+    puVar11 = PTR_DAT_710160acd0;
+    if (plVar10 != (long *)0x0) {
+      *(undefined4 *)(plVar10 + 1) = uVar18;
+      *plVar10 = (long)(puVar11 + 0x10);
+      FUN_7100cd8540(plVar10 + 2);
+    }
+  }
+  param_1[100] = (long)plVar10;
+  local_58._0_1_ = 0;
+  local_58._1_1_ = 0;
+  (**(code **)(*plVar10 + 0x10))(plVar10,(long)param_1 + 0x1ec,&local_58);
+  puVar7 = FUN_71004dc540(0x238);
+  if (puVar7 != (undefined8 *)0x0) {
+    FUN_7100cfe3b0(puVar7,param_1,0,0x40,0,0);
+  }
+  param_1[0x20] = (long)puVar7;
+  *(undefined1 *)(puVar7 + 8) = param_5;
+  *(undefined4 *)(puVar7 + 0x1a) = *(undefined4 *)((long)param_1 + 0x1ec);
+  *(undefined1 *)((long)puVar7 + 0xa3) = (undefined1)local_58;
+  *(int *)(puVar7 + 0x3d) = iVar14;
+  *(undefined8 *)param_1[0x37] = 0;
+  *(undefined1 *)param_1[0x3a] = 1;
+  puVar11 = PTR_DAT_710160aba0;
+  pcVar16 = PTR_DAT_710160aba0 + 0x18;
+  if (*puVar1 != '\0') {
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 != 0) {
+      pcVar16 = (char *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8);
+    }
+  }
+  puVar2 = PTR_DAT_7101601370;
+  if (*pcVar16 == '\0') {
+    if (*PTR_DAT_7101601310 == '\0') {
+      FUN_71004e2ff0((long *)&local_68);
+    }
+    else {
+      FUN_71004e2e60(&local_68,0);
+    }
+    *(ulong *)PTR_DAT_7101601318 = local_68;
+    iVar6 = FUN_71004e0040(0xff);
+    cVar15 = (char)iVar6 + (char)local_68;
+    if (*puVar1 == '\0') goto LAB_7100ce957c;
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    uVar3 = *puVar8;
+    if (uVar3 == 0) goto LAB_7100ce957c;
+LAB_7100ce9564:
+    *(char *)(*(long *)(puVar11 + 0x10) + (ulong)uVar3) = cVar15;
+    cVar15 = *puVar1;
+  }
+  else {
+    if (*puVar1 == '\0') {
+      cVar15 = puVar11[0x18] + '\x01';
+    }
+    else {
+      puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      pcVar16 = puVar11 + 0x18;
+      if (*puVar8 != 0) {
+        pcVar16 = (char *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8);
+      }
+      cVar15 = *pcVar16 + '\x01';
+      if (*puVar1 != '\0') {
+        puVar8 = (uint *)FUN_71004e34b0(*(long *)puVar2);
+        uVar3 = *puVar8;
+        if (uVar3 != 0) goto LAB_7100ce9564;
+      }
+    }
+LAB_7100ce957c:
+    puVar11[0x18] = cVar15;
+    cVar15 = *puVar1;
+  }
+  pcVar16 = puVar11 + 0x18;
+  if (cVar15 != '\0') {
+    pcVar16 = puVar11 + 0x18;
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 != 0) {
+      pcVar16 = (char *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8);
+    }
+  }
+  puVar2 = PTR_DAT_7101601370;
+  if (*pcVar16 == '\0') {
+    if (*puVar1 == '\0') {
+      cVar15 = puVar11[0x18] + '\x01';
+    }
+    else {
+      puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+      pcVar16 = puVar11 + 0x18;
+      if (*puVar8 != 0) {
+        pcVar16 = (char *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8);
+      }
+      cVar15 = *pcVar16 + '\x01';
+      if (*puVar1 != '\0') {
+        puVar8 = (uint *)FUN_71004e34b0(*(long *)puVar2);
+        if (*puVar8 != 0) {
+          *(char *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8) = cVar15;
+          cVar15 = *puVar1;
+          goto joined_r0x007100ce9640;
+        }
+      }
+    }
+    puVar11[0x18] = cVar15;
+    cVar15 = *puVar1;
+  }
+  else {
+    cVar15 = *puVar1;
+  }
+joined_r0x007100ce9640:
+  puVar17 = puVar11 + 0x18;
+  if (cVar15 != '\0') {
+    puVar17 = puVar11 + 0x18;
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 != 0) {
+      puVar17 = (undefined1 *)(*(long *)(puVar11 + 0x10) + (ulong)*puVar8);
+    }
+  }
+  *(undefined1 *)((long)param_1 + 0x1e9) = *puVar17;
+  *(undefined1 *)(param_1 + 0x3d) = 0;
+  *(undefined1 *)((long)param_1 + 0x1ea) = 0;
+  param_1[0x3e] = 0;
+  *(undefined1 *)(param_1 + 0x21) = 0;
+  uVar3 = *(uint *)(param_1[1] + 8);
+  if (*puVar1 == '\0') {
+LAB_7100ce96c4:
+    puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+  }
+  else {
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 == 0) goto LAB_7100ce96c4;
+    puVar11 = (undefined *)
+              (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) + (ulong)*puVar8 * 0x148)
+    ;
+  }
+  *(undefined4 *)((long)param_1 + 0x10c) = *(undefined4 *)(puVar11 + 0xb8);
+  uVar3 = *(uint *)(param_1[1] + 8);
+  if (*puVar1 != '\0') {
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    if (*puVar8 != 0) {
+      puVar11 = (undefined *)
+                (*(long *)(PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x10) +
+                (ulong)*puVar8 * 0x148);
+      goto LAB_7100ce973c;
+    }
+  }
+  puVar11 = PTR_DAT_7101601b60 + (ulong)uVar3 * 0x2a8 + 0x18;
+LAB_7100ce973c:
+  *(undefined4 *)(param_1 + 0x22) = *(undefined4 *)(puVar11 + 0xb0);
+  puVar11 = PTR_DAT_7101601368;
+  plVar10 = (long *)(PTR_DAT_7101601368 + 0x18);
+  if (*puVar1 != '\0') {
+    puVar8 = (uint *)FUN_71004e34b0(*(long *)PTR_DAT_7101601370);
+    uVar3 = *puVar8;
+    if (uVar3 != 0) {
+      lVar13 = **(long **)(puVar11 + 0x98);
+      if ((ulong)((*(long **)(puVar11 + 0x98))[1] - lVar13 >> 3) <= (ulong)uVar3) {
+                    /* WARNING: Subroutine does not return */
+        FUN_71004ddea0("..\\..\\..\\..\\.\\OnlineCore/src/Core/InstanceTable.h",0x47,0xe0000003,0);
+      }
+      plVar10 = (long *)(*(long *)(lVar13 + (ulong)uVar3 * 8) + 0x10);
+    }
+  }
+  lVar13 = 0;
+  if (*plVar10 != 0) {
+    lVar13 = *(long *)(*plVar10 + 0x10);
+  }
+  plVar10 = (long *)(lVar13 + 0x1b0);
+  if (1 < iVar14 - 1U) {
+    plVar10 = (long *)(lVar13 + 0x1a8);
+  }
+  param_1[99] = *plVar10;
+  lVar13 = (**(code **)(*(long *)param_1[100] + 0x20))();
+  param_1[0x65] = lVar13;
+  (**(code **)(*param_1 + 0x10))(param_1);
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100ce8dd0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100d079e0	entry=7100d079e0	FUN_7100d079e0	bytes=60  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	71015f6ca8	<no-function>	<no-function>  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100d079fc	71004e0040	71004e0040	FUN_71004e0040  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100d079e0	chars=270  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+undefined8 FUN_7100d079e0(undefined8 param_1,undefined1 *param_2,long param_3)
+
+{
+  int iVar1;
+  
+  for (; param_3 != 0; param_3 = param_3 + -1) {
+    iVar1 = FUN_71004e0040(0xff);
+    *param_2 = (char)iVar1;
+    param_2 = param_2 + 1;
+  }
+  return 0;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100d079e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cfbdc0	entry=7100cfbdc0	FUN_7100cfbdc0	bytes=160  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cd7504	7100cd73e0	FUN_7100cd73e0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbde8	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbdf8	7100cf7030	7100cf7030	FUN_7100cf7030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbe04	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbe28	71004e0b20	71004e0b20	FUN_71004e0b20  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbe38	71004dd060	71004dd060	FUN_71004dd060  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbe3c	71004e0120	71004e0120	FUN_71004e0120  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cfbe48	71004dfff0	71004dfff0	FUN_71004dfff0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cfbdc0	chars=593  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cfbdc0(undefined8 *param_1)
+
+{
+  int iVar1;
+  undefined8 *puVar2;
+  long *plVar3;
+  
+  *param_1 = PTR_DAT_710160aaf8 + 0x10;
+  puVar2 = FUN_71004dc540(0x28);
+  if (puVar2 != (undefined8 *)0x0) {
+    FUN_7100cf7030(puVar2);
+  }
+  param_1[1] = puVar2;
+  plVar3 = FUN_71004dc540(0xa20);
+  if (plVar3 != (long *)0x0) {
+    *plVar3 = (long)(PTR_DAT_710160ad70 + 0x10);
+    FUN_71004e0b20(plVar3 + 1);
+    FUN_71004dd060(plVar3 + 0x13b,1,1);
+    iVar1 = FUN_71004e0120();
+    FUN_71004dfff0((int *)(plVar3 + 1),iVar1);
+  }
+  param_1[2] = plVar3;
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cfbdc0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> FUNCTION	7100cf7030	entry=7100cf7030	FUN_7100cf7030	bytes=280  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> INCOMING	7100cfbdf8	7100cfbdc0	FUN_7100cfbdc0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf705c	71004de620	71004de620	FUN_71004de620  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf7090	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf70b4	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf70d8	71004e0b20	71004e0b20	FUN_71004e0b20  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf70e8	71004dd060	71004dd060	FUN_71004dd060  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf70ec	71004e0120	71004e0120	FUN_71004e0120  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf70f8	71004dfff0	71004dfff0	FUN_71004dfff0  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> CALL	7100cf7108	71004dc540	71004dc540	FUN_71004dc540  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_BEGIN	7100cf7030	chars=1307  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> 
+void FUN_7100cf7030(undefined8 *param_1)
+
+{
+  undefined *puVar1;
+  undefined *puVar2;
+  int iVar3;
+  undefined8 *puVar4;
+  long *plVar5;
+  long lVar6;
+  
+  puVar1 = PTR_DAT_710160ad20;
+  param_1[2] = 0;
+  param_1[3] = 0;
+  *param_1 = puVar1 + 0x10;
+  param_1[1] = 0;
+  puVar4 = FUN_71004de620(0x10);
+  param_1[1] = puVar4;
+  param_1[2] = puVar4;
+  param_1[3] = puVar4 + 2;
+  *puVar4 = 0;
+  lVar6 = param_1[2];
+  param_1[2] = lVar6 + 8;
+  *(undefined8 *)(lVar6 + 8) = 0;
+  param_1[2] = param_1[2] + 8;
+  plVar5 = FUN_71004dc540(8);
+  if (plVar5 != (long *)0x0) {
+    *plVar5 = (long)(PTR_DAT_710160ad28 + 0x10);
+  }
+  *(long **)param_1[1] = plVar5;
+  plVar5 = FUN_71004dc540(0xa20);
+  if (plVar5 != (long *)0x0) {
+    *plVar5 = (long)(PTR_DAT_710160ad30 + 0x10);
+    FUN_71004e0b20(plVar5 + 1);
+    FUN_71004dd060(plVar5 + 0x13b,1,1);
+    iVar3 = FUN_71004e0120();
+    FUN_71004dfff0((int *)(plVar5 + 1),iVar3);
+  }
+  *(long **)(param_1[1] + 8) = plVar5;
+  plVar5 = FUN_71004dc540(0x40);
+  puVar2 = PTR_DAT_710160ad40;
+  puVar1 = PTR_DAT_710160ad38;
+  if (plVar5 != (long *)0x0) {
+    plVar5[2] = 0;
+    *plVar5 = (long)(puVar1 + 0x10);
+    plVar5[1] = (long)(puVar2 + 0x10);
+    plVar5[6] = 0;
+    plVar5[7] = 0;
+  }
+  param_1[4] = plVar5;
+  return;
+}
+
+  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> DECOMPILED_END	7100cf7030  
+2026-10-29 05:16:32 INFO  (GhidraScript) InspectRandomCallers.java> SUMMARY	image=//192.168.1.5/j/ROMS/Nintendo Switch/Pokemon/Pokemon Lets Go Pikachu/1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main  
+2026-10-29 05:16:33 INFO  (HeadlessAnalyzer) REPORT: Save succeeded for processed file: /main  

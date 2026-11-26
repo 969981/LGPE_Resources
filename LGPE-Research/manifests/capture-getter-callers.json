@@ -1,0 +1,130 @@
+{
+  "schema": "lgpe-research.capture-getter-callers.v2",
+  "status": "STATIC_SHARED_HANDLER_CALLERS",
+  "build": {
+    "game": "Pokemon: Let's Go, Pikachu!",
+    "version": "1.0.2",
+    "nca_id": "2b7730a9e56498bbafac2002d4908c6b",
+    "image_base": "0x7100000000",
+    "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8"
+  },
+  "trace": {
+    "tool": "Ghidra 12.2",
+    "mode": "-noanalysis -readOnly",
+    "script_sha256": "ba12229eb27b220166727ebc7d2e6f0641d998bc47bcc99849758a7d345636da",
+    "wrapper_sha256": "21306dd34f04009684be043710418c3c47263cf29397933fe92f82dac1d0beea",
+    "evidence_log_sha256": "b843837879c03a3e1466b701d2468639868e1217ef9df4fa175fc966ad7c3678",
+    "evidence_log": "logs/ghidra-capture-getter-callers-v1.stdout.log"
+  },
+  "probe_summary": {
+    "decompiled_functions": 7,
+    "instructions": 1264,
+    "direct_calls": 71,
+    "temporary_function_boundaries": 1,
+    "failures": 0,
+    "read_only_source": true,
+    "read_only_project": true,
+    "main_hash_unchanged": true
+  },
+  "capture_result_api_wrapper": {
+    "address": "main+0x1a64c0",
+    "byte_length": 488,
+    "decompiled_instruction_count": 122,
+    "incoming_data_reference": {
+      "from": "main+0x153c890",
+      "owner": "NONE",
+      "reference_type": "DATA",
+      "function_call": false
+    },
+    "direct_handler_callsite": "main+0x1a6524",
+    "direct_handler": "main+0x1aae40",
+    "observed_input_access": "qword from param_2+0x8",
+    "observed_result_projection": [
+      "copies the qword to a returned object's offset +0xc8 on one branch",
+      "writes zero to an adjacent 16-bit field on that branch",
+      "returns constant zero"
+    ],
+    "field_and_outcome_semantics": "UNKNOWN"
+  },
+  "temporary_candidate": {
+    "address": "main+0x28e7f0",
+    "saved_database_function": false,
+    "byte_length": 868,
+    "decompiled_instruction_count": 217,
+    "incoming_data_reference": {
+      "from": "main+0x15472a0",
+      "owner": "NONE",
+      "function_call": false
+    },
+    "static_order_observation": [
+      "case 2 calls main+0x28eb60",
+      "the decompiler output continues into case 3 and calls main+0x28ee10"
+    ],
+    "boundary_persisted": false
+  },
+  "shared_handler": {
+    "address": "main+0x28ee10",
+    "byte_length": 480,
+    "decompiled_instruction_count": 120,
+    "direct_incoming_reference_count": 4,
+    "direct_callers": [
+      {
+        "callsite": "main+0x3059d4",
+        "owner": "main+0x305970",
+        "reference_type": "UNCONDITIONAL_CALL",
+        "owner_boundary_persisted": true
+      },
+      {
+        "callsite": "main+0x28e978",
+        "owner": "main+0x28e7f0",
+        "reference_type": "UNCONDITIONAL_CALL",
+        "owner_boundary_persisted": false
+      },
+      {
+        "callsite": "main+0x319fe0",
+        "owner": "main+0x319f80",
+        "reference_type": "UNCONDITIONAL_CALL",
+        "owner_boundary_persisted": true
+      },
+      {
+        "callsite": "main+0x8549fc",
+        "owner": "NONE",
+        "reference_type": "UNCONDITIONAL_CALL",
+        "owner_boundary_persisted": false
+      }
+    ],
+    "observed_decompile_operations": [
+      "allocates 0x3b0 bytes",
+      "reads object qwords through param_2+0x68 and param_2+0x70",
+      "writes the local result pointer through param_1"
+    ]
+  },
+  "other_callers": {
+    "main+0x305970": {
+      "incoming_direct_callers": [
+        "main+0x2fdf34",
+        "main+0x2fdf80"
+      ],
+      "shared_handler_callsite": "main+0x3059d4"
+    },
+    "main+0x319f80": {
+      "incoming_direct_callers": [
+        "main+0x319cc4"
+      ],
+      "shared_handler_callsite": "main+0x319fe0"
+    },
+    "unowned_region": {
+      "shared_handler_callsite": "main+0x8549fc",
+      "owner": "NONE",
+      "result_stack_read": "main+0x854a00",
+      "subsequent_stack_store": "main+0x854a04"
+    }
+  },
+  "interpretation": {
+    "handler_specific_to_capture": "NOT_ESTABLISHED",
+    "capture_outcome_or_probability": "UNKNOWN",
+    "rng_linkage": "UNKNOWN",
+    "runtime_execution": "UNVERIFIED",
+    "temporary_boundary_is_persisted_analysis": false
+  }
+}

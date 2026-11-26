@@ -1,0 +1,265 @@
+{
+  "schema": "lgpe-save-api-crossref-v1",
+  "status": "STATIC_REFS_ONLY",
+  "game": "Pokemon Let's Go Pikachu 1.0.2",
+  "main": {
+    "sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+    "image_base": "0x7100000000",
+    "source_path": "../1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main"
+  },
+  "trace": {
+    "tool": "Ghidra 12.2",
+    "read_only": true,
+    "source_hash_unchanged": true,
+    "script": "scripts/ghidra/InspectSaveApiReferences.java",
+    "script_sha256": "f3661b60051cde1cc875f6235545a5bcae3491da4740962107006ec3c4bfd931",
+    "wrapper": "scripts/ghidra/Run-InspectSaveApiReferences.ps1",
+    "wrapper_sha256": "872a44533faa22d31eaba294d3540eb4371fb9365be61863bce369aba581ad77",
+    "log": "logs/ghidra-save-api-references-v1-script.log",
+    "log_sha256": "4549575b85f32a9fb855ea70ebdc5761b4ff61ec3bd116dd3360838ea7b307c2"
+  },
+  "counts": {
+    "save_api_symbols": 6,
+    "save_api_references": 71,
+    "save_api_calls": 50,
+    "mount_calls": 1,
+    "existing_calls": 1,
+    "worker_incoming_references": 0,
+    "unique_api_caller_functions": 37,
+    "filesystem_api_symbols": 18,
+    "filesystem_api_code_calls": 19,
+    "filesystem_operation_parents": 2,
+    "decompile_failures": 0
+  },
+  "save_data_api_code_calls": {
+    "<EXTERNAL>::nn::fs::CommitSaveData": 0,
+    "<EXTERNAL>::nn::fs::EnsureSaveData": 0,
+    "<EXTERNAL>::nn::fs::IsSaveDataExisting": 1,
+    "<EXTERNAL>::nn::fs::MountSaveData": 1
+  },
+  "filesystem_api_symbols": [
+    "<EXTERNAL>::nn::fs::CloseFile",
+    "<EXTERNAL>::nn::fs::CommitSaveData",
+    "<EXTERNAL>::nn::fs::CreateFile",
+    "<EXTERNAL>::nn::fs::DeleteFile",
+    "<EXTERNAL>::nn::fs::EnsureSaveData",
+    "<EXTERNAL>::nn::fs::FlushFile",
+    "<EXTERNAL>::nn::fs::GetEntryType",
+    "<EXTERNAL>::nn::fs::GetFileSize",
+    "<EXTERNAL>::nn::fs::IsSaveDataExisting",
+    "<EXTERNAL>::nn::fs::MountRom",
+    "<EXTERNAL>::nn::fs::MountSaveData",
+    "<EXTERNAL>::nn::fs::OpenFile",
+    "<EXTERNAL>::nn::fs::QueryMountRomCacheSize",
+    "<EXTERNAL>::nn::fs::ReadFile",
+    "<EXTERNAL>::nn::fs::SetAllocator",
+    "<EXTERNAL>::nn::fs::SetFileSize",
+    "<EXTERNAL>::nn::fs::Unmount",
+    "<EXTERNAL>::nn::fs::WriteFile"
+  ],
+  "filesystem_api_code_calls": {
+    "<EXTERNAL>::nn::fs::CloseFile": 2,
+    "<EXTERNAL>::nn::fs::CommitSaveData": 0,
+    "<EXTERNAL>::nn::fs::CreateFile": 2,
+    "<EXTERNAL>::nn::fs::DeleteFile": 0,
+    "<EXTERNAL>::nn::fs::EnsureSaveData": 0,
+    "<EXTERNAL>::nn::fs::FlushFile": 1,
+    "<EXTERNAL>::nn::fs::GetEntryType": 3,
+    "<EXTERNAL>::nn::fs::GetFileSize": 3,
+    "<EXTERNAL>::nn::fs::IsSaveDataExisting": 1,
+    "<EXTERNAL>::nn::fs::MountRom": 0,
+    "<EXTERNAL>::nn::fs::MountSaveData": 1,
+    "<EXTERNAL>::nn::fs::OpenFile": 5,
+    "<EXTERNAL>::nn::fs::QueryMountRomCacheSize": 0,
+    "<EXTERNAL>::nn::fs::ReadFile": 1,
+    "<EXTERNAL>::nn::fs::SetAllocator": 0,
+    "<EXTERNAL>::nn::fs::SetFileSize": 0,
+    "<EXTERNAL>::nn::fs::Unmount": 0,
+    "<EXTERNAL>::nn::fs::WriteFile": 0
+  },
+  "filesystem_api_call_sites": [
+    {
+      "callsite": "main+0x23940",
+      "api": "<EXTERNAL>::nn::fs::OpenFile",
+      "caller": "main+0x238e0",
+      "caller_name": "FUN_71000238e0"
+    },
+    {
+      "callsite": "main+0x23950",
+      "api": "<EXTERNAL>::nn::fs::GetFileSize",
+      "caller": "main+0x238e0",
+      "caller_name": "FUN_71000238e0"
+    },
+    {
+      "callsite": "main+0x23980",
+      "api": "<EXTERNAL>::nn::fs::CloseFile",
+      "caller": "main+0x23970",
+      "caller_name": "FUN_7100023970"
+    },
+    {
+      "callsite": "main+0x239e8",
+      "api": "<EXTERNAL>::nn::fs::ReadFile",
+      "caller": "main+0x23990",
+      "caller_name": "FUN_7100023990"
+    },
+    {
+      "callsite": "main+0x24e50",
+      "api": "<EXTERNAL>::nn::fs::IsSaveDataExisting",
+      "caller": "main+0x24d70",
+      "caller_name": "FUN_7100024d70"
+    },
+    {
+      "callsite": "main+0x24e6c",
+      "api": "<EXTERNAL>::nn::fs::MountSaveData",
+      "caller": "main+0x24d70",
+      "caller_name": "FUN_7100024d70"
+    },
+    {
+      "callsite": "main+0x2716c",
+      "api": "<EXTERNAL>::nn::fs::GetEntryType",
+      "caller": "main+0x27140",
+      "caller_name": "FUN_7100027140"
+    },
+    {
+      "callsite": "main+0x618afc",
+      "api": "<EXTERNAL>::nn::fs::FlushFile",
+      "caller": "main+0x618af0",
+      "caller_name": "FUN_7100618af0"
+    },
+    {
+      "callsite": "main+0x6698f0",
+      "api": "<EXTERNAL>::nn::fs::CloseFile",
+      "caller": "main+0x6698e8",
+      "caller_name": "FUN_71006698e8"
+    },
+    {
+      "callsite": "main+0x676d88",
+      "api": "<EXTERNAL>::nn::fs::GetEntryType",
+      "caller": "main+0x676cc0",
+      "caller_name": "FUN_7100676cc0"
+    },
+    {
+      "callsite": "main+0x6776e0",
+      "api": "<EXTERNAL>::nn::fs::CreateFile",
+      "caller": "main+0x677620",
+      "caller_name": "FUN_7100677620"
+    },
+    {
+      "callsite": "main+0x677728",
+      "api": "<EXTERNAL>::nn::fs::OpenFile",
+      "caller": "main+0x677620",
+      "caller_name": "FUN_7100677620"
+    },
+    {
+      "callsite": "main+0x677774",
+      "api": "<EXTERNAL>::nn::fs::OpenFile",
+      "caller": "main+0x677620",
+      "caller_name": "FUN_7100677620"
+    },
+    {
+      "callsite": "main+0x677794",
+      "api": "<EXTERNAL>::nn::fs::GetFileSize",
+      "caller": "main+0x677620",
+      "caller_name": "FUN_7100677620"
+    },
+    {
+      "callsite": "main+0x677844",
+      "api": "<EXTERNAL>::nn::fs::CreateFile",
+      "caller": "main+0x6777e0",
+      "caller_name": "FUN_71006777e0"
+    },
+    {
+      "callsite": "main+0x67788c",
+      "api": "<EXTERNAL>::nn::fs::OpenFile",
+      "caller": "main+0x6777e0",
+      "caller_name": "FUN_71006777e0"
+    },
+    {
+      "callsite": "main+0x6778d8",
+      "api": "<EXTERNAL>::nn::fs::OpenFile",
+      "caller": "main+0x6777e0",
+      "caller_name": "FUN_71006777e0"
+    },
+    {
+      "callsite": "main+0x6778f8",
+      "api": "<EXTERNAL>::nn::fs::GetFileSize",
+      "caller": "main+0x6777e0",
+      "caller_name": "FUN_71006777e0"
+    },
+    {
+      "callsite": "main+0xc9ed30",
+      "api": "<EXTERNAL>::nn::fs::GetEntryType",
+      "caller": "main+0xc9ecb0",
+      "caller_name": "FUN_7100c9ecb0"
+    }
+  ],
+  "filesystem_mutation_callsites": [
+    {
+      "callsite": "main+0x618afc",
+      "api": "<EXTERNAL>::nn::fs::FlushFile",
+      "caller": "main+0x618af0",
+      "caller_name": "FUN_7100618af0"
+    },
+    {
+      "callsite": "main+0x6776e0",
+      "api": "<EXTERNAL>::nn::fs::CreateFile",
+      "caller": "main+0x677620",
+      "caller_name": "FUN_7100677620"
+    },
+    {
+      "callsite": "main+0x677844",
+      "api": "<EXTERNAL>::nn::fs::CreateFile",
+      "caller": "main+0x6777e0",
+      "caller_name": "FUN_71006777e0"
+    }
+  ],
+  "filesystem_operation_owners": [
+    {
+      "function": "main+0x618af0",
+      "name": "FUN_7100618af0",
+      "incoming_references": 0
+    },
+    {
+      "function": "main+0x677620",
+      "name": "FUN_7100677620",
+      "incoming_references": 2
+    },
+    {
+      "function": "main+0x6777e0",
+      "name": "FUN_71006777e0",
+      "incoming_references": 2
+    }
+  ],
+  "filesystem_operation_parent_callsites": [
+    {
+      "callsite": "main+0x6756d8",
+      "child": "main+0x677620",
+      "parent": "main+0x6755f0",
+      "parent_name": "FUN_71006755f0"
+    },
+    {
+      "callsite": "main+0x675858",
+      "child": "main+0x6777e0",
+      "parent": "main+0x675770",
+      "parent_name": "FUN_7100675770"
+    }
+  ],
+  "save_worker": {
+    "address": "main+0x24d70",
+    "incoming_references": 0
+  },
+  "interpretation": {
+    "primary_player_save_owner": "UNKNOWN",
+    "runtime_execution": "UNVERIFIED",
+    "mount_save_data_callsite": "main+0x24e6c",
+    "commit_save_data_direct_code_calls": 0,
+    "ensure_save_data_direct_code_calls": 0,
+    "write_file_direct_code_calls": 0,
+    "limitations": [
+      "Ghidra reference counts describe the saved analysis database, not runtime execution.",
+      "Indirect calls and dynamically registered worker entrypoints remain unresolved.",
+      "Zero direct imported-API references do not exclude equivalent indirect or wrapped operations.",
+      "CreateFile and FlushFile call paths are not assigned to player-save ownership."
+    ]
+  }
+}

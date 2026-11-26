@@ -1,0 +1,298 @@
+{
+  "source_version": "Pokemon Let's Go Pikachu 1.0.2",
+  "bntx_extractor_commit": "2c08e8e55fcc666ba6568a102f36dabd6c584e25",
+  "texture2ddecoder_version": "1.0.6",
+  "ffmpeg": {
+    "version": "ffmpeg version 8.0.1-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers",
+    "executable_sha256": "74db6c184a03dba2bdfe23e1a1f41cf5a8385bc1de6a7a1b26db1dc541abef93"
+  },
+  "ffmpeg_version_command": [
+    {
+      "command": [
+        "D:\\Tool\\ffmpeg-8.0.1-full_build\\bin\\ffmpeg.exe",
+        "-version"
+      ],
+      "cwd": null,
+      "returncode": 0,
+      "timeout_seconds": 180,
+      "stdout": "ffmpeg version 8.0.1-full_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers\nbuilt with gcc 15.2.0 (Rev8, Built by MSYS2 project)\nconfiguration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-lcms2 --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-libdvdnav --enable-libdvdread --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-liboapv --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-openal --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint --enable-whisper\nlibavutil      60.  8.100 / 60.  8.100\nlibavcodec     62. 11.100 / 62. 11.100\nlibavformat    62.  3.100 / 62.  3.100\nlibavdevice    62.  1.100 / 62.  1.100\nlibavfilter    11.  4.100 / 11.  4.100\nlibswscale      9.  1.100 /  9.  1.100\nlibswresample   6.  1.100 /  6.  1.100\n\nExiting with exit code 0\n",
+      "stderr": ""
+    }
+  ],
+  "smoke_samples": 5,
+  "results": [
+    {
+      "source": "bin/battle/waza/model/em000_ball_break01/fxmt_0_mask001_m.bntx",
+      "source_sha256": "073b02668525a3aa62ad405b40f7009af65983d969c90ba34863bb6362d78dbf",
+      "source_unchanged": true,
+      "expected_format": "R16_UNORM",
+      "conversion": {
+        "pixel_format": "R16_UNORM",
+        "decoder": "BNTX-Extractor swizzle.deswizzle + R16_UNORM normalization",
+        "channel_mapping": "16-bit Red UNORM mapped to 8-bit grayscale; alpha set opaque",
+        "color_space": "linear",
+        "source_format_code": 2561,
+        "component_selectors": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "width": 512,
+        "height": 512
+      },
+      "output_sha256": "ff92ce0a2fead6daa194afa4f9aac9e1172b41b2fb303c417fa4d3dba96c5806",
+      "output_bytes": 115103,
+      "validation": {
+        "width": 512,
+        "height": 512,
+        "color_type": 6,
+        "bit_depth": 8,
+        "validated_bytes": 1049088
+      },
+      "cross_validation": {
+        "decoder": "FFmpeg rawvideo gray16le->gray8",
+        "sample_count": 262144,
+        "max_gray_difference": 1,
+        "within_one_8bit_level": true
+      },
+      "commands": [
+        {
+          "command": [
+            "X:\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\.venv\\Scripts\\python.exe",
+            "-c",
+            "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\1\\bin\\battle\\waza\\model\\em000_ball_break01\\fxmt_0_mask001_m.bntx",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-bm29uwni\\texture-metadata.json",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-bm29uwni\\texture-r16.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-bm29uwni",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "\nFile name: fxmt_0_mask0\n\nTextures count: 1\n\nImage 1 name: fxmt_0_mask001_m\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 9\nFormat: 2561\nWidth: 512\nHeight: 512\nNumber of faces: 1\nSize Range: 4\nBlock Height: 16\nImage Size: 701440\nAlignment: 512\nChannel 1: Red\nChannel 2: Red\nChannel 3: Red\nChannel 4: 1\nImage type: 2D\n",
+          "stderr": ""
+        },
+        {
+          "command": [
+            "D:\\Tool\\ffmpeg-8.0.1-full_build\\bin\\ffmpeg.exe",
+            "-hide_banner",
+            "-f",
+            "rawvideo",
+            "-pixel_format",
+            "gray16le",
+            "-video_size",
+            "512x512",
+            "-i",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-smoke-90__g6w2\\r16-linear.raw",
+            "-frames:v",
+            "1",
+            "-f",
+            "rawvideo",
+            "-pix_fmt",
+            "gray",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-smoke-90__g6w2\\ffmpeg-gray8.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-smoke-90__g6w2",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "",
+          "stderr": "[rawvideo @ 000001a1898f6500] Estimating duration from bitrate, this may be inaccurate\nInput #0, rawvideo, from '\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-smoke-90__g6w2\\r16-linear.raw':\n  Duration: 00:00:00.04, start: 0.000000, bitrate: 104857 kb/s\n  Stream #0:0: Video: rawvideo (Y1[0][16] / 0x10003159), gray16le, 512x512, 104857 kb/s, 25 tbr, 25 tbn\nStream mapping:\n  Stream #0:0 -> #0:0 (rawvideo (native) -> rawvideo (native))\nPress [q] to stop, [?] for help\nOutput #0, rawvideo, to '\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-smoke-90__g6w2\\ffmpeg-gray8.raw':\n  Metadata:\n    encoder         : Lavf62.3.100\n  Stream #0:0: Video: rawvideo (Y800 / 0x30303859), gray(pc, progressive), 512x512, q=2-31, 52428 kb/s, 25 fps, 25 tbn\n    Metadata:\n      encoder         : Lavc62.11.100 rawvideo\n[out#0/rawvideo @ 000001a1898f6880] video:256KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%\nframe=    1 fps=0.0 q=-0.0 Lsize=     256KiB time=00:00:00.04 bitrate=52428.8kbits/s speed=4.92x elapsed=0:00:00.00    \n"
+        }
+      ]
+    },
+    {
+      "source": "bin/battle/waza/model/check_cube/fxmt_cmn_sdw002_m_lta.bntx",
+      "source_sha256": "8a54503dd5e6ba456c7549d9951c266e95275f6699413615cd3c146ab0acda0b",
+      "source_unchanged": true,
+      "expected_format": "R8_UNORM",
+      "conversion": {
+        "pixel_format": "R8_UNORM",
+        "decoder": "BNTX-Extractor deswizzle + RGBA expansion",
+        "channel_mapping": "R copied to PNG R/G/B; alpha set opaque",
+        "color_space": "linear",
+        "source_format_code": 513,
+        "component_selectors": [
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      "output_sha256": "27e3329c719c17996ce39a5e331d2198b7259d9d3f2c792014fc18bc96c12f6c",
+      "output_bytes": 106,
+      "validation": {
+        "width": 256,
+        "height": 8,
+        "color_type": 6,
+        "bit_depth": 8,
+        "validated_bytes": 8200
+      },
+      "cross_validation": null,
+      "commands": [
+        {
+          "command": [
+            "X:\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\.venv\\Scripts\\python.exe",
+            "-c",
+            "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\1\\bin\\battle\\waza\\model\\check_cube\\fxmt_cmn_sdw002_m_lta.bntx",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-utjczl9b\\texture-metadata.json",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-utjczl9b\\texture-r16.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-utjczl9b",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "\nFile name: fxmt_cmn_sdw\n\nTextures count: 1\n\nImage 1 name: fxmt_cmn_sdw002_m_lta\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 8\nFormat: R8_UNORM\nWidth: 256\nHeight: 8\nNumber of faces: 1\nSize Range: 0\nBlock Height: 1\nImage Size: 6656\nAlignment: 512\nChannel 1: Red\nChannel 2: Red\nChannel 3: Red\nChannel 4: 1\nImage type: 2D\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "source": "bin/battle/waza/model/ew073_df_sprout01/fxmt_0_object203_a.bntx",
+      "source_sha256": "8adf8396fcb4510a1011c6e5f2424a7fd267b6c75405928e97d1bb243a23a042",
+      "source_unchanged": true,
+      "expected_format": "R8_G8_UNORM",
+      "conversion": {
+        "pixel_format": "R8_G8_UNORM",
+        "decoder": "BNTX-Extractor deswizzle + RGBA expansion",
+        "channel_mapping": "first component to PNG R, second to G, B=0, alpha opaque",
+        "color_space": "linear",
+        "source_format_code": 2305,
+        "component_selectors": [
+          3,
+          2,
+          2,
+          2
+        ]
+      },
+      "output_sha256": "92100e75d0f3c4ed09ac01513bd5c6f5d615765fe6dbfc7276ee846dd82b32a5",
+      "output_bytes": 22927,
+      "validation": {
+        "width": 256,
+        "height": 512,
+        "color_type": 6,
+        "bit_depth": 8,
+        "validated_bytes": 524800
+      },
+      "cross_validation": null,
+      "commands": [
+        {
+          "command": [
+            "X:\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\.venv\\Scripts\\python.exe",
+            "-c",
+            "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\1\\bin\\battle\\waza\\model\\ew073_df_sprout01\\fxmt_0_object203_a.bntx",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-1sxuw19s\\texture-metadata.json",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-1sxuw19s\\texture-r16.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-1sxuw19s",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "\nFile name: fxmt_0_objec\n\nTextures count: 1\n\nImage 1 name: fxmt_0_object203_a\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 9\nFormat: R8_G8_UNORM\nWidth: 256\nHeight: 512\nNumber of faces: 1\nSize Range: 4\nBlock Height: 16\nImage Size: 353280\nAlignment: 512\nChannel 1: Red\nChannel 2: Red\nChannel 3: Red\nChannel 4: Green\nImage type: 2D\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "source": "bin/chara/data/pd/pd0001_00_cap/mdl/pd0001_00_body_col_01.bntx",
+      "source_sha256": "e7412c219c18926895d770f91033fa0d141310be6280d33b24e223423bd341a6",
+      "source_unchanged": true,
+      "expected_format": "BC7_SRGB",
+      "conversion": {
+        "pixel_format": "BC7_SRGB",
+        "decoder": "texture2ddecoder.decode_bc7/1.0.6",
+        "channel_mapping": "decoder BGRA reordered to PNG RGBA",
+        "color_space": "sRGB",
+        "source_format_code": 8198,
+        "component_selectors": [
+          5,
+          4,
+          3,
+          2
+        ]
+      },
+      "output_sha256": "3e28815883d85680b9c34874d2a11f2765b6b37b02a6fc1671341649bfed7c5f",
+      "output_bytes": 125966,
+      "validation": {
+        "width": 512,
+        "height": 512,
+        "color_type": 6,
+        "bit_depth": 8,
+        "validated_bytes": 1049088
+      },
+      "cross_validation": null,
+      "commands": [
+        {
+          "command": [
+            "X:\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\.venv\\Scripts\\python.exe",
+            "-c",
+            "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\1\\bin\\chara\\data\\pd\\pd0001_00_cap\\mdl\\pd0001_00_body_col_01.bntx",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-3wfi6zqm\\texture-metadata.json",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-3wfi6zqm\\texture-r16.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-3wfi6zqm",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "\nFile name: pd0001_00_bo\n\nTextures count: 1\n\nImage 1 name: pd0001_00_body_col_01\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 9\nFormat: BC7_SRGB\nWidth: 512\nHeight: 512\nNumber of faces: 1\nSize Range: 4\nBlock Height: 16\nImage Size: 351744\nAlignment: 512\nChannel 1: Red\nChannel 2: Green\nChannel 3: Blue\nChannel 4: Alpha\nImage type: 2D\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "source": "bin/demo/res/ev0800_ghost/pm0105/model/pm0105_00_Body_amb.bntx",
+      "source_sha256": "3e484d33e887ac2db20975d7e00aca7c2be496922f30e5fbb9941c008b767595",
+      "source_unchanged": true,
+      "expected_format": "BC7_UNORM",
+      "conversion": {
+        "pixel_format": "BC7_UNORM",
+        "decoder": "texture2ddecoder.decode_bc7/1.0.6",
+        "channel_mapping": "decoder BGRA reordered to PNG RGBA",
+        "color_space": "linear",
+        "source_format_code": 8193,
+        "component_selectors": [
+          5,
+          4,
+          3,
+          2
+        ]
+      },
+      "output_sha256": "08bcc8d9ac053c64956a5be64b26482e06b50651b8d49fbc2117936e9b8ec06f",
+      "output_bytes": 64039,
+      "validation": {
+        "width": 512,
+        "height": 512,
+        "color_type": 6,
+        "bit_depth": 8,
+        "validated_bytes": 1049088
+      },
+      "cross_validation": null,
+      "commands": [
+        {
+          "command": [
+            "X:\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\.venv\\Scripts\\python.exe",
+            "-c",
+            "import sys,json;sys.path.insert(0,sys.argv[1]);import bntx_extract as b\nfrom pathlib import Path\ntextures=b.readBNTX(Path(sys.argv[2]).read_bytes())\nsys.path.insert(0,sys.argv[3]);from lgpe_research.assets_decode import safe_name\nfor t in textures:safe_name(t.name)\nmetadata=[{'name':t.name,'format':b.formats.get(t.format,'R16_UNORM' if t.format==0x0A01 else 'UNKNOWN'),'format_code':t.format,'width':t.width,'height':t.height,'faces':t.numFaces,'component_selectors':list(t.compSel)} for t in textures]\nPath(sys.argv[4]).write_text(json.dumps(metadata),encoding='utf8')\nif len(textures)==1 and textures[0].format==0x0A01 and textures[0].numFaces==1:\n t=textures[0];raw=b.swizzle.deswizzle(t.width,t.height,1,1,2,t.tileMode,t.alignment,t.sizeRange,t.data)\n Path(sys.argv[5]).write_bytes(raw[:t.width*t.height*2])\nelse:b.saveTextures(textures)\n",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\tools\\src\\BNTX-Extractor",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\1\\bin\\demo\\res\\ev0800_ghost\\pm0105\\model\\pm0105_00_Body_amb.bntx",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\src",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-am2s5wx0\\texture-metadata.json",
+            "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-am2s5wx0\\texture-r16.raw"
+          ],
+          "cwd": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\LGPE-Research\\work\\bntx-am2s5wx0",
+          "returncode": 0,
+          "timeout_seconds": 180,
+          "stdout": "\nFile name: pm0105_00_Bo\n\nTextures count: 1\n\nImage 1 name: pm0105_00_Body_amb\nTileMode: TILING_MODE_TILED\nDimensions: 2\nFlags: 0\nSwizzle: 0\nNumber of Mipmaps: 9\nFormat: BC7_UNORM\nWidth: 512\nHeight: 512\nNumber of faces: 1\nSize Range: 4\nBlock Height: 16\nImage Size: 351744\nAlignment: 512\nChannel 1: Red\nChannel 2: Green\nChannel 3: Blue\nChannel 4: Alpha\nImage type: 2D\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/tmp/lgpe-research-env/bin/lgpe", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/mnt/x/roms/nintendo switch/pokemon/pokemon lets go pikachu/LGPE-Research/src/lgpe_research/cli.py", line 699, in main
+    code = args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "/mnt/x/roms/nintendo switch/pokemon/pokemon lets go pikachu/LGPE-Research/src/lgpe_research/cli.py", line 380, in cmd_run
+    scan = snapshot_scan(args.root, scan_path, full_hash=args.full_sha256)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/x/roms/nintendo switch/pokemon/pokemon lets go pikachu/LGPE-Research/src/lgpe_research/core.py", line 66, in snapshot_scan
+    if not p.is_file() or p.is_symlink():continue
+           ^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 894, in is_file
+    return S_ISREG(self.stat().st_mode)
+                   ^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 842, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

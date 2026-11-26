@@ -1,0 +1,81 @@
+name: Publish release artifacts
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release git tag
+        type: string
+        required: true
+  push:
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ghidra: [ "12.1.2" ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Java
+        uses: actions/setup-java@v6
+        with:
+          distribution: "temurin"
+          java-version: "21"
+
+      - name: Setup Ghidra ${{ matrix.ghidra }}
+        uses: antoniovazquezblanco/setup-ghidra@v2.2.1
+        with:
+          version: ${{ matrix.ghidra }}
+
+      - name: Build extension
+        run: ./gradlew
+
+      - name: Resolve build artifact
+        id: artifact
+        run: |
+          ZIP_PATH=$(find dist -maxdepth 1 -name 'SwitchLoader-*.zip' | head -n1)
+          if [ -z "$ZIP_PATH" ]; then
+            echo "No SwitchLoader-*.zip found in dist/" >&2
+            exit 1
+          fi
+
+          ZIP_FILE=$(basename "$ZIP_PATH")
+          ARTIFACT_NAME="${ZIP_FILE%.zip}"
+          EXTRACT_DIR="dist/${ARTIFACT_NAME}"
+          # SwitchLoader-1.6.1-2a1cb05-Ghidra_12.1.2 -> 1.6.1-2a1cb05-Ghidra_12.1.2
+          RELEASE_TAG="${ARTIFACT_NAME#SwitchLoader-}"
+
+          mkdir -p "$EXTRACT_DIR"
+          unzip -o "$ZIP_PATH" -d "$EXTRACT_DIR"
+
+          echo "zip_path=$ZIP_PATH" >> "$GITHUB_OUTPUT"
+          echo "artifact_name=$ARTIFACT_NAME" >> "$GITHUB_OUTPUT"
+          echo "extract_dir=$EXTRACT_DIR" >> "$GITHUB_OUTPUT"
+          echo "release_tag=$RELEASE_TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.artifact.outputs.artifact_name }}
+          path: ${{ steps.artifact.outputs.extract_dir }}
+          overwrite: true
+
+      - name: Upload release
+        uses: softprops/action-gh-release@v3
+        if: |
+          github.event_name == 'push' || 
+          github.event_name == 'workflow_dispatch' || 
+          (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+        with:
+          tag_name: ${{ steps.artifact.outputs.release_tag }}
+          name: ${{ steps.artifact.outputs.artifact_name }}
+          files: ${{ steps.artifact.outputs.zip_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

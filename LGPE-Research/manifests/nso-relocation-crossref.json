@@ -1,0 +1,153 @@
+{
+  "schema": "lgpe-nso-relative-relocation-crossref-v1",
+  "status": "STATIC_RELOCATION_CROSSREF_ONLY",
+  "game": "Pokemon Let's Go Pikachu 1.0.2",
+  "main": {
+    "source_path": "../1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main",
+    "sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+    "size_bytes": 13018038,
+    "image_base": "0x7100000000"
+  },
+  "parser": {
+    "name": "PokeLDN",
+    "repository": "https://github.com/Decryptu/pokeldn",
+    "commit": "0afe6f61f25464767e55b909eef6b260a372bb34",
+    "license": "AGPL-3.0",
+    "source_path": "tools/src/pokeldn/pokeldn/switch/nso.py",
+    "source_sha256": "f80e274130a5c055789815604d456271d715cdfc4f1c0528df7ce02460b3c87d",
+    "methods": [
+      "segments",
+      "layout",
+      "relatives (RELA R_AARCH64_RELATIVE and RELR)"
+    ]
+  },
+  "decompressed_segments_image": {
+    "size_bytes": 23117872,
+    "sha256": "32ff708cc634829aeb2e39a5f39eb156d20e16237c5996f5e1299a905ffe68e9",
+    "segments": [
+      {
+        "name": "text",
+        "memory_offset": "0x0",
+        "size_bytes": 13839272
+      },
+      {
+        "name": "rodata",
+        "memory_offset": "0xd33000",
+        "size_bytes": 8335740
+      },
+      {
+        "name": "data",
+        "memory_offset": "0x1527000",
+        "size_bytes": 938032
+      }
+    ],
+    "written_to_disk": false
+  },
+  "zero_filled_memory_image": {
+    "size_bytes": 32376568,
+    "sha256": "5d598a5d3bf2c645050231b87d4b4814a31798148ab2e4dc6bae35a2aa8f9ba1",
+    "includes_bss": true,
+    "written_to_disk": false
+  },
+  "relocations": {
+    "kind": "RELA R_AARCH64_RELATIVE plus RELR",
+    "relative_count": 71687
+  },
+  "queries": [
+    {
+      "id": "spawn_dispatcher_body",
+      "matches": [],
+      "match_count": 0,
+      "range": {
+        "start": "main+0x2f8a50",
+        "end_exclusive": "main+0x2f8e6c"
+      },
+      "evidence": "Ghidra 12.2 exact-build function boundary; end address is exclusive."
+    },
+    {
+      "id": "spawn_rng_candidate_entry",
+      "matches": [],
+      "match_count": 0,
+      "range": {
+        "start": "main+0x2fdf90",
+        "end_exclusive": "main+0x2fdf91"
+      }
+    },
+    {
+      "id": "spawn_rng_next_handler_entry",
+      "matches": [],
+      "match_count": 0,
+      "range": {
+        "start": "main+0x300e40",
+        "end_exclusive": "main+0x300e41"
+      }
+    },
+    {
+      "id": "encounter_rate_helper_entry",
+      "matches": [],
+      "match_count": 0,
+      "range": {
+        "start": "main+0x3154a0",
+        "end_exclusive": "main+0x3154a1"
+      }
+    },
+    {
+      "id": "capture_api_table_targets",
+      "matches": [
+        {
+          "slot": "main+0x153c870",
+          "addend": "main+0x1a5e80"
+        },
+        {
+          "slot": "main+0x153c880",
+          "addend": "main+0x1a61e0"
+        },
+        {
+          "slot": "main+0x153c890",
+          "addend": "main+0x1a64c0"
+        }
+      ],
+      "match_count": 3,
+      "ranges": [
+        {
+          "start": "main+0x1a5e80",
+          "end_exclusive": "main+0x1a5e81"
+        },
+        {
+          "start": "main+0x1a61e0",
+          "end_exclusive": "main+0x1a61e1"
+        },
+        {
+          "start": "main+0x1a64c0",
+          "end_exclusive": "main+0x1a64c1"
+        }
+      ],
+      "evidence": "Labels are from a separate exact-build Ghidra table trace; this query only checks relocation addends.",
+      "observed_local_labels": [
+        "MapChangeCore_",
+        "CaptureCall",
+        "GetCaptureResult"
+      ]
+    }
+  ],
+  "ghidra_evidence": {
+    "version": "Ghidra 12.2",
+    "read_only": true,
+    "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+    "script": "scripts/ghidra/ScanSpawnDispatcherIncomingEdges.java",
+    "script_sha256": "008e5a15736d58aa0184b8f1e6a66de0040a8f434eda51a68550a1b122fa613b",
+    "wrapper": "scripts/ghidra/Run-ScanSpawnDispatcherIncomingEdges.ps1",
+    "wrapper_sha256": "7a1c387d8c4533d3d27a399804a791d97152b5598b7a402cd4d89c02fd5bd208",
+    "details": "docs/research/T10-notes.md"
+  },
+  "interpretation": {
+    "runtime_dispatch": "UNVERIFIED",
+    "rng_seed_initialization": "UNKNOWN",
+    "limitations": [
+      "A missing RELATIVE/RELR addend is not proof that no code can reach a target; computed or unrelocated references remain possible.",
+      "A matching relocation identifies a slot and addend only; it does not assign the slot's runtime type or dispatch role.",
+      "The RELATIVE/RELR scan does not enumerate every AArch64 absolute, GOT, instruction-materialized, or runtime-generated reference.",
+      "Function labels and boundaries are carried from the exact-build Ghidra trace; the parser does not infer function semantics."
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "format": "LGPE 1.0.2 static wild-encounter candidate roll intervals",
+  "source_version": "Pokemon Let's Go Pikachu 1.0.2",
+  "source_nca_folder": "2b7730a9e56498bbafac2002d4908c6b_NCA",
+  "source_sha256": "3dac771dffee508ff8fea41d255326640aefb67c88c2d96fd1ecda7b82b1ce46",
+  "decoded_json_sha256": "23e429a0470a356cffe44e323e8977db0e29c94c09937758676051980df077a2",
+  "schema_sha256": "0f1e114b4ef92986bb674c341dfe75e418d257f5d4a2eb6997c8b9ca629e2a1b",
+  "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+  "pknx_commit": "d191cd0e5c05f2af81d9a41c1f1d82e6621b351a",
+  "schema_fields": {
+    "root_tables_vector": 0,
+    "zone_id": 0,
+    "mode_vectors": {
+      "Ground": 10,
+      "Water": 18,
+      "Sky": 41
+    },
+    "declared_probability_totals": {
+      "Ground": 9,
+      "Water": 17,
+      "Sky": 40
+    },
+    "slot": {
+      "probability": 0,
+      "species": 1,
+      "form": 2
+    }
+  },
+  "raw_offset_origin": "byte zero of source_relative_path",
+  "roll_domain": "[0,100)",
+  "candidate_selection_rule": "candidate computes an RNG-derived value modulo 100, accumulates slot Probability, and selects the first cumulative value greater than the roll",
+  "candidate_evidence": {
+    "main_image_base": "0x7100000000",
+    "function_va": "0x71002fdf90",
+    "direct_caller_va": "0x71002f8a50",
+    "callsite_va": "0x71002f8e2c",
+    "runtime_reachability": "UNVERIFIED",
+    "limitation": "the caller has no direct incoming references in the saved Ghidra database; the candidate's local root is not linked to the constructed encounter resource owner",
+    "notes": "docs/research/T10-notes.md"
+  },
+  "cross_checks": {
+    "source_parse_equals_pinned_json": true,
+    "decoded_leaf_values_compared": 7982,
+    "table_count": 70,
+    "mode_table_groups": 210,
+    "slot_rows": 1330,
+    "inactive_zero_total_groups": 95,
+    "probability_totals_by_mode": {
+      "Ground": {
+        "0": 17,
+        "100": 53
+      },
+      "Water": {
+        "0": 49,
+        "100": 21
+      },
+      "Sky": {
+        "0": 29,
+        "100": 41
+      }
+    }
+  },
+  "outputs": {
+    "csv": "manifests/encounter-weight-intervals.csv",
+    "csv_sha256": "5fa6e10403634d79d46c822bbfb8fedc622126f0510c332e5094a59528a32b4d",
+    "csv_rows": 1330,
+    "verified_csv_rows": 1330,
+    "verified_mode_table_groups": 210,
+    "json": "manifests/encounter-weight-intervals.json"
+  }
+}

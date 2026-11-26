@@ -1,0 +1,102 @@
+INFO  TraceSortStringAccessorLink.java> PROGRAM	version=Pokemon Let's Go Pikachu 1.0.2	base=7100000000	language=AARCH64:LE:64:v8A	main_sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8 (GhidraScript)  
+
+REQUEST PATH LITERALS AND SHARED LOADER CALLS
+INFO  TraceSortStringAccessorLink.java> CODE	7100b31400	24	  local_78 = "item_initial_index.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b31400	29	  local_c8 = "item_sort_table.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b31400	34	  local_118 = "item_initial_to_sort.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b31400	38	  FUN_7100374530(param_1,local_60,local_b0,local_100,(ulong)(param_2 & 1));
+INFO  TraceSortStringAccessorLink.java> CODE	7100b315e0	24	  local_78 = "monsname_initial_index.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b315e0	29	  local_c8 = "monsname_sort_table.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b315e0	34	  local_118 = "monsname_initial_to_sort.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b315e0	38	  FUN_7100374530(param_1,local_60,local_b0,local_100,(ulong)(param_2 & 1));
+INFO  TraceSortStringAccessorLink.java> CODE	7100b318c0	24	  local_78 = "waza_initial_index.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b318c0	29	  local_c8 = "waza_sort_table.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b318c0	34	  local_118 = "waza_initial_to_sort.dat";
+INFO  TraceSortStringAccessorLink.java> CODE	7100b318c0	38	  FUN_7100374530(param_1,local_60,local_b0,local_100,(ulong)(param_2 & 1));
+
+SHARED LOADER FIELD COPIES
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	76	    if ((*(long *)(param_1 + 0x350) == 0) && (lVar2 = *(long *)(param_1 + 0x18), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	77	      *(undefined8 *)(param_1 + 0x350) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	78	      *(int *)(param_1 + 0x358) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	80	    if ((*(long *)(param_1 + 0x340) == 0) && (lVar2 = *(long *)(param_1 + 0x128), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	81	      *(undefined8 *)(param_1 + 0x340) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	82	      *(int *)(param_1 + 0x348) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	84	    if ((*(long *)(param_1 + 0x360) == 0) && (*(long *)(param_1 + 0x238) != 0)) {
+INFO  TraceSortStringAccessorLink.java> CODE	7100374530	85	      *(undefined8 *)(param_1 + 0x360) = *(undefined8 *)(*(long *)(param_1 + 0x238) + 0x170);
+
+ACCESSOR DECOMPILATIONS
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	0	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	1	undefined2 FUN_7100374a90(long param_1,uint param_2)
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	2	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	3	{
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	4	  if (param_2 < *(uint *)(param_1 + 0x348) >> 1) {
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	5	    return *(undefined2 *)(*(long *)(param_1 + 0x340) + (ulong)param_2 * 2);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	6	  }
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	7	  return 0;
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	8	}
+INFO  TraceSortStringAccessorLink.java> CODE	7100374a90	9	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	0	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	1	uint FUN_7100374ac0(long param_1)
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	2	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	3	{
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	4	  return *(uint *)(param_1 + 0x348) >> 1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	5	}
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ac0	6	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	0	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	1	bool FUN_7100374ad0(long param_1,uint param_2,uint *param_3,uint *param_4)
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	2	
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	3	{
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	4	  uint uVar1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	5	  
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	6	  *param_3 = (uint)*(ushort *)(*(long *)(param_1 + 0x360) + (ulong)param_2 * 4);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	7	  uVar1 = (uint)*(ushort *)(*(long *)(param_1 + 0x360) + (ulong)param_2 * 4 + 2);
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	8	  *param_4 = uVar1;
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	9	  return uVar1 != 0xffff && *param_3 != 0xffff;
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	10	}
+INFO  TraceSortStringAccessorLink.java> CODE	7100374ad0	11	
+
+SEPARATE ZUKAN U16 READER (NOT A LOCALIZED-RESOURCE XREF)
+INFO  TraceSortStringAccessorLink.java> CODE	7100377820	12	  FUN_7100101810(local_60,&PTR_s_bin_app_zukan_data_bin_zukan_chi_7101552108 + param_2);
+INFO  TraceSortStringAccessorLink.java> INCOMING	role=helper reads indexed 16-bit value	from=71001769d0	type=UNCONDITIONAL_CALL	caller=7100176940	name=FUN_7100176940 (GhidraScript)
+INFO  TraceSortStringAccessorLink.java> INCOMING	role=helper reads indexed 16-bit value	from=7100176a34	type=UNCONDITIONAL_CALL	caller=7100176940	name=FUN_7100176940 (GhidraScript)
+INFO  TraceSortStringAccessorLink.java> INCOMING	role=helper reads indexed 16-bit value	from=7100176a98	type=UNCONDITIONAL_CALL	caller=7100176940	name=FUN_7100176940 (GhidraScript)
+INFO  TraceSortStringAccessorLink.java> INCOMING	role=helper reads indexed 16-bit value	from=7100176afc	type=UNCONDITIONAL_CALL	caller=7100176940	name=FUN_7100176940 (GhidraScript)
+INFO  TraceSortStringAccessorLink.java> INCOMING	role=helper reads indexed 16-bit value	from=7100176b60	type=UNCONDITIONAL_CALL	caller=7100176940	name=FUN_7100176940 (GhidraScript)
+INFO  TraceSortStringAccessorLink.java> INCOMING_COUNT	role=helper reads indexed 16-bit value	count=5 (GhidraScript)
+
+KNOWN OWNER CONSUMER CALLS
+INFO  TraceSortStringAccessorLink.java> CODE	7100b09cc0	20	          uVar1 = FUN_7100374a90(*(long *)(param_1 + 0x28),param_2);
+INFO  TraceSortStringAccessorLink.java> CODE	7100b0a000	8	  bVar1 = FUN_7100374ad0(*(long *)(param_1 + 0x28),param_2,&local_14,&local_18);
+INFO  TraceSortStringAccessorLink.java> CODE	7100b0a060	12	  uVar2 = FUN_7100374ac0(*(long *)(param_1 + 0x28));
+INFO  TraceSortStringAccessorLink.java> CODE	7100b0a060	24	          uVar1 = FUN_7100374a90(*(long *)(param_1 + 0x28),uVar6);
+
+BOUNDED RESOURCE-HELPER FIELD SCAN
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_BEGIN	start=7100373e00	end=7100374b80	search=shared resource object fields +0x340/+0x348, +0x350/+0x358, +0x360 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_CANDIDATE	function=7100374530	name=FUN_7100374530 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=76	text=    if ((*(long *)(param_1 + 0x350) == 0) && (lVar2 = *(long *)(param_1 + 0x18), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=77	text=      *(undefined8 *)(param_1 + 0x350) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=78	text=      *(int *)(param_1 + 0x358) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=80	text=    if ((*(long *)(param_1 + 0x340) == 0) && (lVar2 = *(long *)(param_1 + 0x128), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=81	text=      *(undefined8 *)(param_1 + 0x340) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=82	text=      *(int *)(param_1 + 0x348) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=84	text=    if ((*(long *)(param_1 + 0x360) == 0) && (*(long *)(param_1 + 0x238) != 0)) {
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374530	line=85	text=      *(undefined8 *)(param_1 + 0x360) = *(undefined8 *)(*(long *)(param_1 + 0x238) + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_CANDIDATE	function=7100374800	name=FUN_7100374800 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=25	text=          if ((*(long *)(param_1 + 0x350) == 0) && (lVar2 = *(long *)(param_1 + 0x18), lVar2 != 0))
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=27	text=            *(undefined8 *)(param_1 + 0x350) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=28	text=            *(int *)(param_1 + 0x358) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=30	text=          if ((*(long *)(param_1 + 0x340) == 0) && (lVar2 = *(long *)(param_1 + 0x128), lVar2 != 0))
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=32	text=            *(undefined8 *)(param_1 + 0x340) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=33	text=            *(int *)(param_1 + 0x348) = (int)*(undefined8 *)(lVar2 + 0x160);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=35	text=          if ((*(long *)(param_1 + 0x360) == 0) && (*(long *)(param_1 + 0x238) != 0)) {
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374800	line=36	text=            *(undefined8 *)(param_1 + 0x360) = *(undefined8 *)(*(long *)(param_1 + 0x238) + 0x170);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_CANDIDATE	function=7100374a90	name=FUN_7100374a90 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374a90	line=4	text=  if (param_2 < *(uint *)(param_1 + 0x348) >> 1) {
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374a90	line=5	text=    return *(undefined2 *)(*(long *)(param_1 + 0x340) + (ulong)param_2 * 2);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_CANDIDATE	function=7100374ac0	name=FUN_7100374ac0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374ac0	line=4	text=  return *(uint *)(param_1 + 0x348) >> 1;
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_CANDIDATE	function=7100374ad0	name=FUN_7100374ad0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374ad0	line=6	text=  *param_3 = (uint)*(ushort *)(*(long *)(param_1 + 0x360) + (ulong)param_2 * 4);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_FIELD_LINE	function=7100374ad0	line=7	text=  uVar1 = (uint)*(ushort *)(*(long *)(param_1 + 0x360) + (ulong)param_2 * 4 + 2);
+INFO  TraceSortStringAccessorLink.java> RESOURCE_RANGE_END	functions=12	decompiled=12	field_candidate_functions=5 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> SUMMARY	decompiled_functions=53	temporary_functions=16	owner_range_functions=55	owner_range_decompiled=55	owner_range_field_candidates=8	resource_range_functions=12	resource_range_decompiled=12	resource_range_field_candidates=5	program=main (GhidraScript)  

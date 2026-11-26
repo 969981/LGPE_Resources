@@ -1,0 +1,20 @@
+Ghidra 12.2 PUBLIC; exact Pokémon Let’s Go Pikachu 1.0.2 main; read-only, -noanalysis.
+Filtered excerpt from the actual v17 runner output. Reproduce with:
+  pwsh.exe -NoProfile -ExecutionPolicy Bypass -File scripts/ghidra/Run-TraceSortStringAccessorLink.ps1
+The runner verifies the main SHA-256 before and after inspection and rejects a non-read-only run.
+
+INFO  TraceSortStringAccessorLink.java> PROGRAM	version=Pokemon Let's Go Pikachu 1.0.2	base=7100000000	language=AARCH64:LE:64:v8A	main_sha256=1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_FUNCTION	entry=7100374530	name=FUN_7100374530	loads_350=1	loads_358=0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_CODE	entry=7100374530	line=76	text=    if ((*(long *)(param_1 + 0x350) == 0) && (lVar2 = *(long *)(param_1 + 0x18), lVar2 != 0)) {
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_CODE	entry=7100374530	line=77	text=      *(undefined8 *)(param_1 + 0x350) = *(undefined8 *)(lVar2 + 0x170);
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING	target=7100374530	from=7100b316c4	type=UNCONDITIONAL_CALL	caller=7100b315e0	caller_name=FUN_7100b315e0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING	target=7100374530	from=7100b314e4	type=UNCONDITIONAL_CALL	caller=7100b31400	caller_name=FUN_7100b31400 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING	target=7100374530	from=7100b319a4	type=UNCONDITIONAL_CALL	caller=7100b318c0	caller_name=FUN_7100b318c0 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING_COUNT	target=7100374530	count=3 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_FUNCTION	entry=7100b06f10	name=FUN_7100b06f10	loads_350=2	loads_358=2 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_NO_DECOMPILER_OFFSET	entry=7100b06f10	name=FUN_7100b06f10 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING	target=7100b06f10	from=7100b06ed4	type=UNCONDITIONAL_CALL	caller=7100b06d60	caller_name=FUN_7100b06d60 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_INCOMING_COUNT	target=7100b06f10	count=1 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> POINTER_FIELD_SCAN_END	functions=88	decompiled=88	decompiler_offset_candidates=44	localized_owner_call_references=4 (GhidraScript)  
+INFO  TraceSortStringAccessorLink.java> SUMMARY	decompiled_functions=54	temporary_functions=16	owner_range_functions=55	owner_range_decompiled=55	owner_range_field_candidates=8	resource_range_functions=12	resource_range_decompiled=12	resource_range_field_candidates=5	pointer_field_functions=88	pointer_field_decompiled=88	pointer_field_code_candidates=44	localized_owner_call_references=4	program=main (GhidraScript)  
+Verified: exact-build main was processed read-only; script changes cannot be saved.

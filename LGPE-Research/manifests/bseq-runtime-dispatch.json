@@ -1,0 +1,3363 @@
+{
+  "schema": "lgpe-research.bseq-runtime-dispatch.v1",
+  "status": "STATIC_DISPATCH_CROSSREF",
+  "build": {
+    "game": "Pokemon: Let's Go, Pikachu!",
+    "version": "1.0.2",
+    "nca_id": "2b7730a9e56498bbafac2002d4908c6b",
+    "image_base": "0x7100000000",
+    "main_path": "../1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main",
+    "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8"
+  },
+  "static_chain": {
+    "delegate_initializer": "main+0xaa0b80",
+    "delegate_install_store": "main+0xa789b0",
+    "controller_callback_field_offset": "0x3e0",
+    "sequence_constructor": "main+0x2103c0",
+    "sequence_callback_field_offset": "0x190",
+    "frame_command_consumer": {
+      "address": "main+0x210510",
+      "callback_virtual_offset": "0x10",
+      "fourth_callback_argument": 0,
+      "dispatch_path": "handler_pointer_table"
+    },
+    "target_frame_consumer": {
+      "address": "main+0x210880",
+      "callback_virtual_offset": "0x10",
+      "fourth_callback_argument": 1,
+      "dispatch_path": "inline_switch_in_callback_dispatcher"
+    },
+    "delegate_vtable": {
+      "global_cell": "0x7101608de8",
+      "address_point": "0x71015d5ab0",
+      "slots": [
+        {
+          "index": 0,
+          "target": "main+0xaa2310"
+        },
+        {
+          "index": 1,
+          "target": "main+0xaa2370"
+        },
+        {
+          "index": 2,
+          "target": "main+0xaa0eb0"
+        }
+      ]
+    },
+    "separate_controller_vtable_candidate": {
+      "address_point": "0x71015d3268",
+      "installed_by": "main+0xa77c20",
+      "rtti_pointer": "0x0",
+      "rtti_name_resolved": false,
+      "observed_method_slots": [
+        {
+          "slot": 78,
+          "target": "main+0xa8acd0"
+        },
+        {
+          "slot": 152,
+          "target": "main+0xa8ce20"
+        }
+      ],
+      "is_bseq_callback_vptr": false
+    },
+    "callback_dispatcher": {
+      "address": "main+0xaa0eb0",
+      "record_id_read": "first 32-bit word at callback record pointer",
+      "mode_bit": "fourth argument bit 0",
+      "zero_mode_call": "indirect handler table lookup by command id",
+      "one_mode_call": "inline switch by command id"
+    },
+    "handler_table_scan": {
+      "global_pointer_cell": "0x7101608df8",
+      "table_address": "0x71015d4c70",
+      "configured_max_slots": 256,
+      "inspected_slots": 256,
+      "executable_targets": 256,
+      "terminating_nonexec_run": 0,
+      "length_proven": false
+    },
+    "handler_slots": [
+      {
+        "index": 0,
+        "address": "0x71015d4c70",
+        "target": "0x7100ada060",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0000",
+          "id_bytes_hex": "00 00",
+          "reference_names": [
+            "DummyLabel"
+          ]
+        }
+      },
+      {
+        "index": 1,
+        "address": "0x71015d4c78",
+        "target": "0x7100ada070",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0100",
+          "id_bytes_hex": "01 00",
+          "reference_names": [
+            "LabelPokemon"
+          ]
+        }
+      },
+      {
+        "index": 2,
+        "address": "0x71015d4c80",
+        "target": "0x7100ada080",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0200",
+          "id_bytes_hex": "02 00",
+          "reference_names": [
+            "PokemonMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 3,
+        "address": "0x71015d4c88",
+        "target": "0x7100ada460",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0300",
+          "id_bytes_hex": "03 00",
+          "reference_names": [
+            "PokemonMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 4,
+        "address": "0x71015d4c90",
+        "target": "0x7100ada6e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0400",
+          "id_bytes_hex": "04 00",
+          "reference_names": [
+            "PokemonMoveRelativeTrainer"
+          ]
+        }
+      },
+      {
+        "index": 5,
+        "address": "0x71015d4c98",
+        "target": "0x7100adac80",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0500",
+          "id_bytes_hex": "05 00",
+          "reference_names": [
+            "PokemonMoveReset"
+          ]
+        }
+      },
+      {
+        "index": 6,
+        "address": "0x71015d4ca0",
+        "target": "0x7100adad50",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0600",
+          "id_bytes_hex": "06 00",
+          "reference_names": [
+            "PokemonMoveResetAll"
+          ]
+        }
+      },
+      {
+        "index": 7,
+        "address": "0x71015d4ca8",
+        "target": "0x7100adadf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0700",
+          "id_bytes_hex": "07 00",
+          "reference_names": [
+            "PokemonScale"
+          ]
+        }
+      },
+      {
+        "index": 8,
+        "address": "0x71015d4cb0",
+        "target": "0x7100adb040",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0800",
+          "id_bytes_hex": "08 00",
+          "reference_names": [
+            "PokemonRotate"
+          ]
+        }
+      },
+      {
+        "index": 9,
+        "address": "0x71015d4cb8",
+        "target": "0x7100adb310",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0900",
+          "id_bytes_hex": "09 00",
+          "reference_names": [
+            "PokemonRotatePoke"
+          ]
+        }
+      },
+      {
+        "index": 10,
+        "address": "0x71015d4cc0",
+        "target": "0x7100adb5e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0A00",
+          "id_bytes_hex": "0a 00",
+          "reference_names": [
+            "PokemonRotateSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 11,
+        "address": "0x71015d4cc8",
+        "target": "0x7100adba20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0B00",
+          "id_bytes_hex": "0b 00",
+          "reference_names": [
+            "PokemonRotateOrder"
+          ]
+        }
+      },
+      {
+        "index": 12,
+        "address": "0x71015d4cd0",
+        "target": "0x7100adba30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0C00",
+          "id_bytes_hex": "0c 00",
+          "reference_names": [
+            "PokemonVisible"
+          ]
+        }
+      },
+      {
+        "index": 13,
+        "address": "0x71015d4cd8",
+        "target": "0x7100adbb40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0D00",
+          "id_bytes_hex": "0d 00",
+          "reference_names": [
+            "PokemonVisibleOther"
+          ]
+        }
+      },
+      {
+        "index": 14,
+        "address": "0x71015d4ce0",
+        "target": "0x7100adbea0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0E00",
+          "id_bytes_hex": "0e 00",
+          "reference_names": [
+            "PokemonVisibleAll"
+          ]
+        }
+      },
+      {
+        "index": 15,
+        "address": "0x71015d4ce8",
+        "target": "0x7100adc040",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "0F00",
+          "id_bytes_hex": "0f 00",
+          "reference_names": [
+            "PokemonVisibleShadow"
+          ]
+        }
+      },
+      {
+        "index": 16,
+        "address": "0x71015d4cf0",
+        "target": "0x7100adc140",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1000",
+          "id_bytes_hex": "10 00",
+          "reference_names": [
+            "PokemonMotion"
+          ]
+        }
+      },
+      {
+        "index": 17,
+        "address": "0x71015d4cf8",
+        "target": "0x7100adc410",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1100",
+          "id_bytes_hex": "11 00",
+          "reference_names": [
+            "PokemonMotionState"
+          ]
+        }
+      },
+      {
+        "index": 18,
+        "address": "0x71015d4d00",
+        "target": "0x7100adc590",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1200",
+          "id_bytes_hex": "12 00",
+          "reference_names": [
+            "PokemonMotionStateInt"
+          ]
+        }
+      },
+      {
+        "index": 19,
+        "address": "0x71015d4d08",
+        "target": "0x7100adc710",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1300",
+          "id_bytes_hex": "13 00",
+          "reference_names": [
+            "PokemonMotionStopResource"
+          ]
+        }
+      },
+      {
+        "index": 20,
+        "address": "0x71015d4d10",
+        "target": "0x7100adc720",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1400",
+          "id_bytes_hex": "14 00",
+          "reference_names": [
+            "PokemonAttackMotion"
+          ]
+        }
+      },
+      {
+        "index": 21,
+        "address": "0x71015d4d18",
+        "target": "0x7100adc760",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1500",
+          "id_bytes_hex": "15 00",
+          "reference_names": [
+            "PokemonSetMotionSpeed"
+          ]
+        }
+      },
+      {
+        "index": 22,
+        "address": "0x71015d4d20",
+        "target": "0x7100adc860",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1600",
+          "id_bytes_hex": "16 00",
+          "reference_names": [
+            "PokemonIntroMotion"
+          ]
+        }
+      },
+      {
+        "index": 23,
+        "address": "0x71015d4d28",
+        "target": "0x7100adc870",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1700",
+          "id_bytes_hex": "17 00",
+          "reference_names": [
+            "PokemonEdgeEnable"
+          ]
+        }
+      },
+      {
+        "index": 24,
+        "address": "0x71015d4d30",
+        "target": "0x7100adc880",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1800",
+          "id_bytes_hex": "18 00",
+          "reference_names": [
+            "PokemonShaderCol"
+          ]
+        }
+      },
+      {
+        "index": 25,
+        "address": "0x71015d4d38",
+        "target": "0x7100adcae0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1900",
+          "id_bytes_hex": "19 00",
+          "reference_names": [
+            "PokemonShaderFullPower"
+          ]
+        }
+      },
+      {
+        "index": 26,
+        "address": "0x71015d4d40",
+        "target": "0x7100adcaf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1A00",
+          "id_bytes_hex": "1a 00",
+          "reference_names": [
+            "PokemonFollowMode"
+          ]
+        }
+      },
+      {
+        "index": 27,
+        "address": "0x71015d4d48",
+        "target": "0x7100adcde0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1B00",
+          "id_bytes_hex": "1b 00",
+          "reference_names": [
+            "PokemonSpMoveReset"
+          ]
+        }
+      },
+      {
+        "index": 28,
+        "address": "0x71015d4d50",
+        "target": "0x7100adcfe0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1C00",
+          "id_bytes_hex": "1c 00",
+          "reference_names": [
+            "PokemonSpMoveShake"
+          ]
+        }
+      },
+      {
+        "index": 29,
+        "address": "0x71015d4d58",
+        "target": "0x7100add380",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1D00",
+          "id_bytes_hex": "1d 00",
+          "reference_names": [
+            "PokemonSetOriginScale"
+          ]
+        }
+      },
+      {
+        "index": 30,
+        "address": "0x71015d4d60",
+        "target": "0x7100add390",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1E00",
+          "id_bytes_hex": "1e 00",
+          "reference_names": [
+            "PokemonSetEnableFloat"
+          ]
+        }
+      },
+      {
+        "index": 31,
+        "address": "0x71015d4d68",
+        "target": "0x7100add490",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "1F00",
+          "id_bytes_hex": "1f 00",
+          "reference_names": [
+            "PokemonRareEffect"
+          ]
+        }
+      },
+      {
+        "index": 32,
+        "address": "0x71015d4d70",
+        "target": "0x7100add4a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2000",
+          "id_bytes_hex": "20 00",
+          "reference_names": [
+            "PokemonLookAt"
+          ]
+        }
+      },
+      {
+        "index": 33,
+        "address": "0x71015d4d78",
+        "target": "0x7100add7b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2100",
+          "id_bytes_hex": "21 00",
+          "reference_names": [
+            "PokemonSetEye"
+          ]
+        }
+      },
+      {
+        "index": 34,
+        "address": "0x71015d4d80",
+        "target": "0x7100add7c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2200",
+          "id_bytes_hex": "22 00",
+          "reference_names": [
+            "LabelCamera"
+          ]
+        }
+      },
+      {
+        "index": 35,
+        "address": "0x71015d4d88",
+        "target": "0x7100add7d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2300",
+          "id_bytes_hex": "23 00",
+          "reference_names": [
+            "CameraMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 36,
+        "address": "0x71015d4d90",
+        "target": "0x7100addb60",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2400",
+          "id_bytes_hex": "24 00",
+          "reference_names": [
+            "CameraMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 37,
+        "address": "0x71015d4d98",
+        "target": "0x7100addf70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2500",
+          "id_bytes_hex": "25 00",
+          "reference_names": [
+            "CameraMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 38,
+        "address": "0x71015d4da0",
+        "target": "0x7100ade320",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2600",
+          "id_bytes_hex": "26 00",
+          "reference_names": [
+            "CameraReset"
+          ]
+        }
+      },
+      {
+        "index": 39,
+        "address": "0x71015d4da8",
+        "target": "0x7100ade380",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2700",
+          "id_bytes_hex": "27 00",
+          "reference_names": [
+            "CameraRotateTrg"
+          ]
+        }
+      },
+      {
+        "index": 40,
+        "address": "0x71015d4db0",
+        "target": "0x7100ade5e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2800",
+          "id_bytes_hex": "28 00",
+          "reference_names": [
+            "CameraRotatePos"
+          ]
+        }
+      },
+      {
+        "index": 41,
+        "address": "0x71015d4db8",
+        "target": "0x7100ade840",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2900",
+          "id_bytes_hex": "29 00",
+          "reference_names": [
+            "CameraRotatePosPoke"
+          ]
+        }
+      },
+      {
+        "index": 42,
+        "address": "0x71015d4dc0",
+        "target": "0x7100adeaa0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2A00",
+          "id_bytes_hex": "2a 00",
+          "reference_names": [
+            "CameraShake"
+          ]
+        }
+      },
+      {
+        "index": 43,
+        "address": "0x71015d4dc8",
+        "target": "0x7100adeea0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2B00",
+          "id_bytes_hex": "2b 00",
+          "reference_names": [
+            "CameraTwist"
+          ]
+        }
+      },
+      {
+        "index": 44,
+        "address": "0x71015d4dd0",
+        "target": "0x7100adf0c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2C00",
+          "id_bytes_hex": "2c 00",
+          "reference_names": [
+            "CameraAnimationPoke"
+          ]
+        }
+      },
+      {
+        "index": 45,
+        "address": "0x71015d4dd8",
+        "target": "0x7100adf340",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2D00",
+          "id_bytes_hex": "2d 00",
+          "reference_names": [
+            "CameraAnimationPosition"
+          ]
+        }
+      },
+      {
+        "index": 46,
+        "address": "0x71015d4de0",
+        "target": "0x7100adf4a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2E00",
+          "id_bytes_hex": "2e 00",
+          "reference_names": [
+            "CameraAnimationTrainer"
+          ]
+        }
+      },
+      {
+        "index": 47,
+        "address": "0x71015d4de8",
+        "target": "0x7100adff30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "2F00",
+          "id_bytes_hex": "2f 00",
+          "reference_names": [
+            "CameraAnimationDoubleIntro"
+          ]
+        }
+      },
+      {
+        "index": 48,
+        "address": "0x71015d4df0",
+        "target": "0x7100adff40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3000",
+          "id_bytes_hex": "30 00",
+          "reference_names": [
+            "CameraAnimationSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 49,
+        "address": "0x71015d4df8",
+        "target": "0x7100ae01e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3100",
+          "id_bytes_hex": "31 00",
+          "reference_names": [
+            "CameraAnimationEnd"
+          ]
+        }
+      },
+      {
+        "index": 50,
+        "address": "0x71015d4e00",
+        "target": "0x7100ae0220",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3200",
+          "id_bytes_hex": "32 00",
+          "reference_names": [
+            "CameraAnimationRotate"
+          ]
+        }
+      },
+      {
+        "index": 51,
+        "address": "0x71015d4e08",
+        "target": "0x7100ae0260",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3300",
+          "id_bytes_hex": "33 00",
+          "reference_names": [
+            "CameraAnimationScale"
+          ]
+        }
+      },
+      {
+        "index": 52,
+        "address": "0x71015d4e10",
+        "target": "0x7100ae02b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3400",
+          "id_bytes_hex": "34 00",
+          "reference_names": [
+            "CameraAnimationChangeSpeed"
+          ]
+        }
+      },
+      {
+        "index": 53,
+        "address": "0x71015d4e18",
+        "target": "0x7100ae02f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3500",
+          "id_bytes_hex": "35 00",
+          "reference_names": [
+            "LabelParticle"
+          ]
+        }
+      },
+      {
+        "index": 54,
+        "address": "0x71015d4e20",
+        "target": "0x7100ae0890",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3600",
+          "id_bytes_hex": "36 00",
+          "reference_names": [
+            "ParticleCreate"
+          ]
+        }
+      },
+      {
+        "index": 55,
+        "address": "0x71015d4e28",
+        "target": "0x7100ae0ab0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3700",
+          "id_bytes_hex": "37 00",
+          "reference_names": [
+            "ParticleStop"
+          ]
+        }
+      },
+      {
+        "index": 56,
+        "address": "0x71015d4e30",
+        "target": "0x7100ae0cb0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3800",
+          "id_bytes_hex": "38 00",
+          "reference_names": [
+            "ParticleDelete"
+          ]
+        }
+      },
+      {
+        "index": 57,
+        "address": "0x71015d4e38",
+        "target": "0x7100ae0ff0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3900",
+          "id_bytes_hex": "39 00",
+          "reference_names": [
+            "ParticleMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 58,
+        "address": "0x71015d4e40",
+        "target": "0x7100ae12d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3A00",
+          "id_bytes_hex": "3a 00",
+          "reference_names": [
+            "ParticleMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 59,
+        "address": "0x71015d4e48",
+        "target": "0x7100ae1b70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3B00",
+          "id_bytes_hex": "3b 00",
+          "reference_names": [
+            "ParticleMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 60,
+        "address": "0x71015d4e50",
+        "target": "0x7100ae1d20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3C00",
+          "id_bytes_hex": "3c 00",
+          "reference_names": [
+            "ParticleMoveRelativeModel"
+          ]
+        }
+      },
+      {
+        "index": 61,
+        "address": "0x71015d4e58",
+        "target": "0x7100ae15a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3D00",
+          "id_bytes_hex": "3d 00",
+          "reference_names": [
+            "ParticleMoveRelativeTrainer"
+          ]
+        }
+      },
+      {
+        "index": 62,
+        "address": "0x71015d4e60",
+        "target": "0x7100ae20d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3E00",
+          "id_bytes_hex": "3e 00",
+          "reference_names": [
+            "ParticleScale"
+          ]
+        }
+      },
+      {
+        "index": 63,
+        "address": "0x71015d4e68",
+        "target": "0x7100ae2360",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "3F00",
+          "id_bytes_hex": "3f 00",
+          "reference_names": [
+            "ParticleRotate"
+          ]
+        }
+      },
+      {
+        "index": 64,
+        "address": "0x71015d4e70",
+        "target": "0x7100ae2630",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4000",
+          "id_bytes_hex": "40 00",
+          "reference_names": [
+            "ParticleRotatePoke"
+          ]
+        }
+      },
+      {
+        "index": 65,
+        "address": "0x71015d4e78",
+        "target": "0x7100ae2950",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4100",
+          "id_bytes_hex": "41 00",
+          "reference_names": [
+            "ParticleRotateTrainer"
+          ]
+        }
+      },
+      {
+        "index": 66,
+        "address": "0x71015d4e80",
+        "target": "0x7100ae2f80",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4200",
+          "id_bytes_hex": "42 00",
+          "reference_names": [
+            "ParticleRotateOffset"
+          ]
+        }
+      },
+      {
+        "index": 67,
+        "address": "0x71015d4e88",
+        "target": "0x7100ae3270",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4300",
+          "id_bytes_hex": "43 00",
+          "reference_names": [
+            "ParticleLengthScale"
+          ]
+        }
+      },
+      {
+        "index": 68,
+        "address": "0x71015d4e90",
+        "target": "0x7100ae3630",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4400",
+          "id_bytes_hex": "44 00",
+          "reference_names": [
+            "ParticleFollowModel"
+          ]
+        }
+      },
+      {
+        "index": 69,
+        "address": "0x71015d4e98",
+        "target": "0x7100ae3920",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4500",
+          "id_bytes_hex": "45 00",
+          "reference_names": [
+            "ParticleFollowPoke"
+          ]
+        }
+      },
+      {
+        "index": 70,
+        "address": "0x71015d4ea0",
+        "target": "0x7100ae3b70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4600",
+          "id_bytes_hex": "46 00",
+          "reference_names": [
+            "ParticleFollowTrainer"
+          ]
+        }
+      },
+      {
+        "index": 71,
+        "address": "0x71015d4ea8",
+        "target": "0x7100ae3b80",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4700",
+          "id_bytes_hex": "47 00",
+          "reference_names": [
+            "ParticleSetAutoRotate"
+          ]
+        }
+      },
+      {
+        "index": 72,
+        "address": "0x71015d4eb0",
+        "target": "0x7100ae3cf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4800",
+          "id_bytes_hex": "48 00",
+          "reference_names": [
+            "ParticlCameraAutoRotate",
+            "ParticleCameraAutoRotate"
+          ]
+        }
+      },
+      {
+        "index": 73,
+        "address": "0x71015d4eb8",
+        "target": "0x7100ae3fc0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4900",
+          "id_bytes_hex": "49 00",
+          "reference_names": [
+            "ParticleLightDir"
+          ]
+        }
+      },
+      {
+        "index": 74,
+        "address": "0x71015d4ec0",
+        "target": "0x7100ae4090",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4A00",
+          "id_bytes_hex": "4a 00",
+          "reference_names": [
+            "ParticleSpMoveReset"
+          ]
+        }
+      },
+      {
+        "index": 75,
+        "address": "0x71015d4ec8",
+        "target": "0x7100ae42e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4B00",
+          "id_bytes_hex": "4b 00",
+          "reference_names": [
+            "ParticleSpMoveShake"
+          ]
+        }
+      },
+      {
+        "index": 76,
+        "address": "0x71015d4ed0",
+        "target": "0x7100ae4660",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4C00",
+          "id_bytes_hex": "4c 00",
+          "reference_names": [
+            "LabelModel"
+          ]
+        }
+      },
+      {
+        "index": 77,
+        "address": "0x71015d4ed8",
+        "target": "0x7100ae4b30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4D00",
+          "id_bytes_hex": "4d 00",
+          "reference_names": [
+            "ModelCreate"
+          ]
+        }
+      },
+      {
+        "index": 78,
+        "address": "0x71015d4ee0",
+        "target": "0x7100ae50c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4E00",
+          "id_bytes_hex": "4e 00",
+          "reference_names": [
+            "ModelCreateBall"
+          ]
+        }
+      },
+      {
+        "index": 79,
+        "address": "0x71015d4ee8",
+        "target": "0x7100ae50d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "4F00",
+          "id_bytes_hex": "4f 00",
+          "reference_names": [
+            "ModelDelete"
+          ]
+        }
+      },
+      {
+        "index": 80,
+        "address": "0x71015d4ef0",
+        "target": "0x7100ae5410",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5000",
+          "id_bytes_hex": "50 00",
+          "reference_names": [
+            "ModelMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 81,
+        "address": "0x71015d4ef8",
+        "target": "0x7100ae56f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5100",
+          "id_bytes_hex": "51 00",
+          "reference_names": [
+            "ModelMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 82,
+        "address": "0x71015d4f00",
+        "target": "0x7100ae5f90",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5200",
+          "id_bytes_hex": "52 00",
+          "reference_names": [
+            "ModelMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 83,
+        "address": "0x71015d4f08",
+        "target": "0x7100ae59c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5300",
+          "id_bytes_hex": "53 00",
+          "reference_names": [
+            "ModelMoveRelativeTrainer"
+          ]
+        }
+      },
+      {
+        "index": 84,
+        "address": "0x71015d4f10",
+        "target": "0x7100ae6140",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5400",
+          "id_bytes_hex": "54 00",
+          "reference_names": [
+            "ModelScale"
+          ]
+        }
+      },
+      {
+        "index": 85,
+        "address": "0x71015d4f18",
+        "target": "0x7100ae63d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5500",
+          "id_bytes_hex": "55 00",
+          "reference_names": [
+            "ModelRotate"
+          ]
+        }
+      },
+      {
+        "index": 86,
+        "address": "0x71015d4f20",
+        "target": "0x7100ae66a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5600",
+          "id_bytes_hex": "56 00",
+          "reference_names": [
+            "ModelRotatePoke"
+          ]
+        }
+      },
+      {
+        "index": 87,
+        "address": "0x71015d4f28",
+        "target": "0x7100ae69c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5700",
+          "id_bytes_hex": "57 00",
+          "reference_names": [
+            "ModelRotateTrainer"
+          ]
+        }
+      },
+      {
+        "index": 88,
+        "address": "0x71015d4f30",
+        "target": "0x7100ae6ff0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5800",
+          "id_bytes_hex": "58 00",
+          "reference_names": [
+            "ModelRotateOffset"
+          ]
+        }
+      },
+      {
+        "index": 89,
+        "address": "0x71015d4f38",
+        "target": "0x7100ae72e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5900",
+          "id_bytes_hex": "59 00",
+          "reference_names": [
+            "ModelLengthScale"
+          ]
+        }
+      },
+      {
+        "index": 90,
+        "address": "0x71015d4f40",
+        "target": "0x7100ae76a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5A00",
+          "id_bytes_hex": "5a 00",
+          "reference_names": [
+            "ModelVisible"
+          ]
+        }
+      },
+      {
+        "index": 91,
+        "address": "0x71015d4f48",
+        "target": "0x7100ae77b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5B00",
+          "id_bytes_hex": "5b 00",
+          "reference_names": [
+            "ModelFollowModel"
+          ]
+        }
+      },
+      {
+        "index": 92,
+        "address": "0x71015d4f50",
+        "target": "0x7100ae7aa0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5C00",
+          "id_bytes_hex": "5c 00",
+          "reference_names": [
+            "ModelFollowPoke"
+          ]
+        }
+      },
+      {
+        "index": 93,
+        "address": "0x71015d4f58",
+        "target": "0x7100ae7d00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5D00",
+          "id_bytes_hex": "5d 00",
+          "reference_names": [
+            "ModelFollowTrainer"
+          ]
+        }
+      },
+      {
+        "index": 94,
+        "address": "0x71015d4f60",
+        "target": "0x7100ae7d10",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5E00",
+          "id_bytes_hex": "5e 00",
+          "reference_names": [
+            "ModelAttachTrainer"
+          ]
+        }
+      },
+      {
+        "index": 95,
+        "address": "0x71015d4f68",
+        "target": "0x7100ae7f40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "5F00",
+          "id_bytes_hex": "5f 00",
+          "reference_names": [
+            "ModelSetAutoRotate"
+          ]
+        }
+      },
+      {
+        "index": 96,
+        "address": "0x71015d4f70",
+        "target": "0x7100ae80b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6000",
+          "id_bytes_hex": "60 00",
+          "reference_names": [
+            "ModelAutoCameraRotate"
+          ]
+        }
+      },
+      {
+        "index": 97,
+        "address": "0x71015d4f78",
+        "target": "0x7100ae8380",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6100",
+          "id_bytes_hex": "61 00",
+          "reference_names": [
+            "ModelSetConstantColor"
+          ]
+        }
+      },
+      {
+        "index": 98,
+        "address": "0x71015d4f80",
+        "target": "0x7100ae8390",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6200",
+          "id_bytes_hex": "62 00",
+          "reference_names": [
+            "ModelLightDir"
+          ]
+        }
+      },
+      {
+        "index": 99,
+        "address": "0x71015d4f88",
+        "target": "0x7100ae8460",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6300",
+          "id_bytes_hex": "63 00",
+          "reference_names": [
+            "ModelSetVectorParam"
+          ]
+        }
+      },
+      {
+        "index": 100,
+        "address": "0x71015d4f90",
+        "target": "0x7100ae8920",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6400",
+          "id_bytes_hex": "64 00",
+          "reference_names": [
+            "ModelSetFloatParam"
+          ]
+        }
+      },
+      {
+        "index": 101,
+        "address": "0x71015d4f98",
+        "target": "0x7100ae8e00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6500",
+          "id_bytes_hex": "65 00",
+          "reference_names": [
+            "ModelSetBoolParam"
+          ]
+        }
+      },
+      {
+        "index": 102,
+        "address": "0x71015d4fa0",
+        "target": "0x7100ae90e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6600",
+          "id_bytes_hex": "66 00",
+          "reference_names": [
+            "ModelSetAnimation"
+          ]
+        }
+      },
+      {
+        "index": 103,
+        "address": "0x71015d4fa8",
+        "target": "0x7100ae9190",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6700",
+          "id_bytes_hex": "67 00",
+          "reference_names": [
+            "ModelSetAnimationConfig"
+          ]
+        }
+      },
+      {
+        "index": 104,
+        "address": "0x71015d4fb0",
+        "target": "0x7100ae9320",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6800",
+          "id_bytes_hex": "68 00",
+          "reference_names": [
+            "ModelAnimationStop"
+          ]
+        }
+      },
+      {
+        "index": 105,
+        "address": "0x71015d4fb8",
+        "target": "0x7100ae9420",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6900",
+          "id_bytes_hex": "69 00",
+          "reference_names": [
+            "ModelSetAnimationSpeed"
+          ]
+        }
+      },
+      {
+        "index": 106,
+        "address": "0x71015d4fc0",
+        "target": "0x7100ae9540",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6A00",
+          "id_bytes_hex": "6a 00",
+          "reference_names": [
+            "ModelCahngeAnimationState",
+            "ModelChangeAnimationState"
+          ]
+        }
+      },
+      {
+        "index": 107,
+        "address": "0x71015d4fc8",
+        "target": "0x7100ae96f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6B00",
+          "id_bytes_hex": "6b 00",
+          "reference_names": [
+            "ModelReplaceTexture"
+          ]
+        }
+      },
+      {
+        "index": 108,
+        "address": "0x71015d4fd0",
+        "target": "0x7100ae9700",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6C00",
+          "id_bytes_hex": "6c 00",
+          "reference_names": [
+            "ModelReplaceTextureTrainer"
+          ]
+        }
+      },
+      {
+        "index": 109,
+        "address": "0x71015d4fd8",
+        "target": "0x7100ae9710",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6D00",
+          "id_bytes_hex": "6d 00",
+          "reference_names": [
+            "ModelSpMoveReset"
+          ]
+        }
+      },
+      {
+        "index": 110,
+        "address": "0x71015d4fe0",
+        "target": "0x7100ae9960",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6E00",
+          "id_bytes_hex": "6e 00",
+          "reference_names": [
+            "ModelSpMoveShake"
+          ]
+        }
+      },
+      {
+        "index": 111,
+        "address": "0x71015d4fe8",
+        "target": "0x7100ae9ce0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "6F00",
+          "id_bytes_hex": "6f 00",
+          "reference_names": [
+            "LabelBelugaSound"
+          ]
+        }
+      },
+      {
+        "index": 112,
+        "address": "0x71015d4ff0",
+        "target": "0x7100ae9cf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7000",
+          "id_bytes_hex": "70 00",
+          "reference_names": [
+            "BelugaSoundPlaySe"
+          ]
+        }
+      },
+      {
+        "index": 113,
+        "address": "0x71015d4ff8",
+        "target": "0x7100aea1c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7100",
+          "id_bytes_hex": "71 00",
+          "reference_names": [
+            "BelugaSoundPlaySeVersion"
+          ]
+        }
+      },
+      {
+        "index": 114,
+        "address": "0x71015d5000",
+        "target": "0x7100aea580",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7200",
+          "id_bytes_hex": "72 00",
+          "reference_names": [
+            "BelugaSoundAddEvent"
+          ]
+        }
+      },
+      {
+        "index": 115,
+        "address": "0x71015d5008",
+        "target": "0x7100aea6e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7300",
+          "id_bytes_hex": "73 00",
+          "reference_names": [
+            "BelugaSoundLoadBank"
+          ]
+        }
+      },
+      {
+        "index": 116,
+        "address": "0x71015d5010",
+        "target": "0x7100aea6f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7400",
+          "id_bytes_hex": "74 00",
+          "reference_names": [
+            "BelugaSoundPlayVoice"
+          ]
+        }
+      },
+      {
+        "index": 117,
+        "address": "0x71015d5018",
+        "target": "0x7100aea850",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7500",
+          "id_bytes_hex": "75 00",
+          "reference_names": [
+            "SoundBelugaMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 118,
+        "address": "0x71015d5020",
+        "target": "0x7100aeaa90",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7600",
+          "id_bytes_hex": "76 00",
+          "reference_names": [
+            "SoundBelugaMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 119,
+        "address": "0x71015d5028",
+        "target": "0x7100aeaca0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7700",
+          "id_bytes_hex": "77 00",
+          "reference_names": [
+            "SoundBelugaMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 120,
+        "address": "0x71015d5030",
+        "target": "0x7100aeae30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7800",
+          "id_bytes_hex": "78 00",
+          "reference_names": [
+            "SoundBelugaFollowPoke"
+          ]
+        }
+      },
+      {
+        "index": 121,
+        "address": "0x71015d5038",
+        "target": "0x7100aeb020",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7900",
+          "id_bytes_hex": "79 00",
+          "reference_names": [
+            "SoundBelugaFollowObj"
+          ]
+        }
+      },
+      {
+        "index": 122,
+        "address": "0x71015d5040",
+        "target": "0x7100aeb350",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7A00",
+          "id_bytes_hex": "7a 00",
+          "reference_names": [
+            "SoundBelugaAutoCameraRotate"
+          ]
+        }
+      },
+      {
+        "index": 123,
+        "address": "0x71015d5048",
+        "target": "0x7100aeb5d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7B00",
+          "id_bytes_hex": "7b 00",
+          "reference_names": [
+            "LabelDisp"
+          ]
+        }
+      },
+      {
+        "index": 124,
+        "address": "0x71015d5050",
+        "target": "0x7100aeb5e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7C00",
+          "id_bytes_hex": "7c 00",
+          "reference_names": [
+            "GaugeDisp"
+          ]
+        }
+      },
+      {
+        "index": 125,
+        "address": "0x71015d5058",
+        "target": "0x7100aeb6b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7D00",
+          "id_bytes_hex": "7d 00",
+          "reference_names": [
+            "GaugeDispAll"
+          ]
+        }
+      },
+      {
+        "index": 126,
+        "address": "0x71015d5060",
+        "target": "0x7100aeb700",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7E00",
+          "id_bytes_hex": "7e 00",
+          "reference_names": [
+            "GaugeDamage"
+          ]
+        }
+      },
+      {
+        "index": 127,
+        "address": "0x71015d5068",
+        "target": "0x7100aeb8b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "7F00",
+          "id_bytes_hex": "7f 00",
+          "reference_names": [
+            "BallBarDisp"
+          ]
+        }
+      },
+      {
+        "index": 128,
+        "address": "0x71015d5070",
+        "target": "0x7100aeb900",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8000",
+          "id_bytes_hex": "80 00",
+          "reference_names": [
+            "HitBack"
+          ]
+        }
+      },
+      {
+        "index": 129,
+        "address": "0x71015d5078",
+        "target": "0x7100aebd40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8100",
+          "id_bytes_hex": "81 00",
+          "reference_names": [
+            "LabelEffectSp"
+          ]
+        }
+      },
+      {
+        "index": 130,
+        "address": "0x71015d5080",
+        "target": "0x7100aebd50",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8200",
+          "id_bytes_hex": "82 00",
+          "reference_names": [
+            "EffSpBackColFlg"
+          ]
+        }
+      },
+      {
+        "index": 131,
+        "address": "0x71015d5088",
+        "target": "0x7100aebff0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8300",
+          "id_bytes_hex": "83 00",
+          "reference_names": [
+            "EffSpBackColSet"
+          ]
+        }
+      },
+      {
+        "index": 132,
+        "address": "0x71015d5090",
+        "target": "0x7100aec5f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8400",
+          "id_bytes_hex": "84 00",
+          "reference_names": [
+            "EffDispBg"
+          ]
+        }
+      },
+      {
+        "index": 133,
+        "address": "0x71015d5098",
+        "target": "0x7100aec680",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8500",
+          "id_bytes_hex": "85 00",
+          "reference_names": [
+            "EffSpFadeIn"
+          ]
+        }
+      },
+      {
+        "index": 134,
+        "address": "0x71015d50a0",
+        "target": "0x7100aec750",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8600",
+          "id_bytes_hex": "86 00",
+          "reference_names": [
+            "EffSpFadeOut"
+          ]
+        }
+      },
+      {
+        "index": 135,
+        "address": "0x71015d50a8",
+        "target": "0x7100aec8a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8700",
+          "id_bytes_hex": "87 00",
+          "reference_names": [
+            "EffLightDirection"
+          ]
+        }
+      },
+      {
+        "index": 136,
+        "address": "0x71015d50b0",
+        "target": "0x7100aec8b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8800",
+          "id_bytes_hex": "88 00",
+          "reference_names": [
+            "EffCharaLightDirection"
+          ]
+        }
+      },
+      {
+        "index": 137,
+        "address": "0x71015d50b8",
+        "target": "0x7100aec990",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8900",
+          "id_bytes_hex": "89 00",
+          "reference_names": [
+            "EffCharaLightEnv"
+          ]
+        }
+      },
+      {
+        "index": 138,
+        "address": "0x71015d50c0",
+        "target": "0x7100aec9a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8A00",
+          "id_bytes_hex": "8a 00",
+          "reference_names": [
+            "EffCharaLightFile"
+          ]
+        }
+      },
+      {
+        "index": 139,
+        "address": "0x71015d50c8",
+        "target": "0x7100aec9b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8B00",
+          "id_bytes_hex": "8b 00",
+          "reference_names": [
+            "EffPokeLightDirection"
+          ]
+        }
+      },
+      {
+        "index": 140,
+        "address": "0x71015d50d0",
+        "target": "0x7100aecb30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8C00",
+          "id_bytes_hex": "8c 00",
+          "reference_names": [
+            "EffGlareControl"
+          ]
+        }
+      },
+      {
+        "index": 141,
+        "address": "0x71015d50d8",
+        "target": "0x7100aecde0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8D00",
+          "id_bytes_hex": "8d 00",
+          "reference_names": [
+            "LabelCluster"
+          ]
+        }
+      },
+      {
+        "index": 142,
+        "address": "0x71015d50e0",
+        "target": "0x7100aecdf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8E00",
+          "id_bytes_hex": "8e 00",
+          "reference_names": [
+            "ClusterCreate"
+          ]
+        }
+      },
+      {
+        "index": 143,
+        "address": "0x71015d50e8",
+        "target": "0x7100aece00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "8F00",
+          "id_bytes_hex": "8f 00",
+          "reference_names": [
+            "ClusterCreateEffect"
+          ]
+        }
+      },
+      {
+        "index": 144,
+        "address": "0x71015d50f0",
+        "target": "0x7100aece10",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9000",
+          "id_bytes_hex": "90 00",
+          "reference_names": [
+            "ClusterMovePosition"
+          ]
+        }
+      },
+      {
+        "index": 145,
+        "address": "0x71015d50f8",
+        "target": "0x7100aece20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9100",
+          "id_bytes_hex": "91 00",
+          "reference_names": [
+            "ClusterMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 146,
+        "address": "0x71015d5100",
+        "target": "0x7100aece30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9200",
+          "id_bytes_hex": "92 00",
+          "reference_names": [
+            "ClusterMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 147,
+        "address": "0x71015d5108",
+        "target": "0x7100aece40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9300",
+          "id_bytes_hex": "93 00",
+          "reference_names": [
+            "ClusterScale"
+          ]
+        }
+      },
+      {
+        "index": 148,
+        "address": "0x71015d5110",
+        "target": "0x7100aece50",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9400",
+          "id_bytes_hex": "94 00",
+          "reference_names": [
+            "ClusterRotate"
+          ]
+        }
+      },
+      {
+        "index": 149,
+        "address": "0x71015d5118",
+        "target": "0x7100aece60",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9500",
+          "id_bytes_hex": "95 00",
+          "reference_names": [
+            "ClusterRotatePoke"
+          ]
+        }
+      },
+      {
+        "index": 150,
+        "address": "0x71015d5120",
+        "target": "0x7100aece70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9600",
+          "id_bytes_hex": "96 00",
+          "reference_names": [
+            "ClusterSpeedDiffuse"
+          ]
+        }
+      },
+      {
+        "index": 151,
+        "address": "0x71015d5128",
+        "target": "0x7100aece80",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9700",
+          "id_bytes_hex": "97 00",
+          "reference_names": [
+            "ClusterSpeedDir"
+          ]
+        }
+      },
+      {
+        "index": 152,
+        "address": "0x71015d5130",
+        "target": "0x7100aece90",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9800",
+          "id_bytes_hex": "98 00",
+          "reference_names": [
+            "ClusterAccelGravity"
+          ]
+        }
+      },
+      {
+        "index": 153,
+        "address": "0x71015d5138",
+        "target": "0x7100aecea0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9900",
+          "id_bytes_hex": "99 00",
+          "reference_names": [
+            "ClusterStartScale"
+          ]
+        }
+      },
+      {
+        "index": 154,
+        "address": "0x71015d5140",
+        "target": "0x7100aeceb0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9A00",
+          "id_bytes_hex": "9a 00",
+          "reference_names": [
+            "ClusterStartRotate"
+          ]
+        }
+      },
+      {
+        "index": 155,
+        "address": "0x71015d5148",
+        "target": "0x7100aecec0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9B00",
+          "id_bytes_hex": "9b 00",
+          "reference_names": [
+            "ClusterAnimeScale"
+          ]
+        }
+      },
+      {
+        "index": 156,
+        "address": "0x71015d5150",
+        "target": "0x7100aeced0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9C00",
+          "id_bytes_hex": "9c 00",
+          "reference_names": [
+            "ClusterAnimeRotate"
+          ]
+        }
+      },
+      {
+        "index": 157,
+        "address": "0x71015d5158",
+        "target": "0x7100aecee0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9D00",
+          "id_bytes_hex": "9d 00",
+          "reference_names": [
+            "ClusterSetRefrect"
+          ]
+        }
+      },
+      {
+        "index": 158,
+        "address": "0x71015d5160",
+        "target": "0x7100aecef0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9E00",
+          "id_bytes_hex": "9e 00",
+          "reference_names": [
+            "ClusterSetSpawnTime"
+          ]
+        }
+      },
+      {
+        "index": 159,
+        "address": "0x71015d5168",
+        "target": "0x7100aecf00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "9F00",
+          "id_bytes_hex": "9f 00",
+          "reference_names": [
+            "ClusterSetChild"
+          ]
+        }
+      },
+      {
+        "index": 160,
+        "address": "0x71015d5170",
+        "target": "0x7100aecf10",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A000",
+          "id_bytes_hex": "a0 00",
+          "reference_names": [
+            "LabelTrainer"
+          ]
+        }
+      },
+      {
+        "index": 161,
+        "address": "0x71015d5178",
+        "target": "0x7100aecf20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A100",
+          "id_bytes_hex": "a1 00",
+          "reference_names": [
+            "TrainerMove"
+          ]
+        }
+      },
+      {
+        "index": 162,
+        "address": "0x71015d5180",
+        "target": "0x7100aed0e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A200",
+          "id_bytes_hex": "a2 00",
+          "reference_names": [
+            "TrainerMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 163,
+        "address": "0x71015d5188",
+        "target": "0x7100aed310",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A300",
+          "id_bytes_hex": "a3 00",
+          "reference_names": [
+            "TrainerMoveReset"
+          ]
+        }
+      },
+      {
+        "index": 164,
+        "address": "0x71015d5190",
+        "target": "0x7100aed370",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A400",
+          "id_bytes_hex": "a4 00",
+          "reference_names": [
+            "TrainerMoveResetAll"
+          ]
+        }
+      },
+      {
+        "index": 165,
+        "address": "0x71015d5198",
+        "target": "0x7100aed3e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A500",
+          "id_bytes_hex": "a5 00",
+          "reference_names": [
+            "TrainerRotate"
+          ]
+        }
+      },
+      {
+        "index": 166,
+        "address": "0x71015d51a0",
+        "target": "0x7100aed5e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A600",
+          "id_bytes_hex": "a6 00",
+          "reference_names": [
+            "TrainerDisp"
+          ]
+        }
+      },
+      {
+        "index": 167,
+        "address": "0x71015d51a8",
+        "target": "0x7100aed670",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A700",
+          "id_bytes_hex": "a7 00",
+          "reference_names": [
+            "TrainerDispAll"
+          ]
+        }
+      },
+      {
+        "index": 168,
+        "address": "0x71015d51b0",
+        "target": "0x7100aed7a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A800",
+          "id_bytes_hex": "a8 00",
+          "reference_names": [
+            "TrainerDispOther"
+          ]
+        }
+      },
+      {
+        "index": 169,
+        "address": "0x71015d51b8",
+        "target": "0x7100aed980",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "A900",
+          "id_bytes_hex": "a9 00",
+          "reference_names": [
+            "TrainerDispShadow"
+          ]
+        }
+      },
+      {
+        "index": 170,
+        "address": "0x71015d51c0",
+        "target": "0x7100aeda00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AA00",
+          "id_bytes_hex": "aa 00",
+          "reference_names": [
+            "TrainerChangeMotion"
+          ]
+        }
+      },
+      {
+        "index": 171,
+        "address": "0x71015d51c8",
+        "target": "0x7100aedb00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AB00",
+          "id_bytes_hex": "ab 00",
+          "reference_names": [
+            "TrainerChangeMotionResource"
+          ]
+        }
+      },
+      {
+        "index": 172,
+        "address": "0x71015d51d0",
+        "target": "0x7100aedb10",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AC00",
+          "id_bytes_hex": "ac 00",
+          "reference_names": [
+            "TrainerChangeMotionKisekae"
+          ]
+        }
+      },
+      {
+        "index": 173,
+        "address": "0x71015d51d8",
+        "target": "0x7100aedb20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AD00",
+          "id_bytes_hex": "ad 00",
+          "reference_names": [
+            "TrainerChangeMotionSpeed"
+          ]
+        }
+      },
+      {
+        "index": 174,
+        "address": "0x71015d51e0",
+        "target": "0x7100aedb30",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AE00",
+          "id_bytes_hex": "ae 00",
+          "reference_names": [
+            "TrainerSetMotionFrame"
+          ]
+        }
+      },
+      {
+        "index": 175,
+        "address": "0x71015d51e8",
+        "target": "0x7100aedb40",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "AF00",
+          "id_bytes_hex": "af 00",
+          "reference_names": [
+            "TrainerEdgeEnable"
+          ]
+        }
+      },
+      {
+        "index": 176,
+        "address": "0x71015d51f0",
+        "target": "0x7100aedb50",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B000",
+          "id_bytes_hex": "b0 00",
+          "reference_names": [
+            "LabelSpecial"
+          ]
+        }
+      },
+      {
+        "index": 177,
+        "address": "0x71015d51f8",
+        "target": "0x7100aedb60",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B100",
+          "id_bytes_hex": "b1 00",
+          "reference_names": [
+            "SpecialAllReset"
+          ]
+        }
+      },
+      {
+        "index": 178,
+        "address": "0x71015d5200",
+        "target": "0x7100aedb70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B200",
+          "id_bytes_hex": "b2 00",
+          "reference_names": [
+            "MessageDispStd"
+          ]
+        }
+      },
+      {
+        "index": 179,
+        "address": "0x71015d5208",
+        "target": "0x7100aee2f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B300",
+          "id_bytes_hex": "b3 00",
+          "reference_names": [
+            "MessageDispSet"
+          ]
+        }
+      },
+      {
+        "index": 180,
+        "address": "0x71015d5210",
+        "target": "0x7100aee3e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B400",
+          "id_bytes_hex": "b4 00",
+          "reference_names": [
+            "MessageHide"
+          ]
+        }
+      },
+      {
+        "index": 181,
+        "address": "0x71015d5218",
+        "target": "0x7100aee3f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B500",
+          "id_bytes_hex": "b5 00",
+          "reference_names": [
+            "SpecialWaitSequence"
+          ]
+        }
+      },
+      {
+        "index": 182,
+        "address": "0x71015d5220",
+        "target": "0x7100aee430",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B600",
+          "id_bytes_hex": "b6 00",
+          "reference_names": [
+            "SpecialSyncDemoFade"
+          ]
+        }
+      },
+      {
+        "index": 183,
+        "address": "0x71015d5228",
+        "target": "0x7100aee440",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B700",
+          "id_bytes_hex": "b7 00",
+          "reference_names": [
+            "SpecialChangeWeather"
+          ]
+        }
+      },
+      {
+        "index": 184,
+        "address": "0x71015d5230",
+        "target": "0x7100aee450",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B800",
+          "id_bytes_hex": "b8 00",
+          "reference_names": [
+            "SpecialChangePokemon"
+          ]
+        }
+      },
+      {
+        "index": 185,
+        "address": "0x71015d5238",
+        "target": "0x7100aee600",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "B900",
+          "id_bytes_hex": "b9 00",
+          "reference_names": [
+            "SpecialTameVisible"
+          ]
+        }
+      },
+      {
+        "index": 186,
+        "address": "0x71015d5240",
+        "target": "0x7100aee700",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BA00",
+          "id_bytes_hex": "ba 00",
+          "reference_names": [
+            "SpecialMigawariVisible"
+          ]
+        }
+      },
+      {
+        "index": 187,
+        "address": "0x71015d5248",
+        "target": "0x7100aee800",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BB00",
+          "id_bytes_hex": "bb 00",
+          "reference_names": [
+            "SpecialMigawariVisibleZenryoku"
+          ]
+        }
+      },
+      {
+        "index": 188,
+        "address": "0x71015d5250",
+        "target": "0x7100aee930",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BC00",
+          "id_bytes_hex": "bc 00",
+          "reference_names": [
+            "SpecialChainAttakDefine"
+          ]
+        }
+      },
+      {
+        "index": 189,
+        "address": "0x71015d5258",
+        "target": "0x7100aeea70",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BD00",
+          "id_bytes_hex": "bd 00",
+          "reference_names": [
+            "SpecialFieldEffectCreate"
+          ]
+        }
+      },
+      {
+        "index": 190,
+        "address": "0x71015d5260",
+        "target": "0x7100aeea80",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BE00",
+          "id_bytes_hex": "be 00",
+          "reference_names": [
+            "SpecialDeleteCamera"
+          ]
+        }
+      },
+      {
+        "index": 191,
+        "address": "0x71015d5268",
+        "target": "0x7100aeea90",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "BF00",
+          "id_bytes_hex": "bf 00",
+          "reference_names": [
+            "SpecialDeleteParticle"
+          ]
+        }
+      },
+      {
+        "index": 192,
+        "address": "0x71015d5270",
+        "target": "0x7100aeeaa0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C000",
+          "id_bytes_hex": "c0 00",
+          "reference_names": [
+            "SpecialDeleteModel"
+          ]
+        }
+      },
+      {
+        "index": 193,
+        "address": "0x71015d5278",
+        "target": "0x7100aeeab0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C100",
+          "id_bytes_hex": "c1 00",
+          "reference_names": [
+            "SpecialDeleteModelAnime"
+          ]
+        }
+      },
+      {
+        "index": 194,
+        "address": "0x71015d5280",
+        "target": "0x7100aeeac0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C200",
+          "id_bytes_hex": "c2 00",
+          "reference_names": [
+            "SpecialDeleteKisekaeAnime"
+          ]
+        }
+      },
+      {
+        "index": 195,
+        "address": "0x71015d5288",
+        "target": "0x7100aeead0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C300",
+          "id_bytes_hex": "c3 00",
+          "reference_names": [
+            "command195"
+          ]
+        }
+      },
+      {
+        "index": 196,
+        "address": "0x71015d5290",
+        "target": "0x7100aeeae0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C400",
+          "id_bytes_hex": "c4 00",
+          "reference_names": [
+            "command196"
+          ]
+        }
+      },
+      {
+        "index": 197,
+        "address": "0x71015d5298",
+        "target": "0x7100aeeaf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C500",
+          "id_bytes_hex": "c5 00",
+          "reference_names": [
+            "command197"
+          ]
+        }
+      },
+      {
+        "index": 198,
+        "address": "0x71015d52a0",
+        "target": "0x7100aeeb00",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C600",
+          "id_bytes_hex": "c6 00",
+          "reference_names": [
+            "LGPEcommand198"
+          ]
+        }
+      },
+      {
+        "index": 199,
+        "address": "0x71015d52a8",
+        "target": "0x7100aeec10",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C700",
+          "id_bytes_hex": "c7 00",
+          "reference_names": [
+            "LGPEcommand199"
+          ]
+        }
+      },
+      {
+        "index": 200,
+        "address": "0x71015d52b0",
+        "target": "0x7100aeed20",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C800",
+          "id_bytes_hex": "c8 00",
+          "reference_names": [
+            "LGPEcommand200"
+          ]
+        }
+      },
+      {
+        "index": 201,
+        "address": "0x71015d52b8",
+        "target": "0x7100aeede0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "C900",
+          "id_bytes_hex": "c9 00",
+          "reference_names": [
+            "BugFixLabel"
+          ]
+        }
+      },
+      {
+        "index": 202,
+        "address": "0x71015d52c0",
+        "target": "0x7100aeedf0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CA00",
+          "id_bytes_hex": "ca 00",
+          "reference_names": [
+            "VsDemoDisp"
+          ]
+        }
+      },
+      {
+        "index": 203,
+        "address": "0x71015d52c8",
+        "target": "0x7100aeee90",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CB00",
+          "id_bytes_hex": "cb 00",
+          "reference_names": [
+            "EffShadowBox"
+          ]
+        }
+      },
+      {
+        "index": 204,
+        "address": "0x71015d52d0",
+        "target": "0x7100aeefc0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CC00",
+          "id_bytes_hex": "cc 00",
+          "reference_names": [
+            "PokemonDisableSleepEye"
+          ]
+        }
+      },
+      {
+        "index": 205,
+        "address": "0x71015d52d8",
+        "target": "0x7100aef070",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CD00",
+          "id_bytes_hex": "cd 00",
+          "reference_names": [
+            "TestLabel"
+          ]
+        }
+      },
+      {
+        "index": 206,
+        "address": "0x71015d52e0",
+        "target": "0x7100aef080",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CE00",
+          "id_bytes_hex": "ce 00",
+          "reference_names": [
+            "TestSpecialCommand"
+          ]
+        }
+      },
+      {
+        "index": 207,
+        "address": "0x71015d52e8",
+        "target": "0x7100aef140",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "CF00",
+          "id_bytes_hex": "cf 00",
+          "reference_names": [
+            "LabelSound"
+          ]
+        }
+      },
+      {
+        "index": 208,
+        "address": "0x71015d52f0",
+        "target": "0x7100aef150",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D000",
+          "id_bytes_hex": "d0 00",
+          "reference_names": [
+            "SoundPlaySe"
+          ]
+        }
+      },
+      {
+        "index": 209,
+        "address": "0x71015d52f8",
+        "target": "0x7100aef160",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D100",
+          "id_bytes_hex": "d1 00",
+          "reference_names": [
+            "SoundCtrlVolume"
+          ]
+        }
+      },
+      {
+        "index": 210,
+        "address": "0x71015d5300",
+        "target": "0x7100aef170",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D200",
+          "id_bytes_hex": "d2 00",
+          "reference_names": [
+            "SoundCtrlPan"
+          ]
+        }
+      },
+      {
+        "index": 211,
+        "address": "0x71015d5308",
+        "target": "0x7100aef180",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D300",
+          "id_bytes_hex": "d3 00",
+          "reference_names": [
+            "SoundCtrlPitch"
+          ]
+        }
+      },
+      {
+        "index": 212,
+        "address": "0x71015d5310",
+        "target": "0x7100aef190",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D400",
+          "id_bytes_hex": "d4 00",
+          "reference_names": [
+            "SoundCtrlTempo"
+          ]
+        }
+      },
+      {
+        "index": 213,
+        "address": "0x71015d5318",
+        "target": "0x7100aef1a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D500",
+          "id_bytes_hex": "d5 00",
+          "reference_names": [
+            "SoundPlayVoice"
+          ]
+        }
+      },
+      {
+        "index": 214,
+        "address": "0x71015d5320",
+        "target": "0x7100aef1b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D600",
+          "id_bytes_hex": "d6 00",
+          "reference_names": [
+            "SoundPlayVoiceId"
+          ]
+        }
+      },
+      {
+        "index": 215,
+        "address": "0x71015d5328",
+        "target": "0x7100aef1c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D700",
+          "id_bytes_hex": "d7 00",
+          "reference_names": [
+            "Sound3DSetParam"
+          ]
+        }
+      },
+      {
+        "index": 216,
+        "address": "0x71015d5330",
+        "target": "0x7100aef1d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D800",
+          "id_bytes_hex": "d8 00",
+          "reference_names": [
+            "Sound3DPlay"
+          ]
+        }
+      },
+      {
+        "index": 217,
+        "address": "0x71015d5338",
+        "target": "0x7100aef1e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "D900",
+          "id_bytes_hex": "d9 00",
+          "reference_names": [
+            "Sound3DStop"
+          ]
+        }
+      },
+      {
+        "index": 218,
+        "address": "0x71015d5340",
+        "target": "0x7100aef1f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DA00",
+          "id_bytes_hex": "da 00",
+          "reference_names": [
+            "Sound3DMovePosition",
+            "command218"
+          ]
+        }
+      },
+      {
+        "index": 219,
+        "address": "0x71015d5348",
+        "target": "0x7100aef200",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DB00",
+          "id_bytes_hex": "db 00",
+          "reference_names": [
+            "Sound3DMoveRelativePoke"
+          ]
+        }
+      },
+      {
+        "index": 220,
+        "address": "0x71015d5350",
+        "target": "0x7100aef210",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DC00",
+          "id_bytes_hex": "dc 00",
+          "reference_names": [
+            "Sound3DMoveSpecialPos"
+          ]
+        }
+      },
+      {
+        "index": 221,
+        "address": "0x71015d5358",
+        "target": "0x7100aef220",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DD00",
+          "id_bytes_hex": "dd 00",
+          "reference_names": [
+            "Sound3DFollowPoke"
+          ]
+        }
+      },
+      {
+        "index": 222,
+        "address": "0x71015d5360",
+        "target": "0x7100aef230",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DE00",
+          "id_bytes_hex": "de 00",
+          "reference_names": [
+            "Sound3DFollowObj"
+          ]
+        }
+      },
+      {
+        "index": 223,
+        "address": "0x71015d5368",
+        "target": "0x7100aef240",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "DF00",
+          "id_bytes_hex": "df 00",
+          "reference_names": [
+            "Sound3DVoicePlay"
+          ]
+        }
+      },
+      {
+        "index": 224,
+        "address": "0x71015d5370",
+        "target": "0x7100aef250",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "E000",
+          "id_bytes_hex": "e0 00",
+          "reference_names": [
+            "Sound3DVoicePlayId"
+          ]
+        }
+      },
+      {
+        "index": 225,
+        "address": "0x71015d5378",
+        "target": "0x7100aef260",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "E100",
+          "id_bytes_hex": "e1 00",
+          "reference_names": [
+            "SoundBGMVolume"
+          ]
+        }
+      },
+      {
+        "index": 226,
+        "address": "0x71015d5380",
+        "target": "0x7100aef270",
+        "target_is_executable": true,
+        "pinned_parser_reference": {
+          "id_hex": "E200",
+          "id_bytes_hex": "e2 00",
+          "reference_names": [
+            "SoundZukanSE"
+          ]
+        }
+      },
+      {
+        "index": 227,
+        "address": "0x71015d5388",
+        "target": "0x7100aef280",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 228,
+        "address": "0x71015d5390",
+        "target": "0x7100aef290",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 229,
+        "address": "0x71015d5398",
+        "target": "0x7100aef2a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 230,
+        "address": "0x71015d53a0",
+        "target": "0x7100aef2b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 231,
+        "address": "0x71015d53a8",
+        "target": "0x7100aef2c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 232,
+        "address": "0x71015d53b0",
+        "target": "0x7100aef2d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 233,
+        "address": "0x71015d53b8",
+        "target": "0x7100aef2e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 234,
+        "address": "0x71015d53c0",
+        "target": "0x7100aef2f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 235,
+        "address": "0x71015d53c8",
+        "target": "0x7100aef300",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 236,
+        "address": "0x71015d53d0",
+        "target": "0x7100aef310",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 237,
+        "address": "0x71015d53d8",
+        "target": "0x7100aef320",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 238,
+        "address": "0x71015d53e0",
+        "target": "0x7100aef330",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 239,
+        "address": "0x71015d53e8",
+        "target": "0x7100aef340",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 240,
+        "address": "0x71015d53f0",
+        "target": "0x7100aef350",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 241,
+        "address": "0x71015d53f8",
+        "target": "0x7100aef360",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 242,
+        "address": "0x71015d5400",
+        "target": "0x7100aef370",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 243,
+        "address": "0x71015d5408",
+        "target": "0x7100aef380",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 244,
+        "address": "0x71015d5410",
+        "target": "0x7100aef390",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 245,
+        "address": "0x71015d5418",
+        "target": "0x7100aef3a0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 246,
+        "address": "0x71015d5420",
+        "target": "0x7100aef3b0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 247,
+        "address": "0x71015d5428",
+        "target": "0x7100aef3c0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 248,
+        "address": "0x71015d5430",
+        "target": "0x7100aef3d0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 249,
+        "address": "0x71015d5438",
+        "target": "0x7100aef3e0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 250,
+        "address": "0x71015d5440",
+        "target": "0x7100aef3f0",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 251,
+        "address": "0x71015d5448",
+        "target": "0x7100aef400",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 252,
+        "address": "0x71015d5450",
+        "target": "0x7100aef410",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 253,
+        "address": "0x71015d5458",
+        "target": "0x7100aef420",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 254,
+        "address": "0x71015d5460",
+        "target": "0x7100aef430",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      },
+      {
+        "index": 255,
+        "address": "0x71015d5468",
+        "target": "0x7100aef440",
+        "target_is_executable": true,
+        "pinned_parser_reference": null
+      }
+    ]
+  },
+  "sample": {
+    "romfs_path": "bin/battle/waza/sequence/ee000.bseq",
+    "local_path": "../1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/1/bin/battle/waza/sequence/ee000.bseq",
+    "size": 124,
+    "sha256": "1b38facf44af506167a588da86c5a6926704336178669248e022e250366cc88f",
+    "parser": {
+      "name": "pbseqtool SESD parser",
+      "commit": "6f122d1b7945797cae472960b798bf28523f8acd",
+      "dictionary_sha256": "b226d3fbfbf6bce22256f82e3a38a933faa48bb1bea5b73b13b493896b5746be",
+      "license_status": "README permits use as a base; no formal LICENSE file"
+    },
+    "commands": [
+      {
+        "parser_name": "DummyLabel",
+        "parser_id_hex": "0000",
+        "raw_id_bytes_hex": "00 00",
+        "table_index_from_exact_build_u16_le": 0,
+        "group_number_from_pinned_parser": 0,
+        "start_frame_from_pinned_parser": 0,
+        "end_frame_from_pinned_parser": 29,
+        "dispatch_slot": "0x71015d4c70",
+        "handler_address": "0x7100ada060",
+        "target_function_created": true,
+        "target_decompiler_completed": true,
+        "observed_function_body_bytes": 4,
+        "observed_instruction_count": 1,
+        "observed_first_instruction": "ret  "
+      },
+      {
+        "parser_name": "CameraReset",
+        "parser_id_hex": "2600",
+        "raw_id_bytes_hex": "26 00",
+        "table_index_from_exact_build_u16_le": 38,
+        "group_number_from_pinned_parser": 0,
+        "start_frame_from_pinned_parser": 0,
+        "end_frame_from_pinned_parser": 0,
+        "dispatch_slot": "0x71015d4da0",
+        "handler_address": "0x7100ade320",
+        "target_function_created": true,
+        "target_decompiler_completed": true,
+        "observed_function_body_bytes": 84,
+        "observed_instruction_count": 21,
+        "observed_first_instruction": "sub sp,sp,#0x30  "
+      },
+      {
+        "parser_name": "GaugeDispAll",
+        "parser_id_hex": "7D00",
+        "raw_id_bytes_hex": "7d 00",
+        "table_index_from_exact_build_u16_le": 125,
+        "group_number_from_pinned_parser": 0,
+        "start_frame_from_pinned_parser": 0,
+        "end_frame_from_pinned_parser": 0,
+        "dispatch_slot": "0x71015d5058",
+        "handler_address": "0x7100aeb6b0",
+        "target_function_created": true,
+        "target_decompiler_completed": true,
+        "observed_function_body_bytes": 72,
+        "observed_instruction_count": 18,
+        "observed_first_instruction": "str x19,[sp, #-0x20]!  "
+      },
+      {
+        "parser_name": "GaugeDisp",
+        "parser_id_hex": "7C00",
+        "raw_id_bytes_hex": "7c 00",
+        "table_index_from_exact_build_u16_le": 124,
+        "group_number_from_pinned_parser": 0,
+        "start_frame_from_pinned_parser": 0,
+        "end_frame_from_pinned_parser": 0,
+        "dispatch_slot": "0x71015d5050",
+        "handler_address": "0x7100aeb5e0",
+        "target_function_created": true,
+        "target_decompiler_completed": true,
+        "observed_function_body_bytes": 208,
+        "observed_instruction_count": 52,
+        "observed_first_instruction": "sub sp,sp,#0x40  "
+      },
+      {
+        "parser_name": "GaugeDamage",
+        "parser_id_hex": "7E00",
+        "raw_id_bytes_hex": "7e 00",
+        "table_index_from_exact_build_u16_le": 126,
+        "group_number_from_pinned_parser": 0,
+        "start_frame_from_pinned_parser": 0,
+        "end_frame_from_pinned_parser": 0,
+        "dispatch_slot": "0x71015d5060",
+        "handler_address": "0x7100aeb700",
+        "target_function_created": true,
+        "target_decompiler_completed": true,
+        "observed_function_body_bytes": 428,
+        "observed_instruction_count": 107,
+        "observed_first_instruction": "sub sp,sp,#0x60  "
+      }
+    ]
+  },
+  "analysis": {
+    "ghidra": "12.2 PUBLIC",
+    "jdk": "25.0.5",
+    "read_only_source_binary": true,
+    "ghidra_project_database_modified_to_create_missing_functions": true,
+    "helper_script": "scripts/ghidra/InspectSequenceRuntimeHelpers.java",
+    "helper_script_sha256": "bf4815e53d5a8030454c8c0797a481ebf4f8733d21b8d7d6fc17d5f1bcf0fb1f",
+    "helper_wrapper": "scripts/ghidra/Run-InspectSequenceRuntimeHelpers.ps1",
+    "helper_wrapper_sha256": "e72f1b812b111e00f80a91766447ccac1dacb9b2babaf7c34696162fe08e85a2",
+    "helper_log_sha256": "efe14af0e87735286c5ca55f7f0172d783c1450162f4c01a76a1d901e64060a6",
+    "callback_script": "scripts/ghidra/InspectSequenceCallbacks.java",
+    "callback_script_sha256": "a3989c17396979da5ee2132103dcc041ee5489322ff6bf87b747806a65972157",
+    "callback_wrapper": "scripts/ghidra/Run-InspectSequenceCallbacks.ps1",
+    "callback_wrapper_sha256": "d3c39d7f608aef8887af4b479ea8d525b344eba8b3b3761bb38af4ac89e2a3e4",
+    "callback_log_sha256": "8c365071469b0642d6fcbdb73b9af201a037a372e06137b8a874f661ed1a1371",
+    "owner_vtable_script": "scripts/ghidra/InspectSequenceOwnerVtables.java",
+    "owner_vtable_script_sha256": "f9c1ad97b71e7337f81a9615c2a10505f16d9f441d80003ae39b058ded0c3341",
+    "owner_vtable_wrapper": "scripts/ghidra/Run-InspectSequenceOwnerVtables.ps1",
+    "owner_vtable_wrapper_sha256": "dbc4b7c8fc72638a962b0c90028310ff07f1cee40aa816508c6a0dbeea293fe2",
+    "owner_vtable_log_sha256": "6e49ea28292209daf552b4636e1fe7a7cf533deaeb9584d4972c4a2e5ab49ff1"
+  },
+  "limits": [
+    "The 256-slot table scan is capped at 256; no table terminator was observed, so its total length is not established.",
+    "Parser command names and IDs are pinned external reference labels; this cross-reference establishes numeric dispatch targets, not gameplay semantics.",
+    "Static code does not prove runtime reachability, command execution, animation/audio outcome, or timing.",
+    "The parser-labeled DummyLabel sample target is one AArch64 RET instruction; exact bytes and its sole table-slot data reference are recorded in manifests/bseq-dispatch-boundary.json. This instruction evidence does not assign command gameplay semantics.",
+    "The Ghidra project database was modified to create five previously undefined handler functions; the original main file hash was checked before and after and remained unchanged."
+  ]
+}

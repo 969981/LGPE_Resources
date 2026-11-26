@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lgpe-research"
+version = "0.1.0"
+description = "Auditable, read-only research pipeline for Pokemon Let's Go Pikachu 1.0.2"
+requires-python = ">=3.11"
+dependencies = ["flatbuffers==25.12.19", "texture2ddecoder==1.0.6"]
+
+[project.scripts]
+lgpe = "lgpe_research.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
