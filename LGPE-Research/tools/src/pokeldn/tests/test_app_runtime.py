@@ -1,0 +1,119 @@
+"""Portable shared launchers and release contents."""
+import os
+import subprocess
+import sys
+from pathlib import Path
+import threading
+
+from pokeldn.app import runner
+from pokeldn.app.command import limit_error
+from pokeldn.app.catalog import Field
+
+
+def test_headless_entry_point_runs_without_gui_dependencies():
+    result = subprocess.run(runner.command("--run", "bin/pla_join.py", "--help"),
+                            capture_output=True, text=True, check=True)
+    assert "--offer" in result.stdout
+    assert "flet" not in result.stderr
+
+
+def test_cli_uses_the_shared_catalog():
+    result = subprocess.run([sys.executable, "-m", "pokeldn", "--list"], capture_output=True,
+                            text=True, check=True)
+    assert "swsh-host" in result.stdout and "za-join" in result.stdout
+
+
+def test_limits_apply_to_hexadecimal_values():
+    field = Field("--set", "items", limits=(("held_item", 1607, "unsafe"),))
+    assert limit_error(field, "held_item=0xffff") == "unsafe"
+    assert not limit_error(field, "held_item=0x100")
+
+
+def test_packer_uses_tracked_defaults_and_requires_firmware(monkeypatch, tmp_path):
+    import importlib.util
+    path = Path(__file__).resolve().parents[1] / "scripts" / "pack_app.py"
+    spec = importlib.util.spec_from_file_location("pack_app", path)
+    pack = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(pack)
+    files = pack.runtime_files()
+    # Every dependency docs/plugins.md lets a plugin import ships whole: a plugin's Crypto.PublicKey.RSA
+    # failed in 0.28.0, which carried only the Crypto modules pokeldn imports.
+    import re
+    row = next(line for line in (path.parents[1] / "docs/plugins.md").read_text(encoding="utf-8").splitlines()
+               if "pokeldn's own dependencies" in line)
+    names = [b or a for a, b in re.findall(r"`([^`]+)`(?: \(`([^`]+)`\))?", row.split("|")[1])]
+    assert set(names) - {"flet", "bleak", "unicorn"} == set(pack.PLUGIN_PACKAGES)
+    assert "config/host.toml" in files
+    assert "LICENSE" in files and "vendor/LDN/LICENSE" in files
+    assert not any("scratchpad" in p or "host.local.toml" in p or "__pycache__" in p for p in files)
+    monkeypatch.setattr(pack, "FIRMWARE", tmp_path / "absent.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_S3", tmp_path / "absent-s3.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_C3", tmp_path / "absent-c3.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_C6", tmp_path / "absent-c6.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_PAD", tmp_path / "absent-pad-s3.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_PAD_ESP32", tmp_path / "absent-pad.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_BLE", tmp_path / "absent-ble.bin")
+    monkeypatch.setattr(pack, "FIRMWARE_BLE_C6", tmp_path / "absent-ble-c6.bin")
+    monkeypatch.setattr(sys, "argv", ["pack_app.py"])
+    import pytest
+    with pytest.raises(SystemExit, match="Missing"):
+        pack.main()
+    # A release missing any target must fail before invoking the packer.
+    images = (pack.FIRMWARE, pack.FIRMWARE_S3, pack.FIRMWARE_C3, pack.FIRMWARE_C6, pack.FIRMWARE_PAD,
+              pack.FIRMWARE_PAD_ESP32, pack.FIRMWARE_BLE, pack.FIRMWARE_BLE_C6)
+    for missing in images:
+        for present in images:
+            if present != missing:
+                present.write_bytes(b"firmware")
+        with pytest.raises(SystemExit, match=missing.name):
+            pack.main()
+        for present in images:
+            present.unlink(missing_ok=True)
+    # So must one without the Flet client that takes file drops.
+    for present in images:
+        present.write_bytes(b"firmware")
+    monkeypatch.setattr(pack, "CLIENT", tmp_path / "client")
+    with pytest.raises(SystemExit, match="Flet client"):
+        pack.main()
+
+
+def test_board_backend_does_not_require_unix_user_ids(monkeypatch):
+    from pokeldn.host_support import needs_root
+    from pokeldn.ldn import transport
+    monkeypatch.delattr(os, "geteuid", raising=False)
+    monkeypatch.setattr(transport, "board_radio", lambda: True)
+    assert not needs_root()
+
+
+def test_vendor_import_does_not_require_linux_fcntl():
+    subprocess.run([sys.executable, "-c", "import sys; sys.modules['fcntl'] = None; import ldn.wlan"],
+                   check=True, capture_output=True)
+
+
+def test_managed_process_logs_utf8_and_stops_on_stdin_close(tmp_path):
+    script = tmp_path / "session.py"
+    # The ready line is printed inside the try: the stop can land as soon as it is read.
+    script.write_text("import time\ntry:\n    print('Pokémon prêt 🎮')\n"
+                      "    while True: time.sleep(0.02)\nexcept KeyboardInterrupt:\n"
+                      "    print('stopped')\n", encoding="utf-8")
+    lines, exits = [], []
+    ready, done = threading.Event(), threading.Event()
+
+    def line(value):
+        lines.append(value)
+        ready.set()
+
+    def exit(code):
+        exits.append(code)
+        done.set()
+
+    process = runner.Process(["--run", str(script)], str(tmp_path),
+                             dict(os.environ, POKELDN_MANAGED_RUN="1", PYTHONIOENCODING="ascii"),
+                             line, exit)
+    try:
+        assert ready.wait(5)
+        assert lines == ["Pokémon prêt 🎮"]
+    finally:
+        process.stop()
+        assert done.wait(5)
+    assert exits == [0] and lines[-1] == "stopped"
