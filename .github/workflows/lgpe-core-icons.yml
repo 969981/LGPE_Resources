@@ -7,6 +7,8 @@ on:
       - LGPE-Research/scripts/verify_core_icons.py
       - LGPE-Research/scripts/audit_image_resources.py
       - LGPE-Research/tests/test_image_resources.py
+      - LGPE-Research/src/lgpe_research/image_resource_core.py
+      - LGPE-Research/scripts/build_core_icon_database.py
       - .github/workflows/lgpe-core-icons.yml
   workflow_dispatch:
 permissions:
@@ -24,6 +26,8 @@ jobs:
             LGPE-Research/scripts
             LGPE-Research/tests
             LGPE-Research/docs/image-resources/evidence
+            LGPE-Research/decoded/1.0.2/romfs/bin/message/Simp_Chinese/common
+            1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/1/bin/pokelib/personal
             1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/1/bin/app/icon_item
             1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/1/bin/app/icon_type
             1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/1/bin/app/icon_pokemon
@@ -39,6 +43,7 @@ jobs:
         run: |
           python -m unittest discover -s tests -p test_image_resources.py -v
           python scripts/verify_core_icons.py --report work/core-icon-validation.json
+          python scripts/build_core_icon_database.py
       - name: Upload evidence only
         if: always()
         uses: actions/upload-artifact@v4
