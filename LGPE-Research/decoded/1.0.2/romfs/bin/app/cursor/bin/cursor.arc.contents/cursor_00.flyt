@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nw4f_layout version="1.5.16" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <create date="2016-01-20T21:54:43.4944544+09:00" host="W00538" source="" user="kuga_erika" />
+    <title />
+    <comment>---アニメ---
+入れ替えの持ち上げている時に、以下のアニメで表示を切り替えてください。カーソルがピタっと張り付くイメージです。
+【catch】　  キャッチ用
+【normal】　通常用
+
+---プログラム---
+・allの原点位置を、ボディレイアウトや部品レイアウトのN_cursorの座標に合わせて配置してください。
+==============================
+171010　
+・【P_cursor_01】追加
+171116 
+・キャッチ切り替え用アニメ追加
+・不要テクスチャ削除</comment>
+    <generator name="NW LayoutEditor Core" version="2.12.5.0" />
+  </head>
+  <body>
+    <lyt>
+      <paneSet>
+        <pane influencedAlpha="true" kind="Null" name="all" partsMagnifyInfluence="AdjustToPartsBound">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_cursor_00" partsMagnifyInfluence="AdjustToPartsBound">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Left" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_cursor_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="cursor_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_cursor_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="cursor_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_keep_00">
+          <comment />
+          <basePositionType x="Right" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_cursor_01" visible="false">
+          <comment>入れ替え用カーソル</comment>
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="10" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="64" y="64" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_cursor_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="cursor_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_cursor_01" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="cursor_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+      </paneSet>
+      <paneHierarchy>
+        <paneTree name="RootPane">
+          <paneTree name="all">
+            <paneTree name="N_keep_00">
+              <paneTree name="P_cursor_00" />
+            </paneTree>
+            <paneTree name="P_cursor_01" />
+          </paneTree>
+        </paneTree>
+      </paneHierarchy>
+      <groupSet>
+        <group name="RootGroup">
+          <group name="keep">
+            <paneRef name="N_keep_00" />
+            <comment />
+          </group>
+          <group name="G_select_00">
+            <paneRef name="P_cursor_00" />
+            <comment />
+          </group>
+          <group name="G_catch_00">
+            <paneRef name="N_keep_00" />
+            <paneRef name="P_cursor_01" />
+            <comment />
+          </group>
+          <comment />
+        </group>
+      </groupSet>
+      <screenSetting origin="Normal">
+        <layoutSize x="1280" y="720" />
+        <backGround>
+          <color a="255" b="169" g="169" r="169" />
+        </backGround>
+        <grid moveMethod="None" thickLineInterval="40" thinDivisionNum="4" visible="true">
+          <color a="128" b="64" g="128" r="128" />
+        </grid>
+      </screenSetting>
+ <textureFile format="BC7" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\cursor\lyt\texture\cursor_00.tga" /> 
+      <metrics>
+        <totalPaneCount>4</totalPaneCount>
+        <totalPixelCount>8192</totalPixelCount>
+      </metrics>
+      <userData />
+    </lyt>
+  </body>
+</nw4f_layout>

@@ -1,0 +1,1251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nw4f_layout version="1.5.16" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <create date="2018-02-21T19:54:33.406786+09:00" host="W00740" source="" user="kuga_erika__adjust_textbox" />
+    <title />
+    <comment>・allの座標を、呼び出される画面の各コンテンツに配置した「N_context」の座標に合わせて配置してください。
+※カーソルの派生版みたいなイメージです。
+※配置位置が安全フレームに重なってしまう場合は、フレーム内に収まるように調整してください。「N_context」の位置の優先は安全フレームより低いです。
+
+【W_window_00】
+・文字幅に合わせて幅を変更してください。
+・拡張ユーザー設定で「window_width_offset」「window_height_offset」の値を設定しました。
+　テキストペインサイズ＋幅・高さに指定の値を足した値をウィンドウペインサイズに設定してください。
+　例）ペインサイズwidht100＋wオフセット値（仮で）64＝window widthは164
+
+【W_window_01】
+・window_00と同様の処理をしてください。
+・オフセット値はwindows_00と同じものを使用してください。
+
+【P_marker_00】
+・window_00と同様の処理をしてください。
+・オフセット値はwindows_00と同じものを使用してください。
+
+【N_pos_00】
+・デフォルト右下配置の座標になっています。
+・ウィンドウペイン【W_window_00】のペインサイズを、このペインの座標に反映してください。
+・画面左下表示の場合：X座標に「-ウィンドウペイン幅」を設定してください。
+・画面右上表示の場合：Y座標に「ウィンドウペイン高さ」を設定してください。
+・画面左上表示の場合：X座標に「-ウィンドウペイン幅」Y座標に「ウィンドウペイン高さ」を設定してください。
+
+【N_curosr_pos_00】
+・選択中カーソルの位置を制御するヌルです。
+・ヌル座標を、選択中の対象のカーソルヌルペイン（N_cursor_00～05）の座標に合わせて移動してください。
+
+
+180420===============
+【T_text_06】テキスト7行目
+【N_cursor_06】7行目カーソル位置
+・新規追加</comment>
+    <generator name="NW LayoutEditor Core" version="2.25.0.0" />
+  </head>
+  <body>
+    <lyt>
+      <paneSet>
+        <pane kind="TextBox" name="T_text_00">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-22" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_01">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-66" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_01" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_02">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-110" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_02">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_02" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_03">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-154" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_03">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_03" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_04">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_04">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_04" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_05">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-242" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_05">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_05" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_pos_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="32" y="32" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Window" name="W_window_00">
+          <comment />
+          <basePositionType x="Left" y="Top" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="400" y="286" />
+          <window kind="Around" useVtxColorForAllWindow="true">
+            <content detailSetting="true">
+              <vtxColLT a="255" b="255" g="255" r="255" />
+              <vtxColRT a="255" b="255" g="255" r="255" />
+              <vtxColLB a="255" b="255" g="255" r="255" />
+              <vtxColRB a="255" b="255" g="255" r="255" />
+              <material name="W_window_00C ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              </material>
+              <materialCtr name="W_window_00C " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </content>
+            <frame detailSetting="true" frameType="CornerLT">
+              <textureFlip>None</textureFlip>
+              <material name="W_window_00LT">
+                <blackColor b="255" g="255" r="255" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_fill_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_00LT" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_fill_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <contentInflation b="0" l="0" r="0" t="0" />
+            <useLTMaterial />
+          </window>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="window_width_offset">60</int>
+            <int kind="Int" name="window_height_offset">22</int>
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_scale_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="32" y="32" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_textParent">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="44" y="-11" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="32" y="32" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Window" name="W_window_01">
+          <comment />
+          <basePositionType x="Left" y="Top" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="400" y="286" />
+          <window kind="Around" notDrawContent="true" useVtxColorForAllWindow="true">
+            <content detailSetting="true">
+              <vtxColLT a="255" b="255" g="255" r="255" />
+              <vtxColRT a="255" b="255" g="255" r="255" />
+              <vtxColLB a="255" b="255" g="255" r="255" />
+              <vtxColRB a="255" b="255" g="255" r="255" />
+              <material name="W_window_01C ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              </material>
+              <materialCtr name="W_window_01C " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </content>
+            <frame detailSetting="true" frameType="CornerLT">
+              <textureFlip>None</textureFlip>
+              <material name="W_window_01LT">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_LT_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01LT" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_LT_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="CornerRT">
+              <textureFlip>FlipH</textureFlip>
+              <material name="W_window_01RT">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_LT_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01RT" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_LT_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="CornerLB">
+              <textureFlip>FlipV</textureFlip>
+              <material name="W_window_01LB">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_LB_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01LB" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_LB_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="CornerRB">
+              <textureFlip>Rotate180</textureFlip>
+              <material name="W_window_01RB">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_LB_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01RB" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_LB_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="FrameT">
+              <textureFlip>None</textureFlip>
+              <material name="W_window_01T ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_T_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01T " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_T_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="FrameB">
+              <textureFlip>FlipV</textureFlip>
+              <material name="W_window_01B ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_B_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01B " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_B_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="FrameL">
+              <textureFlip>None</textureFlip>
+              <material name="W_window_01L ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_L_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01L " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_L_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <frame detailSetting="true" frameType="FrameR">
+              <textureFlip>FlipH</textureFlip>
+              <material name="W_window_01R ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_L_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="W_window_01R " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_L_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <contentInflation b="0" l="0" r="0" t="0" />
+            <useLTMaterial value="false" />
+          </window>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_pict_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="30" y="0" z="0" />
+          <rotate x="0" y="0" z="90" />
+          <scale x="1" y="1" />
+          <size x="40" y="40" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="0" g="195" r="255" />
+            <vtxColRT a="255" b="0" g="195" r="255" />
+            <vtxColLB a="255" b="0" g="195" r="255" />
+            <vtxColRB a="255" b="0" g="195" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_pict_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="cursor_option_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_pict_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="cursor_option_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_scalel_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_curosr_pos_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-33" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="all">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-22" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-66" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_02">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-110" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_03">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-154" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_04">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_05">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-242" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursorParent">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="20" y="-11" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="32" y="32" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Window" name="P_marker_00">
+          <comment />
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="400" y="44" />
+          <window kind="HorizontalNoContent" useVtxColorForAllWindow="true">
+            <content detailSetting="true">
+              <vtxColLT a="255" b="209" g="255" r="255" />
+              <vtxColRT a="255" b="209" g="255" r="255" />
+              <vtxColLB a="255" b="158" g="255" r="255" />
+              <vtxColRB a="255" b="158" g="255" r="255" />
+              <material name="P_marker_00C ">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              </material>
+              <materialCtr name="P_marker_00C " tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </content>
+            <frame detailSetting="true" frameType="CornerLT">
+              <textureFlip>None</textureFlip>
+              <material name="P_marker_00LT">
+                <blackColor b="0" g="0" r="0" />
+                <whiteColor b="255" g="255" r="255" />
+                <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+                <texMap imageName="context_window_marker_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <textureStage texMap="0" />
+              </material>
+              <materialCtr name="P_marker_00LT" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+                <tevColReg a="0" b="0" g="0" r="0" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <tevConstReg a="255" b="255" g="255" r="255" />
+                <texMap imageName="context_window_marker_00" wrap_s="Clamp" wrap_t="Clamp" />
+                <texMatrix rotate="0">
+                  <scale x="1" y="1" />
+                  <translate x="0" y="0" />
+                </texMatrix>
+                <texCoordGen srcParam="Tex0">
+                  <projectionScale x="1" y="1" />
+                  <projectionTrans x="0" y="0" />
+                </texCoordGen>
+                <alphaCompare comp="Always" ref="0" />
+                <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+                <blendModeAlpha type="None" />
+              </materialCtr>
+            </frame>
+            <contentInflation b="0" l="0" r="0" t="0" />
+            <useLTMaterial />
+          </window>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="N_menu_pos">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="N_pos_lt">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-580" y="198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="N_pos_rt">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="580" y="198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="N_pos_lb">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-580" y="-198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="N_pos_rb">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="580" y="-198" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" locked="true" name="mstxt">
+          <comment>app_common.mstxt</comment>
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="TextBox" name="T_text_06">
+          <comment>app_common.mstxt:msg_common_16</comment>
+          <basePositionType x="Left" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-4" y="-286" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="504" y="44" />
+          <textBox allocateStringLength="64" charSpace="0" detailSetting="true" font="system28_jpn" lineSpace="0" perCharacterTransformEvalTimeWidth="100">
+            <fontSize x="28" y="44" />
+            <fontSizeOriginal x="28" y="35" />
+            <text>１２３４５６７８９０１２３４５６</text>
+            <textID />
+            <topColor a="255" b="35" g="35" r="35" />
+            <bottomColor a="255" b="35" g="35" r="35" />
+            <positionType x="Left" y="Center" />
+            <material name="T_text_06">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+            </material>
+            <materialCtr name="T_text_06" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+            <shadowOffset x="1" y="-1" />
+            <shadowScale x="1" y="1" />
+            <shadowTopColor a="255" b="0" g="0" r="0" />
+            <shadowBottomColor a="255" b="0" g="0" r="0" />
+          </textBox>
+          <userData>
+            <string name="__BasicUserDataString" />
+            <int kind="Int" name="size">28</int>
+            <float kind="Float" name="g_fw">28.0000000</float>
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_cursor_06">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-20" y="-286" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="44" y="44" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+      </paneSet>
+      <paneHierarchy>
+        <paneTree name="RootPane">
+          <paneTree name="all">
+            <paneTree name="N_scale_00">
+              <paneTree name="W_window_00" />
+              <paneTree name="N_pos_00">
+                <paneTree name="N_curosr_pos_00">
+                  <paneTree name="N_scalel_00">
+                    <paneTree name="P_marker_00" />
+                  </paneTree>
+                  <paneTree name="P_pict_00" />
+                </paneTree>
+                <paneTree name="N_cursorParent">
+                  <paneTree name="N_cursor_00" />
+                  <paneTree name="N_cursor_01" />
+                  <paneTree name="N_cursor_02" />
+                  <paneTree name="N_cursor_03" />
+                  <paneTree name="N_cursor_04" />
+                  <paneTree name="N_cursor_05" />
+                  <paneTree name="N_cursor_06" />
+                </paneTree>
+                <paneTree name="N_textParent">
+                  <paneTree name="T_text_00" />
+                  <paneTree name="T_text_01" />
+                  <paneTree name="T_text_02" />
+                  <paneTree name="T_text_03" />
+                  <paneTree name="T_text_04" />
+                  <paneTree name="T_text_05" />
+                  <paneTree name="T_text_06" />
+                </paneTree>
+              </paneTree>
+              <paneTree name="W_window_01" />
+            </paneTree>
+          </paneTree>
+          <paneTree name="N_menu_pos">
+            <paneTree name="N_pos_lt" />
+            <paneTree name="N_pos_rt" />
+            <paneTree name="N_pos_lb" />
+            <paneTree name="N_pos_rb" />
+          </paneTree>
+          <paneTree name="mstxt" />
+        </paneTree>
+      </paneHierarchy>
+      <groupSet>
+        <group name="RootGroup">
+          <group name="G_patern_00">
+            <paneRef name="W_window_00" />
+            <paneRef name="W_window_01" />
+            <comment />
+          </group>
+          <group name="G_inout_00">
+            <paneRef name="N_scale_00" />
+            <paneRef name="N_scalel_00" />
+            <comment />
+          </group>
+          <group name="G_select_00">
+            <paneRef name="P_pict_00" />
+            <paneRef name="P_marker_00" />
+            <comment />
+          </group>
+          <comment />
+        </group>
+      </groupSet>
+      <screenSetting origin="Normal">
+        <layoutSize x="1280" y="720" />
+        <backGround>
+          <color a="255" b="169" g="169" r="169" />
+        </backGround>
+        <grid moveMethod="None" thickLineInterval="40" thinDivisionNum="10" visible="true">
+          <color a="128" b="64" g="128" r="128" />
+        </grid>
+      </screenSetting>
+ <textureFile format="BC3" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_B_00.tga" /> 
+ <textureFile format="BC3" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_L_00.tga" /> 
+ <textureFile format="BC3" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_LB_00.tga" /> 
+ <textureFile format="BC3" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_LT_00.tga" /> 
+ <textureFile format="BC3" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_T_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_fill_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\context\lyt\texture\context_window_marker_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\common_texture\cursor\cursor_option_01.tga" /> 
+ <fontFile name="system28_jpn" path="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\font\system28_jpn.fcpx" /> 
+      <metrics>
+        <totalPaneCount>31</totalPaneCount>
+        <totalPixelCount>328640</totalPixelCount>
+      </metrics>
+      <userData />
+    </lyt>
+  </body>
+</nw4f_layout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="honda_marie" host="W00680" date="2018-01-24T18:19:12.3397554+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="in" startFrame="10" endFrame="13" animLoop="OneTime" fileName="in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="result" startFrame="0" endFrame="0" animLoop="Wait" fileName="result" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>リザルト表示</comment>
+      <userData />
+      <group name="G_group_00" />
+    </animTag>
+    <animTag name="item" startFrame="1" endFrame="1" animLoop="Wait" fileName="item" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>取得アイテム表示</comment>
+      <userData />
+      <group name="G_group_00" />
+    </animTag>
+    <lan animType="VertexColor" startFrame="0" endFrame="4000" convertStartFrame="0" convertEndFrame="45">
+      <animContent name="N_inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="13" value="255" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="13" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="4000" convertStartFrame="0" convertEndFrame="45">
+      <animContent name="N_result_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="N_result_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

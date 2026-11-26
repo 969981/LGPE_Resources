@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro__adjust_textbox" host="W00668" date="2018-06-26T15:17:53.5673+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="count_down" startFrame="20" endFrame="110" animLoop="OneTime" fileName="count_down" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「カウントダウン」アニメ終了後startに繋いでください</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="start" startFrame="110" endFrame="140" animLoop="OneTime" fileName="start" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「スタート」フェードイン</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="clear_in" startFrame="4" endFrame="9" animLoop="OneTime" fileName="clear_in" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「クリア」フェードイン</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="clear_out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="clear_out" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「クリア」フェードアウト</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="timeup_in" startFrame="14" endFrame="18" animLoop="OneTime" fileName="timeup_in" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「タウムアップ」フェードイン</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="timeup_out" startFrame="10" endFrame="13" animLoop="OneTime" fileName="timeup_out" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>「タイムアップ」フェードアウト</comment>
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="timer_in" startFrame="4" endFrame="8" animLoop="OneTime" fileName="timer_in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>タイマー表示</comment>
+      <userData />
+      <group name="G_timer_00" />
+    </animTag>
+    <animTag name="timer_out" startFrame="0" endFrame="4" animLoop="OneTime" fileName="timer_out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>タイマー非表示</comment>
+      <userData />
+      <group name="G_timer_00" />
+    </animTag>
+    <animTag name="color_00" startFrame="0" endFrame="0" animLoop="Wait" fileName="color_00" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>タイマー色変え：基本カラー戻す用</comment>
+      <userData />
+      <group name="G_color_00" />
+    </animTag>
+    <animTag name="color_01" startFrame="0" endFrame="4" animLoop="OneTime" fileName="color_01" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>タイマー色変え：時間ないカラー</comment>
+      <userData />
+      <group name="G_color_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="160" convertStartFrame="0" convertEndFrame="160">
+      <animContent name="P_g_text_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="10" value="0" slopeType="Flat" />
+          <key frame="13" value="-116" slopeType="Flat" />
+          <key frame="14" value="115" slopeType="Flat" />
+          <key frame="18" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="4" value="0" slope="45.9329224" />
+          <key frame="5" value="102" slope="-3.5" slopeType="Smooth" />
+          <key frame="8" value="-14" slope="-25.5" slopeType="Smooth" />
+          <key frame="9" value="0" slope="14" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="2" value="0.75" slopeType="Smooth" />
+          <key frame="3" value="1" slopeType="Linear" />
+          <key frame="4" value="3" slopeType="Flat" />
+          <key frame="8" value="0.95" slope="-0.4" slopeType="Smooth" />
+          <key frame="9" value="1" slope="-0.4" slopeType="Linear" />
+          <key frame="9" value="1" slopeType="Linear" />
+          <key frame="19" value="1" slopeType="Linear" />
+          <key frame="19" value="1" slope="-0.5" slopeType="Linear" />
+          <key frame="20" value="0.5" slopeType="Flat" />
+          <key frame="23" value="0.55" slope="0.0321385376" />
+          <key frame="26" value="0.97" slope="0.02066992" />
+          <key frame="30" value="1" slopeType="Step" />
+          <key frame="50" value="1" slopeType="Step" />
+          <key frame="50" value="0.5" slopeType="Smooth" />
+          <key frame="53" value="0.55" slope="0.0321385376" />
+          <key frame="56" value="0.97" slope="0.02066992" />
+          <key frame="60" value="1" slopeType="Step" />
+          <key frame="80" value="1" slopeType="Step" />
+          <key frame="80" value="0.5" slopeType="Smooth" />
+          <key frame="83" value="0.55" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Step" />
+          <key frame="110" value="1" slopeType="Step" />
+          <key frame="110" value="0.5" slopeType="Smooth" />
+          <key frame="113" value="0.55" slope="0.0321385376" />
+          <key frame="116" value="0.97" slope="0.0237618517" />
+          <key frame="140" value="1.25" slope="0.00519259" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="2" value="0.75" slopeType="Smooth" />
+          <key frame="3" value="1" slopeType="Linear" />
+          <key frame="4" value="3" slopeType="Flat" />
+          <key frame="8" value="0.95" slope="-0.4" slopeType="Smooth" />
+          <key frame="9" value="1" slope="-0.4" slopeType="Linear" />
+          <key frame="9" value="1" slopeType="Linear" />
+          <key frame="10" value="1" slope="-0.0625" slopeType="Smooth" />
+          <key frame="13" value="0.75" slope="-0.065625" slopeType="Smooth" />
+          <key frame="14" value="0.6879373" slope="-0.0583819225" slopeType="Smooth" />
+          <key frame="18" value="1" slopeType="Step" />
+          <key frame="20" value="1" slopeType="Step" />
+          <key frame="20" value="0.5" slopeType="Flat" />
+          <key frame="23" value="0.55" slope="0.0321385376" />
+          <key frame="26" value="0.97" slope="0.02066992" />
+          <key frame="30" value="1" slopeType="Step" />
+          <key frame="50" value="1" slopeType="Step" />
+          <key frame="50" value="0.5" slopeType="Smooth" />
+          <key frame="53" value="0.55" slope="0.0321385376" />
+          <key frame="56" value="0.97" slope="0.02066992" />
+          <key frame="60" value="1" slopeType="Step" />
+          <key frame="80" value="1" slopeType="Step" />
+          <key frame="80" value="0.5" slopeType="Smooth" />
+          <key frame="83" value="0.55" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Step" />
+          <key frame="110" value="1" slopeType="Step" />
+          <key frame="110" value="0.5" slopeType="Smooth" />
+          <key frame="113" value="0.55" slope="0.0321385376" />
+          <key frame="116" value="0.97" slope="0.0237618517" />
+          <key frame="140" value="1.25" slope="0.00519259" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="SizeW">
+          <key frame="0" value="640" slopeType="Step" />
+          <key frame="20" value="640" slopeType="Step" />
+          <key frame="20" value="256" slopeType="Step" />
+          <key frame="110" value="256" slopeType="Step" />
+          <key frame="110" value="640" slopeType="Step" />
+          <key frame="140" value="640" slopeType="Step" />
+          <key frame="140" value="640" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="SizeH">
+          <key frame="0" value="256" slopeType="Step" />
+          <key frame="20" value="256" slopeType="Step" />
+          <key frame="20" value="256" slopeType="Step" />
+          <key frame="110" value="256" slopeType="Step" />
+          <key frame="110" value="256" slopeType="Step" />
+          <key frame="110" value="256" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_logo_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="20" value="0.65" slopeType="Smooth" />
+          <key frame="23" value="0.7" slope="0.0321385376" />
+          <key frame="26" value="0.97" slope="0.02066992" />
+          <key frame="30" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="20" value="0.65" slopeType="Smooth" />
+          <key frame="23" value="0.7" slope="0.0321385376" />
+          <key frame="26" value="0.97" slope="0.02066992" />
+          <key frame="30" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_logo_01">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="50" value="0.65" slopeType="Smooth" />
+          <key frame="53" value="0.7" slope="0.0321385376" />
+          <key frame="56" value="0.97" slope="0.02066992" />
+          <key frame="60" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="50" value="0.65" slopeType="Smooth" />
+          <key frame="53" value="0.7" slope="0.0321385376" />
+          <key frame="56" value="0.97" slope="0.02066992" />
+          <key frame="60" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_logo_02">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="80" value="0.65" slopeType="Smooth" />
+          <key frame="83" value="0.7" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="80" value="0.65" slopeType="Smooth" />
+          <key frame="83" value="0.7" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="80" value="-70" slopeType="Smooth" />
+          <key frame="90" value="0" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_logo_03">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="80" value="0.65" slopeType="Smooth" />
+          <key frame="83" value="0.7" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="80" value="0.65" slopeType="Smooth" />
+          <key frame="83" value="0.7" slope="0.0321385376" />
+          <key frame="86" value="0.97" slope="0.02066992" />
+          <key frame="90" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="80" value="70" slopeType="Smooth" />
+          <key frame="90" value="0" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_logo_A_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="100" value="1" />
+          <key frame="100" value="1" slope="-0.0101894364" />
+          <key frame="109" value="0.96" slopeType="Smooth" />
+          <key frame="110" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="100" value="1" />
+          <key frame="100" value="1" slope="-0.0101894364" />
+          <key frame="109" value="0.96" slopeType="Smooth" />
+          <key frame="110" value="1" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_logo_B_00">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="110" value="1" />
+          <key frame="110" value="1" slope="0.016222693" />
+          <key frame="145" value="1.3" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="110" value="1" />
+          <key frame="110" value="1" slope="0.016222693" />
+          <key frame="145" value="1.3" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="MaterialColor" startFrame="0" endFrame="160" convertStartFrame="0" convertEndFrame="160">
+      <animContent name="P_base_00">
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="70" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="70" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="46" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="46" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="102" slope="2.25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="111" slope="2.25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="111" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="100" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="100" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_base_01">
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="70" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="70" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="46" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="46" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="102" slope="2.25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="111" slope="2.25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="111" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="100" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="100" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="160" convertStartFrame="0" convertEndFrame="160">
+      <animContent name="P_g_text_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-74.3333359" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="13" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="13" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="14" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="14" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="18" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="18" value="255" slope="-127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="-127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="25" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="45" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="45" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="45" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="0" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="55" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="75" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="105" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="105" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="105" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="110" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="110" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="115" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slope="-31.875" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="138" value="0" slope="-31.875" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="138" value="0" slope="55.75" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_timer_fade_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="-63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="4" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="8" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_logo_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="20" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="25" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="25" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_logo_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="50" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="55" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="55" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_logo_02">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_logo_03">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="80" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="85" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_logo_B_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="110" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="135" value="0" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_info_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="0" slope="25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="130" value="255" slope="-25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="140" value="0" slope="-25.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="160" convertStartFrame="0" convertEndFrame="160">
+      <animContent name="P_g_text_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="go_park_gtxt_01" />
+          <refRes name="go_park_gtxt_02" />
+          <refRes name="go_park_no_03" />
+          <refRes name="go_park_no_02" />
+          <refRes name="go_park_no_01" />
+          <refRes name="go_park_gtxt_00" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="10" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="13" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="14" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="18" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="20" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="50" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="80" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="110" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="140" value="5" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_logo_anime_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="count_logo_anime_00" />
+          <refRes name="count_logo_anime_01" />
+          <refRes name="count_logo_anime_02" />
+          <refRes name="count_logo_anime_03" />
+          <refRes name="count_logo_anime_04" />
+          <refRes name="count_logo_anime_05" />
+          <refRes name="count_logo_anime_06" />
+          <refRes name="count_logo_anime_07" />
+          <refRes name="count_logo_anime_08" />
+          <refRes name="count_logo_anime_09" />
+          <refRes name="count_logo_anime_10" />
+          <refRes name="count_logo_anime_11" />
+          <refRes name="count_logo_anime_12" />
+          <refRes name="count_logo_anime_13" />
+          <refRes name="count_logo_anime_14" />
+          <refRes name="count_logo_anime_15" />
+          <refRes name="count_logo_anime_16" />
+          <refRes name="count_logo_anime_17" />
+          <refRes name="count_logo_anime_18" />
+          <refRes name="count_logo_anime_19" />
+          <key xsi:type="StepU16" frame="110" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="111" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="112" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="113" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="114" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="115" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="116" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="117" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="118" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="119" value="9" slopeType="Step" />
+          <key xsi:type="StepU16" frame="120" value="10" slopeType="Step" />
+          <key xsi:type="StepU16" frame="121" value="11" slopeType="Step" />
+          <key xsi:type="StepU16" frame="122" value="12" slopeType="Step" />
+          <key xsi:type="StepU16" frame="123" value="13" slopeType="Step" />
+          <key xsi:type="StepU16" frame="124" value="14" slopeType="Step" />
+          <key xsi:type="StepU16" frame="125" value="15" slopeType="Step" />
+          <key xsi:type="StepU16" frame="126" value="16" slopeType="Step" />
+          <key xsi:type="StepU16" frame="127" value="17" slopeType="Step" />
+          <key xsi:type="StepU16" frame="128" value="18" slopeType="Step" />
+          <key xsi:type="StepU16" frame="129" value="19" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="160" convertStartFrame="0" convertEndFrame="160">
+      <animContent name="N_logo_A_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="4" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="10" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="14" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="20" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="110" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="N_logo_B_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="110" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

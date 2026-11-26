@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro" host="W00668" date="2017-10-10T20:59:16.5143341+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="fade_in" startFrame="10" endFrame="30" animLoop="OneTime" fileName="fade_in" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="fade_out" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_fade_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="600" fileName="keep" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="bg_00" startFrame="30" endFrame="30" animLoop="Wait" fileName="bg_00" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>全リスト</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="bg_01" startFrame="31" endFrame="31" animLoop="Wait" fileName="bg_01" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>交換
+※ポケモンアイコンを一段下にずらしています。</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="bg_02" startFrame="32" endFrame="32" animLoop="Wait" fileName="bg_02" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>選択</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="bg_03" startFrame="33" endFrame="33" animLoop="Wait" fileName="bg_03" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>送る</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="bg_00_to_03" startFrame="33" endFrame="40" animLoop="OneTime" fileName="bg_00_to_03" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>全リスト　から　送る　への遷移</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="bg_03_to_00" startFrame="40" endFrame="47" animLoop="OneTime" fileName="bg_03_to_00" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>送る　から　全リスト　への遷移</comment>
+      <userData />
+      <group name="G_bg_color_00" />
+    </animTag>
+    <animTag name="exchange_01_in" startFrame="50" endFrame="53" animLoop="OneTime" fileName="exchange_01_in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>交換確認画面　box_exchange_01.flyt　を表示する際のinアニメ（消えますがinです。</comment>
+      <userData />
+      <group name="G_exchange_00" />
+    </animTag>
+    <animTag name="exchange_01_out" startFrame="54" endFrame="58" animLoop="OneTime" fileName="exchange_01_out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>交換確認画面　box_exchange_01.flyt　から戻る際のoutアニメ（表示されますがoutです。</comment>
+      <userData />
+      <group name="G_exchange_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="600" convertStartFrame="0" convertEndFrame="60">
+      <animContent name="N_scroll_bar_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Step" />
+          <key frame="30" value="0" slopeType="Step" />
+          <key frame="30" value="0" slopeType="Step" />
+          <key frame="31" value="0" slopeType="Step" />
+          <key frame="31" value="-60" slopeType="Step" />
+          <key frame="32" value="-60" slopeType="Step" />
+          <key frame="32" value="0" slopeType="Step" />
+          <key frame="33" value="0" slopeType="Step" />
+          <key frame="33" value="0" slopeType="Step" />
+          <key frame="40" value="0" slopeType="Step" />
+          <key frame="40" value="0" slopeType="Step" />
+          <key frame="47" value="0" slopeType="Step" />
+          <key frame="47" value="0" slopeType="Step" />
+          <key frame="47" value="0" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_ball_L_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Linear" />
+          <key frame="0" value="0" slope="-40.6666679" slopeType="Linear" />
+          <key frame="3" value="-122" slopeType="Step" />
+          <key frame="10" value="-122" slopeType="Step" />
+          <key frame="10" value="-122" />
+          <key frame="10" value="-122" slope="13.7647228" />
+          <key frame="24" value="0" slopeType="Flat" />
+          <key frame="30" value="0" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_ball_R_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="178" slopeType="Step" />
+          <key frame="10" value="178" slopeType="Step" />
+          <key frame="10" value="178" slopeType="Flat" />
+          <key frame="20" value="0" slopeType="Flat" />
+          <key frame="30" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_grass_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="329" slope="16.666666" slopeType="Linear" />
+          <key frame="0" value="329" slope="46.6666679" slopeType="Linear" />
+          <key frame="3" value="469" slope="46.6666679" slopeType="Linear" />
+          <key frame="3" value="469" slopeType="Linear" />
+          <key frame="10" value="469" />
+          <key frame="10" value="469" slope="20.6168213" />
+          <key frame="21" value="314" slopeType="Flat" />
+          <key frame="27" value="329" slope="1.66666663" slopeType="Smooth" />
+          <key frame="30" value="329" slopeType="Linear" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="30" slopeType="Linear" />
+          <key frame="3" value="30" slopeType="Step" />
+          <key frame="10" value="30" slopeType="Step" />
+          <key frame="10" value="142" slope="11.4285717" />
+          <key frame="10" value="142" slope="-10.9018354" />
+          <key frame="29" value="30" slopeType="Flat" />
+          <key frame="30" value="30" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_hyper_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="91" slopeType="Step" />
+          <key frame="7" value="91" slopeType="Step" />
+          <key frame="7" value="91" />
+          <key frame="7" value="91" slope="20.9998417" />
+          <key frame="12" value="164" slope="-0.2" slopeType="Smooth" />
+          <key frame="17" value="89" slope="-25" />
+          <key frame="17" value="89" slope="16.5103321" />
+          <key frame="20" value="114" slopeType="Smooth" />
+          <key frame="23" value="89" slope="-12.7983561" />
+          <key frame="23" value="89" slope="2" />
+          <key frame="28" value="91" slope="0.4" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-10" slopeType="Linear" />
+          <key frame="0" value="-10" slope="6.6" slopeType="Linear" />
+          <key frame="10" value="56" slope="6.6" />
+          <key frame="10" value="56" slope="-8.877537" />
+          <key frame="28" value="-10" slopeType="Flat" />
+          <key frame="30" value="-10" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_electrical_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-92" slope="16.666666" slopeType="Linear" />
+          <key frame="3" value="-42" slope="16.666666" slopeType="Linear" />
+          <key frame="3" value="-42" slopeType="Linear" />
+          <key frame="10" value="-42" slopeType="Linear" />
+          <key frame="10" value="-42" slope="8.2" slopeType="Linear" />
+          <key frame="15" value="-1" slope="8.2" slopeType="Linear" />
+          <key frame="15" value="-1" slope="-24.75" slopeType="Linear" />
+          <key frame="19" value="-100" slope="-24.75" slopeType="Linear" />
+          <key frame="19" value="-100" slope="6.200001" slopeType="Linear" />
+          <key frame="21" value="-87.6" slope="6.200001" slopeType="Linear" />
+          <key frame="21" value="-87.6" slope="-3.20000076" slopeType="Linear" />
+          <key frame="23" value="-94" slope="-3.20000076" slopeType="Linear" />
+          <key frame="23" value="-94" slope="1" slopeType="Linear" />
+          <key frame="25" value="-92" slope="1" slopeType="Linear" />
+          <key frame="25" value="-92" slopeType="Linear" />
+          <key frame="30" value="-92" slopeType="Linear" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="20" slope="65.6666641" slopeType="Linear" />
+          <key frame="0" value="20" slope="41.6666679" slopeType="Linear" />
+          <key frame="3" value="145" slope="41.6666679" slopeType="Linear" />
+          <key frame="3" value="145" slopeType="Linear" />
+          <key frame="10" value="145" slopeType="Linear" />
+          <key frame="15" value="145" />
+          <key frame="15" value="145" slope="-26.27446" />
+          <key frame="30" value="20" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_fire_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="-606" slope="-10" slopeType="Smooth" />
+          <key frame="3" value="-636" slope="-10" slopeType="Smooth" />
+          <key frame="10" value="-706" slope="1.57894742" slopeType="Smooth" />
+          <key frame="22" value="-606" slopeType="Flat" />
+          <key frame="30" value="-606" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-336" slopeType="Flat" />
+          <key frame="3" value="-336" slopeType="Flat" />
+          <key frame="10" value="-336" slopeType="Flat" />
+          <key frame="15" value="-387" slopeType="Flat" />
+          <key frame="21" value="-324" slopeType="Flat" />
+          <key frame="26" value="-336" slopeType="Flat" />
+          <key frame="30" value="-336" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-20" slopeType="Smooth" />
+          <key frame="3" value="-20" slopeType="Smooth" />
+          <key frame="10" value="-20" slope="3.27272725" slopeType="Smooth" />
+          <key frame="14" value="16" slope="-1.33333337" slopeType="Smooth" />
+          <key frame="19" value="-32" slope="-2.72727275" slopeType="Smooth" />
+          <key frame="25" value="-14" slope="1.2" slopeType="Smooth" />
+          <key frame="30" value="-20" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_normal_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="142" slopeType="Step" />
+          <key frame="10" value="142" slopeType="Step" />
+          <key frame="10" value="142" slope="4.866667" slopeType="Smooth" />
+          <key frame="15" value="215" slope="-0.5555556" slopeType="Smooth" />
+          <key frame="19" value="137" slope="-19.5" />
+          <key frame="19" value="137" slope="5.99167061" />
+          <key frame="22" value="150" slope="0.142857149" slopeType="Smooth" />
+          <key frame="26" value="138" slope="-3" slopeType="Linear" />
+          <key frame="26" value="138" slope="3" slopeType="Linear" />
+          <key frame="29" value="142" slopeType="Flat" />
+          <key frame="30" value="142" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-10" slopeType="Linear" />
+          <key frame="0" value="-10" slope="22" slopeType="Linear" />
+          <key frame="3" value="56" slope="22" slopeType="Linear" />
+          <key frame="3" value="56" slopeType="Linear" />
+          <key frame="10" value="56" slopeType="Linear" />
+          <key frame="10" value="56" slope="-3.53333473" slopeType="Linear" />
+          <key frame="16" value="34.79999" slope="-4.485486" />
+          <key frame="16" value="34.79999" slope="-14.9648571" />
+          <key frame="28" value="-10" slope="0.9548391" />
+          <key frame="28" value="-10" />
+          <key frame="30" value="-10" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_monbo_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-70" slopeType="Step" />
+          <key frame="10" value="-70" slopeType="Step" />
+          <key frame="10" value="-70" />
+          <key frame="10" value="-70" slope="18.1617565" />
+          <key frame="15" value="3" slope="-0.2" slopeType="Smooth" />
+          <key frame="20" value="-72" slope="-15" />
+          <key frame="20" value="-72" slope="8.711821" />
+          <key frame="25" value="-46" slope="0.2" slopeType="Smooth" />
+          <key frame="30" value="-70" slope="-7.29393244" />
+          <key frame="30" value="-70" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="10" slopeType="Linear" />
+          <key frame="0" value="10" slope="-8.666667" slopeType="Linear" />
+          <key frame="3" value="-16" slope="-8.666667" slopeType="Linear" />
+          <key frame="3" value="-16" slopeType="Linear" />
+          <key frame="10" value="-16" />
+          <key frame="10" value="-16" slope="-5.63722324" />
+          <key frame="28" value="10" slope="0.9548391" />
+          <key frame="28" value="10" />
+          <key frame="30" value="10" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_water_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-312" slopeType="Flat" />
+          <key frame="3" value="-370" slopeType="Flat" />
+          <key frame="10" value="-370" slopeType="Flat" />
+          <key frame="13" value="-390" slopeType="Flat" />
+          <key frame="22" value="-306" slopeType="Flat" />
+          <key frame="28" value="-312" slopeType="Flat" />
+          <key frame="30" value="-312" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-20" slopeType="Flat" />
+          <key frame="3" value="-20" slopeType="Flat" />
+          <key frame="10" value="-20" slopeType="Flat" />
+          <key frame="20" value="-20" slope="4.001597" />
+          <key frame="30" value="-20" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_super_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="336" slopeType="Step" />
+          <key frame="3" value="336" slopeType="Step" />
+          <key frame="3" value="384" slope="4.8" slopeType="Smooth" />
+          <key frame="10" value="384" slope="2.08333325" slopeType="Smooth" />
+          <key frame="15" value="409" slope="-4.9" slopeType="Smooth" />
+          <key frame="20" value="335" slope="-6.4545455" slopeType="Smooth" />
+          <key frame="26" value="338" slope="0.111111112" slopeType="Smooth" />
+          <key frame="29" value="336" slopeType="Flat" />
+          <key frame="30" value="336" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="200" slope="-60.3333321" slopeType="Smooth" />
+          <key frame="3" value="19" slope="-60.3333321" slopeType="Linear" />
+          <key frame="3" value="19" slopeType="Linear" />
+          <key frame="10" value="19" />
+          <key frame="10" value="19" slope="22.3737717" />
+          <key frame="27" value="200" slope="2.34037328" />
+          <key frame="27" value="200" />
+          <key frame="30" value="200" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_monbo_01">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="10" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="10" slope="1.2" slopeType="Linear" />
+          <key frame="600" value="730" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_super_01">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="200" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="200" slope="1.2" slopeType="Linear" />
+          <key frame="600" value="920" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_hyper_01">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-10" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="-10" slope="-1.2" slopeType="Linear" />
+          <key frame="600" value="-730" slope="-1.2" slopeType="Linear" />
+          <key frame="600" value="-730" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_zipper_01">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="-700" slopeType="Flat" />
+          <key frame="3" value="-640" slopeType="Flat" />
+          <key frame="15" value="-640" slopeType="Flat" />
+          <key frame="20" value="-700" slopeType="Flat" />
+          <key frame="30" value="-700" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-420" slopeType="Flat" />
+          <key frame="3" value="-360" slopeType="Flat" />
+          <key frame="15" value="-360" slopeType="Flat" />
+          <key frame="20" value="-420" slopeType="Flat" />
+          <key frame="30" value="-420" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_zipper_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="700" slopeType="Flat" />
+          <key frame="3" value="640" slopeType="Flat" />
+          <key frame="15" value="640" slopeType="Flat" />
+          <key frame="20" value="700" slopeType="Flat" />
+          <key frame="30" value="700" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="420" slopeType="Flat" />
+          <key frame="3" value="360" slopeType="Flat" />
+          <key frame="15" value="360" slopeType="Flat" />
+          <key frame="20" value="420" slopeType="Flat" />
+          <key frame="30" value="420" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_inout_L_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="-188" slopeType="Flat" />
+          <key frame="10" value="-188" slopeType="Flat" />
+          <key frame="30" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_exchange_pos_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Step" />
+          <key frame="30" value="0" slopeType="Step" />
+          <key frame="30" value="0" slopeType="Step" />
+          <key frame="31" value="0" slopeType="Step" />
+          <key frame="31" value="-114" slopeType="Step" />
+          <key frame="32" value="-114" slopeType="Step" />
+          <key frame="32" value="0" slopeType="Smooth" />
+          <key frame="33" value="0" slopeType="Smooth" />
+          <key frame="47" value="0" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_inout_R_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="3" value="228" slopeType="Flat" />
+          <key frame="10" value="228" slopeType="Flat" />
+          <key frame="30" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_super_02">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="270" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="270" slope="1.2" slopeType="Linear" />
+          <key frame="600" value="990" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_monbo_02">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="100" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="100" slope="1.2" slopeType="Linear" />
+          <key frame="600" value="820" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_hyper_02">
+        <animPaneSRTTarget target="RotateZ">
+          <key frame="0" value="-150" slope="0.35" slopeType="Linear" />
+          <key frame="0" value="-150" slope="-1.2" slopeType="Linear" />
+          <key frame="600" value="-870" slope="-1.2" slopeType="Linear" />
+          <key frame="600" value="-870" slope="1.2" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="MaterialColor" startFrame="0" endFrame="600" convertStartFrame="0" convertEndFrame="60">
+      <animContent name="P_bg_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="37" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="37" slope="203" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="240" slope="203" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="240" slope="-236" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="4" slope="-236" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="4" slope="35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="4" slope="-35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="4" slope="-25.1" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="178" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="178" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="178" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="183" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="183" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="28" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="28" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="210" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="210" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="178" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="178" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="210" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="210" slope="3.2" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="74" slope="168" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="168" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="-242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slope="-242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slope="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="97" slope="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="97" slope="-3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="74" slope="-3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="74" slope="3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="97" slope="3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="97" slope="2.3" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="-66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="-39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="-39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="-3.9" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="233" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="233" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="233" slope="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slope="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slope="-5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="233" slope="-3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="233" slope="3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="2.2" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="96" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="250" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="250" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="18" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="18" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="-17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="-17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="12" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_water_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slope="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="-212" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="36" slope="-212" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="36" slope="-5.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slope="-5.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slope="5.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="36" slope="5.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="36" slope="3.71428561" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="131" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="131" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="131" slope="-58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="73" slope="-58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="73" slope="48" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="121" slope="48" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="121" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="176" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="176" slope="-6.428571" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="131" slope="-6.428571" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="131" slope="6.428571" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="176" slope="6.428571" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="176" slope="8" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="232" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="232" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="232" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="232" slope="-222" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="10" slope="-222" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="10" slope="107" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="117" slope="107" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="117" slope="16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="232" slope="16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="232" slope="-16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="117" slope="-16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="117" slope="-20.2857151" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="91" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="91" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="91" slope="-31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="60" slope="-31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="60" slope="194" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="254" slope="194" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="254" slope="-180" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="74" slope="-180" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="74" slope="2.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="91" slope="2.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="91" slope="-2.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="74" slope="-2.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="74" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="232" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="232" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="232" slope="-58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="174" slope="-58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="174" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="162" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="162" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="228" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="228" slope="0.5714286" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="232" slope="0.5714286" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="232" slope="-0.5714286" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="228" slope="-0.5714286" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="228" slope="1.14285719" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="240" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="240" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="240" slope="9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="249" slope="9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="249" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="91" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="91" slope="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="166" slope="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="166" slope="10.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="240" slope="10.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="240" slope="-10.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="166" slope="-10.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="166" slope="-8.571428" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_fire_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="244" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="244" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="244" slope="-216" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="28" slope="-216" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="28" slope="216" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="244" slope="216" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="244" slope="-180" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="64" slope="-180" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="64" slope="25.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="244" slope="25.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="244" slope="-25.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="64" slope="-25.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="64" slope="-30" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="129" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="129" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="129" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="161" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="161" slope="-32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="129" slope="-32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="129" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="-2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="129" slope="-2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="129" slope="2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="3.16666675" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="42" slope="186" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="228" slope="186" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="228" slope="-186" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="42" slope="-186" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="42" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="81" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="81" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="42" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="42" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="81" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="81" slope="6.5" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="224" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="224" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="224" slope="-163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="61" slope="-163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="61" slope="163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="224" slope="163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="224" slope="-96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="128" slope="-96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="128" slope="13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="224" slope="13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="224" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="128" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="128" slope="-16" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="71" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="71" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="71" slope="38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="109" slope="38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="109" slope="-38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="71" slope="-38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="71" slope="157" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="228" slope="157" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="228" slope="-22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="71" slope="-22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="71" slope="22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="228" slope="22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="228" slope="26.166666" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="33" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="33" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="33" slope="148" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="148" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="-148" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="33" slope="-148" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="33" slope="115" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="115" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="-16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="33" slope="-16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="33" slope="16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="16.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="19.166666" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_electrical_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="244" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="244" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="244" slope="-166" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="78" slope="-166" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="78" slope="177" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="177" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="-170" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="85" slope="-170" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="85" slope="22.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="244" slope="22.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="244" slope="-22.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="85" slope="-22.7142849" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="85" slope="-28.8571434" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="158" slope="45" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="203" slope="45" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="203" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="197" slope="-6" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="197" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="240" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="240" slope="-11.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="158" slope="-11.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="158" slope="11.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="240" slope="11.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="240" slope="8.857142" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="42" slope="205" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="247" slope="205" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="247" slope="-114" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="133" slope="-114" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="133" slope="70" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="203" slope="70" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="203" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="42" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="42" slope="23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="203" slope="23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="203" slope="25.2857151" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="242" slope="-169" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="73" slope="-169" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="73" slope="169" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="242" slope="169" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="242" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="24" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="24" slope="31.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="242" slope="31.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="242" slope="-31.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="24" slope="-31.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="24" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="242" slope="-132" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="110" slope="-132" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="110" slope="26" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="136" slope="26" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="136" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="199" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="199" slope="6.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="242" slope="6.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="242" slope="-6.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="199" slope="-6.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="199" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="89" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="89" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="89" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="243" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="243" slope="-131" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="112" slope="-131" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="112" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="89" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="89" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_grass_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="22" slope="-8" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="14" slope="-8" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="14" slope="182" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="196" slope="182" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="196" slope="-174" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="22" slope="-174" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="22" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="35" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="35" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="22" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="22" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="171" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="171" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="171" slope="-62" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="109" slope="-62" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="109" slope="-71" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="38" slope="-71" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="38" slope="133" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="171" slope="133" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="171" slope="-10.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="-10.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="10.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="171" slope="10.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="171" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="57" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="-194" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="17" slope="-194" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="17" slope="40" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="57" slope="40" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="57" slope="16.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="171" slope="16.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="171" slope="-16.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="57" slope="-16.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="57" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="69" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="69" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="69" slope="17" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="86" slope="17" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="86" slope="138" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="224" slope="138" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="224" slope="-155" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="69" slope="-155" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="69" slope="3.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="94" slope="3.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="94" slope="-3.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="69" slope="-3.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="69" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="224" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="224" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="224" slope="-42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="182" slope="-42" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="182" slope="-82" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="100" slope="-82" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="100" slope="124" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="224" slope="124" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="224" slope="-3.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="197" slope="-3.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="197" slope="3.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="224" slope="3.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="224" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="95" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="95" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="95" slope="114" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="209" slope="114" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="209" slope="-140" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="69" slope="-140" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="69" slope="26" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="95" slope="26" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="95" slope="22.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="253" slope="22.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="253" slope="-22.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="95" slope="-22.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="95" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_normal_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="221" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="221" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="221" slope="-185" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="36" slope="-185" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="36" slope="199" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="235" slope="199" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="235" slope="-200" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="35" slope="-200" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="35" slope="26.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="221" slope="26.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="221" slope="-26.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="33" slope="-26.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="33" slope="-29.166666" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="159" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="159" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="159" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="172" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="172" slope="-84" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="88" slope="-84" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="88" slope="82" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="170" slope="82" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="170" slope="-1.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="159" slope="-1.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="159" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="172" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="172" slope="6.33333349" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="88" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="88" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="88" slope="146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="234" slope="146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="234" slope="-195" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="39" slope="-195" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="39" slope="137" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="176" slope="137" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="176" slope="-12.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="88" slope="-12.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="88" slope="21.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="236" slope="21.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="236" slope="19.166666" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="92" slope="-163" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="92" slope="162" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="254" slope="162" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="254" slope="-156" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="98" slope="-156" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="98" slope="22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="22.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-21.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="102" slope="-21.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="102" slope="-27.833334" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="234" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="234" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="234" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="-75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="147" slope="-75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="147" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="205" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="205" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="234" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="234" slope="-2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="215" slope="-2.71428561" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="215" slope="-2" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="132" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="132" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="132" slope="105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="237" slope="105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="237" slope="-162" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="75" slope="-162" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="75" slope="129" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="204" slope="129" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="204" slope="-10.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="132" slope="-10.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="132" slope="14.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="231" slope="14.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="231" slope="10.833333" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_monbo_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slope="-63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="-63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="59" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="59" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-145" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="105" slope="-145" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="105" slope="21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="-21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="105" slope="-21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="105" slope="-20.8571434" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="209" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="209" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="209" slope="-65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="180" slope="-65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="180" slope="28" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="172" slope="28" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="172" slope="65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="237" slope="65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="237" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="209" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="209" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="237" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="237" slope="3.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="75" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="124" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="124" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="108" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="108" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="75" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="75" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slope="11.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="-110" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-110" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="226" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="226" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="226" slope="-29" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="-29" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="205" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="205" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="226" slope="-4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="226" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="4" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="168" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="168" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="125" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="125" slope="34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="4.714286" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_super_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slope="-173" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="81" slope="-173" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="81" slope="167" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="167" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="90" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="90" slope="23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="-23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="90" slope="-23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="90" slope="-22.8571434" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slope="9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="-34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="181" slope="-34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="181" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="230" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="230" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="230" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="230" slope="3.142857" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="66" slope="147" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="213" slope="147" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="213" slope="-108" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="105" slope="-108" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="105" slope="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="-16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="66" slope="-16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="66" slope="16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="9.857142" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-181" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="74" slope="-181" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="74" slope="176" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="176" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="229" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="229" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="229" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="-36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="206" slope="-36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="206" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="242" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="242" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="229" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="229" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="242" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="242" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slope="109" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="109" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="-54" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="157" slope="-54" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="157" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="188" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="188" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="188" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="188" slope="9" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_puper_h_02">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.4285717" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slope="103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="-23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="24.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_puper_h_03">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="-23" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.4285717" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slope="103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="-23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="23.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="24.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_hyper_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="248" slope="-127" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="144" slope="-127" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="144" slope="122" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="243" slope="122" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="243" slope="-130" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="113" slope="-130" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="113" slope="19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="248" slope="19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="248" slope="-19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="113" slope="-19.2857151" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slope="7" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="7" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="166" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="166" slope="72" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="238" slope="72" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="238" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="238" slope="4.571429" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="68" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="68" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="68" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="136" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="136" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="99" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="99" slope="81" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="180" slope="81" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="180" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="68" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="68" slope="16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="180" slope="16" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="249" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="249" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="249" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="176" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="176" slope="86" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="86" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="249" slope="14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="249" slope="-14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-14.8571424" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="223" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="223" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="223" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="235" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="235" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="208" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="208" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="247" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="247" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="223" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="223" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="247" slope="3.42857146" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="97" slope="94" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="193" slope="94" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="193" slope="-61" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="130" slope="-61" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="130" slope="64" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="194" slope="64" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="194" slope="-13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="97" slope="-13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="97" slope="13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="194" slope="13.8571424" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_hyper_h_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-53" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="202" slope="-53" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="202" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="251" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="251" slope="-103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="-103" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="-15.2857141" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="231" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="231" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="231" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="244" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="244" slope="-46" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="-46" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="231" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="231" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="3.42857146" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="85" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="151" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="151" slope="-27" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="124" slope="-27" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="124" slope="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="181" slope="57" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="181" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="85" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="85" slope="13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="181" slope="13.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_super_02">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slope="-173" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="81" slope="-173" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="81" slope="167" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="167" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="248" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="90" slope="-158" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="90" slope="23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="-23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="90" slope="-23.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="90" slope="-22.8571434" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="-34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="181" slope="-34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="181" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="230" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="230" slope="-2.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="-2.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="2.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="230" slope="2.57142854" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="230" slope="3.142857" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="66" slope="147" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="213" slope="147" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="213" slope="-108" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="105" slope="-108" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="105" slope="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="-16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="66" slope="-16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="66" slope="16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="16.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="9.857142" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-181" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="74" slope="-181" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="74" slope="176" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="176" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="229" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="229" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="229" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="-36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="206" slope="-36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="206" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="242" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="242" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="229" slope="-1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="229" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="242" slope="1.85714281" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="242" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slope="109" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="109" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="211" slope="-54" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="157" slope="-54" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="157" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="188" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="188" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="-12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="188" slope="12.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="188" slope="9" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_puper_h_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="13.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="13.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="-13.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-13.1428576" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.4285717" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slope="-2" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="-2" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="-6.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="-6.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="6.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="6.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slope="116" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="116" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="-25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="24.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_puper_h_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="250" slope="-24" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="-24" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="227" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="20" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="247" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="-97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="150" slope="14.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="14.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="250" slope="-14.4285717" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="150" slope="-14.4285717" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="202" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="191" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="19" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="210" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="31" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="241" slope="-5.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="-5.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="202" slope="5.857143" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="241" slope="5.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="93" slope="113" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="113" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="196" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="192" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-24.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="-24.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="93" slope="24.5714283" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="24.5714283" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_monbo_02">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="254" slope="-63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="-63" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="181" slope="59" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="59" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-145" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="105" slope="-145" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="105" slope="21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="254" slope="-21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="105" slope="-21.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="105" slope="-20.8571434" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="209" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="209" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="209" slope="-65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="180" slope="-65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="180" slope="28" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="172" slope="28" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="172" slope="65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="237" slope="65" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="237" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="209" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="209" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="237" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="237" slope="3.857143" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="75" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="124" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="124" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="108" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="108" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="175" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="75" slope="-14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="75" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slope="14.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="175" slope="11.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="-110" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-110" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-15.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="226" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="226" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="226" slope="-29" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="-29" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="222" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="205" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="205" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="55" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="226" slope="-4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="226" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="4.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="4" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="102" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="168" slope="58" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="168" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="125" slope="-15" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="125" slope="34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="34" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="179" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="-11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="102" slope="11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="11" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="179" slope="4.714286" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_hyper_02">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="248" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="248" slope="-127" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="144" slope="-127" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="144" slope="122" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="243" slope="122" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="243" slope="-130" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="113" slope="-130" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="113" slope="19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="248" slope="19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="248" slope="-19.2857151" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="113" slope="-19.2857151" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="206" slope="7" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="7" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="215" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="166" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="166" slope="72" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="238" slope="72" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="238" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="206" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="238" slope="4.571429" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="68" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="68" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="68" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="136" slope="43" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="136" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="99" slope="-12" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="99" slope="81" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="180" slope="81" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="180" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="68" slope="-16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="68" slope="16" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="180" slope="16" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="249" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="249" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="249" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="176" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="176" slope="86" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="253" slope="86" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="253" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="-105" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="145" slope="14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="249" slope="14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="249" slope="-14.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="145" slope="-14.8571424" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="223" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="223" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="223" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="235" slope="32" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="235" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="194" slope="-47" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="194" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="247" slope="39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="247" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="223" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="223" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="247" slope="3.42857146" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="97" slope="94" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="193" slope="94" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="193" slope="-61" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="127" slope="-61" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="127" slope="64" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="194" slope="64" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="194" slope="-13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="97" slope="-13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="97" slope="13.8571424" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="194" slope="13.8571424" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_hyper_h_02">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="0" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="202" slope="-102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="202" slope="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="251" slope="102" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="251" slope="-107" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="-107" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="148" slope="15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-15.2857141" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="148" slope="-15.2857141" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="231" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="231" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="231" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="244" slope="13" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="244" slope="-38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="-38" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="49" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="231" slope="-3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="231" slope="3.42857146" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="3.42857146" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="85" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="151" slope="67" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="151" slope="-24" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="124" slope="-24" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="124" slope="53" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="181" slope="53" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="181" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="85" slope="-13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="85" slope="13.7142859" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="181" slope="13.7142859" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+      <animContent name="P_bg_01">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="37" slope="-218" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="37" slope="203" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="240" slope="203" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="240" slope="-236" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="4" slope="-236" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="4" slope="35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="4" slope="-35.8571434" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="4" slope="-25.1" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="178" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="178" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="178" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="183" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="183" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="28" slope="-9" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="28" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="210" slope="36" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="210" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="178" slope="-4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="178" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="210" slope="4.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="210" slope="3.2" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="74" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="74" slope="168" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="168" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="242" slope="-242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slope="-242" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="0" slope="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="97" slope="97" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="97" slope="-3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="74" slope="-3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="74" slope="3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="97" slope="3.28571439" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="97" slope="2.3" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="-66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="189" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="66" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="255" slope="-39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="-39" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="-5.571429" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="-3.9" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="233" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="233" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="233" slope="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slope="22" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="255" slope="-5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="-5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="250" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="255" slope="-3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="233" slope="-3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="233" slope="3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="3.142857" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="255" slope="2.2" slopeType="Linear" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="WhiteColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="96" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="96" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="250" slope="154" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="31" value="250" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="-52" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="32" value="198" slope="18" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="18" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="33" value="216" slope="-17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="-17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="96" slope="17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="17.1428566" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="47" value="216" slope="12" slopeType="Linear" />
+        </animMaterialColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="600" convertStartFrame="0" convertEndFrame="60">
+      <animContent name="N_fade_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-25.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slope="42.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="16" value="255" slope="42.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="16" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="25.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_icon_poke_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="50" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="50" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="53" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="53" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="54" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="54" value="0" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="58" value="255" slope="63.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="58" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_poke_inout_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slope="-25.5" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="10" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="16" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="16" value="0" slope="28.333334" slopeType="Smooth" />
+          <key xsi:type="HermiteU8" frame="19" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="600" convertStartFrame="0" convertEndFrame="60">
+      <animContent name="P_bg_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="box_mask_00" />
+          <refRes name="box_mask_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="30" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="31" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="32" value="0" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="600" convertStartFrame="0" convertEndFrame="60">
+      <animContent name="N_mask_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="16" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="30" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="33" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="34" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="40" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="41" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="47" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_bg_02">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="30" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="31" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="32" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_bg_03">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="30" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="31" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="32" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="33" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

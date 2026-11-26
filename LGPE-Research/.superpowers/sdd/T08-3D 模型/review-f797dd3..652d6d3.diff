@@ -1,0 +1,1409 @@
+# Review package: f797dd3b197406df72382b7847098e2a71fa004d..652d6d3
+
+## Commits
+652d6d3 Trace GFBCol token caller candidate
+
+## Files changed
+ .gitattributes                                   |   1 +
+ docs/research/STATUS.md                          |  36 +++++
+ docs/research/T08-notes.md                       |  96 +++++++++++-
+ manifests/gfbcol-main-token-crossref.json        |  74 +++++++--
+ scripts/Crossref-Gfbcol-Main.ps1                 |  45 ++++++
+ scripts/ghidra/InspectGfbcolTokenHandler.java    |  30 +++-
+ scripts/ghidra/InspectGfbcolTokenOwner.java      | 164 ++++++++++++++++++++
+ scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1 |  11 +-
+ scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1   |  69 +++++++++
+ src/lgpe_research/cli.py                         |   8 +-
+ src/lgpe_research/gfbcol_main_crossref.py        | 182 ++++++++++++++++++++++-
+ tasks/INDEX.md                                   |   2 +-
+ tests/test_gfbcol_main_crossref.py               |  67 +++++++++
+ tests/test_gfbcol_main_crossref_cli.py           |   7 +
+ 14 files changed, 771 insertions(+), 21 deletions(-)
+
+## Diff
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..c7c40d5
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1 @@
++manifests/gfbcol-main-token-crossref.json whitespace=cr-at-eol
+diff --git a/docs/research/STATUS.md b/docs/research/STATUS.md
+index 2979270..8114be4 100644
+--- a/docs/research/STATUS.md
++++ b/docs/research/STATUS.md
+@@ -1877,10 +1877,46 @@ unique IDs, all numerically joined to slots 0–226; all five commands in actual
+ The callback pass added five missing function boundaries to the local Ghidra
+ project database. Both passes verified the original `0/main` hash before and
+ after; no original game file or decoded asset output changed. Runtime dispatch,
+ the full handler-table length, the `br x16` destination, and command/gameplay
+ semantics remain UNKNOWN. T09/T10 remain `IN_PROGRESS`.
+ 
+ Focused tests for the new dispatch manifest parser passed **4/4**. Native
+ Windows full regression passed **244 tests: 243 passed, 1 expected
+ symlink-permission skip** via `pwsh.exe -NoProfile -File
+ scripts/Test-Project.ps1`.
++
++## T08 exact-main GFBCol caller-candidate refinement — 2026-10-31
++
++The SHA-guarded, read-only Ghidra 12.2 probe temporarily bounded the code at
++`main+0x24f460..main+0x24f693` (564 bytes / 141 instructions). All six direct
++`main+0xb660` calls pass the exact `col_wall`, `col_water`, `col_jump`,
++`col_sky`, `col_sekichiku`, and `col_safety` literals. Decompilation records
++the returned value at `+0x58`, a comparison with opaque `param_5`, per-token
++counter writes at `+0x30..+0x44`, fallback `+0x48`, and total `+0x4c`. The
++candidate has one incoming reference: a pointer stored in writable,
++non-executable `.data` at `main+0x15437d8`; no instruction caller was found.
++This is candidate-boundary and data-flow evidence only. GFBCol field names,
++types, loader association, runtime reachability, and collision semantics stay
++UNKNOWN; all **698** GFBCol sources remain `SCANNED`, with **0 DECODED, 0
++FAILED, 698 UNKNOWN**.
++
++The refreshed report
++`manifests/gfbcol-main-token-crossref.json` is **114,163 bytes**, SHA-256
++`d205886df933872443cc34e67d3caefb02dfe2ea25d075ffb1648c9253523d7c`. Its
++`main.path` is relative to `game_root`; it contains 2,951 CRLF lines and no
++bare LF, making output stable between Windows and WSL. The report preserves
++the exact-main hash, the 698 per-source hashes, all 807 candidate observations,
++the 6 token callsites, the temporary-boundary trace, and the script/wrapper/log
++hashes. The original `main` hash remains
++`1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8`.
++
++Native Windows verification after the changes passed **9/9 focused tests** and
++the full suite **246 tests: 245 passed, 1 expected symlink-permission skip**.
++`verify-collisions` rehashed and verified **698/698** root and nested outputs,
++including **2,219** child-table envelopes, with **0 failed/pending/errors**.
++The latest coverage refresh remains **27,824 SCANNED; 21,839 DECODED; 0
++FAILED; 5,957 UNKNOWN; 0 PENDING; 28 UNSUPPORTED; 78,498 registered outputs**.
++An attempted WSL collision verification stalled in `p9_client_rpc` on the
++`/mnt/x` mount; the native PowerShell verification completed successfully.
++Reproduction and evidence hashes are in `docs/research/T08-notes.md` and the
++manifest. No source or decoded output was changed.
+diff --git a/docs/research/T08-notes.md b/docs/research/T08-notes.md
+index b981b9c..0da69b0 100644
+--- a/docs/research/T08-notes.md
++++ b/docs/research/T08-notes.md
+@@ -894,21 +894,21 @@ Reproduction from the project root in Windows PowerShell 7:
+     pwsh -NoProfile -File scripts/Decode-Collisions.ps1 -Limit 5 -Execute
+     pwsh -NoProfile -File scripts/Decode-Collisions.ps1 -Limit 20 -Execute
+     pwsh -NoProfile -File scripts/Decode-Collisions.ps1 -Limit 0 -Execute
+     pwsh -NoProfile -File scripts/Verify-Collisions.ps1
+     pwsh -NoProfile -File scripts/Refresh-Coverage.ps1
+     pwsh -NoProfile -File scripts/Test-Project.ps1
+ 
+ The project wrappers use the native Windows temporary uv environment when UV_PROJECT_ENVIRONMENT is set to %TEMP%\lgpe-research-win-venv. The full suite also requires the local Git directory on PATH and .EXE/.CMD in PATHEXT. WSL /mnt/x path resolution stalled in an earlier attempt; all results above come from the native Windows PowerShell path.
+ ## Exact-build main token cross-reference for GFBCol candidates (2026-10-31)
+ 
+-A fresh uv run lgpe crossref-gfbcol-main run joined the raw-byte-verified token references in the exact local Pikachu 1.0.2 ExeFS main with a new read and hash check of all GFBCol files. It revalidated main SHA-256 1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8 before and after the scan and confirmed image base 0x7100000000. The GFBCol scan rehashed **698/698** inventory sources, with **0 failures**, and examined **807** child tables; all **807** slot-0 string-shape candidates passed the existing strict UTF-8/length/NUL/bounds checks. It observed **45** distinct candidate strings.
++A fresh pwsh -NoProfile -File scripts/Crossref-Gfbcol-Main.ps1 run joined the raw-byte-verified token references in the exact local Pikachu 1.0.2 ExeFS main with a new read and hash check of all GFBCol files. It revalidated main SHA-256 1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8 before and after the scan and confirmed image base 0x7100000000. The GFBCol scan rehashed **698/698** inventory sources, with **0 failures**, and examined **807** child tables; all **807** slot-0 string-shape candidates passed the existing strict UTF-8/length/NUL/bounds checks. It observed **45** distinct candidate strings.
+ 
+ The main binary has six exact ASCII token literals whose adjacent ADRP/ADD/ADD/BL sequences target main+0xb660. The saved Ghidra 12.2 read-only trace confirms each direct BL reference; the handler has **225** incoming references overall, and the six token callsites have no containing function in the saved FunctionManager listing.
+ 
+ | Main token | String address | BL address | Matching slot-0 candidate observations |
+ |---|---:|---:|---:|
+ | col_wall | main+0xf03218 | main+0x24f48c | 183 |
+ | col_water | main+0xf03221 | main+0x24f4e4 | 0 |
+ | col_jump | main+0xf0322b | main+0x24f534 | 2 |
+ | col_sky | main+0xf03234 | main+0x24f584 | 0 |
+ | col_sekichiku | main+0xf0323c | main+0x24f5d4 | 1 |
+@@ -916,15 +916,105 @@ The main binary has six exact ASCII token literals whose adjacent ADRP/ADD/ADD/B
+ 
+ Thus **4/6** main token values exactly equal slot-0 candidate text, for **188** child-table observations. This is a literal value cross-reference only. The two absent values are absent from the 807 candidates in the full local corpus; that does not prove they cannot occur in another input or runtime-generated value.
+ 
+ The Ghidra decompilation at main+0xb660 takes an output pointer and a byte-string pointer. Its empty-string branch initializes a global/TLS-backed object and contains a NUL-terminated loop using constants 0xcbf29ce484222645 and 0x100000001b3 over an indirect global string; the non-empty branch delegates the supplied string to main+0x1e080. This does **not** establish that all arguments are hashed, that the helper is a GFBCol parser, or that these calls load the local files. The decompiler text hash is retained in the manifest. No GFBCol field name/type or runtime meaning was assigned.
+ 
+ The structured report is manifests/gfbcol-main-token-crossref.json (112,184 bytes; SHA-256 07721785de914eb08e8cdebf84e7c51a68a4597f83c8bbc26da2c3737092df7e). It records per-source candidate hashes/offsets, exact main instructions and segment hashes, the Ghidra 12.2 script/wrapper/log hashes, and the cross-reference limits. GFBCol remains **SCANNED 698; DECODED 0; FAILED 0; UNKNOWN 698**. Source-wide coverage remains **SCANNED 27,824; DECODED 21,839; FAILED 0; UNKNOWN 5,957; PENDING 0; UNSUPPORTED 28; 78,498 outputs**.
+ 
+ The full native Windows suite ran **233 tests: 232 passed and one expected symlink-permission skip**. Reproduce from the project root after the saved Ghidra trace is available:
+ 
+     pwsh -NoProfile -File scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
+-    uv run lgpe crossref-gfbcol-main
++    pwsh -NoProfile -File scripts/Crossref-Gfbcol-Main.ps1
+     uv run lgpe verify-collisions
+     uv run lgpe coverage
+ 
+-Set UV_PROJECT_ENVIRONMENT to %TEMP%\lgpe-research-win-venv for the native Windows uv environment. The report generator reads the original sources only and writes its JSON under manifests.
++Set UV_PROJECT_ENVIRONMENT to %TEMP%\lgpe-research-win-venv for the native Windows uv environment. The report generator reads the original sources only and writes its JSON under manifests.
++
++## Exact-build `col_*` caller candidate follow-up — 2026-10-31
++
++The updated read-only Ghidra 12.2 trace found the six previously ownerless
++`main+0xb660` calls inside one **temporary candidate boundary** beginning at
++`main+0x24f460`. The boundary was derived from the local `sub sp,sp,#0x40`
++prologue and Ghidra's control-flow traversal to the local `ret`; it spans 564
++bytes / 141 instructions through `main+0x24f693`. The six direct calls at
++`main+0x24f48c`, `+0x24f4e4`, `+0x24f534`, `+0x24f584`, `+0x24f5d4`, and
++`+0x24f624` pass the exact literals `col_wall`, `col_water`, `col_jump`,
++`col_sky`, `col_sekichiku`, and `col_safety` in that order. For each call, the
++decompilation reads a returned object's value through offset `+0x58`, compares
++that value with the function's opaque fifth argument, and increments a
++corresponding integer at offsets `+0x30`, `+0x34`, `+0x38`, `+0x3c`, `+0x40`,
++or `+0x44`. The fallback path increments `+0x48`; the function increments
++`+0x4c` on exit. These are raw code offsets and counter relationships, not
++named GFBCol fields or collision semantics. The calls also use an indirect
++method through object offsets `+0x48/+0x18`; its target is unresolved.
++
++The saved FunctionManager had no function at this entry before the probe. Its
++only incoming reference in the saved model is a DATA reference from
++`main+0x15437d8` in writable, non-executable `.data`, containing the pointer
++`0x710024f460`. It has no code instruction owner. The analysis therefore
++establishes a static data pointer and a local call/comparison chain, not a
++direct caller, runtime dispatch, or file load. The Ghidra script creates the
++boundary only for a `-readOnly` pass, verifies all six calls and the original
++`main` hash before/after, and Ghidra reports discarding `/main` changes at exit.
++
++`pwsh -NoProfile -File scripts/Crossref-Gfbcol-Main.ps1` now rehashes the 698 actual GFBCol sources,
++revalidates the exact-main token trace, and records this bounded caller
++candidate in `manifests/gfbcol-main-token-crossref.json`. The structured trace
++records the script/wrapper/log hashes, candidate range, six literals and
++counter offsets, the single incoming DATA reference, and `semantics=UNKNOWN`.
++The refreshed report still contains **807** slot-0 string-shape candidates;
++the **4/6** exact token-value matches remain **188** occurrences. GFBCol status
++remains **698 SCANNED / 0 DECODED / 0 FAILED / 698 UNKNOWN**. Global asset
++coverage is unchanged at **27,824 SCANNED / 21,839 DECODED / 0 FAILED / 5,957
++UNKNOWN / 0 PENDING / 28 UNSUPPORTED / 78,498 outputs**. No source or decoded
++collision output changed.
++
++Reproduce the local exact-build passes and report with:
++
++```powershell
++pwsh -NoProfile -File scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
++pwsh -NoProfile -File scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1
++pwsh -NoProfile -File scripts/Crossref-Gfbcol-Main.ps1
++uv run lgpe verify-collisions
++```
++
++The focused GFBCol cross-reference tests and the full suite results are
++recorded in `docs/research/STATUS.md`; GFBCol field names, field types, runtime
++use, and collision behavior remain unresolved.
++
++## Stable report and caller-boundary regression (2026-10-31)
++
++After adding the temporary caller-boundary trace, the report writer was made
++host-stable: `main.path` is recorded relative to `game_root`, and JSON output
++uses CRLF on both Windows and WSL. This avoids embedding a host-specific
++absolute path and prevents line-ending-only manifest churn. The regenerated
++`manifests/gfbcol-main-token-crossref.json` is **114,163 bytes**, SHA-256
++`d205886df933872443cc34e67d3caefb02dfe2ea25d075ffb1648c9253523d7c`; its
++2,951 newline bytes are all CRLF. The report includes six token calls within
++the temporary boundary `main+0x24f460..main+0x24f693`, exactly one incoming
++DATA reference from writable non-executable `.data` at `main+0x15437d8`, and
++the decompiled raw offsets documented above. The probe is read-only and the
++exact original `main` hash remained unchanged. No field or runtime semantics
++are assigned.
++
++Verification after this change: focused unit/CLI tests **9/9 passed**; native
++Windows `scripts/Test-Project.ps1` **246 total, 245 passed, 1 expected
++symlink-permission skip**; native `verify-collisions` checked **698/698**
++outputs and **2,219** child-table envelopes with no failures or errors. The
++coverage report remains **27,824 SCANNED; 21,839 DECODED; 0 FAILED; 5,957
++UNKNOWN; 0 PENDING; 28 UNSUPPORTED; 78,498 outputs**. Reproduce with:
++
++```powershell
++pwsh -NoProfile -File scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
++pwsh -NoProfile -File scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1
++pwsh -NoProfile -File scripts/Crossref-Gfbcol-Main.ps1
++pwsh -NoProfile -File scripts/Verify-Collisions.ps1
++pwsh -NoProfile -File scripts/Refresh-Coverage.ps1
++pwsh -NoProfile -File scripts/Test-Project.ps1
++```
++
++For the last three commands, set `UV_PROJECT_ENVIRONMENT` to
++`%TEMP%\lgpe-research-win-venv`; the full suite also needs the installed Git
++directory on `PATH` and `.EXE;.CMD` in `PATHEXT`. WSL verification on the
++`/mnt/x` mount stalled in `p9_client_rpc`; the native PowerShell verification
++completed successfully. GFBCol still reports **698 SCANNED / 0 DECODED / 0
++FAILED / 698 UNKNOWN**.
+diff --git a/manifests/gfbcol-main-token-crossref.json b/manifests/gfbcol-main-token-crossref.json
+index 6bd5d7d..7f6cfa6 100644
+--- a/manifests/gfbcol-main-token-crossref.json
++++ b/manifests/gfbcol-main-token-crossref.json
+@@ -1,20 +1,20 @@
+ {
+   "schema": "lgpe-gfbcol-main-token-crossref-v1",
+   "source_version": "Pokemon Let's Go Pikachu 1.0.2",
+   "analysis_status": "EXACT_LITERAL_VALUE_CROSS_REFERENCE",
+   "schema_status": "UNKNOWN",
+   "field_names_assigned": false,
+   "field_types_assigned": false,
+   "interpretation_limit": "Exact main string bytes and exact GFBCol candidate text values are joined by literal UTF-8 equality. This does not prove a runtime load, field name, field type, token role, or collision semantics.",
+   "main": {
+-    "path": "\\\\192.168.1.5\\j\\ROMS\\Nintendo Switch\\Pokemon\\Pokemon Lets Go Pikachu\\1.0.2\\2b7730a9e56498bbafac2002d4908c6b_NCA\\0\\main",
++    "path": "1.0.2/2b7730a9e56498bbafac2002d4908c6b_NCA/0/main",
+     "bytes": 13018038,
+     "sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+     "image_base": "0x7100000000",
+     "segments": [
+       {
+         "name": "text",
+         "file_offset": 257,
+         "memory_offset": 0,
+         "bytes": 13839272,
+         "stored_bytes": 7251282,
+@@ -133,21 +133,22 @@
+         "bl_target_address": "0x710000b660",
+         "instruction_words": [
+           "0x900065a1",
+           "0x91092821",
+           "0x910023e0",
+           "0x97f6f00f"
+         ],
+         "raw_instruction_bytes": "a1 65 00 90 21 28 09 91 e0 23 00 91 0f f0 f6 97",
+         "status": "ADDRESS_BYTES_MATCH"
+       }
+-    ]
++    ],
++    "path_base": "game_root"
+   },
+   "inventory": {
+     "path": "manifests/files.csv",
+     "sha256": "975a84e096d3423c96a8ab3c202822e8f570e77136634dcdf3fdfc8a4d3c066a",
+     "gfbcol_sources": 698
+   },
+   "gfbcol_probe": {
+     "sources_read": 698,
+     "source_failures": 0,
+     "slot0_child_table_count": 807,
+@@ -2848,48 +2849,103 @@
+   ],
+   "source_integrity": {
+     "main_sha256_before": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+     "main_sha256_after": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+     "main_unchanged": true
+   },
+   "ghidra_trace": {
+     "version": "12.2",
+     "program": "Let's Go Pikachu 1.0.2 main",
+     "trace_script": "scripts/ghidra/InspectGfbcolTokenHandler.java",
+-    "trace_script_sha256": "459ef6c6492938582f22b30c8390cf482f42108311815e283c59067a7049061d",
++    "trace_script_sha256": "c2c9c8a3c98b824dca1d0080afd783aa1fd48dd52ccb8309f5594a83b5d86a49",
+     "trace_wrapper": "scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1",
+-    "trace_wrapper_sha256": "512d270796c2e9289186a2fd24aa45aca2484a02f0a471f134c096aaee48e6a1",
+-    "script_log": "logs/ghidra-gfbcol-token-handler-v1-script.log",
+-    "script_log_sha256": "e323a688d629d846a1a8574ffe1adedbaf32618860332afe5e5490216500c20f",
+-    "decompiler_log": "logs/ghidra-gfbcol-token-handler-v1.stdout.log",
+-    "decompiler_log_sha256": "0bfaf934a3204303aecbfdff60b57ec7b84966985323aabc8117e83ca61785c8",
++    "trace_wrapper_sha256": "720e82a8b57e2241eb062e2c04cfc90bfb31b5f0b35e1ebb1f5d5fce069ea1f3",
++    "script_log": "logs/ghidra-gfbcol-token-handler-v2-script.log",
++    "script_log_sha256": "e00720ea874609cdf0759f9f04e3fea78d6fef482210de83f86abbfa376755a1",
++    "decompiler_log": "logs/ghidra-gfbcol-token-handler-v2.stdout.log",
++    "decompiler_log_sha256": "7992a1d877b81c78031eb8f0adf8ad8ebb7707378b07c2bd9eeec79e8744b4f1",
+     "summary": {
+       "main_sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8",
+       "handler": "main+0xb660",
+       "incoming_references": 225,
+       "expected_call_sites": 6,
+       "verified_callsite_offsets": [
+         "24f48c",
+         "24f4e4",
+         "24f534",
+         "24f584",
+         "24f5d4",
+         "24f624"
+       ],
+       "instructions": 102,
+       "direct_calls": 5,
++      "context_instructions": 101,
++      "read_only": true,
++      "source_hash_unchanged": true,
++      "semantics": "UNKNOWN"
++    }
++  },
++  "ghidra_owner_candidate_trace": {
++    "version": "12.2",
++    "program": "Let's Go Pikachu 1.0.2 main",
++    "trace_script": "scripts/ghidra/InspectGfbcolTokenOwner.java",
++    "trace_script_sha256": "a74a7cfd6d8b1b8be1a0ff831590bae984d88a1990435f29d6fbff47ceee6a61",
++    "trace_wrapper": "scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1",
++    "trace_wrapper_sha256": "5cd3d7a73595ea47ae40823fdf6ab2afe5d47c7541f76e5cfa93f4e3b3fcf01c",
++    "script_log": "logs/ghidra-gfbcol-token-owner-v1-script.log",
++    "script_log_sha256": "f75d58f488f29c15fdab743f431e1ac18db4d865f0f7c1d133b4d6e7bba5af7a",
++    "decompiler_log": "logs/ghidra-gfbcol-token-owner-v1.stdout.log",
++    "decompiler_log_sha256": "44b2692452f0612efb76db319b8fdcf1b470427d137e773806829afc5f7616fd",
++    "summary": {
++      "entry": "main+0x24f460",
++      "function_bytes": 564,
++      "function_min": "main+0x24f460",
++      "function_max": "main+0x24f693",
++      "instruction_count": 141,
++      "call_sites": 6,
++      "tokens": [
++        "col_wall",
++        "col_water",
++        "col_jump",
++        "col_sky",
++        "col_sekichiku",
++        "col_safety"
++      ],
++      "entry_xrefs": 1,
++      "entry_data_cell": "main+0x15437d8",
++      "entry_data_value": "0x710024f460",
++      "entry_data_block": ".data",
++      "entry_data_writable": true,
++      "entry_data_executable": false,
++      "comparison_expression": "lVar3 == param_5",
++      "object_value_offset": "0x58",
++      "virtual_dispatch_offsets": [
++        "0x48",
++        "0x18"
++      ],
++      "token_counter_offsets": {
++        "col_wall": "0x30",
++        "col_water": "0x34",
++        "col_jump": "0x38",
++        "col_sky": "0x3c",
++        "col_sekichiku": "0x40",
++        "col_safety": "0x44"
++      },
++      "fallback_counter_offset": "0x48",
++      "total_counter_offset": "0x4c",
++      "temporary_boundary": true,
+       "read_only": true,
+       "source_hash_unchanged": true,
+       "semantics": "UNKNOWN"
+     }
+   },
+   "tool_provenance": {
+     "main_byte_scanner": {
+       "path": "scripts/research/check_gfbcol_main_references.py",
+       "sha256": "29dc5cd6f62f2e18f57b094d5e455435af1055348d307ac053923a27f085d015"
+     },
+     "gfbcol_slot0_probe": {
+       "path": "scripts/research/probe_gfbcol_slot0_strings.py",
+       "sha256": "5c540bd1d9d2e4052f9ed040f4dd99a10a7d9c8023d46531a0b8962c65eadf0f"
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/scripts/Crossref-Gfbcol-Main.ps1 b/scripts/Crossref-Gfbcol-Main.ps1
+new file mode 100644
+index 0000000..ca5a1d6
+--- /dev/null
++++ b/scripts/Crossref-Gfbcol-Main.ps1
+@@ -0,0 +1,45 @@
++param(
++    [string]$ProjectRoot = (Join-Path $PSScriptRoot '..')
++)
++
++$ErrorActionPreference = 'Stop'
++$ProjectRoot = (Resolve-Path -LiteralPath $ProjectRoot).Path
++
++$UvCommand = Get-Command uv -ErrorAction SilentlyContinue
++if ($UvCommand) {
++    $Uv = $UvCommand.Source
++} else {
++    $Uv = 'D:\SDK\uv-x86_64-pc-windows-msvc\uv.exe'
++    if (-not (Test-Path -LiteralPath $Uv -PathType Leaf)) {
++        throw 'uv was not found on PATH or at the configured local SDK path.'
++    }
++}
++
++if ([string]::IsNullOrWhiteSpace($env:UV_PROJECT_ENVIRONMENT)) {
++    $env:UV_PROJECT_ENVIRONMENT = Join-Path $env:TEMP 'lgpe-research-win-venv'
++}
++
++$Arguments = [System.Collections.Generic.List[string]]::new()
++foreach ($Argument in @(
++    'run', '--project', $ProjectRoot, 'lgpe', 'crossref-gfbcol-main'
++)) {
++    $Arguments.Add($Argument)
++}
++
++$StartInfo = [System.Diagnostics.ProcessStartInfo]::new()
++$StartInfo.FileName = $Uv
++$StartInfo.WorkingDirectory = $ProjectRoot
++$StartInfo.UseShellExecute = $false
++$StartInfo.RedirectStandardOutput = $true
++$StartInfo.RedirectStandardError = $true
++foreach ($Argument in $Arguments) {
++    [void]$StartInfo.ArgumentList.Add($Argument)
++}
++
++$Process = [System.Diagnostics.Process]::Start($StartInfo)
++$StdoutTask = $Process.StandardOutput.ReadToEndAsync()
++$StderrTask = $Process.StandardError.ReadToEndAsync()
++$Process.WaitForExit()
++[Console]::Out.Write($StdoutTask.GetAwaiter().GetResult())
++[Console]::Error.Write($StderrTask.GetAwaiter().GetResult())
++exit $Process.ExitCode
+diff --git a/scripts/ghidra/InspectGfbcolTokenHandler.java b/scripts/ghidra/InspectGfbcolTokenHandler.java
+index 79803b1..cf90188 100644
+--- a/scripts/ghidra/InspectGfbcolTokenHandler.java
++++ b/scripts/ghidra/InspectGfbcolTokenHandler.java
+@@ -62,24 +62,51 @@ public class InspectGfbcolTokenHandler extends GhidraScript {
+             Function caller = currentProgram.getFunctionManager().getFunctionContaining(from);
+             for (int i = 0; i < CALL_SITES.length; i++) {
+                 if (from.getOffset() == CALL_SITES[i]) expectedSitesSeen[i] = true;
+             }
+             println("TARGET_XREF\tfrom=" + relative(from) + "\ttype="
+                 + reference.getReferenceType() + "\towner="
+                 + (caller == null ? "NONE" : relative(caller.getEntryPoint()))
+                 + "\tinstruction=" + (instruction == null ? "NONE" : instruction.toString()));
+         }
+         int expectedSites = 0;
++        int contextInstructions = 0;
+         for (int i = 0; i < CALL_SITES.length; i++) {
+             if (expectedSitesSeen[i]) expectedSites++;
+             println("EXPECTED_CALLSITE\t" + relative(toAddr(CALL_SITES[i]))
+                 + "\tghidra_reference=" + expectedSitesSeen[i]);
++
++            Address site = toAddr(CALL_SITES[i]);
++            Address begin = site.subtract(0x30);
++            Address end = site.add(0x10);
++            Instruction instruction = listing.getInstructionAt(begin);
++            if (instruction == null) instruction = listing.getInstructionAfter(begin);
++            while (instruction != null && instruction.getAddress().compareTo(end) <= 0) {
++                Address instructionAddress = instruction.getAddress();
++                Function owner = currentProgram.getFunctionManager()
++                    .getFunctionContaining(instructionAddress);
++                println("CALL_CONTEXT\tcallsite=" + relative(site)
++                    + "\taddress=" + relative(instructionAddress)
++                    + "\towner=" + (owner == null ? "NONE" : relative(owner.getEntryPoint()))
++                    + "\tflow=" + instruction.getFlowType()
++                    + "\tassembly=" + clean(instruction.toString()));
++                for (Reference reference : instruction.getReferencesFrom()) {
++                    if (reference.getReferenceType().isFlow()) {
++                        println("CALL_CONTEXT_FLOW\tcallsite=" + relative(site)
++                            + "\tfrom=" + relative(instructionAddress)
++                            + "\tto=" + relative(reference.getToAddress())
++                            + "\ttype=" + reference.getReferenceType());
++                    }
++                }
++                contextInstructions++;
++                instruction = listing.getInstructionAfter(instructionAddress);
++            }
+         }
+ 
+         InstructionIterator instructions = listing.getInstructions(function.getBody(), true);
+         int instructionCount = 0;
+         int directCallCount = 0;
+         while (instructions.hasNext()) {
+             Instruction instruction = instructions.next();
+             instructionCount++;
+             for (Reference reference : instruction.getReferencesFrom()) {
+                 if (reference.getReferenceType().isCall()) {
+@@ -115,21 +142,22 @@ public class InspectGfbcolTokenHandler extends GhidraScript {
+         println("DECOMPILED_END\t" + relative(function.getEntryPoint()));
+         decompiler.dispose();
+ 
+         String sourceHashAfter = sha256(executable.trim());
+         if (!sourceHashBefore.equals(sourceHashAfter)) {
+             throw new IllegalStateException("source main changed during read-only inspection");
+         }
+         println("SUMMARY\tmain_sha256=" + sourceHashAfter + "\thandler=" + relative(target)
+             + "\tincoming_references=" + incomingCount + "\texpected_call_sites="
+             + expectedSites + "/" + CALL_SITES.length + "\tinstructions=" + instructionCount
+-            + "\tdirect_calls=" + directCallCount
++            + "\tdirect_calls=" + directCallCount + "\tcontext_instructions="
++            + contextInstructions
+             + "\tsourceHashUnchanged=true\treadOnly=true\tsemantics=UNKNOWN");
+     }
+ 
+     private String relative(Address address) {
+         return "main+0x" + Long.toHexString(address.getOffset() - EXPECTED_BASE);
+     }
+ 
+     private String clean(String value) {
+         return value.replace("\\", "\\\\").replace("\r", "\\r")
+             .replace("\n", "\\n").replace("\t", "\\t");
+diff --git a/scripts/ghidra/InspectGfbcolTokenOwner.java b/scripts/ghidra/InspectGfbcolTokenOwner.java
+new file mode 100644
+index 0000000..d912c75
+--- /dev/null
++++ b/scripts/ghidra/InspectGfbcolTokenOwner.java
+@@ -0,0 +1,164 @@
++import ghidra.app.decompiler.DecompInterface;
++import ghidra.app.decompiler.DecompileResults;
++import ghidra.app.script.GhidraScript;
++import ghidra.framework.Application;
++import ghidra.program.model.address.Address;
++import ghidra.program.model.listing.Function;
++import ghidra.program.model.listing.Instruction;
++import ghidra.program.model.listing.InstructionIterator;
++import ghidra.program.model.mem.MemoryBlock;
++import ghidra.program.model.symbol.Reference;
++import ghidra.program.model.symbol.ReferenceIterator;
++import java.io.InputStream;
++import java.nio.file.Files;
++import java.nio.file.Paths;
++import java.security.MessageDigest;
++import java.util.HexFormat;
++import java.util.Locale;
++
++/** Temporary exact-build function-boundary probe for six col_* callsites. */
++public class InspectGfbcolTokenOwner extends GhidraScript {
++    private static final long BASE = 0x7100000000L;
++    private static final long ENTRY = BASE + 0x24f460L;
++    private static final long HANDLER = BASE + 0xb660L;
++    private static final String EXPECTED_SHA256 =
++        "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8";
++    private static final String EXPECTED_NCA_ID = "2b7730a9e56498bbafac2002d4908c6b";
++    private static final long[] CALLS = {
++        BASE + 0x24f48cL, BASE + 0x24f4e4L, BASE + 0x24f534L,
++        BASE + 0x24f584L, BASE + 0x24f5d4L, BASE + 0x24f624L
++    };
++
++    private String offset(Address address) {
++        return "main+0x" + Long.toHexString(address.getOffset() - BASE);
++    }
++
++    private String hash(String path) throws Exception {
++        MessageDigest digest = MessageDigest.getInstance("SHA-256");
++        try (InputStream input = Files.newInputStream(Paths.get(path))) {
++            byte[] buffer = new byte[1 << 20];
++            int count;
++            while ((count = input.read(buffer)) >= 0) digest.update(buffer, 0, count);
++        }
++        return HexFormat.of().formatHex(digest.digest());
++    }
++
++    private String clean(String value) {
++        return value.replace("\\", "\\\\").replace("\r", "\\r")
++            .replace("\n", "\\n").replace("\t", "\\t");
++    }
++
++    @Override
++    public void run() throws Exception {
++        if (!"12.2".equals(Application.getApplicationVersion())) {
++            throw new IllegalStateException("Ghidra 12.2 required: " + Application.getApplicationVersion());
++        }
++        String executable = currentProgram.getExecutablePath().trim();
++        String normalized = executable.replace('\\', '/').toLowerCase(Locale.ROOT);
++        if (currentProgram.getImageBase().getOffset() != BASE
++            || !normalized.contains(EXPECTED_NCA_ID)
++            || !normalized.endsWith("/0/main")) {
++            throw new IllegalStateException("not the pinned Let's Go Pikachu 1.0.2 main");
++        }
++        String before = hash(executable);
++        if (!EXPECTED_SHA256.equals(before)) {
++            throw new IllegalStateException("main SHA-256 mismatch: " + before);
++        }
++
++        Address entry = toAddr(ENTRY);
++        Function existing = currentProgram.getFunctionManager().getFunctionAt(entry);
++        if (existing != null) {
++            throw new IllegalStateException("expected undefined candidate entry, found " + existing.getName());
++        }
++        Instruction first = currentProgram.getListing().getInstructionAt(entry);
++        if (first == null || !"sub".equals(first.getMnemonicString())
++            || !first.toString().contains("sp,sp,#0x40")) {
++            throw new IllegalStateException("candidate entry prologue mismatch at " + offset(entry));
++        }
++
++        int entryXrefs = 0;
++        ReferenceIterator entryReferences = currentProgram.getReferenceManager().getReferencesTo(entry);
++        while (entryReferences.hasNext()) {
++            Reference reference = entryReferences.next();
++            Address from = reference.getFromAddress();
++            Function owner = currentProgram.getFunctionManager().getFunctionContaining(from);
++            Instruction instruction = currentProgram.getListing().getInstructionAt(from);
++            println("ENTRY_XREF\tfrom=" + offset(from) + "\ttype=" + reference.getReferenceType()
++                + "\towner=" + (owner == null ? "NONE" : offset(owner.getEntryPoint()))
++                + "\tinstruction=" + (instruction == null ? "NONE" : clean(instruction.toString())));
++            if ("DATA".equals(reference.getReferenceType().toString())) {
++                for (long delta = -0x20; delta <= 0x30; delta += 8) {
++                    Address cell = from.add(delta);
++                    MemoryBlock block = currentProgram.getMemory().getBlock(cell);
++                    if (block == null || !block.isInitialized()) continue;
++                    long value = getLong(cell);
++                    println("ENTRY_DATA_WINDOW\tcell=" + offset(cell)
++                        + "\tvalue=0x" + Long.toHexString(value)
++                        + "\tblock=" + block.getName()
++                        + "\twritable=" + block.isWrite()
++                        + "\texecutable=" + block.isExecute());
++                }
++            }
++            entryXrefs++;
++        }
++
++        Function candidate = createFunction(entry, null);
++        if (candidate == null) throw new IllegalStateException("could not create temporary candidate function");
++        int callSitesPresent = 0;
++        for (long value : CALLS) {
++            Address call = toAddr(value);
++            if (!candidate.getBody().contains(call)) {
++                throw new IllegalStateException("candidate boundary excludes observed callsite " + offset(call));
++            }
++            boolean reachesHandler = false;
++            for (Reference reference : currentProgram.getReferenceManager().getReferencesFrom(call)) {
++                if (reference.getReferenceType().isCall()
++                    && reference.getToAddress().getOffset() == HANDLER) reachesHandler = true;
++            }
++            if (!reachesHandler) throw new IllegalStateException("expected call edge missing at " + offset(call));
++            callSitesPresent++;
++        }
++
++        println("GUARD\tgame=Let's Go Pikachu 1.0.2\tmain_sha256=" + before
++            + "\tbase=0x7100000000\tread_only=true");
++        println("CANDIDATE_FUNCTION\tentry=" + offset(candidate.getEntryPoint())
++            + "\tbytes=" + candidate.getBody().getNumAddresses()
++            + "\tmin=" + offset(candidate.getBody().getMinAddress())
++            + "\tmax=" + offset(candidate.getBody().getMaxAddress())
++            + "\ttemporary_boundary=true");
++
++        InstructionIterator instructions = currentProgram.getListing()
++            .getInstructions(candidate.getBody(), true);
++        int instructionCount = 0;
++        while (instructions.hasNext()) {
++            Instruction instruction = instructions.next();
++            instructionCount++;
++            println("INS\t" + offset(instruction.getAddress()) + "\t"
++                + HexFormat.of().formatHex(instruction.getBytes()) + "\t"
++                + clean(instruction.toString()));
++        }
++
++        DecompInterface decompiler = new DecompInterface();
++        if (!decompiler.openProgram(currentProgram)) {
++            throw new IllegalStateException("decompiler could not open pinned program");
++        }
++        DecompileResults result = decompiler.decompileFunction(candidate, 180, monitor);
++        decompiler.dispose();
++        if (!result.decompileCompleted() || result.getDecompiledFunction() == null) {
++            throw new IllegalStateException("candidate decompile failed: " + result.getErrorMessage());
++        }
++        String code = result.getDecompiledFunction().getC();
++        println("DECOMPILED_BEGIN\t" + offset(entry) + "\tchars=" + code.length());
++        println(code);
++        println("DECOMPILED_END\t" + offset(entry));
++
++        String after = hash(executable);
++        if (!before.equals(after)) throw new IllegalStateException("source main changed during inspection");
++        println("SUMMARY\tmain_sha256=" + after + "\tentry=" + offset(entry)
++            + "\tcall_sites=" + callSitesPresent + "/" + CALLS.length
++            + "\tinstructions=" + instructionCount
++            + "\tentry_xrefs=" + entryXrefs
++            + "\ttemporary_boundary=true\tsourceHashUnchanged=true"
++            + "\treadOnly=true\tsemantics=UNKNOWN");
++    }
++}
+diff --git a/scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1 b/scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
+index 4d628ce..7d6e8f7 100644
+--- a/scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
++++ b/scripts/ghidra/Run-InspectGfbcolTokenHandler.ps1
+@@ -21,52 +21,55 @@ $Arguments = @(
+     '-Dsun.java2d.opengl=false', '-Djdk.tls.client.protocols=TLSv1.2,TLSv1.3',
+     '-Djava.awt.headless=true', '-Xshare:off', '-XX:+UseCompactObjectHeaders',
+     '--enable-native-access=ALL-UNNAMED', '--sun-misc-unsafe-memory-access=allow',
+     '-Dsun.java2d.d3d=false', '-Dlog4j.skipJansi=true', '-Xmx2G',
+     '-XX:ParallelGCThreads=2', '-XX:CICompilerCount=2',
+     '-cp', ('"{0}"' -f $UtilityJar),
+     'ghidra.Ghidra', 'ghidra.app.util.headless.AnalyzeHeadless',
+     'work\ghidra-main\project', 'LGPE102-main', '-process', 'main',
+     '-noanalysis', '-readOnly', '-scriptPath', 'scripts\ghidra',
+     '-postScript', 'InspectGfbcolTokenHandler.java',
+-    '-scriptlog', 'logs\ghidra-gfbcol-token-handler-v1-script.log',
+-    '-log', 'logs\ghidra-gfbcol-token-handler-v1-app.log'
++    '-scriptlog', 'logs\ghidra-gfbcol-token-handler-v2-script.log',
++    '-log', 'logs\ghidra-gfbcol-token-handler-v2-app.log'
+ )
+ $StartInfo = [System.Diagnostics.ProcessStartInfo]::new()
+ $StartInfo.FileName = $Java
+ $StartInfo.WorkingDirectory = $ProjectRoot
+ $StartInfo.Arguments = $Arguments -join ' '
+ $StartInfo.UseShellExecute = $false
+ $StartInfo.RedirectStandardOutput = $true
+ $StartInfo.RedirectStandardError = $true
+ $Process = [System.Diagnostics.Process]::Start($StartInfo)
+ $StdoutTask = $Process.StandardOutput.ReadToEndAsync()
+ $StderrTask = $Process.StandardError.ReadToEndAsync()
+ $Process.WaitForExit()
+ $Stdout = $StdoutTask.GetAwaiter().GetResult()
+ $Stderr = $StderrTask.GetAwaiter().GetResult()
+ [Console]::Out.Write($Stdout)
+ [Console]::Error.Write($Stderr)
+ $Combined = $Stdout + [Environment]::NewLine + $Stderr
+ [IO.File]::WriteAllText(
+-    (Join-Path $ProjectRoot 'logs\ghidra-gfbcol-token-handler-v1.stdout.log'),
++    (Join-Path $ProjectRoot 'logs\ghidra-gfbcol-token-handler-v2.stdout.log'),
+     $Combined,
+     [Text.UTF8Encoding]::new($false)
+ )
+ $After = (Get-FileHash -LiteralPath $Main.Path -Algorithm SHA256).Hash.ToLowerInvariant()
+ if ($After -ne $Before) { throw 'The original 1.0.2 main changed during read-only analysis.' }
+ if ($Process.ExitCode -ne 0) { exit $Process.ExitCode }
+ if ($Combined -match 'ERROR REPORT SCRIPT ERROR|SCRIPT ERROR|DECOMPILE_FAILED') {
+     throw 'Ghidra reported a script or decompiler failure.'
+ }
+-if ($Combined -notmatch 'InspectGfbcolTokenHandler\.java> SUMMARY.*sourceHashUnchanged=true.*readOnly=true.*semantics=UNKNOWN') {
++if ($Combined -notmatch 'InspectGfbcolTokenHandler\.java> SUMMARY.*context_instructions=[1-9][0-9]*.*sourceHashUnchanged=true.*readOnly=true.*semantics=UNKNOWN') {
+     throw 'Ghidra did not emit a verified read-only exact-build summary.'
+ }
+ foreach ($Offset in @('24f48c', '24f4e4', '24f534', '24f584', '24f5d4', '24f624')) {
+     if ($Combined -notmatch "EXPECTED_CALLSITE\s+main\+0x$Offset\s+ghidra_reference=true") {
+         throw "Expected raw-confirmed call reference missing at main+0x$Offset."
+     }
++    if ($Combined -notmatch "CALL_CONTEXT\s+callsite=main\+0x$Offset\s+address=main\+0x$Offset\s+owner=NONE") {
++        throw "Expected ownerless direct callsite context missing at main+0x$Offset."
++    }
+ }
+ if ($Combined -notmatch 'DECOMPILED_BEGIN\s+main\+0xb660\s+chars=[1-9]') {
+     throw 'Ghidra did not decompile the expected helper.'
+ }
+ Write-Host "Verified: read-only exact-build trace recorded; source SHA-256 unchanged ($After)."
+diff --git a/scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1 b/scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1
+new file mode 100644
+index 0000000..7bbc552
+--- /dev/null
++++ b/scripts/ghidra/Run-InspectGfbcolTokenOwner.ps1
+@@ -0,0 +1,69 @@
++param(
++    [string]$GhidraHome = 'D:\Tool\ghidra\ghidra_12.2_PUBLIC',
++    [string]$JavaHome = 'D:\SDK\Java\OpenJDK25U-jdk_x64_windows_hotspot_25.0.5_8\jdk-25.0.5+8'
++)
++
++$ErrorActionPreference = 'Stop'
++$ProjectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
++$Java = Join-Path $JavaHome 'bin/java.exe'
++$UtilityJar = Join-Path $GhidraHome 'Ghidra/Framework/Utility/lib/Utility.jar'
++$Main = Resolve-Path (Join-Path $ProjectRoot '..\1.0.2\2b7730a9e56498bbafac2002d4908c6b_NCA\0\main')
++$ExpectedHash = '1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8'
++foreach ($Path in @($Java, $UtilityJar, $Main.Path)) {
++    if (-not (Test-Path -LiteralPath $Path -PathType Leaf)) { throw "Required file missing: $Path" }
++}
++$Before = (Get-FileHash -LiteralPath $Main.Path -Algorithm SHA256).Hash.ToLowerInvariant()
++if ($Before -ne $ExpectedHash) { throw "Exact-build main hash mismatch: $Before" }
++
++$Arguments = @(
++    '-Djava.system.class.loader=ghidra.GhidraClassLoader',
++    '-Dfile.encoding=UTF8', '-Duser.country=US', '-Duser.language=en',
++    '-Dsun.java2d.opengl=false', '-Djdk.tls.client.protocols=TLSv1.2,TLSv1.3',
++    '-Djava.awt.headless=true', '-Xshare:off', '-XX:+UseCompactObjectHeaders',
++    '--enable-native-access=ALL-UNNAMED', '--sun-misc-unsafe-memory-access=allow',
++    '-Dsun.java2d.d3d=false', '-Dlog4j.skipJansi=true', '-Xmx2G',
++    '-XX:ParallelGCThreads=2', '-XX:CICompilerCount=2',
++    '-cp', ('"{0}"' -f $UtilityJar),
++    'ghidra.Ghidra', 'ghidra.app.util.headless.AnalyzeHeadless',
++    'work\ghidra-main\project', 'LGPE102-main', '-process', 'main',
++    '-noanalysis', '-readOnly', '-scriptPath', 'scripts\ghidra',
++    '-postScript', 'InspectGfbcolTokenOwner.java',
++    '-scriptlog', 'logs\ghidra-gfbcol-token-owner-v1-script.log',
++    '-log', 'logs\ghidra-gfbcol-token-owner-v1-app.log'
++)
++$StartInfo = [System.Diagnostics.ProcessStartInfo]::new()
++$StartInfo.FileName = $Java
++$StartInfo.WorkingDirectory = $ProjectRoot
++$StartInfo.Arguments = $Arguments -join ' '
++$StartInfo.UseShellExecute = $false
++$StartInfo.RedirectStandardOutput = $true
++$StartInfo.RedirectStandardError = $true
++$Process = [System.Diagnostics.Process]::Start($StartInfo)
++$StdoutTask = $Process.StandardOutput.ReadToEndAsync()
++$StderrTask = $Process.StandardError.ReadToEndAsync()
++$Process.WaitForExit()
++$Stdout = $StdoutTask.GetAwaiter().GetResult()
++$Stderr = $StderrTask.GetAwaiter().GetResult()
++[Console]::Out.Write($Stdout)
++[Console]::Error.Write($Stderr)
++$Combined = $Stdout + [Environment]::NewLine + $Stderr
++[IO.File]::WriteAllText(
++    (Join-Path $ProjectRoot 'logs\ghidra-gfbcol-token-owner-v1.stdout.log'),
++    $Combined,
++    [Text.UTF8Encoding]::new($false)
++)
++$After = (Get-FileHash -LiteralPath $Main.Path -Algorithm SHA256).Hash.ToLowerInvariant()
++if ($After -ne $Before) { throw 'The original 1.0.2 main changed during read-only analysis.' }
++if ($Process.ExitCode -ne 0) { exit $Process.ExitCode }
++if ($Combined -match 'ERROR REPORT SCRIPT ERROR|SCRIPT ERROR|DECOMPILE_FAILED') {
++    throw 'Ghidra reported a script or decompiler failure.'
++}
++if ($Combined -notmatch 'InspectGfbcolTokenOwner\.java> SUMMARY.*call_sites=6/6.*temporary_boundary=true.*sourceHashUnchanged=true.*readOnly=true.*semantics=UNKNOWN') {
++    throw 'Ghidra did not emit the expected six-callsite read-only summary.'
++}
++foreach ($Offset in @('24f48c', '24f4e4', '24f534', '24f584', '24f5d4', '24f624')) {
++    if ($Combined -notmatch "INS\s+main\+0x$Offset\s+[0-9a-f]+\s+bl 0x710000b660") {
++        throw "Expected direct handler call missing from temporary function at main+0x$Offset."
++    }
++}
++Write-Host "Verified: six local col_* callsites are inside the temporary candidate function; source SHA-256 unchanged ($After)."
+diff --git a/src/lgpe_research/cli.py b/src/lgpe_research/cli.py
+index 2b5a6c3..8f85cbb 100644
+--- a/src/lgpe_research/cli.py
++++ b/src/lgpe_research/cli.py
+@@ -31,21 +31,25 @@ from .save_api_crossref import build_save_api_crossref_report
+ from .save_worker_pointer_scan import build_save_worker_pointer_scan_report
+ from .gfbcol_main_crossref import build_gfbcol_main_crossref_report
+ from .sort_string_profile import profile_sort_string
+ from .sort_string_crossref import write_sort_string_message_crossrefs
+ from .monsname_crossref import build_personal_monsname_crossref
+ from .nso_relocation_crossref import build_nso_relocation_crossref_report
+ 
+ 
+ def write_json(path:Path, obj):
+     path.parent.mkdir(parents=True,exist_ok=True)
+-    path.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf-8')
++    path.write_text(
++        json.dumps(obj, ensure_ascii=False, indent=2) + '\n',
++        encoding='utf-8',
++        newline='\r\n',
++    )
+ 
+ def src_path(root:Path, partition:str, relative:str)->Path:
+     dirs=source_dirs(root)
+     if partition not in dirs:raise ValueError('partition must be romfs/exefs')
+     return ensure_inside(dirs[partition] / relative,dirs[partition])
+ 
+ def cmd_doctor(args):
+     paths=source_dirs(args.root)
+     print('Project:',PROJECT)
+     print('Game root:',args.root.resolve())
+@@ -637,20 +641,22 @@ def cmd_crossref_gfbcol_main(args):
+         PROJECT / "manifests",
+     )
+     report = build_gfbcol_main_crossref_report(PROJECT, args.root)
+     write_json(output, report)
+     print(json.dumps({
+         "status": report["analysis_status"],
+         "output": str(output),
+         **report["summary"],
+         "gfbcol_sources": report["gfbcol_probe"]["sources_read"],
+         "main_sha256": report["main"]["sha256"],
++        "owner_candidate": report["ghidra_owner_candidate_trace"]["summary"]["entry"],
++        "owner_candidate_calls": report["ghidra_owner_candidate_trace"]["summary"]["call_sites"],
+     }, ensure_ascii=False, sort_keys=True))
+     return 0
+ 
+ def cmd_decode_bnk_media(args):
+     only_sources = read_source_list(args.sources_file) if args.sources_file else None
+     summary = run_bnk_media_batch(
+         args.root, PROJECT, args.limit, args.execute,
+         tool=args.vgmstream, timeout=args.timeout, only_sources=only_sources,
+     )
+     print(json.dumps(summary, ensure_ascii=False, sort_keys=True))
+diff --git a/src/lgpe_research/gfbcol_main_crossref.py b/src/lgpe_research/gfbcol_main_crossref.py
+index a279fbf..ae84781 100644
+--- a/src/lgpe_research/gfbcol_main_crossref.py
++++ b/src/lgpe_research/gfbcol_main_crossref.py
+@@ -15,85 +15,240 @@ MAIN_SHA256 = "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8"
+ IMAGE_BASE = "0x7100000000"
+ TOKEN_HANDLER = "main+0xb660"
+ EXPECTED_CALLSITE_OFFSETS = (
+     "24f48c",
+     "24f4e4",
+     "24f534",
+     "24f584",
+     "24f5d4",
+     "24f624",
+ )
++EXPECTED_GFB_COL_TOKENS = (
++    "col_wall",
++    "col_water",
++    "col_jump",
++    "col_sky",
++    "col_sekichiku",
++    "col_safety",
++)
+ STRING_CANDIDATE = "UTF8_NUL_TERMINATED_LENGTH_PREFIX_CANDIDATE"
+ 
+ 
+ def summarize_gfbcol_token_handler_trace(
+     trace_text: str,
+     expected_main_sha256: str = MAIN_SHA256,
+ ) -> dict:
+     """Validate the saved read-only Ghidra trace for the six exact-build calls."""
+     summary_matches = re.findall(
+         r"SUMMARY\tmain_sha256=([0-9a-f]{64})"
+         r"\thandler=(main\+0x[0-9a-f]+)"
+         r"\tincoming_references=(\d+)"
+         r"\texpected_call_sites=(\d+)/(\d+)"
+         r"\tinstructions=(\d+)"
+         r"\tdirect_calls=(\d+)"
++        r"\tcontext_instructions=(\d+)"
+         r"\tsourceHashUnchanged=(true|false)"
+         r"\treadOnly=(true|false)"
+         r"\tsemantics=([A-Z_]+)",
+         trace_text,
+     )
+     if len(summary_matches) != 1:
+         raise ValueError("Ghidra trace must contain exactly one token-handler summary")
+ 
+     (
+         main_sha256,
+         handler,
+         incoming_references,
+         expected_seen,
+         expected_total,
+         instructions,
+         direct_calls,
++        context_instructions,
+         source_unchanged,
+         read_only,
+         semantics,
+     ) = summary_matches[0]
+     if main_sha256 != expected_main_sha256:
+         raise ValueError("Ghidra trace main SHA-256 differs from the exact build")
+     if handler != TOKEN_HANDLER or semantics != "UNKNOWN":
+         raise ValueError("Ghidra trace does not preserve the expected handler/UNKNOWN scope")
+     if source_unchanged != "true" or read_only != "true":
+         raise ValueError("Ghidra trace is not verified read-only against an unchanged main")
+     if int(expected_seen) != len(EXPECTED_CALLSITE_OFFSETS) or int(expected_total) != len(
+         EXPECTED_CALLSITE_OFFSETS
+     ):
+         raise ValueError("Ghidra trace did not confirm all six expected callsites")
++    if int(context_instructions) <= 0:
++        raise ValueError("Ghidra trace did not record callsite instruction contexts")
+ 
+     observed = re.findall(
+         r"TARGET_XREF\tfrom=main\+0x([0-9a-f]+)"
+         r"\ttype=UNCONDITIONAL_CALL"
+         r"\towner=NONE"
+         r"\tinstruction=bl 0x710000b660",
+         trace_text,
+     )
+     observed_expected = [offset for offset in EXPECTED_CALLSITE_OFFSETS if offset in observed]
+     if observed_expected != list(EXPECTED_CALLSITE_OFFSETS):
+         raise ValueError("Ghidra trace is missing one or more of the six expected callsites")
+ 
++    contextual = re.findall(
++        r"CALL_CONTEXT\tcallsite=main\+0x([0-9a-f]+)"
++        r"\taddress=main\+0x([0-9a-f]+)\towner=NONE"
++        r"\tflow=UNCONDITIONAL_CALL\tassembly=bl 0x710000b660",
++        trace_text,
++    )
++    contextual_expected = [
++        offset for offset in EXPECTED_CALLSITE_OFFSETS
++        if (offset, offset) in contextual
++    ]
++    if contextual_expected != list(EXPECTED_CALLSITE_OFFSETS):
++        raise ValueError("Ghidra trace lacks ownerless direct-call context for all six sites")
++
+     return {
+         "main_sha256": main_sha256,
+         "handler": handler,
+         "incoming_references": int(incoming_references),
+         "expected_call_sites": int(expected_seen),
+         "verified_callsite_offsets": observed_expected,
+         "instructions": int(instructions),
+         "direct_calls": int(direct_calls),
++        "context_instructions": int(context_instructions),
++        "read_only": True,
++        "source_hash_unchanged": True,
++        "semantics": "UNKNOWN",
++    }
++
++
++def summarize_gfbcol_token_owner_trace(
++    trace_text: str,
++    expected_main_sha256: str = MAIN_SHA256,
++) -> dict:
++    """Validate the temporary exact-build caller boundary without naming fields."""
++    summary_matches = re.findall(
++        r"SUMMARY\tmain_sha256=([0-9a-f]{64})"
++        r"\tentry=(main\+0x[0-9a-f]+)"
++        r"\tcall_sites=(\d+)/(\d+)"
++        r"\tinstructions=(\d+)"
++        r"\tentry_xrefs=(\d+)"
++        r"\ttemporary_boundary=(true|false)"
++        r"\tsourceHashUnchanged=(true|false)"
++        r"\treadOnly=(true|false)"
++        r"\tsemantics=([A-Z_]+)",
++        trace_text,
++    )
++    if len(summary_matches) != 1:
++        raise ValueError("Ghidra trace must contain exactly one owner-candidate summary")
++    (
++        main_sha256,
++        entry,
++        call_sites,
++        call_sites_total,
++        instructions,
++        entry_xrefs,
++        temporary_boundary,
++        source_unchanged,
++        read_only,
++        semantics,
++    ) = summary_matches[0]
++    if main_sha256 != expected_main_sha256 or entry != "main+0x24f460":
++        raise ValueError("Ghidra trace is not for the pinned main+0x24f460 candidate")
++    if (call_sites, call_sites_total) != ("6", "6"):
++        raise ValueError("Ghidra trace must confirm all six direct callsites")
++    if temporary_boundary != "true" or source_unchanged != "true" or read_only != "true":
++        raise ValueError("Ghidra candidate boundary was not temporary/read-only/hash-verified")
++    if semantics != "UNKNOWN":
++        raise ValueError("Ghidra trace assigns unsupported candidate semantics")
++
++    candidate_match = re.search(
++        r"CANDIDATE_FUNCTION\tentry=main\+0x24f460"
++        r"\tbytes=(\d+)\tmin=(main\+0x[0-9a-f]+)"
++        r"\tmax=(main\+0x[0-9a-f]+)\ttemporary_boundary=true",
++        trace_text,
++    )
++    if not candidate_match:
++        raise ValueError("Ghidra trace lacks the temporary candidate function range")
++    function_bytes, function_min, function_max = candidate_match.groups()
++    if (function_min, function_max) != ("main+0x24f460", "main+0x24f693"):
++        raise ValueError("Ghidra candidate function range differs from the observed range")
++
++    observed_calls = re.findall(
++        r"INS\tmain\+0x([0-9a-f]+)\t[0-9a-f]+\tbl 0x710000b660",
++        trace_text,
++    )
++    if [offset for offset in EXPECTED_CALLSITE_OFFSETS if offset in observed_calls] != list(
++        EXPECTED_CALLSITE_OFFSETS
++    ):
++        raise ValueError("Ghidra trace lacks all six direct call instructions in the candidate")
++
++    entry_refs = re.findall(
++        r"ENTRY_XREF\tfrom=(main\+0x[0-9a-f]+)\ttype=([A-Z_]+)"
++        r"\towner=([A-Z_]+)\tinstruction=([A-Z_]+)",
++        trace_text,
++    )
++    if entry_refs != [("main+0x15437d8", "DATA", "NONE", "NONE")]:
++        raise ValueError("Ghidra trace entry reference differs from the recorded single data xref")
++    data_value_match = re.search(
++        r"ENTRY_DATA_WINDOW\tcell=main\+0x15437d8"
++        r"\tvalue=(0x[0-9a-f]+)\tblock=(\.data)"
++        r"\twritable=true\texecutable=false",
++        trace_text,
++    )
++    if not data_value_match or data_value_match.group(1) != "0x710024f460":
++        raise ValueError("Ghidra trace lacks the matching writable-data pointer observation")
++
++    begin = re.search(r"DECOMPILED_BEGIN\tmain\+0x24f460[^\r\n]*\r?\n", trace_text)
++    end = re.search(r"DECOMPILED_END\tmain\+0x24f460", trace_text)
++    if not begin or not end or end.start() <= begin.end():
++        raise ValueError("Ghidra trace lacks the bounded candidate decompilation")
++    decompiled = trace_text[begin.end():end.start()]
++    observed_tokens = re.findall(
++        r'FUN_710000b660\([^,\r\n]+,\s*\(byte \*\)"([^"]+)"\)',
++        decompiled,
++    )
++    if observed_tokens != list(EXPECTED_GFB_COL_TOKENS):
++        raise ValueError("Ghidra candidate does not contain the six expected literal calls in order")
++    if decompiled.count("lVar3 == param_5") != 6:
++        raise ValueError("Ghidra candidate comparison expression count differs from six")
++    if "+ 0x58" not in decompiled or "+ 0x48) + 0x18" not in decompiled:
++        raise ValueError("Ghidra candidate does not show both observed object/vtable offsets")
++
++    counter_writes = re.findall(
++        r"\*\(int \*\)\(param_1 \+ (0x[0-9a-f]+)\)\s*=", decompiled
++    )
++    expected_counter_offsets = [
++        "0x30", "0x34", "0x38", "0x3c", "0x40", "0x44", "0x48", "0x4c"
++    ]
++    if counter_writes != expected_counter_offsets:
++        raise ValueError("Ghidra candidate counter-write offsets differ from the recorded sequence")
++
++    return {
++        "entry": entry,
++        "function_bytes": int(function_bytes),
++        "function_min": function_min,
++        "function_max": function_max,
++        "instruction_count": int(instructions),
++        "call_sites": int(call_sites),
++        "tokens": list(observed_tokens),
++        "entry_xrefs": int(entry_xrefs),
++        "entry_data_cell": entry_refs[0][0],
++        "entry_data_value": data_value_match.group(1),
++        "entry_data_block": data_value_match.group(2),
++        "entry_data_writable": True,
++        "entry_data_executable": False,
++        "comparison_expression": "lVar3 == param_5",
++        "object_value_offset": "0x58",
++        "virtual_dispatch_offsets": ["0x48", "0x18"],
++        "token_counter_offsets": dict(zip(EXPECTED_GFB_COL_TOKENS, expected_counter_offsets[:6])),
++        "fallback_counter_offset": expected_counter_offsets[6],
++        "total_counter_offset": expected_counter_offsets[7],
++        "temporary_boundary": True,
+         "read_only": True,
+         "source_hash_unchanged": True,
+         "semantics": "UNKNOWN",
+     }
+ 
+ 
+ def cross_reference_slot0_candidates(main_report: dict, slot0_report: dict) -> dict:
+     """Join byte-verified main literals to strict GFBCol string-shape candidates.
+ 
+     The relation is exact UTF-8 value equality only. It does not assign a
+@@ -305,25 +460,27 @@ def build_gfbcol_main_crossref_report(
+     slot0_script = project / "scripts" / "research" / "probe_gfbcol_slot0_strings.py"
+     main_module = _load_research_script(
+         main_script, "_lgpe_check_gfbcol_main_references"
+     )
+     slot0_module = _load_research_script(
+         slot0_script, "_lgpe_probe_gfbcol_slot0_strings"
+     )
+     main_report = main_module.inspect_main(main_path)
+     slot0_report = slot0_module.run(project, game_root, limit=0, sources_file=None)
+     report = cross_reference_slot0_candidates(main_report, slot0_report)
++    report["main"]["path"] = main_path.relative_to(game_root).as_posix()
++    report["main"]["path_base"] = "game_root"
+ 
+     trace_script = project / "scripts" / "ghidra" / "InspectGfbcolTokenHandler.java"
+     trace_wrapper = project / "scripts" / "ghidra" / "Run-InspectGfbcolTokenHandler.ps1"
+-    trace_log = project / "logs" / "ghidra-gfbcol-token-handler-v1-script.log"
+-    decompiler_log = project / "logs" / "ghidra-gfbcol-token-handler-v1.stdout.log"
++    trace_log = project / "logs" / "ghidra-gfbcol-token-handler-v2-script.log"
++    decompiler_log = project / "logs" / "ghidra-gfbcol-token-handler-v2.stdout.log"
+     trace_summary = summarize_gfbcol_token_handler_trace(
+         trace_log.read_text(encoding="utf-8"), main_report["source"]["sha256"]
+     )
+     decompiler_text = decompiler_log.read_text(encoding="utf-8")
+     if (
+         "DECOMPILED_BEGIN\tmain+0xb660" not in decompiler_text
+         or "DECOMPILED_END\tmain+0xb660" not in decompiler_text
+     ):
+         raise ValueError("saved Ghidra stdout lacks the bounded main+0xb660 decompilation")
+ 
+@@ -342,20 +499,41 @@ def build_gfbcol_main_crossref_report(
+         "trace_script": _project_relative(trace_script, project),
+         "trace_script_sha256": _sha256_file(trace_script),
+         "trace_wrapper": _project_relative(trace_wrapper, project),
+         "trace_wrapper_sha256": _sha256_file(trace_wrapper),
+         "script_log": _project_relative(trace_log, project),
+         "script_log_sha256": _sha256_file(trace_log),
+         "decompiler_log": _project_relative(decompiler_log, project),
+         "decompiler_log_sha256": _sha256_file(decompiler_log),
+         "summary": trace_summary,
+     }
++
++    owner_script = project / "scripts" / "ghidra" / "InspectGfbcolTokenOwner.java"
++    owner_wrapper = project / "scripts" / "ghidra" / "Run-InspectGfbcolTokenOwner.ps1"
++    owner_script_log = project / "logs" / "ghidra-gfbcol-token-owner-v1-script.log"
++    owner_output_log = project / "logs" / "ghidra-gfbcol-token-owner-v1.stdout.log"
++    owner_trace_summary = summarize_gfbcol_token_owner_trace(
++        owner_output_log.read_text(encoding="utf-8"), main_report["source"]["sha256"]
++    )
++    report["ghidra_owner_candidate_trace"] = {
++        "version": "12.2",
++        "program": "Let's Go Pikachu 1.0.2 main",
++        "trace_script": _project_relative(owner_script, project),
++        "trace_script_sha256": _sha256_file(owner_script),
++        "trace_wrapper": _project_relative(owner_wrapper, project),
++        "trace_wrapper_sha256": _sha256_file(owner_wrapper),
++        "script_log": _project_relative(owner_script_log, project),
++        "script_log_sha256": _sha256_file(owner_script_log),
++        "decompiler_log": _project_relative(owner_output_log, project),
++        "decompiler_log_sha256": _sha256_file(owner_output_log),
++        "summary": owner_trace_summary,
++    }
+     report["tool_provenance"] = {
+         "main_byte_scanner": {
+             "path": _project_relative(main_script, project),
+             "sha256": _sha256_file(main_script),
+         },
+         "gfbcol_slot0_probe": {
+             "path": _project_relative(slot0_script, project),
+             "sha256": _sha256_file(slot0_script),
+         },
+     }
+diff --git a/tasks/INDEX.md b/tasks/INDEX.md
+index 01789f7..c7925b9 100644
+--- a/tasks/INDEX.md
++++ b/tasks/INDEX.md
+@@ -5,21 +5,21 @@ Statuses: `NOT_STARTED`, `IN_PROGRESS`, `BLOCKED`, `VALIDATED`, `DEFERRED`. `VAL
+ | ID | topic | current status | evidence and remaining work |
+ |---|---|---|---|
+ | T00 | actual dump detection, environment and baseline | VALIDATED | Actual 1.0.2 root verified; original tree/hash baseline recorded. |
+ | T01 | metadata, raw magic and coverage catalog | VALIDATED | 27,824-file scan, tree comparison, signature catalog and plan generated. |
+ | T02 | secure extraction orchestration, evidence, mirror paths | VALIDATED | 1,017 containers extracted to 59,121 internal paths; source/output hashes and receipts registered. An earlier native Windows pass verified 77,697/77,714 receipts; the 17 path-only failures were WSL `/mnt/x/...` receipt paths. After adding exact expected-path mapping, the targeted 17-source run verified 17/17 under Windows and WSL with 0 bad/hash mismatches. The prior integrated replay verified **78,104/78,104 outputs**; the latest native Windows-uv full replay verified **78,126/78,126 unique output paths**, `bad=0`, `errors=[]`. Targeted itemname/item-hash runs verified 1/1 each; the selected AMX batch passed 1,410/1,410 on WSL and Windows. |
+ | T03 | source tool acquisition / reproducible builds / adapters | VALIDATED | Exact commits/licenses and working adapters recorded. New .NET 10 read-only GameManagerGG worker ran against actual 1.0.2 inputs (1,963 files); 4,663 record/file raw-byte comparisons matched production JSON. Switch-Toolbox WinForms/WPF build failure remains documented; supported formats use the implemented headless adapters. |
+ | T04 | GFPAK implementation / first container extraction | VALIDATED | 643 GFPAK decoded in the full run; member paths, hashes and LZ4 cross-checks recorded. |
+ | T05 | ARC and nested archives identification | VALIDATED | 374 SARC-compatible ARC files decoded; sample headers and stored paths checked. Two GO Park UI ARC samples have 46/46 member receipts rehashed with zero mismatches. |
+ | T06 | LGPE message DAT/TBL and AHTB label tables | VALIDATED | 5,380 paired message files decoded. All 15 unpaired AHTB TBL sources (including `asset.tbl`) are path-mirrored JSON with entry indexes, stored hashes, byte lengths, and raw label bytes preserved. A bounded hash-method check matched FNV-1a for 3,105/3,105 rows across 14 tables; all 8,290 `asset.tbl` rows remain hash-method UNKNOWN. A literal path cross-reference found 5,380 exact local `.dat` paths, all with same-stem `.tbl` files, plus 2,910 `debug` path labels without an inventory match; no case-fold ambiguities. The English go_park DAT/TBL remains a positive message decoder control. Grammar DATs are separately structurally decoded under T07; this does not establish their parser or language semantics. `item_hash_to_index.dat` is decoded under T07 from an exact-main reader; `field_pocket.dat` is decoded from exact-build access evidence and `battle_pocket.dat` is a value-matched numeric byte map. |
+ | T07 | personal/moves/trainers/encounters/game tables | IN_PROGRESS | Game-data manifest: **10,085 DECODED, 27 UNKNOWN, 0 FAILED/PENDING** (10,112 source rows, including unlabeled personal monsname text and ten zukan_sort arrays). All 15 unpaired AHTB label tables decode to loss-preserving JSON; table semantics remain unnamed. Includes 5,380 message pairs, personal/wild encounter data, 1,058 items, 1,588 trainers, 980 evolution sets, 980 mega-evolution sets, three event encounter tables, and 743 moves. All 980 `waza_oboe.gfpak` members decode to mirrored JSON and cross-validate against pinned pkNX (15,380 entries, zero mismatches); GameManagerGG independently matched 4,663 raw records/files. Nine grammar DATs now structurally decode to 9 path-mirrored JSONs (5 nonempty files, 4 exact `00 00` empty forms; 52 UTF-16LE segments / 230 strings); the second header byte, interstitial semantics, parser, and runtime use remain UNKNOWN. Exact 1.0.2 `main` SHA-guarded Ghidra evidence finds all nine paths in `FUN_71001ae750`, which builds each path and submits it via `FUN_71000adc70`; the startup caller is a static reference only, not proof of runtime execution. `field_pocket.dat` uses exact-build access evidence and matches all 1,058 numeric values in pinned pkNX GameManagerGG; pocket names and bit 7 remain unresolved. `battle_pocket.dat` matches all 1,058 pinned pkNX values; its exact-main loader is unconfirmed. `item_hash_to_index.dat` uses the exact Pikachu 1.0.2 `main+0x1d4510` reader: count + 0x10-byte rows, preserving full qwords and the low-16-bit loader projection. All 1,046 projections numerically join English itemname line indexes (1,045 unique, index 1057 duplicated, 13 unreferenced); hash meaning, semantics, and runtime reachability remain unresolved. AMX: 712/712 actual catalog entries decoded and passed the exact-build opcode/bounds validator; VM execution semantics remain unresolved. Derived encounter-weight report contains 1,330 candidate intervals, but runtime reachability remains unverified. Exact-main Ghidra proves ten `bin/app/zukan_data/bin/zukan_sort_*.bin` files are u16le arrays; batch decode and receipts pass 10/10, preserving raw bytes. Array semantics remain UNKNOWN; the 81 localized sort-string DATs now have exact-main read evidence and batch outputs. The item/monsname/waza request functions at main+0x31400/+0x315e0/+0x318c0 call shared loader main+0x374530; main+0x374a90 reads u16le sort-table entries and main+0x374ad0 reads u16le pairs from initial_to_sort. The batch emitted 54 mirrored JSONs with source/output hashes and receipts; 54/54 passed raw-byte round trips. The 27 initial_index files remain UNKNOWN because no element reader was identified. Ghidra 12.2 v13 exact-main read-only trace records `AARCH64:LE:64:v8A`, decompiled 53 target functions plus all 12 functions in the shared-resource helper range, and discarded 16 temporary boundaries. The v17/v19 follow-up found 88 defined functions with literal load operand `#0x350` (88/88 decompiled; 44 C-literal candidates), but this is not a shared-field inventory. Of four incoming localized owner/request references, three requests call the shared loader; the owner edge to `main+0xb06f10` was a false positive: v19 ADRP context resolves its `#0x350/#0x358` loads to static addresses `0x7101609350/9358`, stored at owner `+0x18e0/+0x18e8`. No first-resource element reader was identified; unowned bytes and indirect access remain outside this evidence. All 27 first-resource files remain UNKNOWN. Focused decoder tests pass 5/5; no runtime execution or gameplay meaning is inferred. See `docs/research/evidence/sortstring-offset-context-v19.txt` for the corrected provenance excerpt and `docs/research/evidence/sortstring-pointer-field-v17.txt` for the raw v17 search excerpt. |
+-| T08 | BNTX/model/animation/textures/particles/collision | IN_PROGRESS | 1,344/1,344 BNTX PNGs and 321/321 GFBMDL GLBs verified; 455 animation and 1,160 particle structural views. GFBCol v3 has 698 root/nested views, 807 slot-0 string-shape candidates, and 4/6 exact 1.0.2 main token values match 188 candidate observations; 698 remain semantic UNKNOWN. Independent verify: 698/698 outputs, 2,219 child-table envelopes, 0 errors. See docs/research/T08-notes.md and manifests/gfbcol-main-token-crossref.json. |
++| T08 | BNTX/model/animation/textures/particles/collision | IN_PROGRESS | 1,344/1,344 BNTX PNGs and 321/321 GFBMDL GLBs verified; 455 animation and 1,160 particle structural views. GFBCol v3 has 698 root/nested views, 807 slot-0 string-shape candidates, and 4/6 exact 1.0.2 main token values match 188 candidate observations. A temporary exact-main caller candidate at main+0x24f460..+0x24f693 contains all six token comparisons, reads an object value at +0x58, compares it with opaque param_5, and updates raw counters at +0x30..+0x4c. Its sole incoming xref is a writable non-executable .data pointer at main+0x15437d8; no instruction caller is established. GFBCol remains 698 UNKNOWN. Focused tests 9/9; full Windows suite 245 passed plus one expected symlink skip (246 total). Independent verify: 698/698 outputs, 2,219 child-table envelopes, 0 errors. See docs/research/T08-notes.md and manifests/gfbcol-main-token-crossref.json. |
+ | T09 | Wwise WEM/BNK and sequence data | IN_PROGRESS | 1,134 external WEM→WAV and 265 BNK→XML outputs. Static Wwise map: 2,552 event/action rows, 2,251 distinct event→WEM filename pairs, 2,438 receipt-backed external WAV links, and 1,190 same-bank sourceID→DIDX references covering 1,109 unique internal members; 1,170 references have verified internal WAVs and 20 point to six prefetch fragments. BSEQ: 381 SESD v3 inputs, 353 mirrored JSONs, 28 demo/cutscene UNSUPPORTED, 0 FAILED; raw-byte preservation and semantic round-trip equality verified 353/353. A bounded re-run preserves parser cause chains: 14 UnicodeDecodeError and 14 KeyError at command-reference lookup; no demo/cutscene JSON is emitted. The 28-row audit rehashed every source and confirmed every JSON target absent; diagnostics record cursor/header and raw parameter evidence. The 14 decode failures occur at command IDs 2D00 (6) / 2E00 (8), pinned `camFile:String:256`; the KeyError keys remain raw IDs 7461 (2), 6465 (2), 6D6F (8), 2F72 (1), and EB03 (1), with no semantic assignment. New exact-source static join rehashed all 265 BNK/XML pairs and all 353 supported BSEQ JSONs: 268/268 parser bank-name literals equal local BNK stems; 949 `BelugaSoundPlaySe` parser fields yield 658 distinct FNV-1 32-bit IDs; 768 occurrences match an event in a literal-referenced bank and 181 have event-ID candidates only outside those banks. This does not establish command semantics, runtime loading, invocation, playback, or timing. A separate label-candidate sidecar groups 1,612 exact FNV links into 735 bank/event records across 658 parser literals/IDs; 768 candidate links target sequence-referenced banks and 844 target outside bank sources, with 0 multi-literal conflicts. All 735 original Wwise eventName values remain null/UNKNOWN; these labels are not assigned as event names and do not verify command/runtime semantics. A raw demo-audio sidecar now reads the 28 UNSUPPORTED sources without changing decoder rows; 206/206 bounded literals match local raw HIRC type-4 IDs across 265 rehashed banks, with 22 XML and 248 media receipts verified. The map-demo-audio stage is checkpointed in exhaustive full runs and skipped in bounded runs. Candidate semantics and playback remain UNKNOWN. Exact LGPE Pikachu 1.0.2 main analysis now validates the BSEQ request vtable, 40/40 read-only helper decompilations and 8/8 callback-target decompilations; the object-vtable prefix and BSEQ v3 header/command-record readers are traced from main+0x2103c0 through main+0x210510/main+0x210880; a verified ee000 sample decoded 1 group/5 commands with exact byte and semantic round-trips. Its conditional immediate worker edge reaches OpenFile/GetFileSize, ReadFile, and CloseFile with the selected path traced on the fresh-request path and null optional cache field traced into the request. Runtime branch selection, queue servicing, successful I/O, gameplay semantics, playback, and runtime reachability remain UNVERIFIED. A follow-up resolves this delegate callback to main+0xaa0eb0 and maps 227 pinned numeric IDs to exact-build table slots; see docs/research/T09-notes.md and manifests/bseq-runtime-dispatch.json. Remaining: canonical event names, seven external WEM IDs without local HIRC matches, unresolved HIRC links, sequence ownership/playback, timing, and runtime probability. |
+ | T10 | ExeFS NSO, Ghidra, data loaders, RNG/catch/trade | IN_PROGRESS | Exact 1.0.2 main hash retained and rechecked. New SHA-guarded Ghidra tracing confirms the `.bss` item-byte map is populated by a resource path builder with suffix `field_pocket.dat`; the indexed low-three-bit value cross-checks against pinned pkNX GameManagerGG `Item.PocketField` for all 1,058 exact-build items. `battle_pocket.dat` independently matches pkNX `Item.PocketBattle` on all 1,058 records and has a numeric byte-map export; its exact-main loader is unconfirmed. The numeric field names are `pocket_field` and `pocket_battle`; human-readable labels and field-map bit 7 remain unresolved. Both 1,058-byte RomFS files have mirrored JSON outputs and verified receipts. Exact-main tracing also found `item_hash_to_index.dat` at `main+0xf02a31`, loaded/parsed by `main+0x1d4510` through the shared resource request helper; its qword key meaning and low-16-bit mapping semantics remain unknown. Static loading does not prove runtime execution. The exact-main grammar trace finds all nine paths in `FUN_71001ae750` and its resource requests via `FUN_71000adc70`; parser/runtime execution remain unproven. Static personal chain links `personal_total.bin` through request/cache helpers to a `0x54`-stride buffer copy, matching 980 × 0x54 source bytes and pinned pkNX. Encounter path reaches conditional request-vtable dispatch to `nn::fs::OpenFile`/`GetFileSize` then `nn::fs::ReadFile`; the initializer allocates a `0x1120`-byte request object; a SHA-guarded follow-up traces its `+0x98` registration chain through nested `+0x58/+0xe8/+0xf0` pointers to `FUN_710013bfa0`. The latest SHA-guarded pass traces completion through `nn::fs::ReadFile` to `nn::fs::CloseFile`; the encounter callback slots are null, so this constructor waits with its request handle at owner `+0x1e8` and buffer at request `+0x170`. A static encounter-data consumer candidate with unverified runtime reachability at `main+0x2fdf90` traverses a buffer via `*param_2+0x98 → +0x1e8 → +0x170`; its pointer math matches the actual 70-table FlatBuffer root vector in `encount_data_p.bin`. At the row lookup, the qword from opaque object offset `+0x3c0` (`plVar61[0x78]`) is compared with the first field (`ZoneID`); adjacent mode data is at `+0x3d0` (`plVar61[0x7a]`). Direct calls reach encounter helpers that access schema-matched ground/water/sky spawn durations and table encounter rates. Expanded source/JSON/schema validation matched 5,110 scalar values across all 70 rows and 1,330 nested slots, plus 210 Probability-sum/`RandChanceTotal` checks; sums were 100 or 0 for each Ground/Water/Sky vector. The candidate selects Ground/Water/Sky slot vectors by mode, packs each slot Probability as record word 1, then compares an RNG-derived value modulo 100 against the cumulative sum of those words; this static code/data evidence does not prove runtime behavior. Its only direct incoming reference is the call at `main+0x2f8e2c` from `main+0x2f8a50`; that caller has no direct incoming refs in Ghidra's saved database. The helper xrefs confirm static encounter-data access, but runtime dispatch is unproven and the candidate's local root remains untied to the constructed owner. A SHA-guarded Ghidra 12.2 pass found two `(24,16,37)` xoroshiro128+ state pairs inside the candidate, at first-argument offsets `+0x80/+0x88` and `+0x90/+0x98`. The first pair feeds a bounded draw compared to the exact-build encounter-rate helper; the second is gated by an opaque mode value 3, uses a modulo-10,000 `<=4` threshold, then maps another draw to numeric values `0x90..0x92`. These values are matched through an opaque object accessor and have no assigned species/gameplay meaning in this pass. The external lead's `main+0x2fdfc0` is an instruction inside `FUN_71002fdf90`, not a Ghidra function entry. No state initializer, seed source, runtime reachability, capture outcome, PID/EC or shiny generation is established. Relative-dword hits at `main+0x13c3040`, `+0x13c3268`, `+0x13c45b8`, and `+0x13c45e0` resolve to the caller, parser, and two lookup-helper starts; each following size equals the Ghidra function body size, consistent with range metadata rather than dispatch. No call/table edge to the caller is established. Keep loading separate from parsing. A separate random selector chain uses the generic RNG core and callback list, with no static edge to the encounter object. Runtime branch selection/I/O remain unverified. A separate exact-main BSEQ follow-up pins vtable slots +0x38/+0x40 to main+0x26070/main+0x26610 and traces the null-cache immediate branch through filesystem API callsites; TLS branch selection, queued servicing, and successful I/O remain unverified. A 31/31 exact-build follow-up maps BSEQ header fields +0x184/+0x18c from the constructor to per-frame and target-frame record readers at main+0x210510/+0x210880, with callbacks through a virtual slot. The callback target and gameplay effects remain unknown; see docs/research/T10-notes.md. Exchange traces cover message framing/queue filtering, a two-record state machine, selected-record updates, clone-message dispatch, and GO Park resource selection; a save worker conditionally calls `IsSaveDataExisting`/`MountSaveData`. Exact-main RNG core at `0x71004e0150` matches MT19937 constants, with wrappers at `0x71004e0040`/`0x71004e02c0`; traced callers do not establish a Pokémon/capture path. `CaptureCall`/`GetCaptureResult` occupy observed registry pairs at `0x710153c880`/`0x710153c890` and feed an opaque 0x99-byte request/state path. The `GetCaptureResult`-named wrapper copies its qword input to opaque state offset `+0xc8`, clears `+0xd0`, calls a helper that writes `0x0c` at `+0xa4`, and returns zero; output semantics remain unidentified. A bounded 144-byte registry xref scan found only one direct in-range code reference, to the neighboring `MapChangeCore_` name pointer; no direct code-call reference to the capture entries was recovered. Context windows for remaining page references show neighboring object-field pointer initialization, not an indexed walk of the registry range. Generic/indexed indirect dispatch remains possible and unresolved. Six additional calls invoke the shared request helper from prologue-based candidate state-machine bodies; they pass literals `area01`, `t001r01`, or `s001r01` with opaque constants. These tokens match three actual decoded archives with 179, 210, and 228 members, but do not identify the request semantics. `FUN_7100210e20` copies input values to offsets `+0x00`, `+0x08`, `+0x20/+0x28`, `+0x30/+0x38`, and a 64-byte-bounded string at `+0x40`; within the enclosing `0x99`-byte copy, the builder buffer begins at `+0x10` and spans `+0x10..+0x8f`, with a 9-byte tail at `+0x90..+0x98`. Some copied bytes are not explicitly initialized in the visible code. All are byte-offset observations, not semantic field names. The result consumer remains unidentified. The `PID=` xref is NEX endpoint logging. Latest source-wide coverage: SCANNED 27,824; DECODED 21,839; FAILED 0; UNKNOWN 5,957; PENDING 0; UNSUPPORTED 28; 78,498 registered outputs. The exact-build parser comparison at `main+0x2fe260` resolves through the decoded `ZoneNameHashTable.tbl`: `0x97deb1f2d0a83282` → index 134 `t005r0305`; the parent’s constants `0x194d955fbf0a7685` and `0xd8652ab502b422c7` match indexes 255 `gogo_park01` and 256 `gogo_play01`. These are hash/label links only; runtime reachability and gameplay semantics remain unverified. RTTI-verified NEX vtable targets add a static dispatch chain `main+0xb36610 → main+0xb402f0 → main+0x50d730`; a separate clone vtable target `main+0x51c100` is a `ret`, 16 bytes before the distinct trade/clone switch at `main+0x51c110`. These are exact-build address observations, not gameplay or trade semantics. The new `uv run lgpe encounter-weights` report records 1,330 candidate roll intervals, source byte offsets, and exact source/schema/main hashes; runtime reachability is explicitly unverified. GO Park communication, player save ownership/write calls, catch/PID/EC/shiny semantics, and runtime evidence remain unresolved. A SHA-guarded `-noanalysis -readOnly` ADR/ADRP scan covered 2,839,329 executable instructions (91,789 ADR/ADRP) and found zero operand candidates for the page containing `main+0x2f8a50`; a four-offset store scan found 199 same-base groups writing `+0x80/+0x88/+0x90/+0x98`, including the consumer candidate, so no initializer could be assigned by offsets alone. These bounded scans do not rule out runtime registration or uninitialized/indirect paths. The reproducible `uv run lgpe spawn-rng-crossref` report validates exact 1.0.2 main/data hashes, pinned pkNX enum/path sources, and SHA-guarded Ghidra trace scripts. RNG values 0x90–0x92 match personal-table index/GoSpecies and three decoded `event_encount.bin` Species rows; both ordinary encounter tables remain 0/1,820. Ghidra traces the event path through its direct resource loader at main+0x2ba7c0, 64-byte record builder at main+0x2baa10, lookup helper main+0x2baba0 (three direct call sites at main+0x289db4, main+0x28ebe8, main+0x28f4a8), and completion/consumer at main+0x28f430. Its normalized Species/Form checks match event rows 1 (Eevee/Form 1) and 0 (Pikachu/Form 8); the schema-v3 cross-reference verifies each source row against raw bytes and decoded JSON. It then reads opaque byte object+0x111 twice: first-read 0 writes normalized Gender 1 (Male), while first-read nonzero followed by second-read 1 writes 2 (Female); both source rows start as Random. The input meaning and runtime/gameplay outcome remain UNKNOWN. That static-event chain has no direct call to candidate main+0x2fdf90, whose semantics and runtime reachability remain unresolved; report status remains CORRELATED_UNASSIGNED. Latest coverage remains SCANNED 27,824; DECODED 21,839; FAILED 0; UNKNOWN 5,957; PENDING 0; UNSUPPORTED 28; 78,498 outputs. v17 SHA-guarded Ghidra tracing records instructions, FunctionManager boundaries, and incoming DATA-reference counts for six code pointers in main+0x1547348; table semantics and runtime dispatch remain UNKNOWN (report schema v9). A SHA-guarded Ghidra 12.2 consumer pass re-decompiled 10 exact-main functions (1,006 instructions, 32 direct call sites, 0 failures). `spawn-rng-crossref` schema v10 rehashes all 10 actual event rows and maps pinned pkNX `Ptr0..Ptr3` values to the consumer qword pairs; rows 0, 1, 6, 8, 9 match the observed constant-pair comparison. Pointer semantics, runtime/capture outcome, and RNG linkage remain UNKNOWN; report status stays CORRELATED_UNASSIGNED. A separate SHA-guarded read-only trace recovers ten `zukan_sort` path strings and the `main+0x377800` u16 reader; values are decoded losslessly, but element meaning and runtime execution remain UNKNOWN. A second read-only vtable/offset pass on localized sort resources decompiled 12 methods without establishing data reads; a 2,839,329-instruction offset scan was inconclusive. A separate read-only save/filesystem API census is recorded in `docs/research/T10-notes.md` and `manifests/save-api-crossref.json`: `IsSaveDataExisting` and `MountSaveData` each have one direct code call, while direct commit/write operations are absent from the saved reference model. Save ownership/runtime remain UNKNOWN/UNVERIFIED. A second exact-build read-only scan covered 18 initialized memory blocks (23,113,044 bytes): zero absolute qword matches for the worker/helpers; two image-offset dword candidates in `.rela.plt` and `.hash` remain unassigned. The same Ghidra pass scanned 2,839,329 instructions (91,789 ADR/ADRP) for the worker page/offset materialization and found zero candidates; this does not exclude other indirect forms. `manifests/save-worker-pointer-scan.json` preserves the counts and limits. A new SHA-guarded scan checks every instruction in `FUN_71002f8a50` (1,052 bytes): 2,839,329 code instructions yielded zero direct external flows or saved references into its body; 17 readable data blocks / 9,286,364 bytes yielded zero absolute code pointers. Ten relative arithmetic candidates from five slots include two unaligned unreferenced matches, one known range-metadata record, and two untyped aligned record slots; no dispatch edge is established. There are 96,971 unresolved computed call/jump instructions, so runtime reachability remains unknown. A follow-up queried saved xrefs at every byte address from center−0x40 through center+0x40 around each aligned candidate slot; all three windows had zero references. See `docs/research/T10-notes.md`. |
+ | T11 | full safe batch runs, metrics and regression | VALIDATED | Current coverage manifest: **27,824 SCANNED; 21,839 DECODED; 0 FAILED; 5,957 UNKNOWN; 0 PENDING; 28 UNSUPPORTED; 78,498 outputs**. After the verify status fix, native full verification completed with exit 0 in `manifests/runs.jsonl` (full stdout summary was not retained); output and failure manifests contain 78,498 receipt rows and 34 UNSUPPORTED / 0 FAILED rows. Standalone verify now persists its summary as a run-journal checkpoint. A real bounded run checkpointed **28/28 unsupported BSEQ sources**, `bad=0`, exit 0. Latest native Windows suite: **240 tests, 239 passed, 1 expected symlink-permission skip**.
+ | T12 | documentation, Git history and eventual release checklist | VALIDATED | T00–T12 status, exact coverage, tool provenance, compatibility evidence, and remaining research gates are documented; no game binaries or keys are tracked. |
+ 
+ T09 workflow update (2026-10-30): `lgpe run --limit 0 --execute` now runs four ordered post-processing stages after conversion: internal BNK WEM indexing/extraction, static Wwise event/media mapping, supported BSEQ-to-Wwise mapping, and raw unsupported-demo BSEQ audio candidate mapping. Each stage has a run-journal checkpoint; bounded runs skip these cross-corpus stages. The integration test verifies order and summary fields, and the new demo map was separately run and dry-run on the full local input set. The earlier 78,104-receipt replay predates the fourth stage; the later 78,126-receipt native replay ran all four stages, including the demo-audio map, and verified every output receipt.
+ 
+ T09 outside-bank audit (2026-10-30): among 181 event-ID occurrences found only outside their sequence's exact bank-name references, 172 have no `BelugaSoundLoadBank` parser field and 9 reference a local BNK without that ID. Static candidates cluster in `Battle_System_Common.bnk` (173 incidences / 33 IDs) and `System_Common.bnk` (37 / 2 IDs); this does not prove runtime bank loading.
+ 
+ T09 loose-WEM audit (2026-10-30): all seven loose WEMs absent from event-graph reachability also have no matching HIRC `sourceID` across 265 hash-verified local BNK/XML pairs; all seven source and WAV receipts rehash correctly. The sidecar is `manifests/wwise_unreferenced_wem.jsonl`. Other game access paths remain unknown.
+diff --git a/tests/test_gfbcol_main_crossref.py b/tests/test_gfbcol_main_crossref.py
+index c0d07d3..c0be42c 100644
+--- a/tests/test_gfbcol_main_crossref.py
++++ b/tests/test_gfbcol_main_crossref.py
+@@ -1,14 +1,15 @@
+ import unittest
+ 
+ from lgpe_research.gfbcol_main_crossref import (
+     cross_reference_slot0_candidates,
++    summarize_gfbcol_token_owner_trace,
+     summarize_gfbcol_token_handler_trace,
+ )
+ 
+ 
+ MAIN_SHA256 = "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8"
+ 
+ 
+ def _main_report():
+     return {
+         "checks_passed": True,
+@@ -87,29 +88,71 @@ def _slot0_report():
+     }
+ 
+ 
+ def _trace_log():
+     offsets = ("24f48c", "24f4e4", "24f534", "24f584", "24f5d4", "24f624")
+     references = "\n".join(
+         f"TARGET_XREF\tfrom=main+0x{offset}\ttype=UNCONDITIONAL_CALL"
+         "\towner=NONE\tinstruction=bl 0x710000b660"
+         for offset in offsets
+     )
++    contexts = "\n".join(
++        f"CALL_CONTEXT\tcallsite=main+0x{offset}\taddress=main+0x{offset}"
++        "\towner=NONE\tflow=UNCONDITIONAL_CALL\tassembly=bl 0x710000b660"
++        for offset in offsets
++    )
+     return (
+         references
++        + "\n" + contexts
+         + "\nSUMMARY\tmain_sha256=" + MAIN_SHA256
+         + "\thandler=main+0xb660\tincoming_references=225"
+         + "\texpected_call_sites=6/6\tinstructions=102\tdirect_calls=5"
++        + "\tcontext_instructions=101"
+         + "\tsourceHashUnchanged=true\treadOnly=true\tsemantics=UNKNOWN\n"
+     )
+ 
+ 
++def _owner_trace_log():
++    offsets = ("24f48c", "24f4e4", "24f534", "24f584", "24f5d4", "24f624")
++    calls = "\n".join(
++        f"INS\tmain+0x{offset}\t00000094\tbl 0x710000b660" for offset in offsets
++    )
++    tokens = ("col_wall", "col_water", "col_jump", "col_sky", "col_sekichiku", "col_safety")
++    helper_calls = "\n".join(
++        f'FUN_710000b660(&local,(byte *)"{token}");' for token in tokens
++    )
++    counter_offsets = ("0x30", "0x34", "0x38", "0x3c", "0x40", "0x44", "0x48", "0x4c")
++    increments = "\n".join(
++        f"*(int *)(param_1 + {offset}) = *(int *)(param_1 + {offset}) + 1;"
++        for offset in counter_offsets
++    )
++    comparisons = "\n".join("if (lVar3 == param_5) {}" for _ in range(6))
++    return (
++        "GUARD\tgame=Let's Go Pikachu 1.0.2\tmain_sha256=" + MAIN_SHA256
++        + "\tbase=0x7100000000\tread_only=true\n"
++        + "ENTRY_XREF\tfrom=main+0x15437d8\ttype=DATA\towner=NONE\tinstruction=NONE\n"
++        + "ENTRY_DATA_WINDOW\tcell=main+0x15437d8\tvalue=0x710024f460"
++        + "\tblock=.data\twritable=true\texecutable=false\n"
++        + "CANDIDATE_FUNCTION\tentry=main+0x24f460\tbytes=564"
++        + "\tmin=main+0x24f460\tmax=main+0x24f693\ttemporary_boundary=true\n"
++        + calls + "\nDECOMPILED_BEGIN\tmain+0x24f460\tchars=100\n"
++        + "long *plVar1;\n*(long *)(local + 0x58);\n"
++        + "(**(code **)(*(long *)(local + 0x48) + 0x18))();\n"
++        + helper_calls + "\n" + comparisons + "\n"
++        + increments + "\n}\nDECOMPILED_END\tmain+0x24f460\n"
++        + "SUMMARY\tmain_sha256=" + MAIN_SHA256
++        + "\tentry=main+0x24f460\tcall_sites=6/6\tinstructions=141"
++        + "\tentry_xrefs=1\ttemporary_boundary=true\tsourceHashUnchanged=true"
++        + "\treadOnly=true\tsemantics=UNKNOWN\n"
++    )
++
++
+ class GfbcolMainCrossrefTests(unittest.TestCase):
+     def test_cross_reference_reports_literal_value_matches_without_assigning_schema(self):
+         result = cross_reference_slot0_candidates(_main_report(), _slot0_report())
+ 
+         self.assertEqual(result["source_version"], "Pokemon Let's Go Pikachu 1.0.2")
+         self.assertEqual(result["schema_status"], "UNKNOWN")
+         self.assertFalse(result["field_names_assigned"])
+         self.assertFalse(result["field_types_assigned"])
+         self.assertEqual(result["summary"]["exact_main_tokens"], 2)
+         self.assertEqual(result["summary"]["tokens_matching_candidate_strings"], 1)
+@@ -133,24 +176,48 @@ class GfbcolMainCrossrefTests(unittest.TestCase):
+         with self.assertRaisesRegex(ValueError, "exact byte links"):
+             cross_reference_slot0_candidates(report, _slot0_report())
+ 
+     def test_trace_summary_requires_all_six_expected_build_callsites(self):
+         result = summarize_gfbcol_token_handler_trace(_trace_log(), MAIN_SHA256)
+ 
+         self.assertEqual(result["main_sha256"], MAIN_SHA256)
+         self.assertEqual(result["handler"], "main+0xb660")
+         self.assertEqual(result["incoming_references"], 225)
+         self.assertEqual(result["expected_call_sites"], 6)
++        self.assertEqual(result["context_instructions"], 101)
+         self.assertEqual(result["verified_callsite_offsets"], [
+             "24f48c", "24f4e4", "24f534", "24f584", "24f5d4", "24f624",
+         ])
+         self.assertTrue(result["read_only"])
+ 
+     def test_trace_summary_rejects_missing_callsite(self):
+         trace = _trace_log().replace("main+0x24f624", "main+0x24f628")
+ 
+         with self.assertRaisesRegex(ValueError, "six expected callsites"):
+             summarize_gfbcol_token_handler_trace(trace, MAIN_SHA256)
+ 
++    def test_owner_trace_reports_the_provisional_exact_build_comparison_chain(self):
++        result = summarize_gfbcol_token_owner_trace(_owner_trace_log(), MAIN_SHA256)
++
++        self.assertEqual(result["entry"], "main+0x24f460")
++        self.assertEqual(result["function_bytes"], 564)
++        self.assertEqual(result["call_sites"], 6)
++        self.assertEqual(result["entry_xrefs"], 1)
++        self.assertEqual(result["entry_data_cell"], "main+0x15437d8")
++        self.assertEqual(result["entry_data_value"], "0x710024f460")
++        self.assertEqual(result["token_counter_offsets"], {
++            "col_wall": "0x30", "col_water": "0x34", "col_jump": "0x38",
++            "col_sky": "0x3c", "col_sekichiku": "0x40", "col_safety": "0x44",
++        })
++        self.assertEqual(result["fallback_counter_offset"], "0x48")
++        self.assertEqual(result["total_counter_offset"], "0x4c")
++        self.assertEqual(result["semantics"], "UNKNOWN")
++
++    def test_owner_trace_rejects_an_unverified_or_incomplete_candidate(self):
++        trace = _owner_trace_log().replace("call_sites=6/6", "call_sites=5/6")
++
++        with self.assertRaisesRegex(ValueError, "six direct callsites"):
++            summarize_gfbcol_token_owner_trace(trace, MAIN_SHA256)
++
+ 
+ if __name__ == "__main__":
+     unittest.main()
+diff --git a/tests/test_gfbcol_main_crossref_cli.py b/tests/test_gfbcol_main_crossref_cli.py
+index 82b8118..4efe8df 100644
+--- a/tests/test_gfbcol_main_crossref_cli.py
++++ b/tests/test_gfbcol_main_crossref_cli.py
+@@ -17,40 +17,47 @@ class GfbcolMainCrossrefCliTests(unittest.TestCase):
+             "schema_status": "UNKNOWN",
+             "main": {
+                 "sha256": "1bf36681a230f8f5d69c1484e5d4af9027a2cdaee6ed7bf517420b65ff03f1b8"
+             },
+             "gfbcol_probe": {"sources_read": 698},
+             "summary": {
+                 "exact_main_tokens": 6,
+                 "tokens_matching_candidate_strings": 4,
+                 "matched_candidate_occurrences": 188,
+             },
++            "ghidra_owner_candidate_trace": {
++                "summary": {"entry": "main+0x24f460", "call_sites": 6}
++            },
+         }
+         with tempfile.TemporaryDirectory() as temp:
+             project = Path(temp)
+             output = project / "manifests" / "gfbcol-crossref.json"
+             with patch.object(cli, "PROJECT", project), patch.object(
+                 cli, "build_gfbcol_main_crossref_report", create=True, return_value=report
+             ):
+                 stdout = io.StringIO()
+                 with contextlib.redirect_stdout(stdout):
+                     code = cli.main([
+                         "crossref-gfbcol-main",
+                         "--root",
+                         str(project.parent),
+                         "--output",
+                         str(output),
+                     ])
+ 
+             self.assertEqual(code, 0)
+             self.assertEqual(json.loads(output.read_text(encoding="utf-8")), report)
++            raw = output.read_bytes()
++            self.assertIn(b"\r\n", raw)
++            self.assertNotIn(b"\n", raw.replace(b"\r\n", b""))
+             self.assertIn('"tokens_matching_candidate_strings": 4', stdout.getvalue())
++            self.assertIn('"owner_candidate": "main+0x24f460"', stdout.getvalue())
+ 
+     def test_command_rejects_output_outside_manifest_root(self):
+         report = {"schema": "lgpe-gfbcol-main-token-crossref-v1"}
+         with tempfile.TemporaryDirectory() as temp:
+             project = Path(temp)
+             outside = Path(temp).parent / "escape-gfbcol-crossref.json"
+             with patch.object(cli, "PROJECT", project), patch.object(
+                 cli, "build_gfbcol_main_crossref_report", create=True, return_value=report
+             ):
+                 stdout = io.StringIO()

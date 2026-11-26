@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro" host="W00668" date="2017-09-12T20:27:19.7929172+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="37" endFrame="40" animLoop="OneTime" fileName="in" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>【削除】</comment>
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="3" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>【削除】</comment>
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="ptn" startFrame="0" endFrame="9" animLoop="OneTime" fileName="ptn" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>数字切り替えパターンアニメ
+0F　0　から連番です。</comment>
+      <userData />
+      <group name="G_ptn_00" />
+    </animTag>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_item_number_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slope="-85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="3" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="37" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="37" value="0" slope="85" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="85" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_item_number_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="poke_get_itm_number_00" />
+          <refRes name="poke_get_itm_number_01" />
+          <refRes name="poke_get_itm_number_02" />
+          <refRes name="poke_get_itm_number_03" />
+          <refRes name="poke_get_itm_number_04" />
+          <refRes name="poke_get_itm_number_05" />
+          <refRes name="poke_get_itm_number_06" />
+          <refRes name="poke_get_itm_number_07" />
+          <refRes name="poke_get_itm_number_08" />
+          <refRes name="poke_get_itm_number_09" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="9" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

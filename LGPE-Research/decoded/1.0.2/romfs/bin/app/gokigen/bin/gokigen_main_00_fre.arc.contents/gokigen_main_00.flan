@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro__adjust_textbox" host="W00668" date="2018-02-21T19:55:14.745052+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="fade_in" startFrame="35" endFrame="40" animLoop="OneTime" fileName="fade_in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>アプリ間遷移</comment>
+      <userData />
+      <group name="G_fade_inout_00" />
+    </animTag>
+    <animTag name="fade_out" startFrame="0" endFrame="5" animLoop="OneTime" fileName="fade_out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>アプリ間遷移</comment>
+      <userData />
+      <group name="G_fade_inout_00" />
+    </animTag>
+    <animTag name="in" startFrame="35" endFrame="40" animLoop="OneTime" fileName="in" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>アプリ内遷移</comment>
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="5" animLoop="OneTime" fileName="out" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>アプリ内遷移</comment>
+      <userData />
+      <group name="G_inout_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_fade_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="5" value="32" slopeType="Flat" />
+          <key frame="35" value="32" slopeType="Flat" />
+          <key frame="40" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_menu_00">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="560" slopeType="Linear" />
+          <key frame="0" value="560" slope="6" slopeType="Linear" />
+          <key frame="5" value="590" slope="6" slopeType="Linear" />
+          <key frame="5" value="590" slopeType="Linear" />
+          <key frame="35" value="590" slopeType="Linear" />
+          <key frame="35" value="590" slope="-6" slopeType="Linear" />
+          <key frame="40" value="560" slope="-6" slopeType="Linear" />
+          <key frame="40" value="560" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_menu_01">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="560" slopeType="Linear" />
+          <key frame="0" value="560" slope="6" slopeType="Linear" />
+          <key frame="5" value="590" slope="6" slopeType="Linear" />
+          <key frame="5" value="590" slopeType="Linear" />
+          <key frame="35" value="590" slopeType="Linear" />
+          <key frame="35" value="590" slope="-6" slopeType="Linear" />
+          <key frame="40" value="560" slope="-6" slopeType="Linear" />
+          <key frame="40" value="560" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="N_fade_01">
+        <animPaneSRTTarget target="TranslateX">
+          <key frame="0" value="-570" slopeType="Flat" />
+          <key frame="5" value="-602" slopeType="Flat" />
+          <key frame="35" value="-602" slopeType="Flat" />
+          <key frame="40" value="-570" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_fade_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="51" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_menu_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="127.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_menu_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-127.5" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="127.5" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="N_fade_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slope="-51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="5" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="35" value="0" slope="51" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="255" slope="51" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

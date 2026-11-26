@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika" host="W00740" date="2017-11-06T15:55:53.8621084+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="patern_number" startFrame="0" endFrame="9" animLoop="OneTime" fileName="patern_number" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>0～9までの絵の切り替え</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <animTag name="pattern_color" startFrame="0" endFrame="1" animLoop="OneTime" fileName="pattern_color" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>0F: 通常時
+1F: 残り時間少なくて赤い表示</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <lan animType="MaterialColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_numbCommet_00">
+        <animMaterialColorTarget target="BlackColor_r">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="195" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="195" slopeType="Step" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_g">
+          <key xsi:type="HermiteU8" frame="0" value="156" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="156" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_b">
+          <key xsi:type="HermiteU8" frame="0" value="195" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="195" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="19" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="19" slopeType="Step" />
+        </animMaterialColorTarget>
+        <animMaterialColorTarget target="BlackColor_a">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="0" slopeType="Step" />
+        </animMaterialColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_numbCommet_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="grptext_number_commet18px_0" />
+          <refRes name="grptext_number_commet18px_1" />
+          <refRes name="grptext_number_commet18px_2" />
+          <refRes name="grptext_number_commet18px_3" />
+          <refRes name="grptext_number_commet18px_4" />
+          <refRes name="grptext_number_commet18px_5" />
+          <refRes name="grptext_number_commet18px_6" />
+          <refRes name="grptext_number_commet18px_7" />
+          <refRes name="grptext_number_commet18px_8" />
+          <refRes name="grptext_number_commet18px_9" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepU16" frame="2" value="2" slopeType="Step" />
+          <key xsi:type="StepU16" frame="3" value="3" slopeType="Step" />
+          <key xsi:type="StepU16" frame="4" value="4" slopeType="Step" />
+          <key xsi:type="StepU16" frame="5" value="5" slopeType="Step" />
+          <key xsi:type="StepU16" frame="6" value="6" slopeType="Step" />
+          <key xsi:type="StepU16" frame="7" value="7" slopeType="Step" />
+          <key xsi:type="StepU16" frame="8" value="8" slopeType="Step" />
+          <key xsi:type="StepU16" frame="9" value="9" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

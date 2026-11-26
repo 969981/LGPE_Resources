@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="ariga_mitsuhiro" host="W00668" date="2017-07-07T18:31:36.4632138+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="touch_release" startFrame="60" endFrame="65" animLoop="OneTime" fileName="touch_release" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_touch_00" />
+    </animTag>
+    <animTag name="passive" startFrame="1" endFrame="1" animLoop="Wait" fileName="passive" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>ボタン触れない表示　※未所持用ではありません</comment>
+      <userData />
+      <group name="G_passive_00" />
+    </animTag>
+    <animTag name="active" startFrame="0" endFrame="0" animLoop="Wait" fileName="active" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment />
+      <userData />
+      <group name="G_passive_00" />
+    </animTag>
+    <animTag name="select" startFrame="1" endFrame="1" animLoop="Wait" fileName="select" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>選択時のインアニメ</comment>
+      <userData />
+      <group name="G_select_00" />
+    </animTag>
+    <animTag name="unselect" startFrame="0" endFrame="0" animLoop="Wait" fileName="unselect" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>未選択時</comment>
+      <userData />
+      <group name="G_select_00" />
+    </animTag>
+    <animTag name="keep" startFrame="0" endFrame="40" fileName="keep" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>Loopアニメ（仮lytでは止めて見た目変わりません）</comment>
+      <userData />
+      <group name="G_keep_00" />
+    </animTag>
+    <animTag name="icon_change" startFrame="0" endFrame="1" animLoop="OneTime" fileName="icon_change" outputPaneSRT="false" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>相棒アイコン_ver切り替え用アニメ：テクスチャパターン
+0F_ピカチュウ
+1F_イーブイ
+</comment>
+      <userData />
+      <group name="G_ver_change" />
+    </animTag>
+    <animTag name="unowned" startFrame="0" endFrame="1" animLoop="OneTime" fileName="unowned" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>所持の切り替え
+0F 所持
+1F 未所持</comment>
+      <userData />
+      <group name="G_unowned_00" />
+    </animTag>
+    <animTag name="call_00" startFrame="0" endFrame="0" animLoop="Wait" fileName="call_00" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>相棒が呼んでないとき</comment>
+      <userData />
+      <group name="G_call_00" />
+    </animTag>
+    <animTag name="call_01" startFrame="0" endFrame="50" fileName="call_01" outputVisibility="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" outputMaskTextureSRT="false" descendingBind="false">
+      <comment>相棒が呼んでるとき</comment>
+      <userData />
+      <group name="G_call_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_passive_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="0" slopeType="Flat" />
+          <key frame="6" value="25" slopeType="Flat" />
+          <key frame="12" value="0" slopeType="Flat" />
+          <key frame="18" value="16" slopeType="Flat" />
+          <key frame="24" value="0" slopeType="Flat" />
+          <key frame="50" value="0" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_touch_ef_01">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Linear" />
+          <key frame="60" value="1" slopeType="Flat" />
+          <key frame="65" value="1.3" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Linear" />
+          <key frame="60" value="1" slopeType="Flat" />
+          <key frame="65" value="1.3" slopeType="Flat" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="touch">
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Smooth" />
+          <key frame="60" value="1" slopeType="Smooth" />
+          <key frame="63" value="1.01967931" slopeType="Smooth" />
+          <key frame="65" value="1" slope="-0.009839654" slopeType="Smooth" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="0" value="1" slopeType="Smooth" />
+          <key frame="60" value="1" slopeType="Smooth" />
+          <key frame="63" value="1.01967931" slopeType="Smooth" />
+          <key frame="65" value="1" slope="-0.009839654" slopeType="Smooth" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_passive_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="255" slopeType="Step" />
+          <key xsi:type="HermiteU8" frame="1" value="100" slopeType="Smooth" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_select_loop_ef_01">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="80" slope="4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="80" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slope="-4" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_touch_ef_01">
+        <animVertexColorTarget target="PaneAlpha" postInfinityType="Cycle">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slope="60" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="61" value="60" slopeType="Flat" />
+          <key xsi:type="HermiteU8" frame="65" value="0" slope="-40.7670822" />
+          <key xsi:type="HermiteU8" frame="65" value="0" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_touch_ef_00">
+        <animVertexColorTarget target="PaneAlpha" postInfinityType="Cycle">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slope="100" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="61" value="100" slope="100" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="61" value="100" slope="-25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="0" slope="-25" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="65" value="0" slope="95" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+      <animContent name="P_select_ef_top_loop">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="0" value="0" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="60" slope="3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="20" value="60" slope="-3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slope="-3" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="40" value="0" slope="3" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_icon_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00_passive" />
+          <refRes name="main_menu_01_passive" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_icon_unowned_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00_un" />
+          <refRes name="main_menu_01_un" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_select_loop_ef_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00" />
+          <refRes name="main_menu_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_touch_ef_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00" />
+          <refRes name="main_menu_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_touch_ef_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00_passive" />
+          <refRes name="main_menu_01_passive" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_select_ef_top_loop">
+        <animTexPatternTarget target="Image">
+          <refRes name="main_menu_00_passive" />
+          <refRes name="main_menu_01_passive" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_icon_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="P_icon_unowned_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="N_active_ef_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+      <animContent name="N_active_ef_01">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

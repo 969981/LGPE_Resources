@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika__adjust_textbox" host="W00740" date="2018-02-21T17:56:10.245415+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="keep" startFrame="0" endFrame="80" fileName="keep" outputPaneSRT="false" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>状態異常アイコン点滅アニメ
+※基本ボタンアニメのkeepではありません。</comment>
+      <userData />
+      <group name="G_sickKeep_00" />
+    </animTag>
+    <animTag name="patern_own" startFrame="0" endFrame="0" animLoop="Wait" fileName="patern_own" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>自軍の時のプレート</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <animTag name="patern_enemy" startFrame="1" endFrame="1" animLoop="Wait" fileName="patern_enemy" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>敵軍の時のプレート</comment>
+      <userData />
+      <group name="G_patern_00" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_plateBG_00">
+        <animPaneSRTTarget target="SizeH">
+          <key frame="0" value="66" slopeType="Step" />
+          <key frame="1" value="66" slopeType="Step" />
+          <key frame="1" value="56" slopeType="Step" />
+          <key frame="1" value="56" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+      <animContent name="P_plateBG_01">
+        <animPaneSRTTarget target="SizeH">
+          <key frame="0" value="96" slopeType="Step" />
+          <key frame="1" value="96" slopeType="Step" />
+          <key frame="1" value="86" slopeType="Step" />
+          <key frame="1" value="86" slopeType="Step" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="VertexColor" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_sickIcon_00">
+        <animVertexColorTarget target="PaneAlpha">
+          <key xsi:type="HermiteU8" frame="0" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="30" value="255" slope="-12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="0" slope="-12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="50" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="60" value="0" slope="12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slope="12.75" slopeType="Linear" />
+          <key xsi:type="HermiteU8" frame="80" value="255" slopeType="Linear" />
+        </animVertexColorTarget>
+      </animContent>
+    </lan>
+    <lan animType="TexturePattern" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_plateBG_00">
+        <animTexPatternTarget target="Image">
+          <refRes name="battle_pokePlate_00" />
+          <refRes name="battle_pokePlate_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+      <animContent name="P_plateBG_01">
+        <animTexPatternTarget target="Image">
+          <refRes name="battle_pokePlate_flare_00" />
+          <refRes name="battle_pokePlate_flare_01" />
+          <key xsi:type="StepU16" frame="0" value="0" slopeType="Step" />
+          <key xsi:type="StepU16" frame="1" value="1" slopeType="Step" />
+        </animTexPatternTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="N_EXP_00">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>

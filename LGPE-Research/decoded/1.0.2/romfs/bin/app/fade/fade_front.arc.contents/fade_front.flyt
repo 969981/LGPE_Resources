@@ -1,0 +1,2873 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<nw4f_layout version="1.5.16" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <head>
+    <create date="2017-07-24T12:03:24.7047241+09:00" host="W00668" source="" user="ariga_mitsuhiro" />
+    <title />
+    <comment>171003 【N_fade_wipe_00】ワイプ用フェード
+　　　　　【wipe_in】【wipe_out】のアニメ追加</comment>
+    <generator name="NW LayoutEditor Core" version="2.26.0.0" />
+  </head>
+  <body>
+    <lyt>
+      <paneSet>
+        <pane influencedAlpha="true" kind="Null" name="all">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_fade_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="6" y="1" />
+                <translate x="4" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="6" y="1" />
+                <translate x="4" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_prg_00">
+          <comment>プログラム制御用フェード</comment>
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_prg_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_prg_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_fade_wipe_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="4" y="2" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="2.34" y="2.34" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_wipe_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_00" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_wipe_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_01" tevStageNum="0">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Greater" ref="0.03" />
+              <blendMode blendOp="Add" dstFactor="InvDstAlpha" srcFactor="DstAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_02">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_02">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_02" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Null" name="N_fade_cross_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_cross_texture_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="1" />
+              <texRT s="1" t="1" />
+              <texLB s="0" t="0" />
+              <texRB s="1" t="0" />
+            </texCoord>
+            <material name="P_fade_cross_texture_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="white4x4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_cross_texture_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true" useLowLevelCombinerSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstColor a="255" b="255" g="255" r="255" />
+              <tevConstColor a="255" b="255" g="255" r="255" />
+              <tevConstColor a="255" b="255" g="255" r="255" />
+              <tevConstColor a="255" b="255" g="255" r="255" />
+              <tevConstColor a="255" b="255" g="255" r="255" />
+              <texMap imageName="white4x4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Texture0" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Replace" scale="V1">
+                  <arg op="Alpha" source="Primary" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_r_dan_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_r_bg_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_r_bg_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="90">
+                <scale x="1" y="5" />
+                <translate x="-3.5" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_r_bg_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="90">
+                <scale x="1" y="5" />
+                <translate x="-3.5" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_logo_r_00">
+          <comment />
+          <basePositionType x="Center" y="Bottom" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-44" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="640" y="640" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_logo_r_00">
+              <blackColor b="15" g="8" r="26" />
+              <whiteColor b="42" g="79" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="logo_r_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_logo_r_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="15" g="8" r="26" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <tevConstReg a="255" b="42" g="79" r="255" />
+              <texMap imageName="logo_r_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_r_rotation_00" visible="false">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-360" z="0" />
+          <rotate x="80" y="0" z="0" />
+          <scale x="1.1" y="1.1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" influencedAlpha="true" kind="Null" name="N_inout_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_r_bg_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_r_bg_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="-90">
+                <scale x="1" y="5" />
+                <translate x="-3.5" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_r_bg_01" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="-90">
+                <scale x="1" y="5" />
+                <translate x="-3.5" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_r_pos_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_r_bg_02" visible="false">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-240" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="1200" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_r_bg_02">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="r_fade_ring_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="5" y="5" />
+                <translate x="-0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1.6666" />
+                <translate x="0" y="0.333333" />
+              </texMatrix>
+              <texCoordGen srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_r_bg_02" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="r_fade_ring_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_bg_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="5" y="5" />
+                <translate x="-0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1.6666" />
+                <translate x="0" y="0.333333" />
+              </texMatrix>
+              <texCoordGen srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="80" hidden="true" kind="Picture" name="P_logo_r_01">
+          <comment />
+          <basePositionType x="Center" y="Bottom" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-302" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="640" y="640" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_logo_r_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="36" g="97" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="logo_r_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_logo_r_01" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <tevConstReg a="255" b="36" g="97" r="255" />
+              <texMap imageName="logo_r_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_logo_r_02">
+          <comment />
+          <basePositionType x="Center" y="Bottom" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-44" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="640" y="640" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_logo_r_02">
+              <blackColor b="0" g="255" r="255" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="logo_r_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_02" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="3.5">
+                <scale x="0.8" y="1" />
+                <translate x="2.3" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_logo_r_02" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="logo_r_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="logo_r_02" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="3.5">
+                <scale x="0.8" y="1" />
+                <translate x="2.3" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_logo_r_03">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="198" y="500" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="0" y="0" />
+          <size x="128" y="128" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_logo_r_03">
+              <blackColor b="0" g="255" r="255" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="logo_r_03" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0.5" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_logo_r_03" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="logo_r_03" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0.5" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_trainer_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" influencedAlpha="true" kind="Null" name="N_trainer_visi_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_trainer_line_00">
+          <comment />
+          <basePositionType x="Center" y="Top" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="360" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="300" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="0" b="255" g="255" r="255" />
+            <vtxColRB a="0" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_line_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_line_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.5" y="1" />
+                <translate x="0.25" y="-0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_trainer_line_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_line_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.5" y="1" />
+                <translate x="0.25" y="-0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" influencedAlpha="true" kind="Null" name="N_trainer_line_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" influencedAlpha="true" kind="Null" name="N_visible_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="258" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_fade_pika_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_03">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_03">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_03" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_04">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="4" y="2" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="4.5" y="4.5" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_04">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_pika_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_04" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_pika_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_05">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_05">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_05" tevStageNum="0">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Greater" ref="0.03" />
+              <blendMode blendOp="Add" dstFactor="InvDstAlpha" srcFactor="DstAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_fade_bui_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="0" y="0" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_06">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_06">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_06" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_07">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="4" y="22" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="5" y="5" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_07">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_bui_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_07" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_bui_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_wipe_08">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_fade_wipe_08">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="0" g="0" r="0" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_fade_wipe_08" tevStageNum="0">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="0" g="0" r="0" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Greater" ref="0.03" />
+              <blendMode blendOp="Add" dstFactor="InvDstAlpha" srcFactor="DstAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_legend_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_poke_get_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" influencedAlpha="true" kind="Null" name="N_legend_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_trainer_ptn_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1.8" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_ptn_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_bg_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMap imageName="trainer_bg_in_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="1" y="0.8" />
+                <translate x="1" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="2" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_trainer_ptn_01">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_bg_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMap imageName="trainer_bg_in_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="1" y="0.8" />
+                <translate x="1" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="2" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Indirect" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="0" y="0" />
+                </rgb>
+                <alpha konst="K0" mode="Replace" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Greater" ref="0.03" />
+              <blendMode blendOp="Add" dstFactor="InvDstAlpha" srcFactor="DstAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" kind="Picture" name="P_legend_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-279" z="0" />
+          <rotate x="0" y="0" z="90" />
+          <scale x="1" y="1" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="1" t="1" />
+              <texRT s="0" t="1" />
+              <texLB s="1" t="0" />
+              <texRB s="0" t="0" />
+            </texCoord>
+            <material name="P_legend_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_legend_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_trainer_mask_null_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_mask_null_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_trainer_mask_null_00" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="fade_01" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_trainer_line_01">
+          <comment />
+          <basePositionType x="Center" y="Bottom" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-360" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="300" />
+          <picture detailSetting="true">
+            <vtxColLT a="0" b="255" g="255" r="255" />
+            <vtxColRT a="0" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_line_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_line_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.5" y="1" />
+                <translate x="1" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_trainer_line_01" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_line_00" wrap_s="Repeat" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.5" y="1" />
+                <translate x="1" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" kind="Picture" name="P_trainer_ptn_02">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-303" y="-0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1886" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_ptn_02">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="2" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_trainer_ptn_02" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="2" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" kind="Picture" name="P_legend_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-279" z="0" />
+          <rotate x="0" y="0" z="90" />
+          <scale x="1" y="1" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="1" t="1" />
+              <texRT s="0" t="1" />
+              <texLB s="1" t="0" />
+              <texRB s="0" t="0" />
+            </texCoord>
+            <material name="P_legend_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_legend_01" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" kind="Picture" name="P_trainer_ptn_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_trainer_ptn_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_ptn_00" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="-0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_trainer_ptn_00" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_ptn_00" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="-0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="V0" type="Blend" />
+              <blendModeAlpha blendOp="Add" dstFactor="V0" srcFactor="SrcAlpha" type="Blend" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_loading_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_loading_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="32" y="32" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_loading_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="load_dot_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0.5" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_loading_00" tevStageNum="0" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="load_dot_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMatrix rotate="0">
+                <scale x="2" y="2" />
+                <translate x="0.5" y="0.5" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_rot_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="40" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_outline_R_00" visible="false">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="80" y="80" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="76" g="243" r="255" />
+            <vtxColRT a="255" b="76" g="243" r="255" />
+            <vtxColLB a="255" b="76" g="243" r="255" />
+            <vtxColRB a="255" b="76" g="243" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_outline_R_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="load_outline_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="180">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_outline_R_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="load_outline_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="180">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_outline_L_00" visible="false">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="180" />
+          <scale x="1" y="1" />
+          <size x="80" y="80" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="76" g="243" r="255" />
+            <vtxColRT a="255" b="76" g="243" r="255" />
+            <vtxColLB a="255" b="76" g="243" r="255" />
+            <vtxColRB a="255" b="76" g="243" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_outline_L_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="load_outline_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="180">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_outline_L_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="load_outline_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="180">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane influencedAlpha="true" kind="Null" name="N_rot_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="228" />
+          <scale x="1" y="1" />
+          <size x="40" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_centerline_R_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="90" />
+          <scale x="1" y="1" />
+          <size x="56" y="56" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="58" g="21" r="240" />
+            <vtxColRT a="255" b="58" g="21" r="240" />
+            <vtxColLB a="255" b="58" g="21" r="240" />
+            <vtxColRB a="255" b="58" g="21" r="240" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_centerline_R_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="load_centerLine_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_centerline_R_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="load_centerLine_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane kind="Picture" name="P_centerline_L_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="270" />
+          <scale x="1" y="1" />
+          <size x="56" y="56" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="0" />
+              <texRT s="1" t="0" />
+              <texLB s="0" t="1" />
+              <texRB s="1" t="1" />
+            </texCoord>
+            <material name="P_centerline_L_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="load_centerLine_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_centerline_L_00" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="load_centerLine_00" wrap_s="Mirror" wrap_t="Mirror" />
+              <texMap imageName="load_mask_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Replace" scale="V1">
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="1" y="1" />
+                </rgb>
+                <alpha konst="K0" mode="Modulate" scale="V1">
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" influencedAlpha="true" kind="Null" name="N_loading_inout_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="560" y="-280" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="30" y="40" />
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane hidden="true" kind="Picture" name="P_fade_cross_texture_01">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="0" y="0" z="0" />
+          <rotate x="0" y="0" z="0" />
+          <scale x="1" y="1" />
+          <size x="1280" y="720" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="0" t="1" />
+              <texRT s="1" t="1" />
+              <texLB s="0" t="0" />
+              <texRB s="1" t="0" />
+            </texCoord>
+            <material name="P_fade_cross_texture_01">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="white4x4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="fade_indirect_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+              <textureStage texMap="1" />
+            </material>
+            <materialCtr name="P_fade_cross_texture_01" useDefaultAlphaTestSettings="true" useDefaultBlendSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="white4x4" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMap imageName="fade_indirect_00" wrap_s="Clamp" wrap_t="Clamp" />
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texMatrix rotate="0">
+                <scale x="1" y="1" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <texCoordGen srcParam="Tex0">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="0" y="0" />
+              </texCoordGen>
+              <tevStage>
+                <rgb konst="K0" mode="Indirect" scale="V1">
+                  <arg op="Rgb" source="Texture0" />
+                  <arg op="Rgb" source="Constant" />
+                  <arg op="Rgb" source="Constant" />
+                  <indirectScale x="0" y="0" />
+                </rgb>
+                <alpha konst="K0" mode="Replace" scale="V1">
+                  <arg op="Alpha" source="Primary" />
+                  <arg op="Alpha" source="Constant" />
+                  <arg op="Alpha" source="Constant" />
+                </alpha>
+              </tevStage>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="InvSrcAlpha" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+        <pane alpha="0" hidden="true" kind="Picture" name="P_poke_get_line_00">
+          <comment />
+          <basePositionType x="Center" y="Center" />
+          <parentRelativePositionType x="Center" y="Center" />
+          <translate x="-0" y="-279" z="0" />
+          <rotate x="0" y="0" z="90" />
+          <scale x="1" y="1" />
+          <size x="1280" y="1280" />
+          <picture detailSetting="true">
+            <vtxColLT a="255" b="255" g="255" r="255" />
+            <vtxColRT a="255" b="255" g="255" r="255" />
+            <vtxColLB a="255" b="255" g="255" r="255" />
+            <vtxColRB a="255" b="255" g="255" r="255" />
+            <texCoord>
+              <texLT s="1" t="1" />
+              <texRT s="0" t="1" />
+              <texLB s="1" t="0" />
+              <texRB s="0" t="0" />
+            </texCoord>
+            <material name="P_poke_get_line_00">
+              <blackColor b="0" g="0" r="0" />
+              <whiteColor b="255" g="255" r="255" />
+              <hsbAdjustment bScale="1" hOffset="0" sScale="1" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <textureStage texMap="0" />
+            </material>
+            <materialCtr name="P_poke_get_line_00" tevStageNum="0" useDefaultAlphaTestSettings="true">
+              <tevColReg a="0" b="0" g="0" r="0" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <tevConstReg a="255" b="255" g="255" r="255" />
+              <texMap imageName="trainer_bg_02" wrap_s="Clamp" wrap_t="Repeat" />
+              <texMatrix rotate="0">
+                <scale x="0.65" y="0.5" />
+                <translate x="0" y="0" />
+              </texMatrix>
+              <texCoordGen adjustProjectionSREnabled="true" srcParam="PaneBasedProjection">
+                <projectionScale x="1" y="1" />
+                <projectionTrans x="-400" y="-0" />
+              </texCoordGen>
+              <alphaCompare comp="Always" ref="0" />
+              <blendMode blendOp="Add" dstFactor="V1_0" srcFactor="SrcAlpha" type="Blend" />
+              <blendModeAlpha type="None" />
+            </materialCtr>
+          </picture>
+          <userData>
+            <string name="__BasicUserDataString" />
+          </userData>
+        </pane>
+      </paneSet>
+      <paneHierarchy>
+        <paneTree name="RootPane">
+          <paneTree name="all">
+            <paneTree name="N_fade_cross_00">
+              <paneTree name="P_fade_cross_texture_00" />
+            </paneTree>
+            <paneTree name="P_fade_prg_00" />
+            <paneTree name="N_fade_00">
+              <paneTree name="P_fade_00" />
+            </paneTree>
+            <paneTree name="N_fade_wipe_00">
+              <paneTree name="P_fade_wipe_02" />
+              <paneTree name="P_fade_wipe_00" />
+              <paneTree name="P_fade_wipe_01" />
+            </paneTree>
+            <paneTree name="N_r_dan_00">
+              <paneTree name="N_inout_00">
+                <paneTree name="P_r_bg_00" />
+                <paneTree name="P_r_bg_01" />
+                <paneTree name="P_r_bg_02" />
+                <paneTree name="N_r_pos_00">
+                  <paneTree name="N_r_rotation_00">
+                    <paneTree name="P_logo_r_00" />
+                    <paneTree name="P_logo_r_02" />
+                    <paneTree name="P_logo_r_03" />
+                    <paneTree name="N_visible_00">
+                      <paneTree name="P_logo_r_01" />
+                    </paneTree>
+                  </paneTree>
+                </paneTree>
+              </paneTree>
+            </paneTree>
+            <paneTree name="N_trainer_00">
+              <paneTree name="N_trainer_visi_00">
+                <paneTree name="P_trainer_mask_null_00" />
+                <paneTree name="P_trainer_ptn_00" />
+                <paneTree name="P_trainer_ptn_01" />
+                <paneTree name="P_trainer_ptn_02" />
+              </paneTree>
+              <paneTree name="N_trainer_line_00">
+                <paneTree name="P_trainer_line_00" />
+                <paneTree name="P_trainer_line_01" />
+              </paneTree>
+            </paneTree>
+            <paneTree name="N_fade_pika_00">
+              <paneTree name="P_fade_wipe_03" />
+              <paneTree name="P_fade_wipe_04" />
+              <paneTree name="P_fade_wipe_05" />
+            </paneTree>
+            <paneTree name="N_fade_bui_00">
+              <paneTree name="P_fade_wipe_06" />
+              <paneTree name="P_fade_wipe_07" />
+              <paneTree name="P_fade_wipe_08" />
+            </paneTree>
+            <paneTree name="N_legend_00">
+              <paneTree name="P_legend_00" />
+            </paneTree>
+            <paneTree name="N_poke_get_00">
+              <paneTree name="P_fade_cross_texture_01" />
+              <paneTree name="P_poke_get_line_00" />
+            </paneTree>
+            <paneTree name="N_legend_01">
+              <paneTree name="P_legend_01" />
+            </paneTree>
+            <paneTree name="N_loading_00">
+              <paneTree name="N_loading_inout_00">
+                <paneTree name="P_loading_00" />
+                <paneTree name="N_rot_00">
+                  <paneTree name="P_outline_R_00" />
+                  <paneTree name="P_outline_L_00" />
+                </paneTree>
+                <paneTree name="N_rot_01">
+                  <paneTree name="P_centerline_R_00" />
+                  <paneTree name="P_centerline_L_00" />
+                </paneTree>
+              </paneTree>
+            </paneTree>
+          </paneTree>
+        </paneTree>
+      </paneHierarchy>
+      <groupSet>
+        <group name="RootGroup">
+          <group name="G_fade_00">
+            <paneRef name="P_fade_00" />
+            <comment />
+          </group>
+          <group name="G_fade_wipe_00">
+            <paneRef name="P_fade_wipe_00" />
+            <comment />
+          </group>
+          <group name="G_r_dan_00">
+            <paneRef name="N_inout_00" />
+            <paneRef name="N_r_rotation_00" />
+            <paneRef name="P_r_bg_00" />
+            <paneRef name="P_r_bg_01" />
+            <paneRef name="P_r_bg_02" />
+            <paneRef name="P_logo_r_02" />
+            <paneRef name="P_logo_r_03" />
+            <paneRef name="P_logo_r_00" />
+            <paneRef name="N_r_pos_00" />
+            <paneRef name="N_visible_00" />
+            <paneRef name="P_logo_r_01" />
+            <comment />
+          </group>
+          <group name="G_trainer_00">
+            <paneRef name="N_trainer_visi_00" />
+            <paneRef name="P_trainer_line_00" />
+            <paneRef name="N_trainer_line_00" />
+            <paneRef name="P_trainer_ptn_02" />
+            <paneRef name="P_trainer_ptn_01" />
+            <paneRef name="P_trainer_line_01" />
+            <paneRef name="P_trainer_ptn_00" />
+            <comment />
+          </group>
+          <group name="G_pika_00">
+            <paneRef name="P_fade_wipe_04" />
+            <comment />
+          </group>
+          <group name="G_bui_00">
+            <paneRef name="P_fade_wipe_07" />
+            <comment />
+          </group>
+          <group name="G_legend_00">
+            <paneRef name="P_legend_00" />
+            <comment />
+          </group>
+          <group name="G_poke_get_00">
+            <paneRef name="P_fade_cross_texture_01" />
+            <paneRef name="P_poke_get_line_00" />
+            <comment />
+          </group>
+          <group name="G_legend_01">
+            <paneRef name="P_legend_01" />
+            <comment />
+          </group>
+          <group name="G_loading_00">
+            <paneRef name="N_rot_00" />
+            <paneRef name="P_outline_R_00" />
+            <paneRef name="P_outline_L_00" />
+            <paneRef name="N_loading_inout_00" />
+            <paneRef name="N_rot_01" />
+            <paneRef name="P_centerline_R_00" />
+            <paneRef name="P_centerline_L_00" />
+            <comment />
+          </group>
+          <comment />
+        </group>
+      </groupSet>
+      <screenSetting origin="Normal">
+        <layoutSize x="1280" y="720" />
+        <backGround>
+          <color a="255" b="169" g="169" r="169" />
+        </backGround>
+        <grid moveMethod="None" thickLineInterval="40" thinDivisionNum="4" visible="false">
+          <color a="128" b="64" g="128" r="128" />
+        </grid>
+      </screenSetting>
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_00.tga" /> 
+ <textureFile format="BC5" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_wipe_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_01.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\white4x4.tga" /> 
+ <textureFile format="BC5" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\logo_r_00.tga" /> 
+ <textureFile format="BC1" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\logo_r_bg_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\r_fade_ring_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\logo_r_01.tga" /> 
+ <textureFile format="BC5" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\logo_r_02.tga" /> 
+ <textureFile format="BC5" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\logo_r_03.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_01.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_02.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_03.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_04.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_05.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_06.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_07.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_08.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_09.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_10.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_11.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_12.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_13.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_14.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_15.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_16.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_17.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_18.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_19.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_20.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_21.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_22.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_23.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_24.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_25.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_26.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_27.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_28.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_29.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_30.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_31.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_32.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_33.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_34.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_35.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_36.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_37.tga" /> 
+ <textureFile format="BC1" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_bg_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_line_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_bg_02.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_bui_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_pika_00.tga" /> 
+ <textureFile format="BC4L" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\fade_indirect_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_ptn_38.tga" /> 
+ <textureFile format="BC4L" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\trainer_bg_in_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\load_centerLine_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\load_dot_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\load_mask_00.tga" /> 
+ <textureFile format="BC4A" imagePath="C:\projects\workspace\beluga\_clean_build\resource_build_share\resource\app\data\fade\lyt\texture\load_outline_00.tga" /> 
+      <captureTexture format="RGBA8" framebufferCaptureEnabled="false" paneName="P_trainer_ptn_00" usage="Mask">
+        <clearColor a="0" b="0" byte_convert="false" g="0" r="0" />
+        <filters scale="1" type="Copy" />
+        <isHidingFromList>true</isHidingFromList>
+      </captureTexture>
+      <metrics>
+        <totalPaneCount>55</totalPaneCount>
+        <totalPixelCount>28581600</totalPixelCount>
+      </metrics>
+      <userData />
+    </lyt>
+  </body>
+</nw4f_layout>

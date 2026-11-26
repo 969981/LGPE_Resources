@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nw4f_layout xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.5.2" xmlns="http://www.nintendo.co.jp/NW4F/LayoutEditor">
+  <head>
+    <create user="kuga_erika" host="W00740" date="2017-06-22T23:03:02.2964028+09:00" source="" />
+    <title />
+    <comment />
+    <generator name="" version="1.0.0" />
+  </head>
+  <body>
+    <animTag name="in" startFrame="1" endFrame="2" animLoop="OneTime" fileName="in" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>部品inアニメ</comment>
+      <userData />
+      <group name="inout" />
+    </animTag>
+    <animTag name="loop" startFrame="0" endFrame="20" fileName="loop" outputVisibility="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>カーソル表示中の基本ループアニメ</comment>
+      <userData />
+      <group name="loop" />
+    </animTag>
+    <animTag name="out" startFrame="0" endFrame="1" animLoop="OneTime" fileName="out" outputPaneSRT="false" outputVertexColor="false" outputMaterialColor="false" outputTextureSRT="false" outputTexturePattern="false" outputIndTextureSRT="false" outputAlphaTest="false" outputPerCharacterTransform="false" outputWindow="false" outputExtUserData="false" descendingBind="false">
+      <comment>部品outアニメ</comment>
+      <userData />
+      <group name="inout" />
+    </animTag>
+    <lan animType="PaneSRT" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="P_pict_00">
+        <animPaneSRTTarget target="TranslateY">
+          <key frame="0" value="-20" />
+          <key frame="0" value="-20" slope="1.42960739" />
+          <key frame="9" value="-7" slopeType="Flat" />
+          <key frame="11" value="-7" slopeType="Flat" />
+          <key frame="20" value="-20" slope="-1.44444442" slopeType="Linear" />
+          <key frame="20" value="-20" slope="1.44444442" slopeType="Linear" />
+          <key frame="29" value="-7" slopeType="Flat" />
+          <key frame="31" value="-7" slopeType="Flat" />
+          <key frame="40" value="-20" slope="-1.562004" />
+          <key frame="40" value="-20" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleX">
+          <key frame="0" value="1" slopeType="Flat" />
+          <key frame="2" value="1" slopeType="Flat" />
+          <key frame="12" value="0.99" slopeType="Smooth" />
+          <key frame="20" value="1" slopeType="Flat" />
+        </animPaneSRTTarget>
+        <animPaneSRTTarget target="ScaleY">
+          <key frame="-19" value="0.92" slope="-0.00738892145" slopeType="Linear" />
+          <key frame="-19" value="0.92" slope="0.00799999852" slopeType="Linear" />
+          <key frame="-9" value="1" slopeType="Flat" />
+          <key frame="-3" value="1" slopeType="Flat" />
+          <key frame="1" value="0.92" slope="-0.0199999958" slopeType="Linear" />
+          <key frame="1" value="0.92" slope="0.00799999852" slopeType="Linear" />
+          <key frame="11" value="1" slopeType="Flat" />
+          <key frame="17" value="1" slopeType="Flat" />
+          <key frame="21" value="0.92" slope="-0.0199999958" slopeType="Linear" />
+          <key frame="21" value="0.92" slope="0.00799999852" slopeType="Linear" />
+          <key frame="31" value="1" slopeType="Flat" />
+          <key frame="37" value="1" slopeType="Flat" />
+          <key frame="41" value="0.92" slope="-0.0199999958" slopeType="Linear" />
+          <key frame="41" value="0.92" slope="0.0266175475" slopeType="Linear" />
+        </animPaneSRTTarget>
+      </animContent>
+    </lan>
+    <lan animType="Visibility" startFrame="0" endFrame="100" convertStartFrame="0" convertEndFrame="100">
+      <animContent name="all">
+        <animVisibilityTarget target="Visibility">
+          <key xsi:type="StepBool" frame="0" value="1" slopeType="Step" />
+          <key xsi:type="StepBool" frame="1" value="0" slopeType="Step" />
+          <key xsi:type="StepBool" frame="2" value="1" slopeType="Step" />
+        </animVisibilityTarget>
+      </animContent>
+    </lan>
+  </body>
+</nw4f_layout>
